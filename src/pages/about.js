@@ -54,7 +54,7 @@ const AboutPage = () => (
     <h1>About</h1>
     <p>
       My name is Siarhei Yermakovich. I’m a developer living in{' '}
-      <Link href="http://en.wikipedia.org/wiki/Minsk" rel="nofollow">
+      <Link href="https://en.wikipedia.org/wiki/Minsk" rel="nofollow">
         Minsk
       </Link>, Belarus. I work for internet startups{' '}
       <Link href="https://dock.io">Dock</Link> and{' '}

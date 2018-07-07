@@ -29,7 +29,7 @@ const LayoutBase = ({ children }) => (
               rel: 'shortcut icon',
               type: 'image/png',
               href:
-                'http://gravatar.com/avatar/0e82c1d212ddd6697333a244e36f04d3?s=96',
+                'https://gravatar.com/avatar/0e82c1d212ddd6697333a244e36f04d3?s=96',
             },
           ]}
         />

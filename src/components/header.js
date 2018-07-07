@@ -61,7 +61,7 @@ const Header = () => (
   <Layout>
     <Content>
       <GatsbyLink to="/">
-        <Avatar src="http://gravatar.com/avatar/0e82c1d212ddd6697333a244e36f04d3?s=96" />
+        <Avatar src="https://gravatar.com/avatar/0e82c1d212ddd6697333a244e36f04d3?s=96" />
       </GatsbyLink>
       {/* <Menu>
         <MenuItems>
