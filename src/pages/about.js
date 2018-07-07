@@ -3,6 +3,7 @@ import Helmet from 'react-helmet'
 
 import Layout from '../components/layout'
 import Link from '../components/link'
+import OutboundLink from '../components/outbound-link'
 
 import githubIcon from './about/images/social-icons/github.svg'
 import twitterIcon from './about/images/social-icons/twitter.svg'
@@ -54,13 +55,13 @@ const AboutPage = () => (
     <h1>About</h1>
     <p>
       My name is Siarhei Yermakovich. I’m a developer living in{' '}
-      <Link href="https://en.wikipedia.org/wiki/Minsk" rel="nofollow">
+      <OutboundLink href="https://en.wikipedia.org/wiki/Minsk">
         Minsk
-      </Link>, Belarus. I work for internet startups{' '}
-      <Link href="https://dock.io">Dock</Link> and{' '}
-      <Link href="https://remote.com">Remote</Link>. When not doing this I’m
-      recording cover songs and enjoing nature. I do outdoor workouts regularly
-      when it’s not too cold outside.
+      </OutboundLink>, Belarus. I work for internet startups{' '}
+      <OutboundLink href="https://dock.io">Dock</OutboundLink> and{' '}
+      <OutboundLink href="https://remote.com">Remote</OutboundLink>. When not
+      doing this I’m recording cover songs and enjoing nature. I do outdoor
+      workouts regularly when it’s not too cold outside.
     </p>
 
     <p>
@@ -73,11 +74,7 @@ const AboutPage = () => (
       {socialLinks.map(socialLink => (
         <SocialLinksItem key={socialLink.name}>
           <SocialLink href={socialLink.url}>
-            <SocialIcon
-              src={socialLink.icon}
-              alt={socialLink.name}
-              rel="nofollow"
-            />
+            <SocialIcon src={socialLink.icon} alt={socialLink.name} />
           </SocialLink>
         </SocialLinksItem>
       ))}

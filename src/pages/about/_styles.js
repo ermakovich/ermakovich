@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import OutboundLink from '../../components/outbound-link'
+
 export const SocialLinks = styled.ul`
   display: flex;
   flex-flow: wrap;
@@ -14,7 +16,7 @@ export const SocialLinksItem = styled.li`
   }
 `
 
-export const SocialLink = styled.a`
+export const SocialLink = styled(OutboundLink)`
   display: inline-block;
 `
 
