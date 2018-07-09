@@ -60,7 +60,7 @@ const AboutPage = () => (
       </OutboundLink>, Belarus. I work for internet startups{' '}
       <OutboundLink href="https://dock.io">Dock</OutboundLink> and{' '}
       <OutboundLink href="https://remote.com">Remote</OutboundLink>. When not
-      doing this I’m recording cover songs and enjoing nature. I do outdoor
+      doing this I’m recording cover songs and enjoying nature. I do outdoor
       workouts regularly when it’s not too cold outside.
     </p>
 
