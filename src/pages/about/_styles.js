@@ -1,16 +1,14 @@
 import styled from 'styled-components'
 
 import OutboundLink from '../../components/outbound-link'
+import UnstyledList from '../../components/unstyled-list'
 
-export const SocialLinks = styled.ul`
+export const SocialLinks = UnstyledList.extend`
   display: flex;
   flex-flow: wrap;
-  margin-left: 0;
 `
 
 export const SocialLinksItem = styled.li`
-  list-style: none;
-
   & + & {
     margin-left: 1em;
   }
