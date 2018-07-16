@@ -5,16 +5,22 @@
   "dependencies": {
     "babel-plugin-styled-components": "^1.5.1",
     "gatsby": "next",
+    "gatsby-image": "next",
     "gatsby-plugin-google-analytics": "next",
     "gatsby-plugin-react-helmet": "next",
+    "gatsby-plugin-sharp": "next",
     "gatsby-plugin-styled-components": "next",
+    "gatsby-source-filesystem": "next",
+    "gatsby-transformer-sharp": "next",
     "lodash": "^4.17.10",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-helmet": "^5.2.0",
     "styled-components": "^3.3.3"
   },
-  "keywords": ["gatsby"],
+  "keywords": [
+    "gatsby"
+  ],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",

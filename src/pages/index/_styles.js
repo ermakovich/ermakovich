@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import Img from '../../components/progressive-image'
+
 export const Layout = styled.div`
   margin: 7em auto;
   max-width: 20em;
@@ -8,10 +10,9 @@ export const Layout = styled.div`
   text-align: center;
 `
 
-export const Avatar = styled.img`
+export const Avatar = styled(Img)`
   border-radius: 50%;
-  width: 9em;
-  height: 9em;
+  font-size: 2em;
 `
 
 export const Header = styled.h1`

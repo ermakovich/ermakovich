@@ -1,14 +1,16 @@
 import React from 'react'
+import { graphql } from 'gatsby'
+import PropTypes from 'prop-types'
 
 import LayoutBase from '../components/layout-base'
 import InternalLink from '../components/internal-link'
 
 import { Layout, Avatar, Header, More } from './index/_styles'
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <LayoutBase>
     <Layout>
-      <Avatar src="https://gravatar.com/avatar/0e82c1d212ddd6697333a244e36f04d3?s=300" />
+      <Avatar fixed={data.avatar.childImageSharp.fixed} alt="photo" />
       <Header>
         Hi, I’m <strong>Siarhei Yermakovich</strong>
       </Header>
@@ -19,4 +21,26 @@ const IndexPage = () => (
   </LayoutBase>
 )
 
+IndexPage.propTypes = {
+  data: PropTypes.shape({
+    avatar: PropTypes.shape({
+      childImageSharp: PropTypes.shape({
+        fixed: PropTypes.object.isRequired,
+      }).isRequired,
+    }).isRequired,
+  }).isRequired,
+}
+
 export default IndexPage
+
+export const pageQuery = graphql`
+  query IndexPageQuery {
+    avatar: file(relativePath: { eq: "images/avatar.jpg" }) {
+      childImageSharp {
+        fixed(width: 200, height: 200) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+  }
+`
