@@ -14,6 +14,13 @@ const LayoutBase = ({ children }) => (
             title
           }
         }
+        avatar: file(relativePath: { eq: "images/avatar.jpg" }) {
+          childImageSharp {
+            fixed(width: 96, height: 96) {
+              src
+            }
+          }
+        }
       }
     `}
     render={data => (
@@ -28,8 +35,7 @@ const LayoutBase = ({ children }) => (
             {
               rel: 'shortcut icon',
               type: 'image/png',
-              href:
-                'https://gravatar.com/avatar/0e82c1d212ddd6697333a244e36f04d3?s=96',
+              href: data.avatar.childImageSharp.fixed.src,
             },
           ]}
         />
