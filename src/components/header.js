@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link as GatsbyLink } from 'gatsby'
+import { StaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 // import InternalLink from './internal-link'
 
@@ -15,9 +17,7 @@ const Content = styled.div`
   align-items: center;
 `
 
-const Avatar = styled.img`
-  width: 2em;
-  height: 2em;
+const Avatar = styled(Img)`
   border-radius: 0.3em;
 `
 
@@ -58,29 +58,44 @@ const Avatar = styled.img`
 // `
 
 const Header = () => (
-  <Layout>
-    <Content>
-      <GatsbyLink to="/">
-        <Avatar src="https://gravatar.com/avatar/0e82c1d212ddd6697333a244e36f04d3?s=96" />
-      </GatsbyLink>
-      {/* <Menu>
-        <MenuItems>
-          <MenuItem>
-            <MenuLink to="/about" activeClassName="active">
-              About
-            </MenuLink>
+  <StaticQuery
+    query={graphql`
+      query HeaderQuery {
+        avatar: file(relativePath: { eq: "images/avatar.jpg" }) {
+          childImageSharp {
+            fixed(width: 36, height: 36) {
+              ...GatsbyImageSharpFixed_noBase64
+            }
+          }
+        }
+      }
+    `}
+    render={data => (
+      <Layout>
+        <Content>
+          <GatsbyLink to="/">
+            <Avatar fixed={data.avatar.childImageSharp.fixed} alt="photo" />
+          </GatsbyLink>
+          {/* <Menu>
             <MenuItems>
               <MenuItem>
-                <InternalLink to="/about/work" activeClassName="active">
-                  Work
-                </InternalLink>
+                <MenuLink to="/about" activeClassName="active">
+                  About
+                </MenuLink>
+                <MenuItems>
+                  <MenuItem>
+                    <InternalLink to="/about/work" activeClassName="active">
+                      Work
+                    </InternalLink>
+                  </MenuItem>
+                </MenuItems>
               </MenuItem>
             </MenuItems>
-          </MenuItem>
-        </MenuItems>
-      </Menu> */}
-    </Content>
-  </Layout>
+          </Menu> */}
+        </Content>
+      </Layout>
+    )}
+  />
 )
 
 export default Header
