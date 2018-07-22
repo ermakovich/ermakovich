@@ -144,6 +144,7 @@ export const pageQuery = graphql`
   query WeddingPageQuery {
     photos: allFile(
       filter: { relativeDirectory: { eq: "pages/wedding/photos" } }
+      sort: { fields: birthTime }
     ) {
       edges {
         node {

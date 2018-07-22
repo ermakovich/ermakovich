@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import bgImage from './photos/Свадьба-50.jpg'
+import bgImage from './photos/50.jpg'
 
 export const Layout = styled.div`
   @import url('https://fonts.googleapis.com/css?family=Cormorant+Infant');
