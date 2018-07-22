@@ -51,6 +51,7 @@ const WeddingPage = ({ data }) => {
               width: '100%',
               height: '100%',
               zIndex: -1,
+              fontSize: '300px',
             }}
           />
         </Intro>
