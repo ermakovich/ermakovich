@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Img from 'gatsby-image'
+import Img from './progressive-image'
 
 export const PhotoGallery = styled.div`
   width: 100%;
@@ -43,8 +43,6 @@ export const PhotoGalleryItem = styled.a`
 `
 
 export const PhotoGalleryItemImg = styled(Img)`
-  width: 100%;
-
   @media (min-width: 400px) {
     width: 400px;
     height: 267px;

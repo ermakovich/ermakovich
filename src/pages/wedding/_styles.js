@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import bgImage from './photos/50.jpg'
+import Img from '../../components/progressive-image'
 
 export const Layout = styled.div`
   @import url('https://fonts.googleapis.com/css?family=Cormorant+Infant');
@@ -14,11 +14,6 @@ export const Layout = styled.div`
 
   @media (min-width: 1440px) {
     font-size: 1.5em;
-  }
-
-  header {
-    background: url(${bgImage}) no-repeat center;
-    background-size: cover;
   }
 
   .section {
@@ -104,12 +99,6 @@ export const Layout = styled.div`
     }
   }
 
-  .crew-item img {
-    width: 9em;
-    border-radius: 50%;
-    box-shadow: 0 0 0 0.5em rgba(0, 0, 0, 0.06);
-  }
-
   .crew-item h3 {
     margin-top: 0.5em;
     margin-bottom: 0;
@@ -118,4 +107,13 @@ export const Layout = styled.div`
   .video-frame {
     max-width: 100%;
   }
+`
+
+export const Intro = styled.header`
+  position: relative;
+`
+
+export const CrewAvatar = styled(Img)`
+  border-radius: 50%;
+  box-shadow: 0 0 0 0.5em rgba(0, 0, 0, 0.06);
 `

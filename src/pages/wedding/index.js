@@ -2,21 +2,17 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import Img from 'gatsby-image'
 
 import LayoutBase from '../../components/layout-base'
-import InternalLink from '../../components/internal-link'
 import OutboundLink from '../../components/outbound-link'
+import Img from '../../components/progressive-image'
 import {
   PhotoGallery,
   PhotoGalleryItem,
   PhotoGalleryItemImg,
 } from '../../components/photo-gallery'
 
-import { Layout } from './_styles'
-
-import egorPhoto from './crew/egor.jpg'
-import marinaPhoto from './crew/marina.jpg'
+import { Layout, Intro, CrewAvatar } from './_styles'
 
 const WeddingPage = ({ data }) => {
   const photos = data.photos.edges
@@ -38,14 +34,26 @@ const WeddingPage = ({ data }) => {
     <LayoutBase>
       <Helmet title="Вяселле Сяргея і Каці" />
       <Layout>
-        <header className="section">
+        <Intro className="section">
           <div className="section-content section-content--centered">
             <h1>Вяселле Сяргея і Каці 👫💒</h1>
             <h2>адбылося 24 лістапада 2017 года</h2>
             <p>Дзякуй усім за удзел!</p>
           </div>
           <span className="section-next-pointer">👇</span>
-        </header>
+          <Img
+            fluid={data.introBg.childImageSharp.fluid}
+            alt="background"
+            style={{
+              position: 'absolute',
+              left: 0,
+              top: 0,
+              width: '100%',
+              height: '100%',
+              zIndex: -1,
+            }}
+          />
+        </Intro>
         <section className="section">
           <div className="section-content">
             <h2>Праграма</h2>
@@ -92,7 +100,10 @@ const WeddingPage = ({ data }) => {
             <div className="crew">
               <div className="crew-item">
                 <OutboundLink href="https://vk.com/marina_luts">
-                  <img src={marinaPhoto} alt="Марына Луц" />
+                  <CrewAvatar
+                    fixed={data.marinaPhoto.childImageSharp.fixed}
+                    alt="Марына Луц"
+                  />
                 </OutboundLink>
                 <h3>Каардынатар</h3>
                 <OutboundLink href="https://vk.com/marina_luts">
@@ -101,7 +112,10 @@ const WeddingPage = ({ data }) => {
               </div>
               <div className="crew-item">
                 <OutboundLink href="https://vk.com/egor_danchenko_show">
-                  <img src={egorPhoto} alt="Ягор Данчанка" />
+                  <CrewAvatar
+                    fixed={data.egorPhoto.childImageSharp.fixed}
+                    alt="Ягор Данчанка"
+                  />
                 </OutboundLink>
                 <h3>Вядучы</h3>
                 <OutboundLink href="https://vk.com/egor_danchenko_show">
@@ -140,8 +154,20 @@ const WeddingPage = ({ data }) => {
 
 export default WeddingPage
 
+WeddingPage.propTypes = {
+  data: PropTypes.shape().isRequired,
+}
+
 export const pageQuery = graphql`
   query WeddingPageQuery {
+    introBg: file(relativePath: { eq: "pages/wedding/photos/50.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 3840) {
+          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_noBase64
+        }
+      }
+    }
     photos: allFile(
       filter: { relativeDirectory: { eq: "pages/wedding/photos" } }
       sort: { fields: birthTime }
@@ -155,6 +181,22 @@ export const pageQuery = graphql`
               ...GatsbyImageSharpFluid_noBase64
             }
           }
+        }
+      }
+    }
+    marinaPhoto: file(relativePath: { eq: "pages/wedding/crew/marina.jpg" }) {
+      childImageSharp {
+        fixed(width: 250) {
+          ...GatsbyImageSharpFixed
+          ...GatsbyImageSharpFixed_noBase64
+        }
+      }
+    }
+    egorPhoto: file(relativePath: { eq: "pages/wedding/crew/egor.jpg" }) {
+      childImageSharp {
+        fixed(width: 250) {
+          ...GatsbyImageSharpFixed
+          ...GatsbyImageSharpFixed_noBase64
         }
       }
     }
