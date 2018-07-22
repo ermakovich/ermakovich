@@ -163,7 +163,7 @@ export const pageQuery = graphql`
   query WeddingPageQuery {
     introBg: file(relativePath: { eq: "pages/wedding/photos/50.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 3840) {
+        fluid(maxWidth: 2560) {
           ...GatsbyImageSharpFluid
           ...GatsbyImageSharpFluid_noBase64
         }
