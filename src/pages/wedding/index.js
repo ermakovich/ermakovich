@@ -32,7 +32,12 @@ const WeddingPage = ({ data }) => {
 
   return (
     <LayoutBase>
-      <Helmet title="Вяселле Сяргея і Каці" />
+      <Helmet title="Вяселле Сяргея і Каці">
+        <link
+          href="https://fonts.googleapis.com/css?family=Cormorant+Infant"
+          rel="stylesheet"
+        />
+      </Helmet>
       <Layout>
         <Intro className="section">
           <div className="section-content section-content--centered">

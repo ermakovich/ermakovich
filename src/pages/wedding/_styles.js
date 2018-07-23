@@ -3,8 +3,6 @@ import styled from 'styled-components'
 import Img from '../../components/progressive-image'
 
 export const Layout = styled.div`
-  @import url('https://fonts.googleapis.com/css?family=Cormorant+Infant');
-
   font-family: 'Cormorant Infant', Georgia, Times New Roman;
   line-height: 2;
 
