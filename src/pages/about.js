@@ -12,6 +12,7 @@ import stackoverflowIcon from './about/images/social-icons/stackoverflow.svg'
 import linkedinIcon from './about/images/social-icons/linkedin.svg'
 import youtubeIcon from './about/images/social-icons/youtube.svg'
 import soundcloudIcon from './about/images/social-icons/soundcloud.svg'
+import goodreadsIcon from './about/images/social-icons/goodreads.svg'
 
 import bettyPhoto from './about/images/betty.jpg'
 import withKatePhoto from './about/images/with-kate.jpg'
@@ -24,28 +25,38 @@ import {
 } from './about/_styles'
 
 const socialLinks = [
-  { name: 'github', url: 'https://github.com/ermakovich', icon: githubIcon },
-  { name: 'twitter', url: 'https://twitter.com/ki_duk', icon: twitterIcon },
-  { name: 'medium', url: 'https://medium.com/@ki_duk', icon: mediumIcon },
+  { name: 'github', title: 'GitHub', url: 'https://github.com/ermakovich', icon: githubIcon },
+  { name: 'twitter', title: 'Twitter', url: 'https://twitter.com/ki_duk', icon: twitterIcon },
+  { name: 'medium', title: 'Medium', url: 'https://medium.com/@ki_duk', icon: mediumIcon },
   {
     name: 'stackoverflow',
+    title: 'Stackoverflow',
     url: 'https://stackoverflow.com/users/434402/s-ermakovich',
     icon: stackoverflowIcon,
   },
   {
     name: 'linkedin',
+    title: 'LinkedIn',
     url: 'https://www.linkedin.com/in/ermakovich/',
     icon: linkedinIcon,
   },
   {
     name: 'youtube',
+    title: 'YouTube',
     url: 'https://www.youtube.com/channel/UCoBmiyN8_K-spSY8V-EizJQ',
     icon: youtubeIcon,
   },
   {
     name: 'soundcloud',
+    title: 'SoundCloud',
     url: 'https://soundcloud.com/kiduk',
     icon: soundcloudIcon,
+  },
+  {
+    name: 'goodreads',
+    title: 'Goodreads',
+    url: 'https://www.goodreads.com/user/show/14034539-siarhei-yermakovi',
+    icon: goodreadsIcon,
   },
 ]
 
