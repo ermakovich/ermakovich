@@ -43,6 +43,8 @@ export const PhotoGalleryItem = styled.a`
 `
 
 export const PhotoGalleryItemImg = styled(Img)`
+  width: 100%;
+
   @media (min-width: 400px) {
     width: 400px;
     height: 267px;

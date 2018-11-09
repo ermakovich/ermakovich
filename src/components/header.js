@@ -5,6 +5,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
 // import InternalLink from './internal-link'
+// import UnstyledList from './unstyled-list'
 
 const Layout = styled.div`
   margin-bottom: 1.45em;
@@ -23,19 +24,16 @@ const Avatar = styled(Img)`
 
 // const Menu = styled.menu`
 //   margin: 0;
-//   margin-left: 1em;
+//   margin-left: 2em;
 //   padding-left: 0;
 // `
 //
-// const MenuItems = styled.ul`
-//   margin-left: 0;
-//   margin-bottom: 0;
+// const MenuItems = styled(UnstyledList)`
 //   display: flex;
 //   flex-flow: wrap;
 // `
 //
 // const MenuItem = styled.li`
-//   list-style: none;
 //   margin-bottom: 0;
 //
 //   & + & {
@@ -54,6 +52,7 @@ const Avatar = styled(Img)`
 //
 // const MenuLink = styled(InternalLink)`
 //   &.active {
+//     font-weight: bold;
 //   }
 // `
 
@@ -79,16 +78,14 @@ const Header = () => (
           {/* <Menu>
             <MenuItems>
               <MenuItem>
-                <MenuLink to="/about" activeClassName="active">
+                <MenuLink to="/about/" activeClassName="active">
                   About
                 </MenuLink>
-                <MenuItems>
-                  <MenuItem>
-                    <InternalLink to="/about/work" activeClassName="active">
-                      Work
-                    </InternalLink>
-                  </MenuItem>
-                </MenuItems>
+              </MenuItem>
+              <MenuItem>
+                <MenuLink to="/photos/" activeClassName="active">
+                  Photos
+                </MenuLink>
               </MenuItem>
             </MenuItems>
           </Menu> */}

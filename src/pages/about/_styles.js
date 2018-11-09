@@ -4,6 +4,13 @@ import OutboundLink from '../../components/outbound-link'
 import UnstyledList from '../../components/unstyled-list'
 import media from '../../components/utils/media'
 
+export const Wrapper = styled.div`
+  margin: 0 auto;
+  max-width: 35em;
+  padding: 0 1.0875rem 1.45rem;
+  padding-top: 0;
+`
+
 export const SocialLinks = UnstyledList.extend`
   text-align: center;
 
