@@ -4,8 +4,8 @@ import { Link as GatsbyLink } from 'gatsby'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
-// import InternalLink from './internal-link'
-// import UnstyledList from './unstyled-list'
+import InternalLink from './internal-link'
+import UnstyledList from './unstyled-list'
 
 const Layout = styled.div`
   margin-bottom: 1.45em;
@@ -22,39 +22,39 @@ const Avatar = styled(Img)`
   border-radius: 0.3em;
 `
 
-// const Menu = styled.menu`
-//   margin: 0;
-//   margin-left: 2em;
-//   padding-left: 0;
-// `
-//
-// const MenuItems = styled(UnstyledList)`
-//   display: flex;
-//   flex-flow: wrap;
-// `
-//
-// const MenuItem = styled.li`
-//   margin-bottom: 0;
-//
-//   & + & {
-//     margin-left: 1em;
-//   }
-//
-//   ${MenuItems} {
-//     margin-left: 1em;
-//
-//     &::before {
-//       content: '↳';
-//       margin-right: 0.5em;
-//     }
-//   }
-// `
-//
-// const MenuLink = styled(InternalLink)`
-//   &.active {
-//     font-weight: bold;
-//   }
-// `
+const Menu = styled.menu`
+  margin: 0;
+  margin-left: 2em;
+  padding-left: 0;
+`
+
+const MenuItems = styled(UnstyledList)`
+  display: flex;
+  flex-flow: wrap;
+`
+
+const MenuItem = styled.li`
+  margin-bottom: 0;
+
+  & + & {
+    margin-left: 1em;
+  }
+
+  ${MenuItems} {
+    margin-left: 1em;
+
+    &::before {
+      content: '↳';
+      margin-right: 0.5em;
+    }
+  }
+`
+
+const MenuLink = styled(InternalLink)`
+  &.active {
+    font-weight: bold;
+  }
+`
 
 const Header = () => (
   <StaticQuery
@@ -75,7 +75,7 @@ const Header = () => (
           <GatsbyLink to="/">
             <Avatar fixed={data.avatar.childImageSharp.fixed} alt="photo" />
           </GatsbyLink>
-          {/* <Menu>
+          <Menu>
             <MenuItems>
               <MenuItem>
                 <MenuLink to="/about/" activeClassName="active">
@@ -83,12 +83,17 @@ const Header = () => (
                 </MenuLink>
               </MenuItem>
               <MenuItem>
+                <MenuLink to="/blog/" activeClassName="active">
+                  Blog
+                </MenuLink>
+              </MenuItem>
+              {/* <MenuItem>
                 <MenuLink to="/photos/" activeClassName="active">
                   Photos
                 </MenuLink>
-              </MenuItem>
+              </MenuItem> */}
             </MenuItems>
-          </Menu> */}
+          </Menu>
         </Content>
       </Layout>
     )}

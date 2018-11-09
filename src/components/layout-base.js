@@ -12,6 +12,7 @@ const LayoutBase = ({ children }) => (
         site {
           siteMetadata {
             title
+            description
           }
         }
         favicon: file(relativePath: { eq: "images/avatar.jpg" }) {
@@ -30,7 +31,7 @@ const LayoutBase = ({ children }) => (
           meta={[
             {
               name: 'description',
-              content: 'My personal website',
+              content: data.site.siteMetadata.description,
             },
           ]}
           link={[
@@ -40,9 +41,8 @@ const LayoutBase = ({ children }) => (
               href: data.favicon.childImageSharp.fixed.src,
             },
           ]}
-        >
-          <html lang="en" />
-        </Helmet>
+          htmlAttributes={{ lang: 'en' }}
+        />
         {children}
       </>
     )}

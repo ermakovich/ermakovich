@@ -10,14 +10,6 @@ import { Layout, Avatar, Header, More } from './index/_styles'
 
 const IndexPage = ({ data }) => (
   <LayoutBase>
-    <Helmet
-      meta={[
-        {
-          name: 'description',
-          content: 'Hi, I’m Siarhei Yermakovich. Want to know more?',
-        },
-      ]}
-    />
     <Layout>
       <Avatar fixed={data.avatar.childImageSharp.fixed} alt="photo" />
       <Header>

@@ -1,6 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: 'Siarhei Yermakovich',
+    author: 'Siarhei Yermakovich',
+    description:
+      'Everything you need to know about Siarhei Yermakovich and even more.',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -24,5 +27,18 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     'gatsby-plugin-resolve-src',
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 600,
+            },
+          },
+        ],
+      },
+    },
   ],
 }
