@@ -14,7 +14,7 @@ const LayoutBase = ({ children }) => (
             title
           }
         }
-        avatar: file(relativePath: { eq: "images/avatar.jpg" }) {
+        favicon: file(relativePath: { eq: "images/avatar.jpg" }) {
           childImageSharp {
             fixed(width: 96, height: 96) {
               src
@@ -30,14 +30,14 @@ const LayoutBase = ({ children }) => (
           meta={[
             {
               name: 'description',
-              content: 'Hi, I’m Siarhei Yermakovich. Want to know more?',
+              content: 'My personal website',
             },
           ]}
           link={[
             {
               rel: 'shortcut icon',
               type: 'image/png',
-              href: data.avatar.childImageSharp.fixed.src,
+              href: data.favicon.childImageSharp.fixed.src,
             },
           ]}
         >
