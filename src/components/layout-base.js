@@ -40,7 +40,9 @@ const LayoutBase = ({ children }) => (
               href: data.avatar.childImageSharp.fixed.src,
             },
           ]}
-        />
+        >
+          <html lang="en" />
+        </Helmet>
         {children}
       </>
     )}
