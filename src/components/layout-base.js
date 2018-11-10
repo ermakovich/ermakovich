@@ -8,7 +8,7 @@ import './layout.css'
 const LayoutBase = ({ children }) => (
   <StaticQuery
     query={graphql`
-      query SiteTitleQuery {
+      query {
         site {
           siteMetadata {
             title

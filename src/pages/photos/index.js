@@ -39,7 +39,7 @@ PhotosPage.propTypes = {
 }
 
 export const pageQuery = graphql`
-  query PhotosPageQuery {
+  query {
     photos: allFile(
       filter: { relativeDirectory: { eq: "pages/photos/all" } }
       sort: { fields: birthTime }

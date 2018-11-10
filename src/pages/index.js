@@ -34,7 +34,7 @@ IndexPage.propTypes = {
 export default IndexPage
 
 export const pageQuery = graphql`
-  query IndexPageQuery {
+  query {
     avatar: file(relativePath: { eq: "images/avatar.jpg" }) {
       childImageSharp {
         fixed(width: 200, height: 200) {

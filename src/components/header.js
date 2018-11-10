@@ -59,7 +59,7 @@ const Avatar = styled(Img)`
 const Header = () => (
   <StaticQuery
     query={graphql`
-      query HeaderQuery {
+      query {
         avatar: file(relativePath: { eq: "images/avatar.jpg" }) {
           childImageSharp {
             fixed(width: 36, height: 36) {
