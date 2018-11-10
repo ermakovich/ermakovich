@@ -3,14 +3,14 @@ import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
-import LayoutBase from '../../components/layout-base'
-import OutboundLink from '../../components/outbound-link'
-import Img from '../../components/progressive-image'
+import LayoutBase from 'components/layout-base'
+import OutboundLink from 'components/outbound-link'
+import Img from 'components/progressive-image'
 import {
   PhotoGallery,
   PhotoGalleryItem,
   PhotoGalleryItemImg,
-} from '../../components/photo-gallery'
+} from 'components/photo-gallery'
 
 import { Layout, Intro, CrewAvatar } from './_styles'
 

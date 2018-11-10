@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
-import OutboundLink from '../../components/outbound-link'
-import UnstyledList from '../../components/unstyled-list'
-import media from '../../components/utils/media'
+import OutboundLink from 'components/outbound-link'
+import UnstyledList from 'components/unstyled-list'
+import media from 'components/utils/media'
 
 export const Wrapper = styled.div`
   margin: 0 auto;

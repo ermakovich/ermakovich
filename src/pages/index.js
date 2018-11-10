@@ -2,8 +2,8 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 
-import LayoutBase from '../components/layout-base'
-import InternalLink from '../components/internal-link'
+import LayoutBase from 'components/layout-base'
+import InternalLink from 'components/internal-link'
 
 import { Layout, Avatar, Header, More } from './index/_styles'
 

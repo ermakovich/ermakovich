@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import Img from '../../components/progressive-image'
+import Img from 'components/progressive-image'
 
 export const Layout = styled.div`
   margin: 7em auto;

@@ -5413,6 +5413,11 @@ gatsby-plugin-react-helmet@^3.0.1:
   dependencies:
     "@babel/runtime" "^7.0.0"
 
+gatsby-plugin-resolve-src@^2.0.0-beta.1:
+  version "2.0.0-beta.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-resolve-src/-/gatsby-plugin-resolve-src-2.0.0-beta.1.tgz#a45cb60d191d67f284c0529c1f06803855c801c5"
+  integrity sha512-uyiRSiTKxpKqw6kfqp3FyxItJYPPx6O2Sx5rpG3O6Q+bAkWxaRyAbw/fbU01jxzCcd4nV4OKTTxlt2crawC0mQ==
+
 gatsby-plugin-sharp@^2.0.12:
   version "2.0.12"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.0.12.tgz#c791b29f153e481b8287605bf171331daaba7cb8"

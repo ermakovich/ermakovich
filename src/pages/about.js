@@ -1,9 +1,9 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 
-import Layout from '../components/layout'
-import Link from '../components/link'
-import OutboundLink from '../components/outbound-link'
+import Layout from 'components/layout'
+import Link from 'components/link'
+import OutboundLink from 'components/outbound-link'
 
 import githubIcon from './about/images/social-icons/github.svg'
 import twitterIcon from './about/images/social-icons/twitter.svg'
