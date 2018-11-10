@@ -78,7 +78,15 @@ const socialLinks = [
 
 const AboutPage = () => (
   <Layout>
-    <Helmet title="About Siarhei Yermakovich" />
+    <Helmet
+      title="About Siarhei Yermakovich"
+      meta={[
+        {
+          name: 'description',
+          content: 'Some info about me and useful links',
+        },
+      ]}
+    />
     <Wrapper>
       <h1>About</h1>
       <p>
