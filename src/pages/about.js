@@ -4,6 +4,7 @@ import Helmet from 'react-helmet'
 import Layout from 'components/layout'
 import Link from 'components/link'
 import OutboundLink from 'components/outbound-link'
+import Content from 'components/content'
 
 import githubIcon from './about/images/social-icons/github.svg'
 import twitterIcon from './about/images/social-icons/twitter.svg'
@@ -18,7 +19,6 @@ import bettyPhoto from './about/images/betty.jpg'
 import withKatePhoto from './about/images/with-kate.jpg'
 
 import {
-  Wrapper,
   SocialLinks,
   SocialLinksItem,
   SocialLink,
@@ -78,16 +78,7 @@ const socialLinks = [
 
 const AboutPage = () => (
   <Layout>
-    <Helmet
-      title="About Siarhei Yermakovich"
-      meta={[
-        {
-          name: 'description',
-          content: 'Some info about me and useful links',
-        },
-      ]}
-    />
-    <Wrapper>
+    <Content>
       <h1>About</h1>
       <p>
         My name is Siarhei Yermakovich. I’m a developer living in{' '}
@@ -116,7 +107,7 @@ const AboutPage = () => (
           </SocialLinksItem>
         ))}
       </SocialLinks>
-    </Wrapper>
+    </Content>
   </Layout>
 )
 
