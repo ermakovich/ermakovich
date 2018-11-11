@@ -8,6 +8,34 @@ import Layout from 'components/layout'
 import Content from 'components/content'
 import PostMeta from 'components/blog/post-meta'
 import PostDate from 'components/blog/post-date'
+import Img from 'components/progressive-image'
+
+const PostCover = styled.div`
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+
+  h1 {
+    background: white;
+    display: inline-block;
+    z-index: 1;
+    padding: 0.5em;
+  }
+`
+
+const PostCoverContent = styled(Content)`
+  max-width: 50em;
+`
+
+const PostCoverImgWrapper = styled.div`
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+`
 
 const PostContent = styled(Content)`
   font-size: 1.1rem;
@@ -20,6 +48,7 @@ class BlogPostTemplate extends React.Component {
     const description =
       post.excerpt || get(this.props, 'data.site.siteMetadata.description')
     const { previous, next } = this.props.pageContext
+    const coverImage = post.frontmatter.cover_image
 
     return (
       <Layout>
@@ -27,8 +56,24 @@ class BlogPostTemplate extends React.Component {
           meta={[{ name: 'description', content: description }]}
           title={`${post.frontmatter.title} | ${siteTitle}`}
         />
+        {coverImage && (
+          <PostCover>
+            <PostCoverContent>
+              <h1>{post.frontmatter.title}</h1>
+            </PostCoverContent>
+            <PostCoverImgWrapper>
+              <Img
+                fluid={coverImage.childImageSharp.fluid}
+                alt="cover image"
+                style={{
+                  height: '100%',
+                }}
+              />
+            </PostCoverImgWrapper>
+          </PostCover>
+        )}
         <PostContent>
-          <h1>{post.frontmatter.title}</h1>
+          {!coverImage && <h1>{post.frontmatter.title}</h1>}
           <PostMeta>
             <PostDate value={post.frontmatter.date} />
             &nbsp;&middot;&nbsp;
@@ -86,6 +131,14 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        cover_image {
+          childImageSharp {
+            fluid(maxWidth: 2560) {
+              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_noBase64
+            }
+          }
+        }
       }
     }
   }

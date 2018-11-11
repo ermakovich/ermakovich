@@ -4,7 +4,6 @@ import styled from 'styled-components'
 export default styled.div`
   margin: 0 auto;
   max-width: 35em;
-  padding: 0 1em 1.5em;
-  padding-top: 0;
+  padding: 0 1em;
   word-break: break-word;
 `
