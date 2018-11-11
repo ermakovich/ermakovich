@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
   padding-top: 0;
 `
 
-export const SocialLinks = UnstyledList.extend`
+export const SocialLinks = styled(UnstyledList)`
   text-align: center;
 
   @media ${media.mid} {
