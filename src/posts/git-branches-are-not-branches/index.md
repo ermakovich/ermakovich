@@ -4,7 +4,7 @@ title: 'Git branches are not branches?'
 cover_image: './trees.jpeg'
 ---
 
-I personally love Git. It is much better than anything else I've used before. However there is one feature I don't like. I'm talking ability to merge branches.
+I personally love Git. It is much better than anything else I've used before. However there is one feature I don't like. I'm talking about ability to merge branches.
 
 You may ask why? Well, lets imagine a tree. Branches grow from it's trunk and never collide. Speaking in terms of graph theory there are no cycles. In Git you can create cycles by merging a branch into trunk (aka _master_) or into another branch. This is because Git represents history not as a [tree](http://en.wikipedia.org/wiki/Tree_%28data_structure%29), but rather as a structure called [directed acyclic graph](https://en.wikipedia.org/wiki/Directed_acyclic_graph) (DAG).
 
