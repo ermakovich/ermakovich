@@ -12,6 +12,6 @@ DAG structure for representing version history is common for all [DVCS](http://e
 
 Representing version history as DAG seems to be a design error, because it breaks logical flow of history and conflicts with the idea of incremental development. Advice: if you are aimed to develop software in the most logical and efficient way – **avoid** DAGs for representing version history. Just stick with normal tree structure and use branches **only** for release management.
 
-I will try to tell more about this in some time in future.
+I will try to tell more about this some time in future.
 
 Peace!
