@@ -83,8 +83,8 @@ const Header = () => (
                 </MenuLink>
               </MenuItem>
               <MenuItem>
-                <MenuLink to="/blog/" activeClassName="active">
-                  Blog
+                <MenuLink to="/posts/" activeClassName="active">
+                  Posts
                 </MenuLink>
               </MenuItem>
               {/* <MenuItem>

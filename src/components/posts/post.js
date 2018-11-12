@@ -6,8 +6,8 @@ import styled from 'styled-components'
 
 import Layout from 'components/layout'
 import Content from 'components/content'
-import PostMeta from 'components/blog/post-meta'
-import PostDate from 'components/blog/post-date'
+import PostMeta from 'components/posts/post-meta'
+import PostDate from 'components/posts/post-date'
 import Img from 'components/progressive-image'
 
 const PostCover = styled.div`
