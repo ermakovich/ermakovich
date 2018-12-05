@@ -10,8 +10,8 @@ Built using [Gatsby](https://www.gatsbyjs.org). Automatically deployed using Git
 
 # Running
 
-  $ yarn develop
+    $ yarn develop
 
 # Building
 
-  $ yarn build
+    $ yarn build
