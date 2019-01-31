@@ -4,8 +4,8 @@ import { Link as GatsbyLink } from 'gatsby'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
-import InternalLink from './internal-link'
-import UnstyledList from './unstyled-list'
+import InternalLink from 'components/internal-link'
+import UnstyledList from 'components/unstyled-list'
 
 const Layout = styled.div`
   margin-bottom: 1.45em;

@@ -1,7 +1,5 @@
 import React from 'react'
-import Helmet from 'react-helmet'
 
-import Layout from 'components/layout'
 import Link from 'components/link'
 import OutboundLink from 'components/outbound-link'
 import Content from 'components/content'
@@ -77,38 +75,36 @@ const socialLinks = [
 ]
 
 const AboutPage = () => (
-  <Layout>
-    <Content>
-      <h1>About</h1>
-      <p>
-        My name is Siarhei Yermakovich. I’m a developer living in{' '}
-        <OutboundLink href="https://en.wikipedia.org/wiki/Minsk">
-          Minsk
-        </OutboundLink>
-        , Belarus. I work for internet startups{' '}
-        <OutboundLink href="https://dock.io">Dock</OutboundLink> and{' '}
-        <OutboundLink href="https://remote.com">Remote</OutboundLink>. When not
-        doing this I’m recording cover songs and enjoying nature. I do outdoor
-        workouts regularly when it’s not too cold outside.
-      </p>
+  <Content>
+    <h1>About</h1>
+    <p>
+      My name is Siarhei Yermakovich. I’m a developer living in{' '}
+      <OutboundLink href="https://en.wikipedia.org/wiki/Minsk">
+        Minsk
+      </OutboundLink>
+      , Belarus. I work for internet startups{' '}
+      <OutboundLink href="https://dock.io">Dock</OutboundLink> and{' '}
+      <OutboundLink href="https://remote.com">Remote</OutboundLink>. When not
+      doing this I’m recording cover songs and enjoying nature. I do outdoor
+      workouts regularly when it’s not too cold outside.
+    </p>
 
-      <p>
-        Together with my wife <Link href={withKatePhoto}>Kate</Link> we are
-        happy owners of a small funny cat <Link href={bettyPhoto}>Betty</Link>.
-      </p>
+    <p>
+      Together with my wife <Link href={withKatePhoto}>Kate</Link> we are happy
+      owners of a small funny cat <Link href={bettyPhoto}>Betty</Link>.
+    </p>
 
-      <p>You can find me on:</p>
-      <SocialLinks>
-        {socialLinks.map(socialLink => (
-          <SocialLinksItem key={socialLink.name}>
-            <SocialLink href={socialLink.url}>
-              <SocialIcon src={socialLink.icon} alt={socialLink.name} />
-            </SocialLink>
-          </SocialLinksItem>
-        ))}
-      </SocialLinks>
-    </Content>
-  </Layout>
+    <p>You can find me on:</p>
+    <SocialLinks>
+      {socialLinks.map(socialLink => (
+        <SocialLinksItem key={socialLink.name}>
+          <SocialLink href={socialLink.url}>
+            <SocialIcon src={socialLink.icon} alt={socialLink.name} />
+          </SocialLink>
+        </SocialLinksItem>
+      ))}
+    </SocialLinks>
+  </Content>
 )
 
 export default AboutPage

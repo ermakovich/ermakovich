@@ -5,9 +5,9 @@ import LayoutBase from './layout-base'
 import Header from './header'
 import './layout.css'
 
-const Layout = ({ children }) => (
+const Layout = ({ children, pageContext }) => (
   <LayoutBase>
-    <Header />
+    {pageContext.layout !== 'custom' && <Header />}
     {children}
   </LayoutBase>
 )

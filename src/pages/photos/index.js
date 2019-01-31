@@ -2,7 +2,6 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 
-import Layout from 'components/layout'
 import {
   PhotoGallery,
   PhotoGalleryItem,
@@ -25,11 +24,7 @@ const PhotosPage = ({ data }) => {
     )
   })
 
-  return (
-    <Layout>
-      <PhotoGallery>{photoElements}</PhotoGallery>
-    </Layout>
-  )
+  return <PhotoGallery>{photoElements}</PhotoGallery>
 }
 
 export default PhotosPage

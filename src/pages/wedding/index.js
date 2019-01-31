@@ -3,7 +3,6 @@ import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
-import LayoutBase from 'components/layout-base'
 import OutboundLink from 'components/outbound-link'
 import Img from 'components/progressive-image'
 import {
@@ -31,7 +30,7 @@ const WeddingPage = ({ data }) => {
   })
 
   return (
-    <LayoutBase>
+    <>
       <Helmet title="Вяселле Сяргея і Каці" />
       <Layout>
         <Intro className="section">
@@ -149,7 +148,7 @@ const WeddingPage = ({ data }) => {
           </div>
         </section>
       </Layout>
-    </LayoutBase>
+    </>
   )
 }
 

@@ -57,6 +57,15 @@ exports.createPages = ({ graphql, actions }) => {
   })
 }
 
+exports.onCreatePage = ({ page, actions }) => {
+  const { createPage } = actions
+
+  if (page.path === '/' || page.path.match(/wedding/)) {
+    page.context.layout = 'custom'
+  }
+  createPage(page)
+}
+
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 

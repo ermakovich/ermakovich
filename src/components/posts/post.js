@@ -4,7 +4,6 @@ import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 import styled from 'styled-components'
 
-import Layout from 'components/layout'
 import Content from 'components/content'
 import PostMeta from 'components/posts/post-meta'
 import PostDate from 'components/posts/post-date'
@@ -51,7 +50,7 @@ class BlogPostTemplate extends React.Component {
     const coverImage = post.frontmatter.cover_image
 
     return (
-      <Layout>
+      <>
         <Helmet
           meta={[{ name: 'description', content: description }]}
           title={`${post.frontmatter.title} | ${siteTitle}`}
@@ -107,7 +106,7 @@ class BlogPostTemplate extends React.Component {
             )}
           </ul>
         </PostContent>
-      </Layout>
+      </>
     )
   }
 }

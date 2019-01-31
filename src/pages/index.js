@@ -1,25 +1,21 @@
 import React from 'react'
-import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 
-import LayoutBase from 'components/layout-base'
 import InternalLink from 'components/internal-link'
 
 import { Layout, Avatar, Header, More } from './index/_styles'
 
 const IndexPage = ({ data }) => (
-  <LayoutBase>
-    <Layout>
-      <Avatar fixed={data.avatar.childImageSharp.fixed} alt="photo" />
-      <Header>
-        Hi, I’m <strong>Siarhei Yermakovich</strong>
-      </Header>
-      <More>
-        Want to know <InternalLink to="/about/">more</InternalLink>?
-      </More>
-    </Layout>
-  </LayoutBase>
+  <Layout>
+    <Avatar fixed={data.avatar.childImageSharp.fixed} alt="photo" />
+    <Header>
+      Hi, I’m <strong>Siarhei Yermakovich</strong>
+    </Header>
+    <More>
+      Want to know <InternalLink to="/about/">more</InternalLink>?
+    </More>
+  </Layout>
 )
 
 IndexPage.propTypes = {
