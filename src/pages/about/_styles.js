@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import OutboundLink from 'components/outbound-link'
 import UnstyledList from 'components/unstyled-list'
 import media from 'components/utils/media'
+import { system as systemColor } from 'components/utils/colors'
 
 export const Wrapper = styled.div`
   margin: 0 auto;
@@ -26,11 +27,17 @@ export const SocialLinksItem = styled.li`
 `
 
 export const SocialLink = styled(OutboundLink)`
-  display: inline-flex;
-  font-size: 16px;
+  height: 4em;
+  border: 1px solid ${systemColor};
+  border-radius: 3px;
+  background: white;
+  display: flex;
+  font-size: 14px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `
 
 export const SocialIcon = styled.img`
   height: 1.5em;
-  margin-right: 1em;
 `
