@@ -9,6 +9,8 @@ import PostMeta from 'components/posts/post-meta'
 import PostDate from 'components/posts/post-date'
 import Img from 'components/progressive-image'
 
+import { bg as bgColor, fg as fgColor } from 'components/utils/colors'
+
 const PostCover = styled.div`
   position: relative;
   overflow: hidden;
@@ -18,7 +20,8 @@ const PostCover = styled.div`
   align-items: center;
 
   h1 {
-    background: white;
+    background: ${fgColor};
+    color: ${bgColor};
     display: inline-block;
     z-index: 1;
     padding: 0.5em;

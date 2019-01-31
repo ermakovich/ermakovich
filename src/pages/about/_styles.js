@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import OutboundLink from 'components/outbound-link'
 import UnstyledList from 'components/unstyled-list'
 import media from 'components/utils/media'
-import { system as systemColor } from 'components/utils/colors'
+import { system as systemColor, fg as fgColor } from 'components/utils/colors'
 
 export const Wrapper = styled.div`
   margin: 0 auto;
@@ -30,7 +30,7 @@ export const SocialLink = styled(OutboundLink)`
   height: 4em;
   border: 1px solid ${systemColor};
   border-radius: 3px;
-  background: white;
+  background: ${fgColor};
   display: flex;
   font-size: 14px;
   flex-direction: column;

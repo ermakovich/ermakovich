@@ -12,7 +12,7 @@ export const PhotoGallery = styled.div`
 export const PhotoGalleryItem = styled.a`
   display: flex;
   align-items: flex-start;
-  border: 0.1rem solid white;
+  border: 0.1rem solid rgb(61, 60, 58);
   box-sizing: border-box;
   position: relative;
 

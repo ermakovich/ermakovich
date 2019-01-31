@@ -3,6 +3,8 @@ html {
   font-family: georgia, serif;
   line-height: 1.5;
   box-sizing: border-box;
+  background: rgb(35, 35, 37);
+  color: rgb(229, 225, 216);
 }
 body {
   margin: 0;
@@ -21,4 +23,8 @@ pre {
   background: rgba(0, 0, 0, 0.05);
   padding: 1em;
   white-space: pre-wrap;
+}
+
+a {
+  color: rgb(71, 145, 230);
 }

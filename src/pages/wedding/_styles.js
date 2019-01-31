@@ -2,6 +2,8 @@ import styled from 'styled-components'
 
 import Img from 'components/progressive-image'
 
+import { bg as bgColor, fg as fgColor } from 'components/utils/colors'
+
 export const Layout = styled.div`
   /* cyrillic-ext */
   @font-face {
@@ -75,13 +77,9 @@ export const Layout = styled.div`
   }
 
   .section:nth-child(odd) {
-    color: white;
+    color: ${fgColor};
     text-shadow: 0 0 0.2em rgba(0, 0, 0, 0.7);
     position: relative;
-  }
-
-  .section:nth-child(odd) a {
-    color: white;
   }
 
   .section:nth-child(odd)::before {
@@ -128,7 +126,7 @@ export const Layout = styled.div`
   }*/
 
   .timeline-item-time {
-    color: brown;
+    color: rgb(213, 134, 130);
     margin-right: 1em;
   }
 
