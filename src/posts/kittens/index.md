@@ -29,3 +29,5 @@ image: './DSC08371.jpg'
   <img src="./DSC08395.jpg">
   <figcaption>4. Малыш-"четвертыш". Самый могучий и бесстрашный.</figcaption>
 </figure>
+
+Еще больше фото [тут](https://photos.app.goo.gl/k1aGQoMoMxjR8S6M6).
