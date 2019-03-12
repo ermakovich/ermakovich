@@ -59,12 +59,26 @@ class BlogPostTemplate extends React.Component {
       post.excerpt || get(this.props, 'data.site.siteMetadata.description')
     const { previous, next } = this.props.pageContext
     const coverImage = post.frontmatter.cover_image
+    const image = post.frontmatter.image
     const tags = post.frontmatter.tags
 
     return (
       <>
         <Helmet
-          meta={[{ name: 'description', content: description }]}
+          meta={[
+            {
+              name: 'description',
+              content: description,
+            },
+            {
+              name: 'og:image',
+              content: image
+                ? image.publicURL
+                : coverImage
+                  ? coverImage.publicURL
+                  : null,
+            },
+          ]}
           title={`${post.frontmatter.title} | ${siteTitle}`}
         />
         {coverImage && (
@@ -90,6 +104,9 @@ class BlogPostTemplate extends React.Component {
             &nbsp;&middot;&nbsp;
             <span>{post.timeToRead} min read</span>
           </PostMeta>
+          {image && (
+            <Img fluid={image.childImageSharp.fluid} alt="cover image" />
+          )}
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
 
           <NextPrev>
@@ -141,6 +158,16 @@ export const pageQuery = graphql`
               ...GatsbyImageSharpFluid_noBase64
             }
           }
+          publicURL
+        }
+        image {
+          childImageSharp {
+            fluid(maxWidth: 700) {
+              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_noBase64
+            }
+          }
+          publicURL
         }
         tags
       }

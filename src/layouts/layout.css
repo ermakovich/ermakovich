@@ -29,6 +29,11 @@ a {
   color: rgb(71, 145, 230);
 }
 
+figure {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 figcaption {
   text-align: center;
   font-size: smaller;
