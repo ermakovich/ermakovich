@@ -8,6 +8,7 @@ import Content from 'components/content'
 import PostMeta from 'components/posts/post-meta'
 import PostDate from 'components/posts/post-date'
 import Img from 'components/progressive-image'
+import UnstyledList from 'components/unstyled-list'
 
 import { bg as bgColor, fg as fgColor } from 'components/utils/colors'
 
@@ -43,6 +44,13 @@ const PostContent = styled(Content)`
   font-size: 1.1rem;
 `
 
+const NextPrev = styled(UnstyledList)`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 3rem;
+`
+
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
@@ -51,6 +59,7 @@ class BlogPostTemplate extends React.Component {
       post.excerpt || get(this.props, 'data.site.siteMetadata.description')
     const { previous, next } = this.props.pageContext
     const coverImage = post.frontmatter.cover_image
+    const tags = post.frontmatter.tags
 
     return (
       <>
@@ -83,15 +92,7 @@ class BlogPostTemplate extends React.Component {
           </PostMeta>
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
 
-          <ul
-            style={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              justifyContent: 'space-between',
-              listStyle: 'none',
-              padding: 0,
-            }}
-          >
+          <NextPrev>
             {previous && (
               <li>
                 <Link to={previous.fields.slug} rel="prev">
@@ -107,7 +108,7 @@ class BlogPostTemplate extends React.Component {
                 </Link>
               </li>
             )}
-          </ul>
+          </NextPrev>
         </PostContent>
       </>
     )
@@ -141,6 +142,7 @@ export const pageQuery = graphql`
             }
           }
         }
+        tags
       }
     }
   }

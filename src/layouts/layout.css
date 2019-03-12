@@ -28,3 +28,9 @@ pre {
 a {
   color: rgb(71, 145, 230);
 }
+
+figcaption {
+  text-align: center;
+  font-size: smaller;
+  margin-top: 0.3rem;
+}
