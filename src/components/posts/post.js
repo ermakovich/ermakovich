@@ -110,18 +110,19 @@ class BlogPostTemplate extends React.Component {
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
 
           <NextPrev>
-            {previous && (
+            {next && (
               <li>
-                <Link to={previous.fields.slug} rel="prev">
-                  ← {previous.frontmatter.title}
+                → Next post:&nbsp;
+                <Link to={next.fields.slug} rel="next">
+                  {next.frontmatter.title}
                 </Link>
               </li>
             )}
-
-            {next && (
+            {previous && (
               <li>
-                <Link to={next.fields.slug} rel="next">
-                  {next.frontmatter.title} →
+                ← Previous post:&nbsp;
+                <Link to={previous.fields.slug} rel="prev">
+                  {previous.frontmatter.title}
                 </Link>
               </li>
             )}
