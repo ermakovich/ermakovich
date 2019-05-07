@@ -20,9 +20,17 @@ li {
 }
 
 pre {
-  background: rgba(0, 0, 0, 0.05);
   padding: 1em;
   white-space: pre-wrap;
+  background: rgba(128, 0, 0, 0.5);
+}
+
+pre > code {
+  background: transparent;
+}
+
+code {
+  background: rgba(128, 0, 0, 0.5);
 }
 
 a {
