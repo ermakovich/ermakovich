@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
+import ThemeConsumer from 'components/theme.js'
+
 import './layout.css'
 
 const LayoutBase = ({ children }) => (
@@ -26,23 +28,27 @@ const LayoutBase = ({ children }) => (
     `}
     render={data => (
       <>
-        <Helmet
-          title={data.site.siteMetadata.title}
-          meta={[
-            {
-              name: 'description',
-              content: data.site.siteMetadata.description,
-            },
-          ]}
-          link={[
-            {
-              rel: 'shortcut icon',
-              type: 'image/png',
-              href: data.favicon.childImageSharp.fixed.src,
-            },
-          ]}
-          htmlAttributes={{ lang: 'en' }}
-        />
+        <ThemeConsumer>
+          {({ isDark }) => (
+            <Helmet
+              title={data.site.siteMetadata.title}
+              meta={[
+                {
+                  name: 'description',
+                  content: data.site.siteMetadata.description,
+                },
+              ]}
+              link={[
+                {
+                  rel: 'shortcut icon',
+                  type: 'image/png',
+                  href: data.favicon.childImageSharp.fixed.src,
+                },
+              ]}
+              htmlAttributes={{ lang: 'en', theme: isDark && 'dark' }}
+            />
+          )}
+        </ThemeConsumer>
         {children}
       </>
     )}
