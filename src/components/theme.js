@@ -5,9 +5,8 @@ const ThemeContext = React.createContext({
   isDark: false,
 })
 
-const storage = localStorage
-
 export function ThemeProvider({ children }) {
+  const storage = localStorage
   const [isDark, setIsDark] = useState()
 
   useEffect(() => {
