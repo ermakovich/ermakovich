@@ -2,12 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import LayoutBase from './layout-base'
-import Header from './header'
+import Header from './header/header'
 import './layout.css'
 
 const Layout = ({ children, pageContext }) => (
   <LayoutBase>
-    {pageContext.layout !== 'custom' && <Header />}
+    {pageContext.layout !== 'wedding' && (
+      <Header isIntro={pageContext.layout === 'intro'} />
+    )}
     {children}
   </LayoutBase>
 )

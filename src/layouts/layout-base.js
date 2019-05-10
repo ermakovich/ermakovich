@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
-import ThemeConsumer from 'components/theme.js'
+import ThemeConsumer from 'components/theme'
 
 import './layout.css'
 

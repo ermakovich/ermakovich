@@ -60,8 +60,10 @@ exports.createPages = ({ graphql, actions }) => {
 exports.onCreatePage = ({ page, actions }) => {
   const { createPage } = actions
 
-  if (page.path === '/' || page.path.match(/wedding/)) {
-    page.context.layout = 'custom'
+  if (page.path === '/') {
+    page.context.layout = 'intro'
+  } else if (page.path.match(/wedding/)) {
+    page.context.layout = 'wedding'
   }
   createPage(page)
 }
