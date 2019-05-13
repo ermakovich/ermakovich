@@ -14,6 +14,7 @@ import soundcloudIcon from './about/images/social-icons/soundcloud.svg'
 import goodreadsIcon from './about/images/social-icons/goodreads.svg'
 
 import bettyPhoto from './about/images/betty.jpg'
+import ashkaPhoto from './about/images/ashka.jpg'
 import withKatePhoto from './about/images/with-kate.jpg'
 
 import {
@@ -78,20 +79,21 @@ const AboutPage = () => (
   <Content>
     <h1>About</h1>
     <p>
-      My name is Siarhei Yermakovich. I’m a developer living in{' '}
+      My name is Siarhei Yermakovich. I’m a front-end engineer living in{' '}
       <OutboundLink href="https://en.wikipedia.org/wiki/Minsk">
         Minsk
       </OutboundLink>
-      , Belarus. I work for internet startups{' '}
-      <OutboundLink href="https://dock.io">Dock</OutboundLink> and{' '}
-      <OutboundLink href="https://remote.com">Remote</OutboundLink>. When not
-      doing this I’m recording cover songs and enjoying nature. I do outdoor
-      workouts regularly when it’s not too cold outside.
+      , Belarus. I work for internet startup{' '}
+      <OutboundLink href="https://dock.io">Dock</OutboundLink>. Previously was
+      helping building{' '}
+      <OutboundLink href="https://remote.com">Remote</OutboundLink>. Aside from
+      work I love to record cover songs and enjoying nature.
     </p>
 
     <p>
       Together with my wife <Link href={withKatePhoto}>Kate</Link> we are happy
-      owners of a small funny cat <Link href={bettyPhoto}>Betty</Link>.
+      owners of two cats - <Link href={bettyPhoto}>Betty</Link> and her daughter{' '}
+      <Link href={ashkaPhoto}>Ashka</Link>.
     </p>
 
     <p>You can find me on:</p>
