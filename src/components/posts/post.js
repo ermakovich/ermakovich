@@ -75,8 +75,8 @@ class BlogPostTemplate extends React.Component {
               content: image
                 ? image.publicURL
                 : coverImage
-                  ? coverImage.publicURL
-                  : null,
+                ? coverImage.publicURL
+                : null,
             },
           ]}
           title={`${post.frontmatter.title} | ${siteTitle}`}
