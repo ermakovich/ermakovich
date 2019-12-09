@@ -1,10 +1,31 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
 import InternalLink from 'components/internal-link'
+import Img from 'components/progressive-image'
 
-import { Layout, Avatar, Header, More } from './index/_styles'
+export const Layout = styled.div`
+  margin: 7em auto;
+  max-width: 20em;
+  padding: 0px 1.0875em 1.45em;
+  padding-top: 0;
+  text-align: center;
+`
+
+export const Avatar = styled(Img)`
+  font-size: 2em;
+  border-radius: 50%;
+`
+
+export const Header = styled.h1`
+  font-weight: normal;
+`
+
+export const More = styled.p`
+  font-size: 1.2em;
+`
 
 const IndexPage = ({ data }) => (
   <Layout>
