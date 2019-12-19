@@ -4,6 +4,7 @@ module.exports = {
     author: 'Siarhei Yermakovich',
     description:
       'Everything you need to know about Siarhei Yermakovich and even more.',
+    siteUrl: 'https://ermakovich.name',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -41,5 +42,17 @@ module.exports = {
       },
     },
     'gatsby-plugin-layout',
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        exclude: ['/wedding'],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        policy: [{ userAgent: '*', disallow: '/wedding' }],
+      },
+    },
   ],
 }
