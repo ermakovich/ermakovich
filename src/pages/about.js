@@ -83,7 +83,8 @@ const AboutPage = () => (
       <OutboundLink href="https://en.wikipedia.org/wiki/Minsk">
         Minsk
       </OutboundLink>
-      , Belarus. I work for internet startup{' '}
+      , Belarus. I work for internet startups{' '}
+      <OutboundLink href="https://verifiable.com">Verifiable</OutboundLink> and{' '}
       <OutboundLink href="https://dock.io">Dock</OutboundLink>. Previously was
       helping building{' '}
       <OutboundLink href="https://remote.com">Remote</OutboundLink>. Aside from
