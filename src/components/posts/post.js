@@ -51,90 +51,84 @@ const NextPrev = styled(UnstyledList)`
   margin-top: 3rem;
 `
 
-class BlogPostTemplate extends React.Component {
-  render() {
-    const post = this.props.data.markdownRemark
-    const siteTitle = get(this.props, 'data.site.siteMetadata.title')
-    const description =
-      post.excerpt || get(this.props, 'data.site.siteMetadata.description')
-    const { previous, next } = this.props.pageContext
-    const coverImage = post.frontmatter.cover_image
-    const image = post.frontmatter.image
-    const tags = post.frontmatter.tags
+export default function BlogPostTemplate(props) {
+  const post = props.data.markdownRemark
+  const siteTitle = get(props, 'data.site.siteMetadata.title')
+  const description =
+    post.excerpt || get(props, 'data.site.siteMetadata.description')
+  const { previous, next } = props.pageContext
+  const coverImage = post.frontmatter.cover_image
+  const image = post.frontmatter.image
+  const tags = post.frontmatter.tags
 
-    return (
-      <>
-        <Helmet
-          meta={[
-            {
-              name: 'description',
-              content: description,
-            },
-            {
-              name: 'og:image',
-              content: image
-                ? image.publicURL
-                : coverImage
-                  ? coverImage.publicURL
-                  : null,
-            },
-          ]}
-          title={`${post.frontmatter.title} | ${siteTitle}`}
-          htmlAttributes={{ lang: post.frontmatter.lang || 'en' }}
-        />
-        {coverImage && (
-          <PostCover>
-            <PostCoverContent>
-              <h1>{post.frontmatter.title}</h1>
-            </PostCoverContent>
-            <PostCoverImgWrapper>
-              <Img
-                fluid={coverImage.childImageSharp.fluid}
-                alt="cover image"
-                style={{
-                  height: '100%',
-                }}
-              />
-            </PostCoverImgWrapper>
-          </PostCover>
-        )}
-        <PostContent>
-          {!coverImage && <h1>{post.frontmatter.title}</h1>}
-          <PostMeta>
-            <PostDate value={post.frontmatter.date} />
-            &nbsp;&middot;&nbsp;
-            <span>{post.timeToRead} min read</span>
-          </PostMeta>
-          {image && (
-            <Img fluid={image.childImageSharp.fluid} alt="cover image" />
+  return (
+    <>
+      <Helmet
+        meta={[
+          {
+            name: 'description',
+            content: description,
+          },
+          {
+            name: 'og:image',
+            content: image
+              ? image.publicURL
+              : coverImage
+                ? coverImage.publicURL
+                : null,
+          },
+        ]}
+        title={`${post.frontmatter.title} | ${siteTitle}`}
+        htmlAttributes={{ lang: post.frontmatter.lang || 'en' }}
+      />
+      {coverImage && (
+        <PostCover>
+          <PostCoverContent>
+            <h1>{post.frontmatter.title}</h1>
+          </PostCoverContent>
+          <PostCoverImgWrapper>
+            <Img
+              fluid={coverImage.childImageSharp.fluid}
+              alt="cover image"
+              style={{
+                height: '100%',
+              }}
+            />
+          </PostCoverImgWrapper>
+        </PostCover>
+      )}
+      <PostContent>
+        {!coverImage && <h1>{post.frontmatter.title}</h1>}
+        <PostMeta>
+          <PostDate value={post.frontmatter.date} />
+          &nbsp;&middot;&nbsp;
+          <span>{post.timeToRead} min read</span>
+        </PostMeta>
+        {image && <Img fluid={image.childImageSharp.fluid} alt="cover image" />}
+        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+
+        <NextPrev>
+          {next && (
+            <li>
+              → Next post:&nbsp;
+              <Link to={next.fields.slug} rel="next">
+                {next.frontmatter.title}
+              </Link>
+            </li>
           )}
-          <div dangerouslySetInnerHTML={{ __html: post.html }} />
-
-          <NextPrev>
-            {next && (
-              <li>
-                → Next post:&nbsp;
-                <Link to={next.fields.slug} rel="next">
-                  {next.frontmatter.title}
-                </Link>
-              </li>
-            )}
-            {previous && (
-              <li>
-                ← Previous post:&nbsp;
-                <Link to={previous.fields.slug} rel="prev">
-                  {previous.frontmatter.title}
-                </Link>
-              </li>
-            )}
-          </NextPrev>
-        </PostContent>
-      </>
-    )
-  }
+          {previous && (
+            <li>
+              ← Previous post:&nbsp;
+              <Link to={previous.fields.slug} rel="prev">
+                {previous.frontmatter.title}
+              </Link>
+            </li>
+          )}
+        </NextPrev>
+      </PostContent>
+    </>
+  )
 }
-
-export default BlogPostTemplate
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {

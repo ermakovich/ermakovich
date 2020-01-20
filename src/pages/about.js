@@ -1,4 +1,6 @@
 import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
+import Helmet from 'react-helmet'
 
 import Link from 'components/link'
 import OutboundLink from 'components/outbound-link'
@@ -75,39 +77,52 @@ const socialLinks = [
   },
 ]
 
-const AboutPage = () => (
-  <Content>
-    <h1>About</h1>
-    <p>
-      My name is Siarhei Yermakovich. I’m a front-end engineer living in{' '}
-      <OutboundLink href="https://en.wikipedia.org/wiki/Minsk">
-        Minsk
-      </OutboundLink>
-      , Belarus. I work for internet startups{' '}
-      <OutboundLink href="https://verifiable.com">Verifiable</OutboundLink> and{' '}
-      <OutboundLink href="https://dock.io">Dock</OutboundLink>. Previously was
-      helping building{' '}
-      <OutboundLink href="https://remote.com">Remote</OutboundLink>. Aside from
-      work I love to record cover songs and enjoying nature.
-    </p>
+export default function AboutPage() {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
 
-    <p>
-      Together with my wife <Link href={withKatePhoto}>Kate</Link> we are happy
-      owners of two cats - <Link href={bettyPhoto}>Betty</Link> and her daughter{' '}
-      <Link href={ashkaPhoto}>Ashka</Link>.
-    </p>
+  return (
+    <>
+      <Helmet title={`${data.site.siteMetadata.title} - About`} />
+      <Content>
+        <h1>About</h1>
+        <p>
+          My name is Siarhei Yermakovich. I’m a front-end engineer living in{' '}
+          <OutboundLink href="https://en.wikipedia.org/wiki/Minsk">
+            Minsk
+          </OutboundLink>
+          , Belarus. I work for internet startups{' '}
+          <OutboundLink href="https://verifiable.com">Verifiable</OutboundLink>{' '}
+          and <OutboundLink href="https://dock.io">Dock</OutboundLink>.
+          Previously was helping building{' '}
+          <OutboundLink href="https://remote.com">Remote</OutboundLink>. Aside
+          from work I love to record cover songs and enjoying nature.
+        </p>
 
-    <p>You can find me on:</p>
-    <SocialLinks>
-      {socialLinks.map(socialLink => (
-        <SocialLinksItem key={socialLink.name}>
-          <SocialLink href={socialLink.url}>
-            <SocialIcon src={socialLink.icon} alt={socialLink.name} />
-          </SocialLink>
-        </SocialLinksItem>
-      ))}
-    </SocialLinks>
-  </Content>
-)
+        <p>
+          Together with my wife <Link href={withKatePhoto}>Kate</Link> we are
+          happy owners of two cats - <Link href={bettyPhoto}>Betty</Link> and
+          her daughter <Link href={ashkaPhoto}>Ashka</Link>.
+        </p>
 
-export default AboutPage
+        <p>You can find me on:</p>
+        <SocialLinks>
+          {socialLinks.map(socialLink => (
+            <SocialLinksItem key={socialLink.name}>
+              <SocialLink href={socialLink.url}>
+                <SocialIcon src={socialLink.icon} alt={socialLink.name} />
+              </SocialLink>
+            </SocialLinksItem>
+          ))}
+        </SocialLinks>
+      </Content>
+    </>
+  )
+}

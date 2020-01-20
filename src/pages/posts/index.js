@@ -1,16 +1,43 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { Link, useStaticQuery, graphql } from 'gatsby'
 import get from 'lodash/get'
+import Helmet from 'react-helmet'
 
 import Content from 'components/content'
 import PostMeta from 'components/posts/post-meta'
 import PostDate from 'components/posts/post-date'
 
-class BlogIndex extends React.Component {
-  render() {
-    const posts = get(this, 'props.data.allMarkdownRemark.edges')
+export default function BlogIndex() {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+      allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+        edges {
+          node {
+            excerpt
+            fields {
+              slug
+            }
+            timeToRead
+            frontmatter {
+              date(formatString: "MMMM DD, YYYY")
+              title
+            }
+          }
+        }
+      }
+    }
+  `)
 
-    return (
+  const posts = get(data, 'allMarkdownRemark.edges')
+
+  return (
+    <>
+      <Helmet title={`${data.site.siteMetadata.title} - Posts`} />
       <Content>
         {posts.map(({ node }) => {
           const title = get(node, 'frontmatter.title') || node.fields.slug
@@ -29,28 +56,6 @@ class BlogIndex extends React.Component {
           )
         })}
       </Content>
-    )
-  }
+    </>
+  )
 }
-
-export default BlogIndex
-
-export const pageQuery = graphql`
-  query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          timeToRead
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-          }
-        }
-      }
-    }
-  }
-`
