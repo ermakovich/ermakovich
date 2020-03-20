@@ -54,5 +54,6 @@ module.exports = {
         policy: [{ userAgent: '*', disallow: '/wedding' }],
       },
     },
+    'gatsby-plugin-feed',
   ],
 }
