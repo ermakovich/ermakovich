@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import get from 'lodash/get'
-import Helmet from 'react-helmet'
+import {Helmet} from 'react-helmet'
 
 import Content from 'components/content'
 import PostMeta from 'components/posts/post-meta'
