@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
+import {Helmet} from 'react-helmet'
 
 import OutboundLink from 'components/outbound-link'
 import Img from 'components/progressive-image'
