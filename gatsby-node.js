@@ -2,6 +2,7 @@ const _ = require('lodash')
 const Promise = require('bluebird')
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
+const UnusedWebpackPlugin = require('unused-webpack-plugin')
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
@@ -80,3 +81,14 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     })
   }
 }
+
+exports.onCreateWebpackConfig = ({stage, actions}) => {
+  actions.setWebpackConfig({
+    plugins: stage === 'build-html' ? [
+      new UnusedWebpackPlugin({
+        directories: [path.join(__dirname, 'src')],
+        exclude: ['*.md', '*.jpg', '*.jpeg', '*.png'],
+      }),
+    ] : [],
+  });
+};
