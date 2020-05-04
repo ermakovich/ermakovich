@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useStaticQuery, graphql } from 'gatsby'
+import BackgroundImage from 'gatsby-background-image'
 
-import Img from 'components/progressive-image'
 import ThemeConsumer from 'components/theme'
 
 const Root = styled.button`
@@ -50,7 +50,9 @@ export default function DarkThemeToggle() {
           onClick={() => setIsDark(!isDark)}
           title={`Toggle to ${isDark ? 'light' : 'dark'} theme`}
         >
-          <Img fixed={(isDark ? sunIcon : moonIcon).childImageSharp.fixed} />
+          <BackgroundImage
+            fixed={(isDark ? sunIcon : moonIcon).childImageSharp.fixed}
+          />
         </Root>
       )}
     </ThemeConsumer>
