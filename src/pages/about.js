@@ -94,16 +94,18 @@ export default function AboutPage() {
       <Content>
         <h1>About</h1>
         <p>
-          My name is Siarhei Yermakovich. I’m a front-end engineer living in{' '}
+          My name is Sergey Ermakovich. I’m a front-end engineer living in{' '}
           <OutboundLink href="https://en.wikipedia.org/wiki/Minsk">
             Minsk
           </OutboundLink>
-          , Belarus. I work for internet startups{' '}
-          <OutboundLink href="https://verifiable.com">Verifiable</OutboundLink>{' '}
-          and <OutboundLink href="https://dock.io">Dock</OutboundLink>.
-          Previously was helping building{' '}
-          <OutboundLink href="https://remote.com">Remote</OutboundLink>. Aside
-          from work I love to record cover songs and enjoying nature.
+          , Belarus. Currently I’m working on open source and personal projects.
+          Previously I was leading front-end efforts in a bunch of internet
+          startups, such as{' '}
+          <OutboundLink href="https://verifiable.com">Verifiable</OutboundLink>,{' '}
+          <OutboundLink href="https://dock.io">Dock</OutboundLink>,{' '}
+          <OutboundLink href="https://remote.com">Remote</OutboundLink>, and
+          some others. Aside from work I love to record cover songs and enjoying
+          nature.
         </p>
 
         <p>
