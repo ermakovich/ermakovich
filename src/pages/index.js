@@ -1,8 +1,8 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
-import BackgroundImage from 'gatsby-background-image'
 
+import Img from 'components/progressive-image'
 import InternalLink from 'components/internal-link'
 
 export const Layout = styled.div`
@@ -13,9 +13,8 @@ export const Layout = styled.div`
   text-align: center;
 `
 
-export const Avatar = styled(BackgroundImage)`
+export const Avatar = styled(Img)`
   border-radius: 50%;
-  overflow: hidden;
 `
 
 export const Header = styled.h1`
@@ -41,7 +40,7 @@ export default function IndexPage() {
 
   return (
     <Layout>
-      <Avatar fixed={avatar.childImageSharp.fixed} />
+      <Avatar fixed={avatar.childImageSharp.fixed} alt="Photo" />
       <Header>
         Hi, I’m <strong>Siarhei Yermakovich</strong>
       </Header>

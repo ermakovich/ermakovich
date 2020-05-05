@@ -98,7 +98,7 @@ export default function AboutPage() {
           <OutboundLink href="https://en.wikipedia.org/wiki/Minsk">
             Minsk
           </OutboundLink>
-          , Belarus. Currently I’m working on open source and personal projects.
+          , Belarus. Currently working on open source and personal projects.
           Previously I was leading front-end efforts in a bunch of internet
           startups, such as{' '}
           <OutboundLink href="https://verifiable.com">Verifiable</OutboundLink>,{' '}
