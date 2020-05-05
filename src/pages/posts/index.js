@@ -1,14 +1,14 @@
 import React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import get from 'lodash/get'
-import {Helmet} from 'react-helmet'
+import { Helmet } from 'react-helmet'
 
 import Content from 'components/content'
 import PostMeta from 'components/posts/post-meta'
 import PostDate from 'components/posts/post-date'
 
 export default function BlogIndex() {
-  const data = useStaticQuery(graphql`
+  const { site, allMarkdownRemark } = useStaticQuery(graphql`
     query {
       site {
         siteMetadata {
@@ -33,11 +33,11 @@ export default function BlogIndex() {
     }
   `)
 
-  const posts = get(data, 'allMarkdownRemark.edges')
+  const posts = get(allMarkdownRemark, 'edges')
 
   return (
     <>
-      <Helmet title={`${data.site.siteMetadata.title} - Posts`} />
+      <Helmet title={`${site.siteMetadata.title} - Posts`} />
       <Content>
         {posts.map(({ node }) => {
           const title = get(node, 'frontmatter.title') || node.fields.slug

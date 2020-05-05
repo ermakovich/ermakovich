@@ -1,6 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import {Helmet} from 'react-helmet'
+import { Helmet } from 'react-helmet'
 
 import Link from 'components/link'
 import OutboundLink from 'components/outbound-link'
@@ -78,7 +78,7 @@ const socialLinks = [
 ]
 
 export default function AboutPage() {
-  const data = useStaticQuery(graphql`
+  const { site } = useStaticQuery(graphql`
     query {
       site {
         siteMetadata {
@@ -90,7 +90,7 @@ export default function AboutPage() {
 
   return (
     <>
-      <Helmet title={`${data.site.siteMetadata.title} - About`} />
+      <Helmet title={`${site.siteMetadata.title} - About`} />
       <Content>
         <h1>About</h1>
         <p>
@@ -114,7 +114,7 @@ export default function AboutPage() {
 
         <p>You can find me on:</p>
         <SocialLinks>
-          {socialLinks.map(socialLink => (
+          {socialLinks.map((socialLink) => (
             <SocialLinksItem key={socialLink.name}>
               <SocialLink href={socialLink.url}>
                 <SocialIcon src={socialLink.icon} alt={socialLink.name} />

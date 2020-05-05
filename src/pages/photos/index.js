@@ -10,7 +10,7 @@ import {
 
 const PhotosPage = ({ data }) => {
   const photos = data.photos.edges
-  const photoElements = photos.map(photo => {
+  const photoElements = photos.map((photo) => {
     const { publicURL, childImageSharp } = photo.node
     return (
       <PhotoGalleryItem

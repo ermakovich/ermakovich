@@ -1,7 +1,6 @@
 import React from 'react'
-import {Helmet} from 'react-helmet'
+import { Helmet } from 'react-helmet'
 import { Link, graphql } from 'gatsby'
-import get from 'lodash/get'
 import styled from 'styled-components'
 
 import Content from 'components/content'
@@ -51,15 +50,16 @@ const NextPrev = styled(UnstyledList)`
   margin-top: 3rem;
 `
 
-export default function BlogPostTemplate(props) {
-  const post = props.data.markdownRemark
-  const siteTitle = get(props, 'data.site.siteMetadata.title')
-  const description =
-    post.excerpt || get(props, 'data.site.siteMetadata.description')
-  const { previous, next } = props.pageContext
-  const coverImage = post.frontmatter.cover_image
-  const image = post.frontmatter.image
-  const tags = post.frontmatter.tags
+export default function BlogPostTemplate({
+  pageContext,
+  data: { site, markdownRemark },
+}) {
+  const { excerpt, frontmatter, timeToRead, html } = markdownRemark
+  const siteTitle = site.siteMetadata.title
+  const description = excerpt || site.siteMetadata.description
+  const { previous, next } = pageContext
+  const coverImage = frontmatter.cover_image
+  const image = frontmatter.image
 
   return (
     <>
@@ -78,13 +78,13 @@ export default function BlogPostTemplate(props) {
                 : null,
           },
         ]}
-        title={`${post.frontmatter.title} | ${siteTitle}`}
-        htmlAttributes={{ lang: post.frontmatter.lang || 'en' }}
+        title={`${frontmatter.title} | ${siteTitle}`}
+        htmlAttributes={{ lang: frontmatter.lang || 'en' }}
       />
       {coverImage && (
         <PostCover>
           <PostCoverContent>
-            <h1>{post.frontmatter.title}</h1>
+            <h1>{frontmatter.title}</h1>
           </PostCoverContent>
           <PostCoverImgWrapper>
             <Img
@@ -98,14 +98,14 @@ export default function BlogPostTemplate(props) {
         </PostCover>
       )}
       <PostContent>
-        {!coverImage && <h1>{post.frontmatter.title}</h1>}
+        {!coverImage && <h1>{frontmatter.title}</h1>}
         <PostMeta>
-          <PostDate value={post.frontmatter.date} />
+          <PostDate value={frontmatter.date} />
           &nbsp;&middot;&nbsp;
-          <span>{post.timeToRead} min read</span>
+          <span>{timeToRead} min read</span>
         </PostMeta>
         {image && <Img fluid={image.childImageSharp.fluid} alt="cover image" />}
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div dangerouslySetInnerHTML={{ __html: html }} />
 
         <NextPrev>
           {next && (
@@ -165,7 +165,6 @@ export const pageQuery = graphql`
           }
           publicURL
         }
-        tags
         lang
       }
     }
