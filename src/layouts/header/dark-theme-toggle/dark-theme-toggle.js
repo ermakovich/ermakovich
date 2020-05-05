@@ -1,10 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
+import { useStaticQuery, graphql } from 'gatsby'
+import BackgroundImage from 'gatsby-background-image'
 
 import ThemeConsumer from 'components/theme'
-
-import sunIcon from './sun-with-face.png'
-import moonIcon from './moon-with-face.png'
 
 const Root = styled.button`
   cursor: pointer;
@@ -14,24 +13,48 @@ const Root = styled.button`
   background: transparent;
   padding: 0;
   display: inline-flex;
-
-  img {
-    width: 1em;
-    height: 1em;
-  }
 `
 
-const DarkThemeToggle = () => (
-  <ThemeConsumer>
-    {({ isDark, setIsDark }) => (
-      <Root
-        onClick={() => setIsDark(!isDark)}
-        title={`${isDark ? 'Dark' : 'Light'} theme`}
-      >
-        <img src={isDark ? sunIcon : moonIcon} />
-      </Root>
-    )}
-  </ThemeConsumer>
-)
+export default function DarkThemeToggle() {
+  const { sunIcon, moonIcon } = useStaticQuery(graphql`
+    query {
+      sunIcon: file(
+        relativePath: {
+          eq: "layouts/header/dark-theme-toggle/sun-with-face.png"
+        }
+      ) {
+        childImageSharp {
+          fixed(width: 30, height: 30) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      moonIcon: file(
+        relativePath: {
+          eq: "layouts/header/dark-theme-toggle/moon-with-face.png"
+        }
+      ) {
+        childImageSharp {
+          fixed(width: 30, height: 30) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+    }
+  `)
 
-export default DarkThemeToggle
+  return (
+    <ThemeConsumer>
+      {({ isDark, setIsDark }) => (
+        <Root
+          onClick={() => setIsDark(!isDark)}
+          title={`Toggle to ${isDark ? 'light' : 'dark'} theme`}
+        >
+          <BackgroundImage
+            fixed={(isDark ? sunIcon : moonIcon).childImageSharp.fixed}
+          />
+        </Root>
+      )}
+    </ThemeConsumer>
+  )
+}
