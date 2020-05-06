@@ -10,6 +10,10 @@ html[theme='dark'] {
   color: rgb(229, 225, 216);
 }
 
+html[theme='dark'] a {
+  color: #81b4ee;
+}
+
 body {
   margin: 0;
 }
@@ -38,7 +42,7 @@ code {
 }
 
 a {
-  color: rgb(71, 145, 230);
+  color: #15559d;
 }
 
 figure {
