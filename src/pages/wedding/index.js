@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
-import {Helmet} from 'react-helmet'
+import { Helmet } from 'react-helmet'
 
 import OutboundLink from 'components/outbound-link'
 import Img from 'components/progressive-image'
@@ -15,7 +15,7 @@ import { Layout, Intro, CrewAvatar } from './_styles'
 
 const WeddingPage = ({ data }) => {
   const photos = data.photos.edges
-  const photoElements = photos.map(photo => {
+  const photoElements = photos.map((photo) => {
     const { publicURL, childImageSharp } = photo.node
     return (
       <PhotoGalleryItem
@@ -34,12 +34,6 @@ const WeddingPage = ({ data }) => {
       <Helmet title="Вяселле Сяргея і Каці" />
       <Layout>
         <Intro className="section">
-          <div className="section-content section-content--centered">
-            <h1>Вяселле Сяргея і Каці 👫💒</h1>
-            <h2>адбылося 24 лістапада 2017 года</h2>
-            <p>Дзякуй усім за удзел!</p>
-          </div>
-          <span className="section-next-pointer">👇</span>
           <Img
             fluid={data.introBg.childImageSharp.fluid}
             alt="background"
@@ -49,10 +43,16 @@ const WeddingPage = ({ data }) => {
               top: 0,
               width: '100%',
               height: '100%',
-              zIndex: -1,
               fontSize: '300px',
             }}
           />
+          <div className="section-tint-overlay" />
+          <div className="section-content section-content--centered">
+            <h1>Вяселле Сяргея і Каці 👫💒</h1>
+            <h2>адбылося 24 лістапада 2017 года</h2>
+            <p>Дзякуй усім за удзел!</p>
+          </div>
+          <span className="section-next-pointer">👇</span>
         </Intro>
         <section className="section">
           <div className="section-content">
@@ -95,6 +95,7 @@ const WeddingPage = ({ data }) => {
           </div>
         </section>
         <section className="section">
+          <div className="section-tint-overlay" />
           <div className="section-content">
             <h2>Наша каманда</h2>
             <div className="crew">

@@ -82,7 +82,7 @@ export const Layout = styled.div`
     position: relative;
   }
 
-  .section:nth-child(odd)::before {
+  .section-tint-overlay {
     content: '';
     position: absolute;
     top: 0;
@@ -91,11 +91,10 @@ export const Layout = styled.div`
     bottom: 0;
     background: rgb(63, 43, 43);
     opacity: 0.8;
-    z-index: 0;
   }
 
   .section-content {
-    z-index: 1;
+    z-index: 2;
     flex: 1;
     display: flex;
     flex-direction: column;
