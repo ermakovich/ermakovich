@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 import Img from 'components/progressive-image'
 
-import { bg as bgColor, fg as fgColor } from 'components/utils/colors'
+import { fg as fgColor } from 'components/utils/colors'
 
 export const Layout = styled.div`
   /* cyrillic-ext */
@@ -80,6 +80,10 @@ export const Layout = styled.div`
     color: ${fgColor};
     text-shadow: 0 0 0.2em rgba(0, 0, 0, 0.7);
     position: relative;
+
+    a {
+      color: #81b4ee;
+    }
   }
 
   .section-tint-overlay {
