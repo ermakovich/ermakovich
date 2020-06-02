@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
 import { useStaticQuery, graphql } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
 
-import ThemeConsumer from 'components/theme'
+import { ThemeContext } from 'components/theme'
 
 const Root = styled.button`
   cursor: pointer;
@@ -16,6 +16,8 @@ const Root = styled.button`
 `
 
 export default function DarkThemeToggle() {
+  const { isDark, setIsDark } = useContext(ThemeContext)
+
   const { sunIcon, moonIcon } = useStaticQuery(graphql`
     query {
       sunIcon: file(
@@ -44,17 +46,13 @@ export default function DarkThemeToggle() {
   `)
 
   return (
-    <ThemeConsumer>
-      {({ isDark, setIsDark }) => (
-        <Root
-          onClick={() => setIsDark(!isDark)}
-          title={`Toggle to ${isDark ? 'light' : 'dark'} theme`}
-        >
-          <BackgroundImage
-            fixed={(isDark ? sunIcon : moonIcon).childImageSharp.fixed}
-          />
-        </Root>
-      )}
-    </ThemeConsumer>
+    <Root
+      onClick={() => setIsDark(!isDark)}
+      title={`Toggle to ${isDark ? 'light' : 'dark'} theme`}
+    >
+      <BackgroundImage
+        fixed={(isDark ? sunIcon : moonIcon).childImageSharp.fixed}
+      />
+    </Root>
   )
 }

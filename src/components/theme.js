@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { isUndefined, isNull } from 'lodash'
 
-const ThemeContext = React.createContext({
+export const ThemeContext = React.createContext({
   isDark: false,
 })
 
@@ -33,5 +33,3 @@ export function ThemeProvider({ children }) {
     </ThemeContext.Provider>
   )
 }
-
-export default ThemeContext.Consumer

@@ -1,13 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 
-import ThemeConsumer from 'components/theme'
+import { ThemeContext } from 'components/theme'
 
 import './layout.css'
 
 function LayoutBase({ children }) {
+  const { isDark } = useContext(ThemeContext)
+
   const { site, favicon } = useStaticQuery(graphql`
     query {
       site {
@@ -28,27 +30,23 @@ function LayoutBase({ children }) {
 
   return (
     <>
-      <ThemeConsumer>
-        {({ isDark }) => (
-          <Helmet
-            title={site.siteMetadata.title}
-            meta={[
-              {
-                name: 'description',
-                content: site.siteMetadata.description,
-              },
-            ]}
-            link={[
-              {
-                rel: 'shortcut icon',
-                type: 'image/png',
-                href: favicon.childImageSharp.fixed.src,
-              },
-            ]}
-            htmlAttributes={{ lang: 'en', theme: isDark && 'dark' }}
-          />
-        )}
-      </ThemeConsumer>
+      <Helmet
+        title={site.siteMetadata.title}
+        meta={[
+          {
+            name: 'description',
+            content: site.siteMetadata.description,
+          },
+        ]}
+        link={[
+          {
+            rel: 'shortcut icon',
+            type: 'image/png',
+            href: favicon.childImageSharp.fixed.src,
+          },
+        ]}
+        htmlAttributes={{ lang: 'en', theme: isDark && 'dark' }}
+      />
       {children}
     </>
   )
