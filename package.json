@@ -21,8 +21,8 @@
     "gatsby-transformer-remark": "2.8.39",
     "gatsby-transformer-sharp": "2.5.17",
     "lodash": "4.17.20",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
+    "react": "16.14.0",
+    "react-dom": "16.14.0",
     "react-helmet": "6.1.0",
     "styled-components": "5.2.0"
   },
