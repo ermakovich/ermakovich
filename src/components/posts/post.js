@@ -60,6 +60,12 @@ export default function BlogPostTemplate({
   const { previous, next } = pageContext
   const coverImage = frontmatter.cover_image
   const image = frontmatter.image
+  const publicImageURL = image
+    ? image.publicURL
+    : coverImage
+      ? coverImage.publicURL
+      : null
+  const title = `${frontmatter.title} | ${siteTitle}`
 
   return (
     <>
@@ -71,14 +77,30 @@ export default function BlogPostTemplate({
           },
           {
             name: 'og:image',
-            content: image
-              ? image.publicURL
-              : coverImage
-                ? coverImage.publicURL
-                : null,
+            content: publicImageURL,
+          },
+          {
+            name: 'twitter:image',
+            content: publicImageURL,
+          },
+          {
+            name: 'twitter:card',
+            content: 'summary',
+          },
+          {
+            name: 'twitter:site',
+            content: '@ki_duk',
+          },
+          {
+            name: 'twitter:title',
+            content: title,
+          },
+          {
+            name: 'twitter:description',
+            content: description,
           },
         ]}
-        title={`${frontmatter.title} | ${siteTitle}`}
+        title={title}
         htmlAttributes={{ lang: frontmatter.lang || 'en' }}
       />
       {coverImage && (
