@@ -1,7 +1,7 @@
 ---
 date: '2019-03-12'
 title: 'Шотландские прямоухие котята (проданы)'
-tags: ['sale']
+tags: ['sale', 'cats']
 lang: 'ru'
 image: './DSC08371.jpg'
 ---
