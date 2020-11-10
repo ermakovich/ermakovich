@@ -56,15 +56,15 @@ export default function BlogPostTemplate({
 }) {
   const { excerpt, frontmatter, timeToRead, html } = markdownRemark
   const siteTitle = site.siteMetadata.title
+  const siteUrl = site.siteMetadata.siteUrl
   const description = excerpt || site.siteMetadata.description
   const { previous, next } = pageContext
   const coverImage = frontmatter.cover_image
   const image = frontmatter.image
-  const publicImageURL = image
-    ? image.publicURL
-    : coverImage
-      ? coverImage.publicURL
-      : null
+  const frontmatterImage = frontmatter.image || frontmatter.cover_image
+
+  const publicImageURL =
+    frontmatterImage && siteUrl + frontmatterImage.childImageSharp.fluid.src
   const title = `${frontmatter.title} | ${siteTitle}`
 
   return (
@@ -159,6 +159,7 @@ export const pageQuery = graphql`
         title
         description
         author
+        siteUrl
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
@@ -176,7 +177,6 @@ export const pageQuery = graphql`
               ...GatsbyImageSharpFluid_noBase64
             }
           }
-          publicURL
         }
         image {
           childImageSharp {
@@ -185,7 +185,6 @@ export const pageQuery = graphql`
               ...GatsbyImageSharpFluid_noBase64
             }
           }
-          publicURL
         }
         lang
       }

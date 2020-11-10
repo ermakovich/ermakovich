@@ -34,7 +34,6 @@ export default function BlogIndex() {
                     ...GatsbyImageSharpFixed_noBase64
                   }
                 }
-                publicURL
               }
               image {
                 childImageSharp {
@@ -43,7 +42,6 @@ export default function BlogIndex() {
                     ...GatsbyImageSharpFixed_noBase64
                   }
                 }
-                publicURL
               }
             }
           }
