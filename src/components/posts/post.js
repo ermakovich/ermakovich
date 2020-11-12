@@ -1,13 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Helmet } from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import styled from 'styled-components'
+import { TwitterTweetEmbed } from 'react-twitter-embed'
 
 import Content from 'components/content'
 import PostMeta from 'components/posts/post-meta'
 import PostDate from 'components/posts/post-date'
 import Img from 'components/progressive-image'
 import UnstyledList from 'components/unstyled-list'
+import { ThemeContext } from 'components/theme'
 
 import { bg as bgColor, fg as fgColor } from 'components/utils/colors'
 
@@ -54,13 +56,15 @@ export default function BlogPostTemplate({
   pageContext,
   data: { site, markdownRemark },
 }) {
+  const { isDark } = useContext(ThemeContext)
+
   const { excerpt, frontmatter, timeToRead, html } = markdownRemark
   const siteTitle = site.siteMetadata.title
   const siteUrl = site.siteMetadata.siteUrl
   const description = excerpt || site.siteMetadata.description
   const { previous, next } = pageContext
   const coverImage = frontmatter.cover_image
-  const image = frontmatter.image
+  const { tweetId, image, lang } = frontmatter
   const frontmatterImage = frontmatter.image || frontmatter.cover_image
 
   const publicImageURL =
@@ -101,7 +105,7 @@ export default function BlogPostTemplate({
           },
         ]}
         title={title}
-        htmlAttributes={{ lang: frontmatter.lang || 'en' }}
+        htmlAttributes={{ lang: lang || 'en' }}
       />
       {coverImage && (
         <PostCover>
@@ -128,6 +132,13 @@ export default function BlogPostTemplate({
         </PostMeta>
         {image && <Img fluid={image.childImageSharp.fluid} alt="cover image" />}
         <div dangerouslySetInnerHTML={{ __html: html }} />
+
+        {tweetId && (
+          <TwitterTweetEmbed
+            {...{ tweetId }}
+            options={{ lang, theme: isDark ? 'dark' : 'light' }}
+          />
+        )}
 
         <NextPrev>
           {next && (
@@ -187,6 +198,7 @@ export const pageQuery = graphql`
           }
         }
         lang
+        tweetId
       }
     }
   }
