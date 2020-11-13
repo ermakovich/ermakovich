@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "dependencies": {
     "babel-plugin-styled-components": "1.11.1",
-    "gatsby": "2.26.0",
+    "gatsby": "2.26.1",
     "gatsby-background-image": "1.2.0",
     "gatsby-image": "2.5.0",
     "gatsby-plugin-feed": "2.7.0",
@@ -16,7 +16,7 @@
     "gatsby-plugin-sharp": "2.8.0",
     "gatsby-plugin-sitemap": "2.6.0",
     "gatsby-plugin-styled-components": "3.4.0",
-    "gatsby-remark-images": "3.5.0",
+    "gatsby-remark-images": "3.5.1",
     "gatsby-source-filesystem": "2.5.0",
     "gatsby-transformer-remark": "2.10.0",
     "gatsby-transformer-sharp": "2.6.0",
