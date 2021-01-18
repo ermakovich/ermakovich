@@ -55,3 +55,9 @@ figcaption {
   font-size: smaller;
   margin-top: 0.3rem;
 }
+
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 1.6em;
+  }
+}
