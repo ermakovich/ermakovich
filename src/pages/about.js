@@ -13,6 +13,7 @@ import mediumIcon from './about/images/social-icons/medium.svg'
 import stackoverflowIcon from './about/images/social-icons/stackoverflow.svg'
 import linkedinIcon from './about/images/social-icons/linkedin.svg'
 import youtubeIcon from './about/images/social-icons/youtube.svg'
+import instagramIcon from './about/images/social-icons/instagram.svg'
 import soundcloudIcon from './about/images/social-icons/soundcloud.svg'
 import goodreadsIcon from './about/images/social-icons/goodreads.svg'
 
@@ -69,6 +70,12 @@ const socialLinks = [
     title: 'SoundCloud',
     url: 'https://soundcloud.com/kiduk',
     icon: soundcloudIcon,
+  },
+  {
+    name: 'instagram',
+    title: 'Instagram',
+    url: 'https://www.instagram.com/ki_duk',
+    icon: instagramIcon,
   },
   {
     name: 'goodreads',

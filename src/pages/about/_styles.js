@@ -16,7 +16,7 @@ export const SocialLinks = styled(UnstyledList)`
   text-align: center;
 
   @media ${media.mid} {
-    columns: 4;
+    columns: 3;
   }
 `
 
