@@ -15,7 +15,7 @@ I hope you are now convinced enough that IPFS is a good choice. Let's move to ac
 
 ## Preparing both machines
 
-First of all we need to [install IPFS](https://docs.ipfs.io/introduction/install) on both machines. After installing we need to init repositories:
+First of all we need to [install IPFS](https://docs.ipfs.io/install) on both machines. After installing we need to init repositories:
 
 ```
 $ ipfs init
