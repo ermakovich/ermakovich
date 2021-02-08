@@ -64,7 +64,7 @@ $ ipfs pin add QmaW4tz1ZMT8Q3feTaskg7bWhMq6DLxoQWN2fckDrcUKmx
 
 ## Target machine
 
-Now our directory is discoverable using it's unique hash via IPFS. All we need to do is to copy hash to the second machine and then run get command on it:
+Now our directory is discoverable using it's unique hash via IPFS. All we need to do is to copy hash to the second machine and then run `get` command on it:
 
 ```
 $ ipfs get QmaW4tz1ZMT8Q3feTaskg7bWhMq6DLxoQWN2fckDrcUKmx -o <output_path>
