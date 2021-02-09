@@ -988,10 +988,17 @@
     core-js-pure "^3.0.0"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@7.12.5", "@babel/runtime@^7.10.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4":
+"@babel/runtime@^7.10.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4":
   version "7.12.5"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.12.5.tgz#410e7e487441e1b360c29be715d870d9b985882e"
   integrity sha512-plcc+hbExy3McchJCEQG3knOsuh3HH+Prx1P6cLIkET/0dLuQDEnrT+s27Axgc9bqfsmNUNHfscgMUdBpC9xfg==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
+"@babel/runtime@^7.12.13":
+  version "7.12.13"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.12.13.tgz#0a21452352b02542db0ffb928ac2d3ca7cb6d66d"
+  integrity sha512-8+3UMPBrjFa/6TtKi/7sehPKqfAm4g6K+YQjyyFOLUTxzOngcRZTlAVY8sc2CORJYqdHQY8gRPHmn+qo15rCBw==
   dependencies:
     regenerator-runtime "^0.13.4"
 
@@ -6413,12 +6420,12 @@ functions-have-names@^1.2.0:
   resolved "https://registry.yarnpkg.com/functions-have-names/-/functions-have-names-1.2.1.tgz#a981ac397fa0c9964551402cdc5533d7a4d52f91"
   integrity sha512-j48B/ZI7VKs3sgeI2cZp7WXWmZXu7Iq5pl5/vptV5N2mq+DGFuS/ulaDjtaoLpYzuD6u8UgrUKHfgo7fDTSiBA==
 
-gatsby-background-image@1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/gatsby-background-image/-/gatsby-background-image-1.4.0.tgz#eaac297ac53f263bc39ffd3a1b1782c4d059d82b"
-  integrity sha512-EFlFKiC/bOPznRbnJ8DtTKclbL6JnSPdfoJpZ9bU0Jgg21/OfHYy3bbDJFxeutwpGNIcV+T5xjW7c59CSUPoWg==
+gatsby-background-image@1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/gatsby-background-image/-/gatsby-background-image-1.4.1.tgz#d084a029b5fc082bac55870d6508c60be545367c"
+  integrity sha512-AJpdc5L+ufOTrxp23QiHXYxrfS6+6mZNjxsE6X3r3OlbFPAF6tkskqECZt8il7R2rU5opW7SV5PjVspq1eqQiQ==
   dependencies:
-    "@babel/runtime" "7.12.5"
+    "@babel/runtime" "^7.12.13"
     filter-invalid-dom-props "^2.0.0"
     global "^4.4.0"
     short-uuid "^4.1.0"
