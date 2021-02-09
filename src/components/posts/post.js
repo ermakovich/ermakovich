@@ -79,14 +79,20 @@ export default function BlogPostTemplate({
             name: 'description',
             content: description,
           },
-          {
-            name: 'og:image',
-            content: publicImageURL,
-          },
-          {
-            name: 'twitter:image',
-            content: publicImageURL,
-          },
+          ...[
+            ...(publicImageURL
+              ? [
+                {
+                  name: 'og:image',
+                  content: publicImageURL,
+                },
+                {
+                  name: 'twitter:image',
+                  content: publicImageURL,
+                },
+              ]
+              : []),
+          ],
           {
             name: 'twitter:card',
             content: 'summary',
