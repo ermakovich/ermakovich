@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "babel-eslint": "10.1.0",
-    "eslint": "7.21.0",
+    "eslint": "7.22.0",
     "eslint-plugin-react": "7.22.0",
     "prettier": "2.2.1",
     "unused-webpack-plugin": "2.4.0"
