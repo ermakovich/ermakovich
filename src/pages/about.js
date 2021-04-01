@@ -106,9 +106,16 @@ export default function AboutPage() {
           <OutboundLink href="https://en.wikipedia.org/wiki/Minsk">
             Minsk
           </OutboundLink>
-          , <img src={flagIcon} width={30} height={16} border={1} /> Belarus.
-          Currently working on open source and personal projects. Previously I
-          was leading front-end efforts in a bunch of internet startups, such as{' '}
+          ,{' '}
+          <img
+            src={flagIcon}
+            width={30}
+            height={16}
+            style={{ boxShadow: '0 0 1px gray' }}
+          />{' '}
+          Belarus. Currently working on open source and personal projects.
+          Previously I was leading front-end efforts in a bunch of internet
+          startups, such as{' '}
           <OutboundLink href="https://verifiable.com">Verifiable</OutboundLink>,{' '}
           <OutboundLink href="https://dock.io">Dock</OutboundLink>,{' '}
           <OutboundLink href="https://remote.com">Remote</OutboundLink>, and
