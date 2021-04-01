@@ -102,7 +102,7 @@ export default function AboutPage() {
       <Content>
         <h1>About</h1>
         <p>
-          My name is Sergey Ermakovich. I’m a front-end engineer living in{' '}
+          My name is Siarhei Yermakovich. I’m a front-end engineer living in{' '}
           <OutboundLink href="https://en.wikipedia.org/wiki/Minsk">
             Minsk
           </OutboundLink>

@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import Img from 'components/progressive-image'
 import InternalLink from 'components/internal-link'
 
-export const Layout = styled.div`
+const Layout = styled.div`
   margin: 7em auto;
   max-width: 20em;
   padding: 0px 1.0875em 1.45em;
@@ -13,15 +13,15 @@ export const Layout = styled.div`
   text-align: center;
 `
 
-export const Avatar = styled(Img)`
+const Avatar = styled(Img)`
   border-radius: 50%;
 `
 
-export const Header = styled.h1`
+const Header = styled.h1`
   font-weight: normal;
 `
 
-export const More = styled.p`
+const More = styled.p`
   font-size: 1.2em;
 `
 
