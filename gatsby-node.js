@@ -30,7 +30,7 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         `
-      ).then(result => {
+      ).then((result) => {
         if (result.errors) {
           reject(result.errors)
         }
@@ -82,13 +82,16 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   }
 }
 
-exports.onCreateWebpackConfig = ({stage, actions}) => {
+exports.onCreateWebpackConfig = ({ stage, actions }) => {
   actions.setWebpackConfig({
-    plugins: stage === 'build-html' ? [
-      new UnusedWebpackPlugin({
-        directories: [path.join(__dirname, 'src')],
-        exclude: ['*.md', '*.jpg', '*.jpeg', '*.png'],
-      }),
-    ] : [],
-  });
-};
+    plugins:
+      stage === 'build-html'
+        ? [
+          new UnusedWebpackPlugin({
+            directories: [path.join(__dirname, 'src')],
+            exclude: ['*.md', '*.jpg', '*.jpeg', '*.png', '*.pdf'],
+          }),
+        ]
+        : [],
+  })
+}
