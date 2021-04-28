@@ -6048,10 +6048,10 @@ functions-have-names@^1.2.0:
   resolved "https://registry.yarnpkg.com/functions-have-names/-/functions-have-names-1.2.1.tgz#a981ac397fa0c9964551402cdc5533d7a4d52f91"
   integrity sha512-j48B/ZI7VKs3sgeI2cZp7WXWmZXu7Iq5pl5/vptV5N2mq+DGFuS/ulaDjtaoLpYzuD6u8UgrUKHfgo7fDTSiBA==
 
-gatsby-background-image@1.5.2:
-  version "1.5.2"
-  resolved "https://registry.yarnpkg.com/gatsby-background-image/-/gatsby-background-image-1.5.2.tgz#79bb6dbd6474fa709dd08c6a4aad620076539723"
-  integrity sha512-pENYmggaF+tQW2YN21stDvdU4ClL7lxtqDOp2QI4qXKN2M610zewHyQJpw3iXmMwV7N9KQIeOReLmwqGmU1VwA==
+gatsby-background-image@1.5.3:
+  version "1.5.3"
+  resolved "https://registry.yarnpkg.com/gatsby-background-image/-/gatsby-background-image-1.5.3.tgz#3c16f19beda861e8129f95bb20a8589ee9272e2c"
+  integrity sha512-mELRONXu4QpNJQ8rKqFmqRKO1l7I/xDWCPEjzf4qg6epWisr7QTrBL3mYFdl7+CUjV7Lw2xSXy26JsLw8vbI5w==
   dependencies:
     "@babel/runtime" "^7.13.17"
     filter-invalid-dom-props "^2.0.0"
