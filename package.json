@@ -14,7 +14,7 @@
     "gatsby-plugin-resolve-src": "2.1.0",
     "gatsby-plugin-robots-txt": "1.6.2",
     "gatsby-plugin-sharp": "3.5.0",
-    "gatsby-plugin-sitemap": "3.3.0",
+    "gatsby-plugin-sitemap": "4.1.0",
     "gatsby-plugin-styled-components": "4.5.0",
     "gatsby-remark-copy-linked-files": "4.2.0",
     "gatsby-remark-embed-gist": "1.2.1",
