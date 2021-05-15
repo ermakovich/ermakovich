@@ -47,7 +47,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sitemap',
       options: {
-        exclude: ['/wedding'],
+        excludes: ['/wedding'],
       },
     },
     {
