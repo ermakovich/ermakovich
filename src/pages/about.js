@@ -6,7 +6,6 @@ import Link from 'components/link'
 import OutboundLink from 'components/outbound-link'
 import Content from 'components/content'
 
-import flagIcon from './about/images/flag.png'
 import githubIcon from './about/images/social-icons/github.svg'
 import twitterIcon from './about/images/social-icons/twitter.svg'
 import mediumIcon from './about/images/social-icons/medium.svg'
@@ -106,14 +105,7 @@ export default function AboutPage() {
           <OutboundLink href="https://en.wikipedia.org/wiki/Minsk">
             Minsk
           </OutboundLink>
-          ,{' '}
-          <img
-            src={flagIcon}
-            width={30}
-            height={16}
-            style={{ boxShadow: '0 0 1px gray' }}
-          />{' '}
-          Belarus. Currently working on open source and personal projects.
+          , Belarus. Currently working on open source and personal projects.
           Previously I was leading front-end efforts in a bunch of internet
           startups, such as{' '}
           <OutboundLink href="https://verifiable.com">Verifiable</OutboundLink>,{' '}
