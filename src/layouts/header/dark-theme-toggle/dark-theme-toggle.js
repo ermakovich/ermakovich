@@ -19,16 +19,14 @@ export default function DarkThemeToggle() {
   const { isDark, setIsDark } = useContext(ThemeContext)
 
   const { sunIcon, moonIcon } = useStaticQuery(graphql`
-    query {
+    {
       sunIcon: file(
         relativePath: {
           eq: "layouts/header/dark-theme-toggle/sun-with-face.png"
         }
       ) {
         childImageSharp {
-          fixed(width: 30, height: 30) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(width: 30, height: 30, layout: FIXED)
         }
       }
       moonIcon: file(
@@ -37,9 +35,7 @@ export default function DarkThemeToggle() {
         }
       ) {
         childImageSharp {
-          fixed(width: 30, height: 30) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(width: 30, height: 30, layout: FIXED)
         }
       }
     }
@@ -51,7 +47,7 @@ export default function DarkThemeToggle() {
       title={`Toggle to ${isDark ? 'light' : 'dark'} theme`}
     >
       <BackgroundImage
-        fixed={(isDark ? sunIcon : moonIcon).childImageSharp.fixed}
+        fixed={(isDark ? sunIcon : moonIcon).childImageSharp.gatsbyImageData}
       />
     </Root>
   )

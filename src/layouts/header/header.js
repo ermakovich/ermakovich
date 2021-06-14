@@ -72,12 +72,10 @@ const Right = styled.div`
 
 export default function Header({ isIntro }) {
   const { avatar } = useStaticQuery(graphql`
-    query {
+    {
       avatar: file(relativePath: { eq: "images/avatar.jpg" }) {
         childImageSharp {
-          fixed(width: 36, height: 36) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(width: 36, height: 36, layout: FIXED)
         }
       }
     }
@@ -89,7 +87,10 @@ export default function Header({ isIntro }) {
         {!isIntro && (
           <>
             <GatsbyLink to="/">
-              <Avatar loading="eager" fixed={avatar.childImageSharp.fixed} />
+              <Avatar
+                loading="eager"
+                fixed={avatar.childImageSharp.gatsbyImageData}
+              />
             </GatsbyLink>
             <Menu>
               <MenuItems>

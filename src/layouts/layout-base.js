@@ -38,13 +38,13 @@ function LayoutBase({ children }) {
             content: site.siteMetadata.description,
           },
         ]}
-        link={[
-          {
-            rel: 'shortcut icon',
-            type: 'image/png',
-            href: favicon.childImageSharp.fixed.src,
-          },
-        ]}
+        // link={[
+        //   {
+        //     rel: 'shortcut icon',
+        //     type: 'image/png',
+        //     href: favicon.childImageSharp.fixed.src,
+        //   },
+        // ]}
         htmlAttributes={{ lang: 'en', theme: isDark && 'dark' }}
       />
       {children}

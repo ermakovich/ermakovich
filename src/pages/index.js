@@ -2,7 +2,7 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 
-import Img from 'components/progressive-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import InternalLink from 'components/internal-link'
 
 const Layout = styled.div`
@@ -11,10 +11,6 @@ const Layout = styled.div`
   padding: 0px 1.0875em 1.45em;
   padding-top: 0;
   text-align: center;
-`
-
-const Avatar = styled(Img)`
-  border-radius: 50%;
 `
 
 const Header = styled.h1`
@@ -27,12 +23,10 @@ const More = styled.p`
 
 export default function IndexPage() {
   const { avatar } = useStaticQuery(graphql`
-    query {
+    {
       avatar: file(relativePath: { eq: "images/avatar.jpg" }) {
         childImageSharp {
-          fixed(width: 200, height: 200) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(width: 200, height: 200, layout: FIXED)
         }
       }
     }
@@ -40,7 +34,15 @@ export default function IndexPage() {
 
   return (
     <Layout>
-      <Avatar fixed={avatar.childImageSharp.fixed} alt="Photo" />
+      <GatsbyImage
+        image={avatar.childImageSharp.gatsbyImageData}
+        alt="Photo"
+        style={{
+          margin: '0 auto',
+          borderRadius: '50%',
+          zIndex: 0,
+        }}
+      />
       <Header>
         Hi, I’m <strong>Siarhei Yermakovich</strong>
       </Header>

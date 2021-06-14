@@ -34,7 +34,7 @@ PhotosPage.propTypes = {
 }
 
 export const pageQuery = graphql`
-  query {
+  {
     photos: allFile(
       filter: { relativeDirectory: { eq: "pages/photos/all" } }
       sort: { fields: birthTime }
@@ -43,10 +43,7 @@ export const pageQuery = graphql`
         node {
           publicURL
           childImageSharp {
-            fluid(maxWidth: 400) {
-              ...GatsbyImageSharpFluid
-              ...GatsbyImageSharpFluid_noBase64
-            }
+            gatsbyImageData(width: 400, layout: CONSTRAINED)
           }
         }
       }

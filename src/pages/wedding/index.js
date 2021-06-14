@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 
 import OutboundLink from 'components/outbound-link'
-import Img from 'components/progressive-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import {
   PhotoGallery,
   PhotoGalleryItem,
@@ -34,8 +34,8 @@ const WeddingPage = ({ data }) => {
       <Helmet title="Вяселле Сяргея і Каці" />
       <Layout>
         <Intro className="section">
-          <Img
-            fluid={data.introBg.childImageSharp.fluid}
+          <GatsbyImage
+            image={data.introBg.childImageSharp.gatsbyImageData}
             alt="background"
             style={{
               position: 'absolute',
@@ -102,7 +102,7 @@ const WeddingPage = ({ data }) => {
               <div className="crew-item">
                 <OutboundLink href="https://vk.com/marina_luts">
                   <CrewAvatar
-                    fixed={data.marinaPhoto.childImageSharp.fixed}
+                    fixed={data.marinaPhoto.childImageSharp.gatsbyImageData}
                     alt="Марына Луц"
                   />
                 </OutboundLink>
@@ -114,7 +114,7 @@ const WeddingPage = ({ data }) => {
               <div className="crew-item">
                 <OutboundLink href="https://vk.com/egor_danchenko_show">
                   <CrewAvatar
-                    fixed={data.egorPhoto.childImageSharp.fixed}
+                    fixed={data.egorPhoto.childImageSharp.gatsbyImageData}
                     alt="Ягор Данчанка"
                   />
                 </OutboundLink>
@@ -160,13 +160,10 @@ WeddingPage.propTypes = {
 }
 
 export const pageQuery = graphql`
-  query {
+  {
     introBg: file(relativePath: { eq: "pages/wedding/photos/50.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 2560) {
-          ...GatsbyImageSharpFluid
-          ...GatsbyImageSharpFluid_noBase64
-        }
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
     photos: allFile(
@@ -177,28 +174,19 @@ export const pageQuery = graphql`
         node {
           publicURL
           childImageSharp {
-            fluid(maxWidth: 400) {
-              ...GatsbyImageSharpFluid
-              ...GatsbyImageSharpFluid_noBase64
-            }
+            gatsbyImageData(width: 400, layout: CONSTRAINED)
           }
         }
       }
     }
     marinaPhoto: file(relativePath: { eq: "pages/wedding/crew/marina.jpg" }) {
       childImageSharp {
-        fixed(width: 250) {
-          ...GatsbyImageSharpFixed
-          ...GatsbyImageSharpFixed_noBase64
-        }
+        gatsbyImageData(width: 250, layout: FIXED)
       }
     }
     egorPhoto: file(relativePath: { eq: "pages/wedding/crew/egor.jpg" }) {
       childImageSharp {
-        fixed(width: 250) {
-          ...GatsbyImageSharpFixed
-          ...GatsbyImageSharpFixed_noBase64
-        }
+        gatsbyImageData(width: 250, layout: FIXED)
       }
     }
   }
