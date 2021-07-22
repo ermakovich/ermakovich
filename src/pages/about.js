@@ -117,8 +117,11 @@ export default function AboutPage() {
 
         <p>
           Together with my wife <Link href={withKatePhoto}>Kate</Link> we are
-          happy owners of two cats - <Link href={bettyPhoto}>Betty</Link> and
-          her daughter <Link href={ashkaPhoto}>Ashka</Link>.
+          happy owners of two cats –{' '}
+          <OutboundLink href="https://instagram.com/betty_ashka/">
+            Betty and her daughter Ashka
+          </OutboundLink>
+          .
         </p>
 
         <p>You can find me on:</p>
