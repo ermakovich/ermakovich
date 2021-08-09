@@ -1,8 +1,7 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql, Link } from 'gatsby'
 import { Helmet } from 'react-helmet'
 
-import Link from 'components/link'
 import OutboundLink from 'components/outbound-link'
 import Content from 'components/content'
 
@@ -16,8 +15,6 @@ import instagramIcon from './about/images/social-icons/instagram.svg'
 import soundcloudIcon from './about/images/social-icons/soundcloud.svg'
 import goodreadsIcon from './about/images/social-icons/goodreads.svg'
 
-import bettyPhoto from './about/images/betty.jpg'
-import ashkaPhoto from './about/images/ashka.jpg'
 import withKatePhoto from './about/images/with-kate.jpg'
 
 import {
@@ -101,23 +98,18 @@ export default function AboutPage() {
       <Content>
         <h1>About</h1>
         <p>
-          My name is Siarhei Yermakovich. I’m a front-end engineer living in{' '}
+          My name is Siarhei Yermakovich. I’m a{' '}
+          <Link to="/programming">programmer</Link> living in a small village
+          80km away from{' '}
           <OutboundLink href="https://en.wikipedia.org/wiki/Minsk">
             Minsk
           </OutboundLink>
-          , Belarus. Currently working on open source and personal projects.
-          Previously I was leading front-end efforts in a bunch of internet
-          startups, such as{' '}
-          <OutboundLink href="https://verifiable.com">Verifiable</OutboundLink>,{' '}
-          <OutboundLink href="https://dock.io">Dock</OutboundLink>,{' '}
-          <OutboundLink href="https://remote.com">Remote</OutboundLink>, and
-          some others. Aside from work I love to record cover songs and enjoying
+          , Belarus. Aside from work I love to record cover songs and enjoying
           nature.
         </p>
 
         <p>
-          Together with my wife <Link href={withKatePhoto}>Kate</Link> we are
-          happy owners of two cats –{' '}
+          I’m a happy owner of two cats –{' '}
           <OutboundLink href="https://instagram.com/betty_ashka/">
             Betty and her daughter Ashka
           </OutboundLink>
