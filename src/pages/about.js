@@ -15,8 +15,6 @@ import instagramIcon from './about/images/social-icons/instagram.svg'
 import soundcloudIcon from './about/images/social-icons/soundcloud.svg'
 import goodreadsIcon from './about/images/social-icons/goodreads.svg'
 
-import withKatePhoto from './about/images/with-kate.jpg'
-
 import {
   SocialLinks,
   SocialLinksItem,
