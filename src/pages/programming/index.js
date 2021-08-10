@@ -26,13 +26,17 @@ export default function AboutPage() {
           experience. You can check my full working and studying background at{' '}
           <OutboundLink href="https://www.linkedin.com/in/ermakovich/">
             LinkedIn
-          </OutboundLink>{' '}
+          </OutboundLink>
           .
         </p>
         <p>
+          In 2015 I left my office job and started working remotely with a
+          distributed international team, headquatered in California, US. During
+          2015-2020 period we launched a bunch of projects with varying success.
+        </p>
+        <p>
           In 2020 I decided to stop working full-time and switched to
-          open-source and personal projects, including this website. You may
-          want to check my{' '}
+          open-source and personal projects. You may want to check my{' '}
           <OutboundLink href="https://github.com/ermakovich">
             GitHub
           </OutboundLink>{' '}
@@ -47,8 +51,14 @@ export default function AboutPage() {
           Currently I offer{' '}
           <Link to="/website-development-services">
             website development services
-          </Link>
-          .
+          </Link>{' '}
+          for small businesses and individuals.
+        </p>
+
+        <br />
+        <p>
+          P.S. Dear recruiters, please do not contact me, as I’m not looking for
+          any type of a permanent job!
         </p>
       </Content>
     </>
