@@ -14,6 +14,7 @@ const Layout = styled.div`
 `
 
 const Avatar = styled(Img)`
+  box-shadow: 0 0 5px 0;
   border-radius: 50%;
 `
 

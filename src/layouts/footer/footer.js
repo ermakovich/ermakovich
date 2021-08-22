@@ -14,7 +14,7 @@ export default function Footer() {
       <Content>
         <small>
           This website is built using{' '}
-          <OutboundLink href="https://www.gatsbyjs.com">Gatsby</OutboundLink>{' '}
+          <OutboundLink href="https://www.gatsbyjs.com">Gatsby</OutboundLink> 🚀
           and hosted on{' '}
           <OutboundLink href="https://www.netlify.com">Netlify</OutboundLink>.
           <br />

@@ -23,12 +23,12 @@ export default function AboutPage() {
         <h1>About</h1>
         <p>
           My name is Siarhei Yermakovich. I’m a{' '}
-          <Link to="/programming">programmer</Link>, hobby{' '}
-          <Link to="/music">musician</Link>, and beginning{' '}
+          <Link to="/programming">programmer</Link> 👨🏻‍💻, hobby{' '}
+          <Link to="/music">musician</Link> 🎸, and beginning{' '}
           <OutboundLink href="https://www.youtube.com/playlist?list=PL_27v5WWVQwQJY_eFhhMaqXHakMTh5dNT">
             beekeeper
-          </OutboundLink>
-          . Today I mostly live in a small village 80km away from{' '}
+          </OutboundLink>{' '}
+          🐝 . Today I mostly live in a small village 🏡 80km away from{' '}
           <OutboundLink href="https://en.wikipedia.org/wiki/Minsk">
             Minsk
           </OutboundLink>
@@ -36,11 +36,11 @@ export default function AboutPage() {
         </p>
 
         <p>
-          I’m a happy owner of two cats –{' '}
+          I’m a happy owner of{' '}
           <OutboundLink href="https://instagram.com/betty_ashka/">
-            Betty and her daughter Ashka
-          </OutboundLink>
-          .
+            two cats
+          </OutboundLink>{' '}
+          😺.
         </p>
 
         <p>
