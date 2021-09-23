@@ -3,12 +3,12 @@ html {
   font-family: georgia, serif;
   line-height: 1.5;
   box-sizing: border-box;
-  background: yellow;
+  background: rgb(255, 255, 126);
 }
 
 html[theme='dark'] {
   background: rgb(35, 35, 37);
-  color: yellow;
+  color: rgb(255, 255, 126);
 }
 
 body {
