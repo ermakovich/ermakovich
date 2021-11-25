@@ -43,7 +43,7 @@
     "babel-eslint": "10.1.0",
     "eslint": "8.3.0",
     "eslint-plugin-react": "7.27.1",
-    "prettier": "2.4.1",
+    "prettier": "2.5.0",
     "unused-webpack-plugin": "2.4.0"
   },
   "repository": {
