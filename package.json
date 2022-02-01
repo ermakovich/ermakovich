@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "dependencies": {
     "babel-plugin-styled-components": "2.0.2",
-    "gatsby": "4.6.0",
+    "gatsby": "4.6.1",
     "gatsby-background-image": "1.6.0",
     "gatsby-image": "3.11.0",
     "gatsby-plugin-feed": "4.6.0",
