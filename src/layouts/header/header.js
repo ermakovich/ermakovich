@@ -77,7 +77,7 @@ export default function Header({ isIntro }) {
                 layout="fixed"
                 width={36}
                 height={36}
-                style={{ borderRadius: '0.3em' }}
+                style={{ borderRadius: '0.3em', zIndex: 0 }}
               />
             </GatsbyLink>
             <Menu>

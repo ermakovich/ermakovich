@@ -11,7 +11,7 @@ import {
   PhotoGalleryItemImg,
 } from 'components/photo-gallery'
 
-import { Layout, Intro, CrewAvatar } from './_styles'
+import { Layout, Intro } from './_styles'
 
 const WeddingPage = ({ data }) => {
   const photos = data.photos.edges
@@ -105,11 +105,13 @@ const WeddingPage = ({ data }) => {
                 <OutboundLink href="https://vk.com/marina_luts">
                   <StaticImage
                     src="./crew/marina.jpg"
-                    width={250}
+                    width={225}
+                    layout="fixed"
                     alt="Марына Луц"
                     style={{
                       borderRadius: '50%',
                       boxShadow: '0 0 0 0.5em rgba(0, 0, 0, 0.06)',
+                      zIndex: 0,
                     }}
                   />
                 </OutboundLink>
@@ -122,11 +124,13 @@ const WeddingPage = ({ data }) => {
                 <OutboundLink href="https://vk.com/egor_danchenko_show">
                   <StaticImage
                     src="./crew/egor.jpg"
-                    width={250}
+                    width={225}
+                    layout="fixed"
                     alt="Ягор Данчанка"
                     style={{
                       borderRadius: '50%',
                       boxShadow: '0 0 0 0.5em rgba(0, 0, 0, 0.06)',
+                      zIndex: 0,
                     }}
                   />
                 </OutboundLink>
@@ -184,16 +188,6 @@ export const pageQuery = graphql`
             gatsbyImageData(width: 400, layout: CONSTRAINED)
           }
         }
-      }
-    }
-    marinaPhoto: file(relativePath: { eq: "pages/wedding/crew/marina.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(width: 250)
-      }
-    }
-    egorPhoto: file(relativePath: { eq: "pages/wedding/crew/egor.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(width: 250)
       }
     }
   }
