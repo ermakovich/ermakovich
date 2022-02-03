@@ -1,6 +1,8 @@
+const title = 'Siarhei Yermakovich';
+
 module.exports = {
   siteMetadata: {
-    title: 'Siarhei Yermakovich',
+    title,
     author: 'Siarhei Yermakovich',
     description:
       'Everything you need to know about Siarhei Yermakovich and even more.',
@@ -84,6 +86,7 @@ module.exports = {
                   custom_elements: [{ 'content:encoded': edge.node.html }],
                 }
               }),
+            title,
             query: `
               {
                 allMarkdownRemark(

@@ -13,6 +13,11 @@ const Layout = styled.div`
   text-align: center;
 `
 
+const Avatar = styled(Img)`
+  box-shadow: 0 0 5px 0;
+  border-radius: 50%;
+`
+
 const Header = styled.h1`
   font-weight: normal;
 `

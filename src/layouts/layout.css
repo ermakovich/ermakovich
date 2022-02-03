@@ -3,15 +3,12 @@ html {
   font-family: georgia, serif;
   line-height: 1.5;
   box-sizing: border-box;
+  background: rgb(255, 255, 126);
 }
 
 html[theme='dark'] {
   background: rgb(35, 35, 37);
-  color: rgb(229, 225, 216);
-}
-
-html[theme='dark'] a {
-  color: #81b4ee;
+  color: rgb(255, 255, 126);
 }
 
 body {
@@ -42,7 +39,7 @@ code {
 }
 
 a {
-  color: #15559d;
+  color: inherit;
 }
 
 figure {
