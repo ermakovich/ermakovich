@@ -185,7 +185,7 @@ export const pageQuery = graphql`
         node {
           publicURL
           childImageSharp {
-            gatsbyImageData(width: 400, layout: CONSTRAINED)
+            gatsbyImageData(layout: FULL_WIDTH)
           }
         }
       }
