@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Img from './progressive-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 export const PhotoGallery = styled.div`
   width: 100%;
@@ -15,10 +15,8 @@ export const PhotoGalleryItem = styled.a`
   border: 0.1rem solid rgb(61, 60, 58);
   box-sizing: border-box;
   position: relative;
-
-  @media (max-width: 400px) {
-    width: 100%;
-  }
+  width: 100%;
+  max-width: 400px;
 
   &::after {
     content: '';
@@ -42,11 +40,6 @@ export const PhotoGalleryItem = styled.a`
   }
 `
 
-export const PhotoGalleryItemImg = styled(Img)`
+export const PhotoGalleryItemImg = styled(GatsbyImage)`
   width: 100%;
-
-  @media (min-width: 400px) {
-    width: 400px;
-    height: 267px;
-  }
 `

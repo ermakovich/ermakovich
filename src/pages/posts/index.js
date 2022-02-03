@@ -6,11 +6,11 @@ import { Helmet } from 'react-helmet'
 import Content from 'components/content'
 import PostMeta from 'components/posts/post-meta'
 import PostDate from 'components/posts/post-date'
-import Img from 'components/progressive-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 export default function BlogIndex() {
   const { site, allMarkdownRemark, memoIcon } = useStaticQuery(graphql`
-    query {
+    {
       site {
         siteMetadata {
           title
@@ -29,18 +29,12 @@ export default function BlogIndex() {
               title
               cover_image {
                 childImageSharp {
-                  fixed(width: 70, height: 70) {
-                    ...GatsbyImageSharpFixed
-                    ...GatsbyImageSharpFixed_noBase64
-                  }
+                  gatsbyImageData(width: 70, height: 70, layout: FIXED)
                 }
               }
               image {
                 childImageSharp {
-                  fixed(width: 70, height: 70) {
-                    ...GatsbyImageSharpFixed
-                    ...GatsbyImageSharpFixed_noBase64
-                  }
+                  gatsbyImageData(width: 70, height: 70, layout: FIXED)
                 }
               }
             }
@@ -49,9 +43,7 @@ export default function BlogIndex() {
       }
       memoIcon: file(relativePath: { eq: "pages/posts/memo.png" }) {
         childImageSharp {
-          fixed(width: 70, height: 70) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(width: 70, height: 70, layout: FIXED)
         }
       }
     }
@@ -70,11 +62,11 @@ export default function BlogIndex() {
           return (
             <div key={node.fields.slug}>
               <Link to={node.fields.slug}>
-                <Img
-                  fixed={
+                <GatsbyImage
+                  image={
                     image
-                      ? image.childImageSharp.fixed
-                      : memoIcon.childImageSharp.fixed
+                      ? image.childImageSharp.gatsbyImageData
+                      : memoIcon.childImageSharp.gatsbyImageData
                   }
                   alt="post image"
                   style={{

@@ -7,7 +7,7 @@ import { TwitterTweetEmbed } from 'react-twitter-embed'
 import Content from 'components/content'
 import PostMeta from 'components/posts/post-meta'
 import PostDate from 'components/posts/post-date'
-import Img from 'components/progressive-image'
+import { getSrc, GatsbyImage } from 'gatsby-plugin-image'
 import UnstyledList from 'components/unstyled-list'
 import { ThemeContext } from 'components/theme'
 
@@ -67,8 +67,7 @@ export default function BlogPostTemplate({
   const { tweetId, image, lang } = frontmatter
   const frontmatterImage = frontmatter.image || frontmatter.cover_image
 
-  const publicImageURL =
-    frontmatterImage && siteUrl + frontmatterImage.childImageSharp.fluid.src
+  const publicImageURL = frontmatterImage && siteUrl + getSrc(frontmatterImage)
   const title = `${frontmatter.title} | ${siteTitle}`
 
   return (
@@ -117,9 +116,10 @@ export default function BlogPostTemplate({
             <h1>{frontmatter.title}</h1>
           </PostCoverContent>
           <PostCoverImgWrapper>
-            <Img
-              fluid={coverImage.childImageSharp.fluid}
+            <GatsbyImage
+              image={coverImage.childImageSharp.gatsbyImageData}
               alt="cover image"
+              loading="eager"
               style={{
                 height: '100%',
               }}
@@ -134,7 +134,13 @@ export default function BlogPostTemplate({
           &nbsp;&middot;&nbsp;
           <span>{timeToRead} min read</span>
         </PostMeta>
-        {image && <Img fluid={image.childImageSharp.fluid} alt="cover image" />}
+        {image && (
+          <GatsbyImage
+            image={image.childImageSharp.gatsbyImageData}
+            loading="eager"
+            alt="cover image"
+          />
+        )}
         <div dangerouslySetInnerHTML={{ __html: html }} />
 
         {tweetId && (
@@ -187,18 +193,12 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         cover_image {
           childImageSharp {
-            fluid(maxWidth: 2560) {
-              ...GatsbyImageSharpFluid
-              ...GatsbyImageSharpFluid_noBase64
-            }
+            gatsbyImageData(layout: FULL_WIDTH)
           }
         }
         image {
           childImageSharp {
-            fluid(maxWidth: 700) {
-              ...GatsbyImageSharpFluid
-              ...GatsbyImageSharpFluid_noBase64
-            }
+            gatsbyImageData(width: 700, layout: CONSTRAINED)
           }
         }
         lang

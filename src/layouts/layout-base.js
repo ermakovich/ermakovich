@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
+import { getSrc } from 'gatsby-plugin-image'
 
 import { ThemeContext } from 'components/theme'
 
@@ -20,9 +21,7 @@ function LayoutBase({ children }) {
       }
       favicon: file(relativePath: { eq: "images/avatar.jpg" }) {
         childImageSharp {
-          fixed(width: 96, height: 96) {
-            src
-          }
+          gatsbyImageData(width: 96, height: 96, layout: FIXED)
         }
       }
     }
@@ -42,7 +41,7 @@ function LayoutBase({ children }) {
           {
             rel: 'shortcut icon',
             type: 'image/png',
-            href: favicon.childImageSharp.fixed.src,
+            href: getSrc(favicon),
           },
         ]}
         htmlAttributes={{ lang: 'en', theme: isDark && 'dark' }}

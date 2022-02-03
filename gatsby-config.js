@@ -1,4 +1,4 @@
-const title = 'Siarhei Yermakovich';
+const title = 'Siarhei Yermakovich'
 
 module.exports = {
   siteMetadata: {
@@ -45,6 +45,7 @@ module.exports = {
         ],
       },
     },
+    'gatsby-plugin-image',
     'gatsby-plugin-layout',
     {
       resolve: 'gatsby-plugin-sitemap',

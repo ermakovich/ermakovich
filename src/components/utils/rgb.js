@@ -1,4 +1,4 @@
-export default function(r, g, b) {
+export default function (r, g, b) {
   if (arguments.length === 1) {
     return `rgb(${r}, ${r}, ${r})`
   }
