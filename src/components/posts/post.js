@@ -7,7 +7,7 @@ import { TwitterTweetEmbed } from 'react-twitter-embed'
 import Content from 'components/content'
 import PostMeta from 'components/posts/post-meta'
 import PostDate from 'components/posts/post-date'
-import { GatsbyImage } from 'gatsby-plugin-image'
+import { getSrc, GatsbyImage } from 'gatsby-plugin-image'
 import UnstyledList from 'components/unstyled-list'
 import { ThemeContext } from 'components/theme'
 
@@ -67,9 +67,7 @@ export default function BlogPostTemplate({
   const { tweetId, image, lang } = frontmatter
   const frontmatterImage = frontmatter.image || frontmatter.cover_image
 
-  const publicImageURL =
-    frontmatterImage &&
-    siteUrl + frontmatterImage.childImageSharp.gatsbyImageData.src
+  const publicImageURL = frontmatterImage && siteUrl + getSrc(frontmatterImage)
   const title = `${frontmatter.title} | ${siteTitle}`
 
   return (
@@ -82,15 +80,15 @@ export default function BlogPostTemplate({
           },
           ...(publicImageURL
             ? [
-                {
-                  name: 'og:image',
-                  content: publicImageURL,
-                },
-                {
-                  name: 'twitter:image',
-                  content: publicImageURL,
-                },
-              ]
+              {
+                name: 'og:image',
+                content: publicImageURL,
+              },
+              {
+                name: 'twitter:image',
+                content: publicImageURL,
+              },
+            ]
             : []),
           {
             name: 'twitter:card',
@@ -121,6 +119,7 @@ export default function BlogPostTemplate({
             <GatsbyImage
               image={coverImage.childImageSharp.gatsbyImageData}
               alt="cover image"
+              loading="eager"
               style={{
                 height: '100%',
               }}
@@ -138,6 +137,7 @@ export default function BlogPostTemplate({
         {image && (
           <GatsbyImage
             image={image.childImageSharp.gatsbyImageData}
+            loading="eager"
             alt="cover image"
           />
         )}

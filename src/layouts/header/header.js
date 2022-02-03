@@ -1,8 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link as GatsbyLink } from 'gatsby'
-import { useStaticQuery, graphql } from 'gatsby'
-import BackgroundImage from 'gatsby-background-image'
+import { StaticImage } from 'gatsby-plugin-image'
 
 import InternalLink from 'components/internal-link'
 import UnstyledList from 'components/unstyled-list'
@@ -19,11 +18,6 @@ const Content = styled.div`
   display: flex;
   align-items: center;
   min-height: 100px;
-`
-
-const Avatar = styled(BackgroundImage)`
-  border-radius: 0.3em;
-  overflow: hidden;
 `
 
 const Menu = styled.menu`
@@ -71,25 +65,19 @@ const Right = styled.div`
 `
 
 export default function Header({ isIntro }) {
-  const { avatar } = useStaticQuery(graphql`
-    {
-      avatar: file(relativePath: { eq: "images/avatar.jpg" }) {
-        childImageSharp {
-          gatsbyImageData(width: 36, height: 36, layout: FIXED)
-        }
-      }
-    }
-  `)
-
   return (
     <Layout>
       <Content>
         {!isIntro && (
           <>
             <GatsbyLink to="/">
-              <Avatar
+              <StaticImage
+                src="../../images/avatar.jpg"
                 loading="eager"
-                fixed={avatar.childImageSharp.gatsbyImageData}
+                layout="fixed"
+                width={36}
+                height={36}
+                style={{ borderRadius: '0.3em' }}
               />
             </GatsbyLink>
             <Menu>

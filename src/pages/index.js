@@ -1,8 +1,7 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 
-import { GatsbyImage } from 'gatsby-plugin-image'
+import { StaticImage } from 'gatsby-plugin-image'
 import InternalLink from 'components/internal-link'
 
 const Layout = styled.div`
@@ -11,11 +10,6 @@ const Layout = styled.div`
   padding: 0px 1.0875em 1.45em;
   padding-top: 0;
   text-align: center;
-`
-
-const Avatar = styled(Img)`
-  box-shadow: 0 0 5px 0;
-  border-radius: 50%;
 `
 
 const Header = styled.h1`
@@ -27,24 +21,18 @@ const More = styled.p`
 `
 
 export default function IndexPage() {
-  const { avatar } = useStaticQuery(graphql`
-    {
-      avatar: file(relativePath: { eq: "images/avatar.jpg" }) {
-        childImageSharp {
-          gatsbyImageData(width: 200, height: 200, layout: FIXED)
-        }
-      }
-    }
-  `)
-
   return (
     <Layout>
-      <GatsbyImage
-        image={avatar.childImageSharp.gatsbyImageData}
+      <StaticImage
+        src="../images/avatar.jpg"
         alt="Photo"
+        width={200}
+        height={200}
+        loading="eager"
         style={{
           margin: '0 auto',
           borderRadius: '50%',
+          boxShadow: '0 0 5px 0',
           zIndex: 0,
         }}
       />

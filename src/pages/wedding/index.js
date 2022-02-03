@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 
 import OutboundLink from 'components/outbound-link'
-import { GatsbyImage } from 'gatsby-plugin-image'
+import { StaticImage } from 'gatsby-plugin-image'
 import {
   PhotoGallery,
   PhotoGalleryItem,
@@ -24,7 +24,7 @@ const WeddingPage = ({ data }) => {
         rel="noopener noreferrer"
         href={publicURL}
       >
-        <PhotoGalleryItemImg fluid={childImageSharp.fluid} />
+        <PhotoGalleryItemImg image={childImageSharp.gatsbyImageData} />
       </PhotoGalleryItem>
     )
   })
@@ -34,8 +34,10 @@ const WeddingPage = ({ data }) => {
       <Helmet title="Вяселле Сяргея і Каці" />
       <Layout>
         <Intro className="section">
-          <GatsbyImage
-            image={data.introBg.childImageSharp.gatsbyImageData}
+          <StaticImage
+            src="./photos/50.jpg"
+            loading="eager"
+            placeholder="none"
             alt="background"
             style={{
               position: 'absolute',
@@ -101,9 +103,14 @@ const WeddingPage = ({ data }) => {
             <div className="crew">
               <div className="crew-item">
                 <OutboundLink href="https://vk.com/marina_luts">
-                  <CrewAvatar
-                    fixed={data.marinaPhoto.childImageSharp.gatsbyImageData}
+                  <StaticImage
+                    src="./crew/marina.jpg"
+                    width={250}
                     alt="Марына Луц"
+                    style={{
+                      borderRadius: '50%',
+                      boxShadow: '0 0 0 0.5em rgba(0, 0, 0, 0.06)',
+                    }}
                   />
                 </OutboundLink>
                 <h3>Каардынатар</h3>
@@ -113,9 +120,14 @@ const WeddingPage = ({ data }) => {
               </div>
               <div className="crew-item">
                 <OutboundLink href="https://vk.com/egor_danchenko_show">
-                  <CrewAvatar
-                    fixed={data.egorPhoto.childImageSharp.gatsbyImageData}
+                  <StaticImage
+                    src="./crew/egor.jpg"
+                    width={250}
                     alt="Ягор Данчанка"
+                    style={{
+                      borderRadius: '50%',
+                      boxShadow: '0 0 0 0.5em rgba(0, 0, 0, 0.06)',
+                    }}
                   />
                 </OutboundLink>
                 <h3>Вядучы</h3>
@@ -161,11 +173,6 @@ WeddingPage.propTypes = {
 
 export const pageQuery = graphql`
   {
-    introBg: file(relativePath: { eq: "pages/wedding/photos/50.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH)
-      }
-    }
     photos: allFile(
       filter: { relativeDirectory: { eq: "pages/wedding/photos" } }
       sort: { fields: birthTime }
@@ -181,12 +188,12 @@ export const pageQuery = graphql`
     }
     marinaPhoto: file(relativePath: { eq: "pages/wedding/crew/marina.jpg" }) {
       childImageSharp {
-        gatsbyImageData(width: 250, layout: FIXED)
+        gatsbyImageData(width: 250)
       }
     }
     egorPhoto: file(relativePath: { eq: "pages/wedding/crew/egor.jpg" }) {
       childImageSharp {
-        gatsbyImageData(width: 250, layout: FIXED)
+        gatsbyImageData(width: 250)
       }
     }
   }

@@ -19,7 +19,7 @@ const PhotosPage = ({ data }) => {
         rel="noopener noreferrer"
         href={publicURL}
       >
-        <PhotoGalleryItemImg fluid={childImageSharp.fluid} />
+        <PhotoGalleryItemImg image={childImageSharp.gatsbyImageData} />
       </PhotoGalleryItem>
     )
   })

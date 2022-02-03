@@ -1,7 +1,5 @@
 import styled from 'styled-components'
 
-import { GatsbyImage } from 'gatsby-plugin-image'
-
 import { fg as fgColor } from 'components/utils/colors'
 
 export const Layout = styled.div`
@@ -165,9 +163,4 @@ export const Layout = styled.div`
 
 export const Intro = styled.header`
   position: relative;
-`
-
-export const CrewAvatar = styled(GatsbyImage)`
-  border-radius: 50%;
-  box-shadow: 0 0 0 0.5em rgba(0, 0, 0, 0.06);
 `
