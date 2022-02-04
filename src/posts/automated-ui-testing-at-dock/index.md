@@ -17,7 +17,14 @@ The second technology is [Cucumber](https://cucumber.io), which is a runner for 
 
 Here is an example of a test scenario:
 
-`gist:ermakovich/5762a7dba764db0e2a9542336c6fd1b6`
+<iframe
+  width="100%"
+  height="400"  
+  style="border: none;"
+  src="data:text/html;charset=utf-8,
+  <head><base target='_blank' /></head>
+  <body style='margin: 0; padding: 0'><script src='https://gist.github.com/ermakovich/5762a7dba764db0e2a9542336c6fd1b6.js'></script>
+  </body>" />
 
 One powerful feature of Cucumber is that once you define a step, you can use it in multiple scenarios. In the example above you can see the steps: `I navigate to ""` or `I submit form`. These steps are generic and are used in many different scenarios.
 
