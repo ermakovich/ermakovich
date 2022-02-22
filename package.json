@@ -3,7 +3,7 @@
   "name": "ermakovich",
   "version": "1.0.0",
   "dependencies": {
-    "babel-plugin-styled-components": "2.0.3",
+    "babel-plugin-styled-components": "2.0.5",
     "gatsby": "4.7.2",
     "gatsby-plugin-feed": "4.7.0",
     "gatsby-plugin-google-analytics": "4.7.0",
