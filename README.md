@@ -3,7 +3,7 @@
 
 My personal website - https://ermakovich.name.
 
-Built using [Gatsby](https://www.gatsbyjs.org). Automatically deployed using Github hooks and hosted on [Netlify](https://www.netlify.com).
+Built using [Gatsby](https://www.gatsbyjs.org). Continuous builds and deployments using Github Actions and [Netlify](https://www.netlify.com).
 
 # Installing
 

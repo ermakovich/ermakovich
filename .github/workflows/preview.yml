@@ -1,0 +1,22 @@
+name: 'Netlify Preview Deploy'
+
+on:
+  pull_request:
+    types: ['opened', 'edited', 'synchronize']
+
+jobs:
+  deploy-preview:
+    name: 'Deploy Preview'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: deploy to preview mode
+        uses: thundermiracle/netlify-deploy@v2.0.2
+        with:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN}}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID}}
+          deploy-dir: "./public"
+          cache-path: |
+            .cache
+            public
+            node_modules

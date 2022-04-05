@@ -1,0 +1,24 @@
+name: 'Netlify Production Deploy'
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: 'Deploy Production'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: deploy to production mode
+        uses: thundermiracle/netlify-deploy@v2.0.2
+        with:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN}}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID}}
+          deploy-dir: "./public"
+          cache-path: |
+            .cache
+            public
+            node_modules
+          production: true
