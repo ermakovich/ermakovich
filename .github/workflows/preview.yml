@@ -11,12 +11,11 @@ jobs:
 
     steps:
       - name: deploy to preview mode
-        uses: thundermiracle/netlify-deploy@v2.0.2
+        uses: thundermiracle/netlify-deploy@v3.0.1
         with:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN}}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID}}
           deploy-dir: "./public"
-          cache-path: |
+          extra-cache-path: |
             .cache
             public
-            node_modules
