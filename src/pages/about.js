@@ -33,14 +33,6 @@ export default function AboutPage() {
         </p>
 
         <p>
-          I’m a happy owner of{' '}
-          <OutboundLink href="https://instagram.com/betty_ashka/">
-            two cats
-          </OutboundLink>{' '}
-          😺.
-        </p>
-
-        <p>
           Sometimes I post to{' '}
           <OutboundLink href="https://twitter.com/ki_duk">Twitter</OutboundLink>
           . You can also check for my photos and videos on{' '}
