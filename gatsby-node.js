@@ -63,8 +63,6 @@ exports.onCreatePage = ({ page, actions }) => {
 
   if (page.path === '/') {
     page.context.layout = 'intro'
-  } else if (page.path.match(/wedding/)) {
-    page.context.layout = 'wedding'
   }
   createPage(page)
 }

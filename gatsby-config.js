@@ -48,15 +48,6 @@ module.exports = {
     'gatsby-plugin-layout',
     {
       resolve: 'gatsby-plugin-sitemap',
-      options: {
-        excludes: ['/wedding'],
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-robots-txt',
-      options: {
-        policy: [{ userAgent: '*', disallow: '/wedding' }],
-      },
     },
     {
       resolve: `gatsby-plugin-feed`,
