@@ -13,6 +13,7 @@ jobs:
       - name: deploy to preview mode
         uses: thundermiracle/netlify-deploy@v3.0.1
         with:
+          node: 18
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN}}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID}}
           deploy-dir: "./public"
