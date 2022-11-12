@@ -8,11 +8,9 @@ import './layout.css'
 
 const Layout = ({ children, pageContext }) => (
   <LayoutBase>
-    {pageContext.layout !== 'wedding' && (
-      <Header isIntro={pageContext.layout === 'intro'} />
-    )}
+    <Header isIntro={pageContext.layout === 'intro'} />
     {children}
-    {pageContext.layout !== 'wedding' && <Footer />}
+    <Footer />
   </LayoutBase>
 )
 
