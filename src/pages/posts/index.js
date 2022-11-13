@@ -9,45 +9,43 @@ import PostDate from 'components/posts/post-date'
 import { GatsbyImage } from 'gatsby-plugin-image'
 
 export default function BlogIndex() {
-  const { site, allMarkdownRemark, memoIcon } = useStaticQuery(graphql`
-    {
-      site {
-        siteMetadata {
-          title
+  const { site, allMarkdownRemark, memoIcon } = useStaticQuery(graphql`{
+  site {
+    siteMetadata {
+      title
+    }
+  }
+  allMarkdownRemark(sort: {frontmatter: {date: DESC}}) {
+    edges {
+      node {
+        excerpt
+        fields {
+          slug
         }
-      }
-      allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-        edges {
-          node {
-            excerpt
-            fields {
-              slug
+        timeToRead
+        frontmatter {
+          date(formatString: "MMMM DD, YYYY")
+          title
+          cover_image {
+            childImageSharp {
+              gatsbyImageData(width: 70, height: 70, layout: FIXED)
             }
-            timeToRead
-            frontmatter {
-              date(formatString: "MMMM DD, YYYY")
-              title
-              cover_image {
-                childImageSharp {
-                  gatsbyImageData(width: 70, height: 70, layout: FIXED)
-                }
-              }
-              image {
-                childImageSharp {
-                  gatsbyImageData(width: 70, height: 70, layout: FIXED)
-                }
-              }
+          }
+          image {
+            childImageSharp {
+              gatsbyImageData(width: 70, height: 70, layout: FIXED)
             }
           }
         }
       }
-      memoIcon: file(relativePath: { eq: "pages/posts/memo.png" }) {
-        childImageSharp {
-          gatsbyImageData(width: 70, height: 70, layout: FIXED)
-        }
-      }
     }
-  `)
+  }
+  memoIcon: file(relativePath: {eq: "pages/posts/memo.png"}) {
+    childImageSharp {
+      gatsbyImageData(width: 70, height: 70, layout: FIXED)
+    }
+  }
+}`)
 
   const posts = get(allMarkdownRemark, 'edges')
 
