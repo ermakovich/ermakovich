@@ -5,9 +5,11 @@ html {
   box-sizing: border-box;
 }
 
-html[theme='dark'] {
-  background: rgb(35, 35, 37);
-  color: white;
+@media (prefers-color-scheme: dark) {
+  html {
+    background: rgb(35, 35, 37);
+    color: white;
+  }
 }
 
 body {

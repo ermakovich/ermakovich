@@ -6,8 +6,6 @@ import { StaticImage } from 'gatsby-plugin-image'
 import InternalLink from 'components/internal-link'
 import UnstyledList from 'components/unstyled-list'
 
-import DarkThemeToggle from './dark-theme-toggle/dark-theme-toggle'
-
 const Layout = styled.div`
   margin-bottom: 1.45em;
 `
@@ -102,9 +100,7 @@ export default function Header({ isIntro }) {
           </>
         )}
         <Main />
-        <Right>
-          <DarkThemeToggle />
-        </Right>
+        <Right />
       </Content>
     </Layout>
   )
