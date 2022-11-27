@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { Helmet } from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import styled from 'styled-components'
@@ -9,7 +9,6 @@ import PostMeta from 'components/posts/post-meta'
 import PostDate from 'components/posts/post-date'
 import { getSrc, GatsbyImage } from 'gatsby-plugin-image'
 import UnstyledList from 'components/unstyled-list'
-import { ThemeContext } from 'components/theme'
 
 import { bg as bgColor, fg as fgColor } from 'components/utils/colors'
 
@@ -52,12 +51,7 @@ const NextPrev = styled(UnstyledList)`
   margin-top: 3rem;
 `
 
-export default function BlogPostTemplate({
-  pageContext,
-  data: { site, markdownRemark },
-}) {
-  const { isDark } = useContext(ThemeContext)
-
+export default function BlogPostTemplate({ pageContext, data: { site, markdownRemark } }) {
   const { excerpt, frontmatter, timeToRead, html } = markdownRemark
   const siteTitle = site.siteMetadata.title
   const siteUrl = site.siteMetadata.siteUrl
@@ -80,15 +74,15 @@ export default function BlogPostTemplate({
           },
           ...(publicImageURL
             ? [
-              {
-                name: 'og:image',
-                content: publicImageURL,
-              },
-              {
-                name: 'twitter:image',
-                content: publicImageURL,
-              },
-            ]
+                {
+                  name: 'og:image',
+                  content: publicImageURL,
+                },
+                {
+                  name: 'twitter:image',
+                  content: publicImageURL,
+                },
+              ]
             : []),
           {
             name: 'twitter:card',
@@ -143,12 +137,7 @@ export default function BlogPostTemplate({
         )}
         <div dangerouslySetInnerHTML={{ __html: html }} />
 
-        {tweetId && (
-          <TwitterTweetEmbed
-            {...{ tweetId }}
-            options={{ lang, theme: isDark ? 'dark' : 'light' }}
-          />
-        )}
+        {tweetId && <TwitterTweetEmbed {...{ tweetId }} options={{ lang }} />}
 
         <NextPrev>
           {next && (

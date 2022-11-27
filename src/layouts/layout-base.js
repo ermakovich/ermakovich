@@ -1,16 +1,12 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 import { getSrc } from 'gatsby-plugin-image'
 
-import { ThemeContext } from 'components/theme'
-
 import './layout.css'
 
 function LayoutBase({ children }) {
-  const { isDark } = useContext(ThemeContext)
-
   const { site, favicon } = useStaticQuery(graphql`
     query {
       site {
@@ -44,7 +40,7 @@ function LayoutBase({ children }) {
             href: getSrc(favicon),
           },
         ]}
-        htmlAttributes={{ lang: 'en', theme: isDark && 'dark' }}
+        htmlAttributes={{ lang: 'en' }}
       />
       {children}
     </>
