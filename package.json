@@ -34,12 +34,13 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
+    "lint": "eslint .",
+    "lint-ci": "eslint . --format junit -o reports/junit/lint-results.xml",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "babel-eslint": "10.1.0",
     "eslint": "8.28.0",
-    "eslint-plugin-react": "7.31.11",
+    "eslint-config-react-app": "7.0.1",
     "prettier": "2.8.0",
     "unused-webpack-plugin": "2.4.0"
   },

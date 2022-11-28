@@ -18,10 +18,10 @@ export default function AboutPage() {
     }
   `)
 
-  // simple workaround for exposing email statically on the page
+  // simple workaround for not exposing email statically on the page
   useEffect(() => {
-    setEmail('s.ermakovich@' + 'gmail.com')
-  })
+    setEmail('s.ermakovich@gmail.com')
+  }, [])
 
   return (
     <>
