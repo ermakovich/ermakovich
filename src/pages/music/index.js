@@ -40,6 +40,7 @@ export default function AboutPage() {
 
         <p>
           <iframe
+            title="soundcloud"
             width="100%"
             height="300"
             scrolling="no"
