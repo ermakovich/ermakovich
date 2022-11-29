@@ -1,16 +1,32 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import styled from 'styled-components'
 import { TwitterTweetEmbed } from 'react-twitter-embed'
+import { getSrc } from 'gatsby-plugin-image'
 
 import Content from 'components/content'
 import PostMeta from 'components/posts/post-meta'
 import PostDate from 'components/posts/post-date'
-import { getSrc, GatsbyImage } from 'gatsby-plugin-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import UnstyledList from 'components/unstyled-list'
-
 import { bg as bgColor, fg as fgColor } from 'components/utils/colors'
+import { SEO } from 'components/seo'
+
+export const Head = ({ data: { site, markdownRemark } }) => {
+  const { excerpt, frontmatter } = markdownRemark
+  const siteTitle = site.siteMetadata.title
+  const frontmatterImage = frontmatter.image || frontmatter.cover_image
+
+  const title = `${frontmatter.title} | ${siteTitle}`
+
+  return (
+    <SEO
+      title={title}
+      description={excerpt}
+      image={frontmatterImage && getSrc(frontmatterImage)}
+    />
+  )
+}
 
 const PostCover = styled.div`
   position: relative;
@@ -51,59 +67,17 @@ const NextPrev = styled(UnstyledList)`
   margin-top: 3rem;
 `
 
-export default function BlogPostTemplate({ pageContext, data: { site, markdownRemark } }) {
-  const { excerpt, frontmatter, timeToRead, html } = markdownRemark
-  const siteTitle = site.siteMetadata.title
-  const siteUrl = site.siteMetadata.siteUrl
-  const description = excerpt || site.siteMetadata.description
+export default function BlogPostTemplate({
+  pageContext,
+  data: { markdownRemark },
+}) {
+  const { frontmatter, timeToRead, html } = markdownRemark
   const { previous, next } = pageContext
   const coverImage = frontmatter.cover_image
   const { tweetId, image, lang } = frontmatter
-  const frontmatterImage = frontmatter.image || frontmatter.cover_image
-
-  const publicImageURL = frontmatterImage && siteUrl + getSrc(frontmatterImage)
-  const title = `${frontmatter.title} | ${siteTitle}`
 
   return (
     <>
-      <Helmet
-        meta={[
-          {
-            name: 'description',
-            content: description,
-          },
-          ...(publicImageURL
-            ? [
-                {
-                  name: 'og:image',
-                  content: publicImageURL,
-                },
-                {
-                  name: 'twitter:image',
-                  content: publicImageURL,
-                },
-              ]
-            : []),
-          {
-            name: 'twitter:card',
-            content: 'summary',
-          },
-          {
-            name: 'twitter:site',
-            content: '@ki_duk',
-          },
-          {
-            name: 'twitter:title',
-            content: title,
-          },
-          {
-            name: 'twitter:description',
-            content: description,
-          },
-        ]}
-        title={title}
-        htmlAttributes={{ lang: lang || 'en' }}
-      />
       {coverImage && (
         <PostCover>
           <PostCoverContent>
@@ -167,9 +141,6 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
-        description
-        author
-        siteUrl
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
