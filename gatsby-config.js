@@ -10,7 +10,6 @@ module.exports = {
     twitterUsername: '@ki_duk',
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-plugin-google-analytics',
