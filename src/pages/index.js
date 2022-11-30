@@ -3,6 +3,9 @@ import styled from 'styled-components'
 
 import { StaticImage } from 'gatsby-plugin-image'
 import InternalLink from 'components/internal-link'
+import { SEO } from 'components/seo'
+
+export const Head = () => <SEO />
 
 const Layout = styled.div`
   margin: 7em auto;

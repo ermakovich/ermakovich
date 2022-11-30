@@ -7,9 +7,9 @@ module.exports = {
     description:
       'Everything you need to know about Siarhei Yermakovich and even more.',
     siteUrl: 'https://ermakovich.name',
+    twitterUsername: '@ki_duk',
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-plugin-google-analytics',
