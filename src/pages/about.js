@@ -1,43 +1,75 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link, graphql, useStaticQuery } from 'gatsby'
 
 import OutboundLink from 'components/outbound-link'
 import Content from 'components/content'
 import { SEO } from 'components/seo'
 
-export const Head = () => <SEO titleAddendum="About" />
+export const Head = () => <SEO titleAddendum="Обо мне" />
 
 export default function AboutPage() {
+  const { site } = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
+
   return (
     <Content>
-      <h1>About</h1>
+      <h1>Обо мне</h1>
       <p>
-        My name is Siarhei Yermakovich. I’m a{' '}
-        <Link to="/programming">programmer</Link> 👨🏻‍💻, hobby{' '}
-        <Link to="/music">musician</Link> 🎸, and beginning beekeeper 🐝 . Today
-        I mostly live in a small village 🏡 80km away from{' '}
-        <OutboundLink href="https://en.wikipedia.org/wiki/Minsk">
-          Minsk
+        Меня зовут {site.siteMetadata.title}. Более{' '}
+        {new Date().getFullYear() - 2006} лет я занимаюсь веб-разработкой. Вы
+        можете посмотреть где я учился и работал в моем профиле на{' '}
+        <OutboundLink href="https://www.linkedin.com/in/ermakovich/">
+          LinkedIn
         </OutboundLink>
-        , Belarus.
+        .
+      </p>
+      <p>
+        В 2015 году я решил покинуть офис и начал работать удаленно в
+        распределенной международной команде с главным офисом в Калифорнии, США.
+        В течении 2015-2020 годов мы запустили несколько проектов с различным
+        успехом.
+      </p>
+      <p>
+        В 2020 году я решил прекратить работу на полную занятость и переключился
+        на персональные проекты. Возможно вы захотите взглянуть на мои профили
+        на{' '}
+        <OutboundLink href="https://github.com/ermakovich">GitHub</OutboundLink>{' '}
+        и{' '}
+        <OutboundLink href="https://stackoverflow.com/users/434402/s-ermakovich">
+          StackOverflow
+        </OutboundLink>
+        .
       </p>
 
       <p>
-        Sometimes I post to{' '}
-        <OutboundLink href="https://twitter.com/ki_duk">Twitter</OutboundLink>.
-        You can also check for my photos and videos on{' '}
+        В данный момент я предлагаю{' '}
+        <Link to="/website-development-services">разработку веб-сайтов</Link>{' '}
+        для малого бизнеса и индивидуалов.
+      </p>
+
+      <p>
+        Иногда я пишу в{' '}
+        <OutboundLink href="https://twitter.com/ki_duk">твиттер</OutboundLink>.
+        Вы также можете посмотреть мои фото и видео в{' '}
         <OutboundLink href="https://www.instagram.com/ki_duk">
-          Instagram
+          инстаграмме
         </OutboundLink>{' '}
-        and{' '}
+        и{' '}
         <OutboundLink href="https://www.youtube.com/channel/UCoBmiyN8_K-spSY8V-EizJQ">
-          YouTube
+          ютубе
         </OutboundLink>
-        . Also sometimes I{' '}
+        . Также иногда я{' '}
         <OutboundLink href="https://www.goodreads.com/user/show/14034539-siarhei-yermakovi">
-          read
+          читаю
         </OutboundLink>{' '}
-        books :)
+        книги :)
       </p>
     </Content>
   )

@@ -23,7 +23,7 @@ export default function BlogIndex() {
             }
             timeToRead
             frontmatter {
-              date(formatString: "MMMM DD, YYYY")
+              date(formatString: "MMMM DD, YYYY", locale: "ru")
               title
               cover_image {
                 childImageSharp {
@@ -82,7 +82,7 @@ export default function BlogIndex() {
             <PostMeta>
               <PostDate value={node.frontmatter.date} />
               &nbsp;&middot;&nbsp;
-              <span>{node.timeToRead} min read</span>
+              <span>{node.timeToRead} мин чтения</span>
             </PostMeta>
             <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
           </div>

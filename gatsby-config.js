@@ -1,12 +1,11 @@
-const title = 'Siarhei Yermakovich'
+const title = 'Сергей Ермакович'
 
 module.exports = {
   siteMetadata: {
     title,
-    author: 'Siarhei Yermakovich',
-    description:
-      'Everything you need to know about Siarhei Yermakovich and even more.',
-    siteUrl: 'https://ermakovich.name',
+    author: title,
+    description: 'Разработка сайтов для профессионалов и малого бизнеса',
+    siteUrl: 'https://ermakovich.ru',
     twitterUsername: '@ki_duk',
   },
   plugins: [

@@ -7,5 +7,5 @@
 // You can delete this file if you're not using it
 
 export function onRenderBody({ setHtmlAttributes }) {
-  setHtmlAttributes({ lang: 'en' })
+  setHtmlAttributes({ lang: 'ru' })
 }
