@@ -62,43 +62,39 @@ const Right = styled.div`
   flex: none;
 `
 
-export default function Header({ isIntro }) {
+export default function Header() {
   return (
     <Layout>
       <Content>
-        {!isIntro && (
-          <>
-            <GatsbyLink to="/">
-              <StaticImage
-                src="../../images/avatar.jpg"
-                loading="eager"
-                layout="fixed"
-                width={36}
-                height={36}
-                style={{ borderRadius: '0.3em', zIndex: 0 }}
-              />
-            </GatsbyLink>
-            <Menu>
-              <MenuItems>
-                <MenuItem>
-                  <MenuLink to="/about/" activeClassName="active">
-                    About
-                  </MenuLink>
-                </MenuItem>
-                <MenuItem>
-                  <MenuLink to="/posts/" activeClassName="active">
-                    Posts
-                  </MenuLink>
-                </MenuItem>
-                {/* <MenuItem>
+        <GatsbyLink to="/">
+          <StaticImage
+            src="../../images/avatar.jpg"
+            loading="eager"
+            layout="fixed"
+            width={36}
+            height={36}
+            style={{ borderRadius: '0.3em', zIndex: 0 }}
+          />
+        </GatsbyLink>
+        <Menu>
+          <MenuItems>
+            <MenuItem>
+              <MenuLink to="/about/" activeClassName="active">
+                Обо мне
+              </MenuLink>
+            </MenuItem>
+            <MenuItem>
+              <MenuLink to="/posts/" activeClassName="active">
+                Блог
+              </MenuLink>
+            </MenuItem>
+            {/* <MenuItem>
                 <MenuLink to="/photos/" activeClassName="active">
                   Photos
                 </MenuLink>
               </MenuItem> */}
-              </MenuItems>
-            </Menu>
-          </>
-        )}
+          </MenuItems>
+        </Menu>
         <Main />
         <Right />
       </Content>

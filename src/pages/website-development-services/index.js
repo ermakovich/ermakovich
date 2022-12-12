@@ -48,7 +48,7 @@ export default function AboutPage() {
             Lighthouse
           </OutboundLink>{' '}
           and others to ensure this. For example you can{' '}
-          <OutboundLink href="https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fermakovich.name">
+          <OutboundLink href="https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fermakovich.ru">
             check
           </OutboundLink>{' '}
           my website in{' '}

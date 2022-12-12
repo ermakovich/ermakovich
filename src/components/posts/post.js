@@ -100,7 +100,7 @@ export default function BlogPostTemplate({
         <PostMeta>
           <PostDate value={frontmatter.date} />
           &nbsp;&middot;&nbsp;
-          <span>{timeToRead} min read</span>
+          <span>{timeToRead} мин чтения</span>
         </PostMeta>
         {image && (
           <GatsbyImage
@@ -116,7 +116,7 @@ export default function BlogPostTemplate({
         <NextPrev>
           {next && (
             <li>
-              → Next post:&nbsp;
+              → Следующая запись:&nbsp;
               <Link to={next.fields.slug} rel="next">
                 {next.frontmatter.title}
               </Link>
@@ -124,7 +124,7 @@ export default function BlogPostTemplate({
           )}
           {previous && (
             <li>
-              ← Previous post:&nbsp;
+              ← Предыдущая запись:&nbsp;
               <Link to={previous.fields.slug} rel="prev">
                 {previous.frontmatter.title}
               </Link>
@@ -150,7 +150,7 @@ export const pageQuery = graphql`
       timeToRead
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "MMMM DD, YYYY", locale: "ru")
         cover_image {
           childImageSharp {
             gatsbyImageData(layout: FULL_WIDTH)

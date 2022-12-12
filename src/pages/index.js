@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { graphql, useStaticQuery } from 'gatsby'
 
 import { StaticImage } from 'gatsby-plugin-image'
 import InternalLink from 'components/internal-link'
@@ -7,8 +8,13 @@ import { SEO } from 'components/seo'
 
 export const Head = () => <SEO />
 
+const LayoutWrapper = styled.div`
+  min-height: 100vh;
+  display: flex;
+`
+
 const Layout = styled.div`
-  margin: 7em auto;
+  margin: auto;
   max-width: 20em;
   padding: 0px 1.0875em 1.45em;
   padding-top: 0;
@@ -24,27 +30,39 @@ const More = styled.p`
 `
 
 export default function IndexPage() {
+  const { site } = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
+
   return (
-    <Layout>
-      <StaticImage
-        src="../images/avatar.jpg"
-        alt="Photo"
-        width={200}
-        height={200}
-        loading="eager"
-        style={{
-          margin: '0 auto',
-          borderRadius: '50%',
-          boxShadow: '0 0 5px 0',
-          zIndex: 0,
-        }}
-      />
-      <Header>
-        Hi, I’m <strong>Siarhei Yermakovich</strong>
-      </Header>
-      <More>
-        <InternalLink to="/about/">Ok, show me more</InternalLink>
-      </More>
-    </Layout>
+    <LayoutWrapper>
+      <Layout>
+        <StaticImage
+          src="../images/avatar.jpg"
+          alt="Photo"
+          width={200}
+          height={200}
+          loading="eager"
+          style={{
+            margin: '0 auto',
+            borderRadius: '50%',
+            boxShadow: '0 0 5px 0',
+            zIndex: 0,
+          }}
+        />
+        <Header>
+          Привет, я <strong>{site.siteMetadata.title}</strong> 👋
+        </Header>
+        <More>
+          <InternalLink to="/about/">Продолжить 👉</InternalLink>
+        </More>
+      </Layout>
+    </LayoutWrapper>
   )
 }
