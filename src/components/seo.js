@@ -20,7 +20,9 @@ export const SEO = ({
   } = useSiteMetadata()
 
   const seo = {
-    title: titleAddendum ? `${defaultTitle} - ${titleAddendum}` : title,
+    title:
+      (titleAddendum ? `${defaultTitle} - ${titleAddendum}` : title) ||
+      defaultTitle,
     description: description || defaultDescription,
     url: `${siteUrl}${pathname || ``}`,
     twitterUsername,
