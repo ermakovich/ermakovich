@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "dependencies": {
     "babel-plugin-styled-components": "2.0.7",
-    "gatsby": "5.4.0",
+    "gatsby": "5.4.1",
     "gatsby-plugin-canonical-urls": "^5.3.0",
     "gatsby-plugin-feed": "5.4.0",
     "gatsby-plugin-google-analytics": "5.4.0",
