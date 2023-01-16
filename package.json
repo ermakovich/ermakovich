@@ -7,7 +7,6 @@
     "gatsby": "5.4.1",
     "gatsby-plugin-canonical-urls": "^5.3.0",
     "gatsby-plugin-feed": "5.4.0",
-    "gatsby-plugin-google-analytics": "5.4.0",
     "gatsby-plugin-image": "3.4.0",
     "gatsby-plugin-layout": "4.4.0",
     "gatsby-plugin-resolve-src": "2.1.0",
