@@ -11,15 +11,6 @@ module.exports = {
   plugins: [
     'gatsby-plugin-styled-components',
     {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: 'UA-38766823-1',
-        head: true,
-        anonymize: true,
-        respectDNT: true,
-      },
-    },
-    {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'src',
