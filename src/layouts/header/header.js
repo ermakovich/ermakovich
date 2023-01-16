@@ -66,7 +66,7 @@ export default function Header() {
   return (
     <Layout>
       <Content>
-        <GatsbyLink to="/">
+        <GatsbyLink to="/" title="Главная">
           <StaticImage
             src="../../images/avatar.jpg"
             loading="eager"
