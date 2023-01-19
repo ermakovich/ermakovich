@@ -51,7 +51,7 @@ export default function AboutPage() {
       <p>
         В данный момент я предлагаю{' '}
         <Link to="/website-development-services">разработку веб-сайтов</Link>{' '}
-        для малого бизнеса и индивидуалов.
+        для малого бизнеса и профессионалов.
       </p>
 
       <p>

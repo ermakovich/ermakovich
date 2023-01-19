@@ -75,12 +75,20 @@ export default function Header() {
         <Menu>
           <MenuItems>
             <MenuItem>
-              <MenuLink to="/about/" activeClassName="active">
+              <MenuLink
+                to="/about/"
+                activeClassName="active"
+                partiallyActive={true}
+              >
                 Обо мне
               </MenuLink>
             </MenuItem>
             <MenuItem>
-              <MenuLink to="/posts/" activeClassName="active">
+              <MenuLink
+                to="/posts/"
+                activeClassName="active"
+                partiallyActive={true}
+              >
                 Блог
               </MenuLink>
             </MenuItem>
