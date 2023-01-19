@@ -1,14 +1,44 @@
 html {
   font-size: 112.5%;
-  font-family: georgia, serif;
+  font-family: 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
   line-height: 1.5;
   box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  font-weight: 500;
+}
+
+a {
+  color: rgb(82, 130, 255);
+  text-decoration: none;
+}
+
+a:active,
+a:hover {
+  color: rgb(63, 87, 153);
 }
 
 @media (prefers-color-scheme: dark) {
   html {
     background: rgb(35, 35, 37);
-    color: white;
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  a {
+    color: rgb(98, 146, 255);
+  }
+
+  a:active,
+  a:hover {
+    color: rgb(133, 168, 255);
   }
 }
 
@@ -37,10 +67,6 @@ pre > code {
 
 code {
   background: rgba(50, 128, 50, 0.4);
-}
-
-a {
-  color: inherit;
 }
 
 figure {
