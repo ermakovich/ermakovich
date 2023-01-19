@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Link as GatsbyLink } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 
 import InternalLink from 'components/internal-link'
@@ -33,24 +32,21 @@ const MenuItems = styled(UnstyledList)`
 
 const MenuItem = styled.li`
   margin-bottom: 0;
-
-  & + & {
-    margin-left: 1em;
-  }
-
-  ${MenuItems} {
-    margin-left: 1em;
-
-    &::before {
-      content: '↳';
-      margin-right: 0.5em;
-    }
-  }
 `
 
 const MenuLink = styled(InternalLink)`
+  padding: 10px;
+  color: var(--color-primary) !important;
+  background: transparent;
+  border-radius: 3px;
+
+  &:active,
+  &:hover {
+    background-color: rgba(98, 146, 255, 0.2);
+  }
+
   &.active {
-    font-weight: bold;
+    background-color: rgba(98, 146, 255, 0.1);
   }
 `
 
@@ -66,7 +62,7 @@ export default function Header() {
   return (
     <Layout>
       <Content>
-        <GatsbyLink to="/" title="Главная">
+        <InternalLink to="/" title="Главная">
           <StaticImage
             src="../../images/avatar.jpg"
             loading="eager"
@@ -75,7 +71,7 @@ export default function Header() {
             height={36}
             style={{ borderRadius: '0.3em', zIndex: 0 }}
           />
-        </GatsbyLink>
+        </InternalLink>
         <Menu>
           <MenuItems>
             <MenuItem>

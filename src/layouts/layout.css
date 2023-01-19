@@ -1,9 +1,22 @@
+:root {
+  --color-primary: rgba(0, 0, 0, 0.85);
+  --background-color: white;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: rgba(255, 255, 255, 0.85);
+    --background-color: rgb(35, 35, 37);
+  }
+}
+
 html {
   font-size: 112.5%;
   font-family: 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
   line-height: 1.5;
   box-sizing: border-box;
-  color: rgba(0, 0, 0, 0.85);
+  color: var(--color-primary);
+  background: var(--background-color);
 }
 
 h1,
@@ -27,11 +40,6 @@ a:hover {
 }
 
 @media (prefers-color-scheme: dark) {
-  html {
-    background: rgb(35, 35, 37);
-    color: rgba(255, 255, 255, 0.85);
-  }
-
   a {
     color: rgb(98, 146, 255);
   }

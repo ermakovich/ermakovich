@@ -1,10 +1,4 @@
-import React from 'react'
 import Link from './link'
+import { Link as GatsbyLink } from 'gatsby'
 
-export default function InternalLink({ to, children, ...props }) {
-  return (
-    <Link href={to} {...props}>
-      {children}
-    </Link>
-  )
-}
+export default Link.withComponent(GatsbyLink)
