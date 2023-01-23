@@ -13,7 +13,7 @@ export const useSiteMetadata = () => {
       }
       favicon: file(relativePath: { eq: "images/avatar.jpg" }) {
         childImageSharp {
-          gatsbyImageData(width: 96, height: 96, layout: FIXED)
+          gatsbyImageData(width: 120, height: 120, layout: FIXED)
         }
       }
     }

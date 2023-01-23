@@ -7,7 +7,7 @@ image: './picture.png'
 tweetId: '1014446025803812865'
 ---
 
-We rely heavily on automated UI testing as a primary way of ensuring quality and preventing regressions in our web apps and satellite projects. We have found it to be an excellent method of testing by simulating how our web applications are supposed to work for our end users. In light of this, we've continuously noticed significant improvements in quality as we've introduced more tests.
+At [Dock](https://www.dock.io) we rely heavily on automated UI testing as a primary way of ensuring quality and preventing regressions in our web apps and satellite projects. We have found it to be an excellent method of testing by simulating how our web applications are supposed to work for our end users. In light of this, we've continuously noticed significant improvements in quality as we've introduced more tests.
 
 ## Puppeteer + Cucumber = ❤️
 

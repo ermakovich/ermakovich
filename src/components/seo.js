@@ -49,7 +49,7 @@ export const SEO = ({
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:creator" content={seo.twitterUsername} />
       <meta name="twitter:site" content={seo.twitterUsername} />
-      <link rel="shortcut icon" type="image/jpeg" href={getSrc(favicon)} />
+      <link rel="icon" type="image/jpeg" href={getSrc(favicon)} />
       {children}
     </>
   )
