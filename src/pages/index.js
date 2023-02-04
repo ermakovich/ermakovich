@@ -15,7 +15,6 @@ const LayoutWrapper = styled.div`
 
 const Layout = styled.div`
   margin: auto;
-  max-width: 20em;
   padding: 0px 1.0875em 1.45em;
   padding-top: 0;
   text-align: center;
@@ -56,9 +55,7 @@ export default function IndexPage() {
             zIndex: 0,
           }}
         />
-        <Header>
-          Привет, я <strong>{site.siteMetadata.title}</strong> 👋
-        </Header>
+        <Header>Привет, я {site.siteMetadata.title.split(' ')[0]} 👋</Header>
         <More>
           <InternalLink to="/about/">Продолжить 👉</InternalLink>
         </More>
