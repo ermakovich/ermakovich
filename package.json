@@ -39,7 +39,7 @@
   "devDependencies": {
     "eslint": "8.33.0",
     "eslint-config-react-app": "7.0.1",
-    "prettier": "2.8.3",
+    "prettier": "2.8.4",
     "unused-webpack-plugin": "2.4.0"
   },
   "repository": {
