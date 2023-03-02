@@ -22,7 +22,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-twitter-embed": "4.0.4",
-    "styled-components": "5.3.7"
+    "styled-components": "5.3.8"
   },
   "keywords": [
     "gatsby"
