@@ -36,6 +36,7 @@ const MenuItem = styled.li`
 
 const MenuLink = styled(InternalLink)`
   padding: 10px;
+  margin: 2px;
   color: var(--color-primary) !important;
   background: transparent;
   border-radius: 3px;
@@ -65,6 +66,7 @@ export default function Header() {
         <InternalLink to="/" title="Главная">
           <StaticImage
             src="../../images/avatar.jpg"
+            alt="Logo"
             loading="eager"
             layout="fixed"
             width={36}
@@ -89,7 +91,25 @@ export default function Header() {
                 activeClassName="active"
                 partiallyActive={true}
               >
-                Блог
+                Записи
+              </MenuLink>
+            </MenuItem>
+            <MenuItem>
+              <MenuLink
+                to="/resume/"
+                activeClassName="active"
+                partiallyActive={true}
+              >
+                Резюме
+              </MenuLink>
+            </MenuItem>
+            <MenuItem>
+              <MenuLink
+                to="/contacts/"
+                activeClassName="active"
+                partiallyActive={true}
+              >
+                Контакты
               </MenuLink>
             </MenuItem>
             {/* <MenuItem>

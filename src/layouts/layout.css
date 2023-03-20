@@ -1,12 +1,19 @@
 :root {
-  --color-primary: rgba(0, 0, 0, 0.85);
+  --color-primary: #000000d9;
   --background-color: white;
+  --color-system: gray;
+  --color-link: rgb(82, 130, 255);
+  --color-link-active: rgba(82, 130, 255, 0.9);
+
+  --media-xs: 576px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --color-primary: rgba(255, 255, 255, 0.85);
     --background-color: rgb(35, 35, 37);
+    --color-link: rgb(98, 146, 255);
+    --color-link-active: rgba(98, 146, 255, 0.9);
   }
 }
 
@@ -29,25 +36,14 @@ strong {
   font-weight: 500;
 }
 
-a {
-  color: rgb(82, 130, 255);
+a:not(.button) {
+  color: var(--color-link);
   text-decoration: none;
 }
 
-a:active,
-a:hover {
-  color: rgb(63, 87, 153);
-}
-
-@media (prefers-color-scheme: dark) {
-  a {
-    color: rgb(98, 146, 255);
-  }
-
-  a:active,
-  a:hover {
-    color: rgb(133, 168, 255);
-  }
+a:not(.button):active,
+a:not(.button):hover {
+  color: var(--color-link-active);
 }
 
 body {

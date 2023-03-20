@@ -9,7 +9,12 @@ import PostDate from 'components/posts/post-date'
 
 import { SEO } from 'components/seo'
 
-export const Head = () => <SEO titleAddendum="Posts" />
+export const Head = () => (
+  <SEO
+    titleAddendum="Записи"
+    description="Заметки на профессиональную тематику и наблюдения из жизни"
+  />
+)
 
 export default function BlogIndex() {
   const { allMarkdownRemark, memoIcon } = useStaticQuery(graphql`
@@ -51,6 +56,21 @@ export default function BlogIndex() {
 
   return (
     <Content>
+      <h1>Записи</h1>
+      <p>
+        <i>
+          В этом разделе мной публикуются записи на профессиональную тематику,
+          но есть также и просто заметки из жизни. Часть из них на английском
+          языке для широкой аудитории.
+        </i>
+      </p>
+      <p>
+        <i>
+          P.S. Записи отражают сугубо моё личное мнение, не претендующее на
+          истину.
+        </i>
+      </p>
+      <br />
       {posts.map(({ node }) => {
         const title = get(node, 'frontmatter.title') || node.fields.slug
         const { frontmatter } = node
