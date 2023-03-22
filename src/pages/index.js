@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import { graphql, useStaticQuery } from 'gatsby'
+import { Link, graphql, useStaticQuery } from 'gatsby'
 
 import { StaticImage } from 'gatsby-plugin-image'
-import InternalLink from 'components/internal-link'
 import { SEO } from 'components/seo'
+import Button from 'components/button'
 
 export const Head = () => <SEO />
 
@@ -55,9 +55,13 @@ export default function IndexPage() {
             zIndex: 0,
           }}
         />
-        <Header>Привет, я {site.siteMetadata.title.split(' ')[0]} 👋</Header>
+        <Header>
+          <i>Привет, я {site.siteMetadata.title.split(' ')[0]}</i> 👋
+        </Header>
         <More>
-          <InternalLink to="/about/">Продолжить 👉</InternalLink>
+          <Button as={Link} to="/about">
+            Продолжить 👉
+          </Button>
         </More>
       </Layout>
     </LayoutWrapper>
