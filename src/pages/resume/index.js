@@ -102,7 +102,7 @@ export default function ResumePage() {
               width={130}
               height={130}
               loading="eager"
-              style={{ borderRadius: '50%', boxShadow: '0 0 5px 0' }}
+              style={{ borderRadius: '50%', boxShadow: '0 0 5px 0', zIndex: 0 }}
             />
           </AvatarWrapper>
 
