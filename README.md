@@ -1,4 +1,5 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/63e732aa-9213-45fd-b6a0-b4d03252a628/deploy-status)](https://app.netlify.com/sites/ermakovich/deploys)
+[![CI](https://github.com/ermakovich/ermakovich/actions/workflows/ci.yml/badge.svg)](https://github.com/ermakovich/ermakovich/actions/workflows/ci.yml)
 [![Renovate](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://github.com/ermakovich/ermakovich/issues/487)
 
 My personal website - https://ermakovich.ru.
