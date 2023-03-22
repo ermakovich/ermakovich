@@ -36,21 +36,6 @@ export default function AboutPage() {
       <section>
         <h1>{site.siteMetadata.title}</h1>
 
-        <StaticImage
-          src="../../images/avatar-cv.jpg"
-          alt="Photo"
-          width={200}
-          height={200}
-          loading="eager"
-          style={{
-            marginRight: '20px',
-            borderRadius: '50%',
-            boxShadow: '0 0 5px 0',
-            zIndex: 0,
-            float: 'left',
-          }}
-        />
-
         <h2>Веб-разработчик (React)</h2>
         <p>🏠 Санкт-Петербург</p>
         <p>
