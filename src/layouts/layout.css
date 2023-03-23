@@ -4,8 +4,6 @@
   --color-system: gray;
   --color-link: rgb(82, 130, 255);
   --color-link-active: rgba(82, 130, 255, 0.9);
-
-  --media-xs: 576px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -36,13 +34,13 @@ strong {
   font-weight: 500;
 }
 
-a:not(.button) {
+a:not(.btn) {
   color: var(--color-link);
   text-decoration: none;
 }
 
-a:not(.button):active,
-a:not(.button):hover {
+a:not(.btn):active,
+a:not(.btn):hover {
   color: var(--color-link-active);
 }
 

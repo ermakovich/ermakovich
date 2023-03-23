@@ -1,11 +1,17 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { StaticImage } from 'gatsby-plugin-image'
+import { globalHistory } from '@reach/router'
 
 import InternalLink from 'components/internal-link'
 import UnstyledList from 'components/unstyled-list'
+import mq from 'components/media-queries'
+import IconButton from 'components/icon-button'
 
-const Layout = styled.div`
+import HamburgerIcon from './hamburger-icon'
+import CloseIcon from './close-icon'
+
+const Root = styled.div`
   margin-bottom: 1.45em;
 `
 
@@ -22,12 +28,31 @@ const Menu = styled.menu`
   margin-left: 2em;
   padding-left: 0;
   display: flex;
+
+  @media (${mq.xs}) {
+    position: fixed;
+    z-index: 1;
+    background: var(--background-color);
+    margin: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid gray;
+    padding: 0 1em;
+
+    &:not(.open) {
+      display: none;
+    }
+  }
 `
 
 const MenuItems = styled(UnstyledList)`
   flex: none;
   display: flex;
-  flex-flow: wrap;
+
+  @media (${mq.xs}) {
+    flex-direction: column;
+  }
 `
 
 const MenuItem = styled.li`
@@ -40,6 +65,7 @@ const MenuLink = styled(InternalLink)`
   color: var(--color-primary) !important;
   background: transparent;
   border-radius: 3px;
+  display: inline-block;
 
   &:active,
   &:hover {
@@ -59,9 +85,44 @@ const Right = styled.div`
   flex: none;
 `
 
+const CloseMenuButton = styled(IconButton)`
+  position: absolute;
+  right: 1em;
+  top: 1.5em;
+  display: none;
+
+  @media (${mq.xs}) {
+    display: initial;
+  }
+`
+
+const HamburgerMenuButton = styled(IconButton)`
+  display: none;
+
+  @media (${mq.xs}) {
+    display: initial;
+  }
+`
+
 export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  useEffect(() => {
+    return globalHistory.listen(({ action }) => {
+      setIsMenuOpen(false)
+    })
+  }, [])
+
+  function handleHamburgerIconClick() {
+    setIsMenuOpen(true)
+  }
+
+  function handleCloseIconClick() {
+    setIsMenuOpen(false)
+  }
+
   return (
-    <Layout>
+    <Root>
       <Content>
         <InternalLink to="/" title="Главная">
           <StaticImage
@@ -74,7 +135,7 @@ export default function Header() {
             style={{ borderRadius: '0.3em', zIndex: 0 }}
           />
         </InternalLink>
-        <Menu>
+        <Menu className={isMenuOpen ? 'open' : ''}>
           <MenuItems>
             <MenuItem>
               <MenuLink
@@ -112,16 +173,18 @@ export default function Header() {
                 Контакты
               </MenuLink>
             </MenuItem>
-            {/* <MenuItem>
-                <MenuLink to="/photos/" activeClassName="active">
-                  Photos
-                </MenuLink>
-              </MenuItem> */}
           </MenuItems>
+          <CloseMenuButton onClick={handleCloseIconClick}>
+            <CloseIcon width={24} height={24} />
+          </CloseMenuButton>
         </Menu>
         <Main />
-        <Right />
+        <Right>
+          <HamburgerMenuButton onClick={handleHamburgerIconClick}>
+            <HamburgerIcon width={24} height={34} />
+          </HamburgerMenuButton>
+        </Right>
       </Content>
-    </Layout>
+    </Root>
   )
 }

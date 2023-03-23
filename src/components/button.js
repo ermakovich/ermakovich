@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export default styled.button.attrs((props) => ({
-  className: 'button',
+  className: 'btn',
 }))`
   background: var(--color-link);
   margin: 10px;
@@ -9,7 +9,6 @@ export default styled.button.attrs((props) => ({
   text-align: center;
   color: white;
   border-radius: 0.4em;
-  outline: none;
   border: none;
   text-decoration: none;
   display: inline-block;
