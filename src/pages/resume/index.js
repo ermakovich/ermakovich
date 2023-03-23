@@ -8,6 +8,7 @@ import FileLink from 'components/file-link'
 import Content from 'components/content'
 import TextSystem from 'components/text-system'
 import { SEO } from 'components/seo'
+import mq from 'components/media-queries'
 
 export const Head = () => (
   <SEO
@@ -39,7 +40,7 @@ const AvatarWrapper = styled.div`
   flex: none;
   align-self: center;
 
-  @media (max-width: 576px) {
+  @media (${mq.xs}) {
     width: 80px;
     height: 80px;
   }
