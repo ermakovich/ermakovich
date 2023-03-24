@@ -174,13 +174,19 @@ export default function Header() {
               </MenuLink>
             </MenuItem>
           </MenuItems>
-          <CloseMenuButton onClick={handleCloseIconClick}>
+          <CloseMenuButton
+            aria-label="Close menu"
+            onClick={handleCloseIconClick}
+          >
             <CloseIcon width={24} height={24} />
           </CloseMenuButton>
         </Menu>
         <Main />
         <Right>
-          <HamburgerMenuButton onClick={handleHamburgerIconClick}>
+          <HamburgerMenuButton
+            aria-label="Open menu"
+            onClick={handleHamburgerIconClick}
+          >
             <HamburgerIcon width={24} height={34} />
           </HamburgerMenuButton>
         </Right>
