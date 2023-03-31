@@ -122,9 +122,9 @@ export default function ResumePage() {
         </p>
 
         <p>
-          <strong>Инструменты:</strong> React (Next.js / Gatsby), Styled
-          Components, Babel, ESLint, Prettier, Lighthouse, NodeJS, Express,
-          Nginx, Docker, Git, Jest, Puppeteer
+          <strong>Инструменты:</strong> React (Next.js / Gatsby), TypeScript,
+          Styled Components, Babel, ESLint, Prettier, Lighthouse, NodeJS,
+          Express, Nginx, Docker, Git, Jest, Puppeteer
         </p>
 
         <p>
