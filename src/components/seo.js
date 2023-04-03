@@ -15,7 +15,6 @@ export const SEO = ({
     title: defaultTitle,
     description: defaultDescription,
     siteUrl,
-    twitterUsername,
     favicon,
   } = useSiteMetadata()
 
@@ -25,7 +24,6 @@ export const SEO = ({
       defaultTitle,
     description: description || defaultDescription,
     url: `${siteUrl}${pathname || ``}`,
-    twitterUsername,
   }
 
   if (image) {
@@ -47,8 +45,6 @@ export const SEO = ({
       <meta name="twitter:title" content={seo.title} />
       <meta name="twitter:url" content={seo.url} />
       <meta name="twitter:description" content={seo.description} />
-      <meta name="twitter:creator" content={seo.twitterUsername} />
-      <meta name="twitter:site" content={seo.twitterUsername} />
       <link rel="icon" type="image/jpeg" href={getSrc(favicon)} />
       {children}
     </>

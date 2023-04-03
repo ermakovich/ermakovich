@@ -3,7 +3,6 @@ date: '2019-05-07'
 title: 'Can I send HTTP GET request with body from browser?'
 tags: ['web']
 lang: 'en'
-tweetId: '1358803248690388995'
 ---
 
 TLDR; No.

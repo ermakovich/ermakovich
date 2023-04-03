@@ -4,9 +4,8 @@ module.exports = {
   siteMetadata: {
     title,
     author: title,
-    description: 'Разработка сайтов для профессионалов и малого бизнеса',
+    description: 'Веб-разработчик JavaScript (React) в Санкт-Петербурге',
     siteUrl: 'https://ermakovich.ru',
-    twitterUsername: '@ki_duk',
   },
   plugins: [
     'gatsby-plugin-styled-components',

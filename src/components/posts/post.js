@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import styled from 'styled-components'
-import { TwitterTweetEmbed } from 'react-twitter-embed'
 import { getSrc } from 'gatsby-plugin-image'
 
 import Content from 'components/content'
@@ -74,7 +73,7 @@ export default function BlogPostTemplate({
   const { frontmatter, timeToRead, html } = markdownRemark
   const { previous, next } = pageContext
   const coverImage = frontmatter.cover_image
-  const { tweetId, image, lang } = frontmatter
+  const { image } = frontmatter
 
   return (
     <>
@@ -110,8 +109,6 @@ export default function BlogPostTemplate({
           />
         )}
         <div dangerouslySetInnerHTML={{ __html: html }} />
-
-        {tweetId && <TwitterTweetEmbed {...{ tweetId }} options={{ lang }} />}
 
         <NextPrev>
           {next && (
@@ -161,8 +158,6 @@ export const pageQuery = graphql`
             gatsbyImageData(width: 700, layout: CONSTRAINED)
           }
         }
-        lang
-        tweetId
       }
     }
   }

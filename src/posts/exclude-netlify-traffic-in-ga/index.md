@@ -3,7 +3,6 @@ date: '2019-08-28'
 title: 'How to exclude traffic from Netlify deployment bot in Google Analytics'
 tags: ['web']
 lang: 'en'
-tweetId: '1358803581248413697'
 ---
 
 Currently I'm using [Netlify](https://netlify.com/) for hosting this website, and it's pretty awesome. Recently I did a bunch of small updates to my site (mainly due to integrating [Renovate](https://renovatebot.com/)) and I noticed a spike of traffic in GA dashboard. This site has very low traffic at the moment, so it was pretty notable.
