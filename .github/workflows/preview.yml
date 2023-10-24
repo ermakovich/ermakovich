@@ -10,13 +10,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: deploy to preview mode
-        uses: thundermiracle/netlify-deploy@v3.0.1
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node: 18
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN}}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID}}
-          deploy-dir: "./public"
-          extra-cache-path: |
+          node-version: 20
+          cache: 'yarn'
+      - uses: actions/cache@v3
+        with:
+          path: |
             .cache
             public
+          key: gatsby-cache
+      - name: deploy to preview mode
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN}}
+        run: |
+          yarn --frozen-lockfile
+          yarn deploy-preview

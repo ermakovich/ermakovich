@@ -33,11 +33,14 @@
     "format": "prettier --write 'src/**/*.js'",
     "lint": "eslint .",
     "lint-ci": "eslint . --format junit -o reports/junit/lint-results.xml",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "netlify deploy --build --context production --prod --site 63e732aa-9213-45fd-b6a0-b4d03252a628",
+    "deploy-preview": "netlify deploy --build --context deploy-preview --site 63e732aa-9213-45fd-b6a0-b4d03252a628"
   },
   "devDependencies": {
     "eslint": "8.50.0",
     "eslint-config-react-app": "7.0.1",
+    "netlify-cli": "16.9.1",
     "prettier": "3.0.3",
     "unused-webpack-plugin": "2.4.0"
   },
