@@ -20,7 +20,8 @@ jobs:
           path: |
             .cache
             public
-          key: gatsby-cache
+            .netlify
+          key: build-cache
       - name: deploy to preview mode
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN}}
