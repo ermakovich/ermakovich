@@ -3154,6 +3154,36 @@
     urlpattern-polyfill "8.0.2"
     uuid "^9.0.0"
 
+"@netlify/edge-bundler@9.4.1":
+  version "9.4.1"
+  resolved "https://registry.yarnpkg.com/@netlify/edge-bundler/-/edge-bundler-9.4.1.tgz#edf7126d3f1bf6b7c962f4622ca264197c54c571"
+  integrity sha512-vcmKLIQL57NEcYBZtBptWWdK5JmWZc3r1ba+kEg939aXPEI5nT5D5qT5PyMiIQwWuFtR0t+DH3koOm8UOfsuwg==
+  dependencies:
+    "@import-maps/resolve" "^1.0.1"
+    "@vercel/nft" "^0.24.3"
+    ajv "^8.11.2"
+    ajv-errors "^3.0.0"
+    better-ajv-errors "^1.2.0"
+    common-path-prefix "^3.0.0"
+    env-paths "^3.0.0"
+    esbuild "0.19.4"
+    execa "^6.0.0"
+    find-up "^6.3.0"
+    get-package-name "^2.2.0"
+    get-port "^6.1.2"
+    is-path-inside "^4.0.0"
+    jsonc-parser "^3.2.0"
+    node-fetch "^3.1.1"
+    node-stream-zip "^1.15.0"
+    p-retry "^5.1.1"
+    p-wait-for "^4.1.0"
+    path-key "^4.0.0"
+    regexp-tree "^0.1.24"
+    semver "^7.3.8"
+    tmp-promise "^3.0.3"
+    urlpattern-polyfill "8.0.2"
+    uuid "^9.0.0"
+
 "@netlify/framework-info@^9.8.10":
   version "9.8.10"
   resolved "https://registry.yarnpkg.com/@netlify/framework-info/-/framework-info-9.8.10.tgz#a18589f132dafb5cb7f86c05a9895b9118633fe1"
@@ -14420,17 +14450,17 @@ nested-error-stacks@^2.0.0, nested-error-stacks@^2.1.0, nested-error-stacks@^2.1
   resolved "https://registry.yarnpkg.com/nested-error-stacks/-/nested-error-stacks-2.1.1.tgz#26c8a3cee6cc05fbcf1e333cd2fc3e003326c0b5"
   integrity sha512-9iN1ka/9zmX1ZvLV9ewJYEk9h7RyRRtqdK0woXcqohu8EWIerfPUjYJPg0ULy0UqP7cslmdGc8xKDJcojlKiaw==
 
-netlify-cli@16.9.1:
-  version "16.9.1"
-  resolved "https://registry.yarnpkg.com/netlify-cli/-/netlify-cli-16.9.1.tgz#c133d6004b1a0b9da8dfd78a1dc73ee48356e443"
-  integrity sha512-SZrPdHT6FRmpxN5vvy0ufyrN6PjpHAFqVDj9BifDaVywo0/4VJ/WdnZFF8gYtURp82omNu/RtToKBuCXPyg8vw==
+netlify-cli@16.9.2:
+  version "16.9.2"
+  resolved "https://registry.yarnpkg.com/netlify-cli/-/netlify-cli-16.9.2.tgz#d6229daa240d1c409fd5006996e4bf6f924d0ada"
+  integrity sha512-3T51HRg3C2n+msze/2KuYpcrDrf6+7YsuH78o/OzjD/SMC4SFz8fUmA44Dk5N/uWQN2k5gFA8yi+KXl7J+W86g==
   dependencies:
     "@bugsnag/js" "7.20.2"
     "@fastify/static" "6.10.2"
     "@netlify/build" "29.23.4"
     "@netlify/build-info" "7.10.1"
     "@netlify/config" "20.9.0"
-    "@netlify/edge-bundler" "9.3.0"
+    "@netlify/edge-bundler" "9.4.1"
     "@netlify/local-functions-proxy" "1.1.1"
     "@netlify/sdk" "^1.1.5"
     "@netlify/serverless-functions-api" "1.10.0"
