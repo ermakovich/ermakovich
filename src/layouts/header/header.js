@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { StaticImage } from 'gatsby-plugin-image'
+import { Link } from 'gatsby'
 import { globalHistory } from '@reach/router'
 
-import InternalLink from 'components/internal-link'
 import UnstyledList from 'components/unstyled-list'
 import mq from 'components/media-queries'
 import IconButton from 'components/icon-button'
@@ -59,7 +59,7 @@ const MenuItem = styled.li`
   margin-bottom: 0;
 `
 
-const MenuLink = styled(InternalLink)`
+const MenuLink = styled(Link)`
   padding: 10px;
   margin: 2px;
   color: var(--color-primary) !important;
@@ -124,7 +124,7 @@ export default function Header() {
   return (
     <Root>
       <Content>
-        <InternalLink to="/" title="Главная">
+        <Link to="/" title="Главная">
           <StaticImage
             src="../../images/avatar.jpg"
             alt="Logo"
@@ -134,7 +134,7 @@ export default function Header() {
             height={36}
             style={{ borderRadius: '0.3em', zIndex: 0 }}
           />
-        </InternalLink>
+        </Link>
         <Menu className={isMenuOpen ? 'open' : ''}>
           <MenuItems>
             <MenuItem>

@@ -1,9 +1,8 @@
 import styled from 'styled-components'
 
-import Link from './link'
 import fileLinkSvg from './file-link.svg'
 
-export default styled(Link)`
+export default styled.a`
   background-image: url('${fileLinkSvg}');
   background-position: center right;
   background-repeat: no-repeat;
