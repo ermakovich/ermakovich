@@ -38,6 +38,8 @@ export default function Footer() {
             .
             <br />
             <br />© {new Date().getFullYear()} {site.siteMetadata.title}
+            <br />
+            <small>Данный сайт не использует инструменты для отслеживания пользовательской активности 🙅‍♂️</small>
           </small>
         </TextSystem>
       </Content>

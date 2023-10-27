@@ -143,7 +143,10 @@ export default function ResumePage() {
         </p>
         <ul>
           <li>
-            Стартапы{' '}
+            Персональные проекты, open source разработка / 2023г. - н.в.
+          </li>
+          <li>
+            Интернет-стартапы{' '}
             <OutboundLink
               href="https://verifiable.com"
               target="_blank"

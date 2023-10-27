@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import { StaticImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
 
 import OutboundLink from 'components/outbound-link'
