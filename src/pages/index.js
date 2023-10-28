@@ -55,9 +55,7 @@ export default function IndexPage() {
             zIndex: 0,
           }}
         />
-        <Header>
-          Привет, я {site.siteMetadata.title.split(' ')[0]} 👋
-        </Header>
+        <Header>Привет, я {site.siteMetadata.title.split(' ')[0]} 👋</Header>
         <More>
           <Button as={Link} to="/about">
             Продолжить 👉

@@ -10,22 +10,25 @@ exports.createPages = ({ graphql, actions }) => {
   return new Promise((resolve, reject) => {
     const blogPost = path.resolve('./src/components/posts/post.js')
     resolve(
-      graphql(
-        `{
-  allMarkdownRemark(sort: {frontmatter: {date: DESC}}, limit: 1000) {
-    edges {
-      node {
-        fields {
-          slug
+      graphql(`
+        {
+          allMarkdownRemark(
+            sort: { frontmatter: { date: DESC } }
+            limit: 1000
+          ) {
+            edges {
+              node {
+                fields {
+                  slug
+                }
+                frontmatter {
+                  title
+                }
+              }
+            }
+          }
         }
-        frontmatter {
-          title
-        }
-      }
-    }
-  }
-}`
-      ).then((result) => {
+      `).then((result) => {
         if (result.errors) {
           reject(result.errors)
         }
@@ -50,7 +53,7 @@ exports.createPages = ({ graphql, actions }) => {
         })
       })
     )
-  });
+  })
 }
 
 exports.onCreatePage = ({ page, actions }) => {
@@ -80,11 +83,11 @@ exports.onCreateWebpackConfig = ({ stage, actions }) => {
     plugins:
       stage === 'build-html'
         ? [
-          new UnusedWebpackPlugin({
-            directories: [path.join(__dirname, 'src')],
-            exclude: ['*.md', '*.jpg', '*.jpeg', '*.png', '*.pdf'],
-          }),
-        ]
+            new UnusedWebpackPlugin({
+              directories: [path.join(__dirname, 'src')],
+              exclude: ['*.md', '*.jpg', '*.jpeg', '*.png', '*.pdf'],
+            }),
+          ]
         : [],
   })
 }

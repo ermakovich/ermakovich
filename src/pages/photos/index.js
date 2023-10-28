@@ -33,18 +33,20 @@ PhotosPage.propTypes = {
   data: PropTypes.shape().isRequired,
 }
 
-export const pageQuery = graphql`{
-  photos: allFile(
-    filter: {relativeDirectory: {eq: "pages/photos/all"}}
-    sort: {birthTime: ASC}
-  ) {
-    edges {
-      node {
-        publicURL
-        childImageSharp {
-          gatsbyImageData(width: 400, layout: CONSTRAINED)
+export const pageQuery = graphql`
+  {
+    photos: allFile(
+      filter: { relativeDirectory: { eq: "pages/photos/all" } }
+      sort: { birthTime: ASC }
+    ) {
+      edges {
+        node {
+          publicURL
+          childImageSharp {
+            gatsbyImageData(width: 400, layout: CONSTRAINED)
+          }
         }
       }
     }
   }
-}`
+`

@@ -142,9 +142,7 @@ export default function ResumePage() {
           <strong>Опыт работы:</strong>
         </p>
         <ul>
-          <li>
-            Персональные проекты, open source разработка / 2023г. - н.в.
-          </li>
+          <li>Персональные проекты, open source разработка / 2023г. - н.в.</li>
           <li>
             Интернет-стартапы{' '}
             <OutboundLink
