@@ -21,7 +21,10 @@ jobs:
             .cache
             public
             .netlify
-          key: build-cache
+          key: build-cache-${{ github.sha }}
+          restore-keys: |
+            build-cache-${{ github.sha }}
+            build-cache-
       - name: deploy to preview mode
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN}}
