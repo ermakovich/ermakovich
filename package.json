@@ -43,7 +43,7 @@
     "eslint-config-react-app": "7.0.1",
     "husky": "8.0.3",
     "lint-staged": "15.0.2",
-    "netlify-cli": "17.0.1",
+    "netlify-cli": "17.1.0",
     "prettier": "3.0.3",
     "unused-webpack-plugin": "2.4.0"
   },
