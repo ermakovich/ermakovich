@@ -30,6 +30,8 @@ module.exports = {
             },
           },
           'gatsby-remark-copy-linked-files',
+          'gatsby-remark-code-titles',
+          'gatsby-remark-vscode',
         ],
       },
     },

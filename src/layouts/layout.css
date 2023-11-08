@@ -1,14 +1,18 @@
 :root {
+  --color-white: rgba(255, 255, 255, 0.85);
+
   --color-primary: #000000d9;
   --background-color: white;
   --color-system: gray;
   --color-link: rgb(82, 130, 255);
   --color-link-active: rgba(82, 130, 255, 0.9);
+
+  --theme-neutral-bg-color: rgba(50, 128, 50, 0.4);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-primary: rgba(255, 255, 255, 0.85);
+    --color-primary: var(--color-white);
     --background-color: rgb(35, 35, 37);
     --color-link: rgb(98, 146, 255);
     --color-link-active: rgba(98, 146, 255, 0.9);
@@ -57,18 +61,19 @@ li {
   margin-bottom: 1em;
 }
 
-pre {
-  padding: 1em;
-  white-space: pre-wrap;
-  background: rgba(50, 128, 50, 0.5);
-}
-
 pre > code {
-  background: transparent;
+  background: initial;
+  padding: 0;
 }
 
 code {
-  background: rgba(50, 128, 50, 0.4);
+  background: var(--theme-neutral-bg-color);
+  padding: 0.1em 0.4em;
+}
+
+blockquote {
+  border-left: solid 0.3em var(--theme-neutral-bg-color);
+  padding-left: 1em;
 }
 
 figure {
@@ -86,4 +91,19 @@ figcaption {
   h1 {
     font-size: 1.6em;
   }
+}
+
+.gatsby-code-title {
+  padding: 1em;
+  font-family: monospace;
+  background-color: var(--theme-neutral-bg-color);
+  color: var(--color-primary);
+  border-top-left-radius: var(--grvsc-border-radius, 8px);
+  border-top-right-radius: var(--grvsc-border-radius, 8px);
+}
+
+.gatsby-code-title + pre {
+  margin-top: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
