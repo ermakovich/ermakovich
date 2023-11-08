@@ -112,7 +112,7 @@ Allright. I actually don't like to use any "next"-ish values, and always prefer 
 }
 ```
 
-WTF. Now we are getting a new error from the compiler, blaming that the file where we use root `await` statement is a CommonJS module:
+WTF. Now we are getting a new error from the compiler, blaming that the file where we use top-level `await` statement is a CommonJS module:
 
 > The current file is a CommonJS module and cannot use 'await' at the top level.
 
@@ -132,4 +132,4 @@ I must admit that there were some issues in between, since I was using `ts-node`
 
 ## Conclusion
 
-It's not possble to have root-level `await` statements using TypeScript-only settings. This should be a combination of switching your node project to native Node module format (`type: "modude`) and configuring TypeScript respectively. However, it would be _really nice_, TypeScript if you did more intelligent checks during `tsc --init` and created correct config based on project settings (like checking `type` field in `package.json`) 😉.
+It's not possble to have top-level `await` statements using TypeScript-only settings. This should be a combination of switching your node project to native Node module format (`type: "modude`) and configuring TypeScript respectively. However, it would be _really nice_, TypeScript if you did more intelligent checks during `tsc --init` and created correct config based on project settings (like checking `type` field in `package.json`). Thanks 😉.
