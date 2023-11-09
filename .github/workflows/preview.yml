@@ -28,5 +28,6 @@ jobs:
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN}}
         run: |
-          yarn --frozen-lockfile
+          corepack enable
+          yarn --immutable
           yarn deploy-preview
