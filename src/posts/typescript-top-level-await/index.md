@@ -6,7 +6,7 @@ lang: 'en'
 cover_image: './carbon-2.png'
 ---
 
-I have a simple task. I have a local TypeScript project, and there is a script in this project, that performs async tasks, and where I naturally want to use `await` statements:
+I have a simple task. I have a local TypeScript project, and there is a script in this project, that performs async tasks, and where I naturally want to use top-level `await` statements:
 
 ```typescript:title=publish.ts
 import puppeteer from 'puppeteer'
@@ -50,7 +50,7 @@ Historically we would wrap the entire code into async IIFE to use `await` like t
 })()
 ```
 
-And it still works! But hey, it's 2023 outside. The language is called Type**Script** (or Java**Script**), so there should definitely be some more elegant way to do this. So, let's try.
+And it still works! But hey, it's 2023 outside, and there should definitely be some more elegant way to do this. So, let's try.
 
 If we take a naive approach and run it as is, without wrapping into async function, we get an error:
 
@@ -132,4 +132,4 @@ I must admit that there were some issues in between, since I was using `ts-node`
 
 ## Conclusion
 
-It's not possble to have top-level `await` statements using TypeScript-only settings. This should be a combination of switching your node project to native Node module format (`type: "modude`) and configuring TypeScript respectively. However, it would be _really nice_, TypeScript if you did more intelligent checks during `tsc --init` and created correct config based on project settings (like checking `type` field in `package.json`). Thanks 😉.
+It's not possble to have top-level `await` statements using TypeScript-only settings. This should be a combination of switching your node project to native Node module format (`type: "modude`) and configuring TypeScript respectively. However, it would be _really nice_, TypeScript, if you did more intelligent checks during `tsc --init` and created correct config based on project settings (like checking `type` field in `package.json`). Thanks 😉.

@@ -5,6 +5,7 @@ import Content from 'components/content'
 import { SEO } from 'components/seo'
 import Button from 'components/button'
 import OutboundLink from 'components/outbound-link'
+import ShortPostPreview from 'components/posts/post-preview/short-post-preview'
 
 export const Head = () => (
   <SEO
@@ -14,15 +15,41 @@ export const Head = () => (
 )
 
 export default function AboutPage() {
-  const { site } = useStaticQuery(graphql`
+  const { site, allMarkdownRemark } = useStaticQuery(graphql`
     query {
       site {
         siteMetadata {
           title
         }
       }
+      allMarkdownRemark(limit: 1, sort: { frontmatter: { date: DESC } }) {
+        edges {
+          node {
+            fields {
+              slug
+            }
+            timeToRead
+            frontmatter {
+              date(formatString: "MMMM DD, YYYY", locale: "ru")
+              title
+              cover_image {
+                childImageSharp {
+                  gatsbyImageData(width: 70, height: 70, layout: FIXED)
+                }
+              }
+              image {
+                childImageSharp {
+                  gatsbyImageData(width: 70, height: 70, layout: FIXED)
+                }
+              }
+            }
+          }
+        }
+      }
     }
   `)
+
+  const post = allMarkdownRemark.edges[0]
 
   return (
     <Content>
@@ -74,6 +101,14 @@ export default function AboutPage() {
         Заметки на профессиональную тематику и просто наблюдения из жизни я
         публикую в <Link to="/posts">записях</Link>.
       </p>
+
+      {post && (
+        <>
+          <br />
+          <p>Последняя запись:</p>
+          <ShortPostPreview {...post} />
+        </>
+      )}
     </Content>
   )
 }
