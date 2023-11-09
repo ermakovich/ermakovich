@@ -9,13 +9,17 @@ Built using [Gatsby](https://www.gatsbyjs.org). Continuous builds and deployment
 # Installing
 
 - Install [Node.js](https://nodejs.org/en/) (preferably via [NVM](https://github.com/creationix/nvm)).
-- Install [Yarn](https://yarnpkg.com/en/) (recommended).
+- Enable [Corepack](https://nodejs.org/api/corepack.html), if not enable (run `$ corepack enable`)
 - Install NPM packages by running `$ yarn` in project directory.
 
 # Running
 
-    $ yarn develop
+```shell
+$ yarn develop
+```
 
 # Building
 
-    $ yarn build
+```shell
+$ yarn build
+```
