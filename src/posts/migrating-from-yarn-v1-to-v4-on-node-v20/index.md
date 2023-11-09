@@ -75,4 +75,10 @@ steps:
       yarn lint
 ```
 
-Now we are done!
+Cool, so we are done. I can't tell that I see much difference locally, but Github actions now seems to be running much faster! What a breeze.
+
+## Conclusion
+
+Yarn v1 (Yarn Classic) is already in maintenance-only mode and not getting any new cool features and performance improvements. You should upgrade from Yarn v1 if you haven't done it yet, or migrate to alternatives, like [pnpm](https://pnpm.io).
+
+The only inconvenience right now is the need of enabling Corepack, but it should change very soon.
