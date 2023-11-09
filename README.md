@@ -9,7 +9,7 @@ Built using [Gatsby](https://www.gatsbyjs.org). Continuous builds and deployment
 # Installing
 
 - Install [Node.js](https://nodejs.org/en/) (preferably via [NVM](https://github.com/creationix/nvm)).
-- Enable [Corepack](https://nodejs.org/api/corepack.html), if not enable (run `$ corepack enable`)
+- Enable [Corepack](https://nodejs.org/api/corepack.html), if not enabled (run `$ corepack enable`)
 - Install NPM packages by running `$ yarn` in project directory.
 
 # Running

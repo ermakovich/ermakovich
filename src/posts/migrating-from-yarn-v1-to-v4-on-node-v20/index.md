@@ -15,6 +15,7 @@ So, to install Yarn v4 on Node.js v20.9.x LTS you have to do the following.
 First of all, make sure to uninstall your global Yarn instance. Uninstalling depends on the way how you installed it. In my case it was done via Homebrew.
 
 After that enable [Corepack](https://nodejs.org/dist/v20.9.0/docs/api/corepack.html):
+
 ```shell
 corepack enable
 ```
@@ -30,6 +31,7 @@ WOW, console output when installing Yarn looks like you are launching a missile 
 ![Yarn installing...](yarn-install.png)
 
 Now let's see what's changed in our Yarn v1 project after that. The most important changes are:
+
 - `"packageManager"` entry added to `package.json`
 - `yarn.lock` file updated to the modern format
 - `.yarn` directory added (which we should ignore in git)
@@ -54,3 +56,23 @@ steps:
       yarn --frozen-lockfile
       yarn lint
 ```
+
+However I got an interesting warning when running the workflow:
+
+> The --frozen-lockfile option is deprecated; use --immutable and/or --immutable-cache instead
+
+What a pity! I always loved how cool this "frozen lockfile" sounds. But let's update the command to get rid of the warning:
+
+```yaml{8}:title=ci.yml
+steps:
+  - uses: actions/checkout@v4
+  - uses: actions/setup-node@v4
+    with:
+      node-version-file: .nvmrc
+  - run: |
+      corepack enable
+      yarn --immutable
+      yarn lint
+```
+
+Now we are done!
