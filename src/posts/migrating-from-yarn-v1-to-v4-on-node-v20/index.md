@@ -1,12 +1,12 @@
 ---
 date: '2023-11-09'
 title: 'Migrating from Yarn v1 to v4 on Node.js v20'
-tags: ['web', 'nodejs', 'yarn']
+tags: ['web', 'node.js', 'yarn']
 lang: 'en'
 cover_image: './yarn-install.png'
 ---
 
-The recommended (and seems to be the only) way of installing modern release of Yarn accordingly to the [docs](https://yarnpkg.com/getting-started/install) is using [Corepack](https://nodejs.org/dist/latest/docs/api/corepack.html). This seems to be quite odd, since Corepack is still marked as an experimental feature in NodeJS. However there is a [thread](https://github.com/nodejs/corepack/issues/104) to make it stable finally.
+The recommended (and seems to be the only) way of installing modern release of Yarn accordingly to the [docs](https://yarnpkg.com/getting-started/install) is using [Corepack](https://nodejs.org/dist/latest/docs/api/corepack.html). This seems to be quite odd, since Corepack is still marked as an experimental feature in Node.js. However there is a [thread](https://github.com/nodejs/corepack/issues/104) to make it stable finally.
 
 I'm writing this post, because I haven't found instructions how to install modern Yarn on Node.js v20 LTS on official resources. There are only instructions how to do this assuming you have Node v21 or higher.
 
