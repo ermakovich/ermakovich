@@ -2,6 +2,8 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import styled from 'styled-components'
 import { getSrc } from 'gatsby-plugin-image'
+import { format } from 'date-fns'
+import { en, ru } from 'date-fns/locale'
 
 import Content from 'components/content'
 import PostMeta from 'components/posts/post-meta'
@@ -23,6 +25,7 @@ export const Head = ({ data: { site, markdownRemark } }) => {
       title={title}
       description={excerpt}
       image={frontmatterImage && getSrc(frontmatterImage)}
+      lang={frontmatter.lang}
     />
   )
 }
@@ -66,6 +69,26 @@ const NextPrev = styled(UnstyledList)`
   margin-top: 3rem;
 `
 
+const locales = {
+  en,
+  ru,
+}
+
+const timeToReadText = {
+  ru: 'мин чтения',
+  en: 'min read',
+}
+
+const nextPostText = {
+  ru: 'Следующая запись',
+  en: 'Next post',
+}
+
+const prevPostText = {
+  ru: 'Предыдущая запись',
+  en: 'Previous post',
+}
+
 export default function BlogPostTemplate({
   pageContext,
   data: { markdownRemark },
@@ -73,7 +96,7 @@ export default function BlogPostTemplate({
   const { frontmatter, timeToRead, html } = markdownRemark
   const { previous, next } = pageContext
   const coverImage = frontmatter.cover_image
-  const { image } = frontmatter
+  const { image, lang } = frontmatter
 
   return (
     <>
@@ -97,9 +120,15 @@ export default function BlogPostTemplate({
       <PostContent>
         {!coverImage && <h1>{frontmatter.title}</h1>}
         <PostMeta>
-          <PostDate value={frontmatter.date} />
+          <PostDate
+            value={format(new Date(frontmatter.date), 'MMMM dd, yyyy', {
+              locale: locales[lang],
+            })}
+          />
           &nbsp;&middot;&nbsp;
-          <span>{timeToRead} мин чтения</span>
+          <span>
+            {timeToRead} {timeToReadText[lang]}
+          </span>
         </PostMeta>
         {image && (
           <GatsbyImage
@@ -113,7 +142,7 @@ export default function BlogPostTemplate({
         <NextPrev>
           {next && (
             <li>
-              → Следующая запись:&nbsp;
+              → {nextPostText[lang]}:&nbsp;
               <Link to={next.fields.slug} rel="next">
                 {next.frontmatter.title}
               </Link>
@@ -121,7 +150,7 @@ export default function BlogPostTemplate({
           )}
           {previous && (
             <li>
-              ← Предыдущая запись:&nbsp;
+              ← {prevPostText[lang]}:&nbsp;
               <Link to={previous.fields.slug} rel="prev">
                 {previous.frontmatter.title}
               </Link>
@@ -147,7 +176,7 @@ export const pageQuery = graphql`
       timeToRead
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY", locale: "ru")
+        date
         cover_image {
           childImageSharp {
             gatsbyImageData(layout: FULL_WIDTH)
@@ -158,6 +187,7 @@ export const pageQuery = graphql`
             gatsbyImageData(width: 700, layout: CONSTRAINED)
           }
         }
+        lang
       }
     }
   }

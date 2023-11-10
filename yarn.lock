@@ -9048,7 +9048,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"date-fns@npm:^2.30.0":
+"date-fns@npm:2.30.0, date-fns@npm:^2.30.0":
   version: 2.30.0
   resolution: "date-fns@npm:2.30.0"
   dependencies:
@@ -9929,6 +9929,7 @@ __metadata:
   resolution: "ermakovich@workspace:."
   dependencies:
     babel-plugin-styled-components: "npm:2.1.4"
+    date-fns: "npm:2.30.0"
     eslint: "npm:8.53.0"
     eslint-config-react-app: "npm:7.0.1"
     gatsby: "npm:5.12.9"

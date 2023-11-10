@@ -10,6 +10,7 @@ export const SEO = ({
   children,
   titleAddendum,
   image,
+  lang = 'ru',
 }) => {
   const {
     title: defaultTitle,
@@ -32,6 +33,7 @@ export const SEO = ({
 
   return (
     <>
+      <html lang={lang} />
       <title>{seo.title}</title>
       <meta name="description" content={seo.description} />
       {seo.image && (
