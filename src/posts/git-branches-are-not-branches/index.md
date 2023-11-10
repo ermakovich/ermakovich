@@ -2,6 +2,7 @@
 date: '2015-02-28'
 title: 'Git branches are not branches?'
 cover_image: './trees.jpeg'
+preview: ./trees.jpeg
 ---
 
 I personally love Git. It is much better than anything else I've used before. However there is one feature I don't like. I'm talking about ability to merge branches.

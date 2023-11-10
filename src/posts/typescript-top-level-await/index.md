@@ -1,9 +1,12 @@
 ---
-date: '2023-11-08'
-title: 'Top-level await statements in TypeScript'
-tags: ['web', 'typescript']
-lang: 'en'
-cover_image: './carbon-2.png'
+date: 2023-11-08
+title: Top-level await statements in TypeScript
+tags:
+  - web
+  - typescript
+lang: en
+cover_image: ./carbon-2.png
+preview: ./carbon-2.png
 ---
 
 I have a simple task. I have a local TypeScript project, and there is a script in this project, that performs async tasks, and where I naturally want to use top-level `await` statements:

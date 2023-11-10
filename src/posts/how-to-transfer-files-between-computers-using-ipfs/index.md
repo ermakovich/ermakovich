@@ -1,7 +1,8 @@
 ---
 date: '2018-10-04'
 title: 'How to transfer files between computers using IPFS'
-image: './ipfs.png'
+image: ./ipfs.png
+preview: ./ipfs.png
 ---
 
 When it comes to transferring files between computers usually there are many options. One relatively new and modern option is to use [IPFS](https://ipfs.io). There are numerous benefits:

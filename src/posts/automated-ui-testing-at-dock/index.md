@@ -3,7 +3,8 @@ date: '2018-06-03'
 title: 'Automated UI Testing at Dock'
 tags: ['web']
 lang: 'en'
-image: './picture.png'
+image: ./picture.png
+preview: ./picture.png
 ---
 
 At [Dock](https://www.dock.io) we rely heavily on automated UI testing as a primary way of ensuring quality and preventing regressions in our web apps and satellite projects. We have found it to be an excellent method of testing by simulating how our web applications are supposed to work for our end users. In light of this, we've continuously noticed significant improvements in quality as we've introduced more tests.

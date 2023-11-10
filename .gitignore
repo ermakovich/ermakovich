@@ -1,15 +1,13 @@
 # Project dependencies
-.cache
 node_modules
+
+# Gatsby build directory
+/public
+.cache
+
+# Misc
 yarn-error.log
 .yarn
-
-# Build directory
-/public
-.DS_Store
-
-# Local Netlify folder
+.frontmatter
 .netlify
-
-#Env files
-.env
+.DS_Store
