@@ -11,10 +11,6 @@ import IconButton from 'components/icon-button'
 import HamburgerIcon from './hamburger-icon'
 import CloseIcon from './close-icon'
 
-const Root = styled.div`
-  margin-bottom: 1.45em;
-`
-
 const Content = styled.div`
   margin: 0 auto;
   padding: 1em 1em;
@@ -122,75 +118,70 @@ export default function Header() {
   }
 
   return (
-    <Root>
-      <Content>
-        <Link to="/" title="Главная">
-          <StaticImage
-            src="../../images/avatar.jpg"
-            alt="Logo"
-            loading="eager"
-            layout="fixed"
-            width={36}
-            height={36}
-            style={{ borderRadius: '0.3em', zIndex: 0 }}
-          />
-        </Link>
-        <Menu className={isMenuOpen ? 'open' : ''}>
-          <MenuItems>
-            <MenuItem>
-              <MenuLink
-                to="/about/"
-                activeClassName="active"
-                partiallyActive={true}
-              >
-                Обо мне
-              </MenuLink>
-            </MenuItem>
-            <MenuItem>
-              <MenuLink
-                to="/posts/"
-                activeClassName="active"
-                partiallyActive={true}
-              >
-                Записи
-              </MenuLink>
-            </MenuItem>
-            <MenuItem>
-              <MenuLink
-                to="/resume/"
-                activeClassName="active"
-                partiallyActive={true}
-              >
-                Резюме
-              </MenuLink>
-            </MenuItem>
-            <MenuItem>
-              <MenuLink
-                to="/contacts/"
-                activeClassName="active"
-                partiallyActive={true}
-              >
-                Контакты
-              </MenuLink>
-            </MenuItem>
-          </MenuItems>
-          <CloseMenuButton
-            aria-label="Close menu"
-            onClick={handleCloseIconClick}
-          >
-            <CloseIcon width={24} height={24} />
-          </CloseMenuButton>
-        </Menu>
-        <Main />
-        <Right>
-          <HamburgerMenuButton
-            aria-label="Open menu"
-            onClick={handleHamburgerIconClick}
-          >
-            <HamburgerIcon width={24} height={34} />
-          </HamburgerMenuButton>
-        </Right>
-      </Content>
-    </Root>
+    <Content>
+      <Link to="/" title="Главная">
+        <StaticImage
+          src="../../images/avatar.jpg"
+          alt="Logo"
+          loading="eager"
+          layout="fixed"
+          width={36}
+          height={36}
+          style={{ borderRadius: '0.3em', zIndex: 0 }}
+        />
+      </Link>
+      <Menu className={isMenuOpen ? 'open' : ''}>
+        <MenuItems>
+          <MenuItem>
+            <MenuLink
+              to="/about/"
+              activeClassName="active"
+              partiallyActive={true}
+            >
+              Обо мне
+            </MenuLink>
+          </MenuItem>
+          <MenuItem>
+            <MenuLink
+              to="/posts/"
+              activeClassName="active"
+              partiallyActive={true}
+            >
+              Записи
+            </MenuLink>
+          </MenuItem>
+          <MenuItem>
+            <MenuLink
+              to="/resume/"
+              activeClassName="active"
+              partiallyActive={true}
+            >
+              Резюме
+            </MenuLink>
+          </MenuItem>
+          <MenuItem>
+            <MenuLink
+              to="/contacts/"
+              activeClassName="active"
+              partiallyActive={true}
+            >
+              Контакты
+            </MenuLink>
+          </MenuItem>
+        </MenuItems>
+        <CloseMenuButton aria-label="Close menu" onClick={handleCloseIconClick}>
+          <CloseIcon width={24} height={24} />
+        </CloseMenuButton>
+      </Menu>
+      <Main />
+      <Right>
+        <HamburgerMenuButton
+          aria-label="Open menu"
+          onClick={handleHamburgerIconClick}
+        >
+          <HamburgerIcon width={24} height={34} />
+        </HamburgerMenuButton>
+      </Right>
+    </Content>
   )
 }

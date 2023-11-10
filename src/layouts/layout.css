@@ -94,7 +94,8 @@ figcaption {
 }
 
 .gatsby-code-title {
-  padding: 1em;
+  padding: 0.5em 1em;
+  width: fit-content;
   font-family: monospace;
   background-color: var(--theme-neutral-bg-color);
   color: var(--color-primary);
@@ -105,5 +106,4 @@ figcaption {
 .gatsby-code-title + pre {
   margin-top: 0;
   border-top-left-radius: 0;
-  border-top-right-radius: 0;
 }
