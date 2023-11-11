@@ -62,6 +62,10 @@ const PostContent = styled(Content)`
   font-size: 1.1rem;
 `
 
+const PostControls = styled.div`
+  text-align: right;
+`
+
 const NextPrev = styled(UnstyledList)`
   display: flex;
   flex-wrap: wrap;
@@ -89,9 +93,19 @@ const prevPostText = {
   en: 'Previous post',
 }
 
+const feedbackText = {
+  ru: 'отзыв',
+  en: 'feedback',
+}
+
+const sendFeedbackText = {
+  ru: `отправить ${feedbackText.ru}`,
+  en: `send ${feedbackText.en}`,
+}
+
 export default function BlogPostTemplate({
   pageContext,
-  data: { markdownRemark },
+  data: { site, markdownRemark },
 }) {
   const { frontmatter, timeToRead, html } = markdownRemark
   const { previous, next } = pageContext
@@ -139,6 +153,18 @@ export default function BlogPostTemplate({
         )}
         <div dangerouslySetInnerHTML={{ __html: html }} />
 
+        <PostControls>
+          <a
+            href={`mailto:${site.siteMetadata.email}?subject=${
+              feedbackText[lang]
+            }: ${frontmatter.title}&body=${
+              site.siteMetadata.siteUrl + pageContext.slug
+            }`}
+          >
+            {sendFeedbackText[lang]}
+          </a>
+        </PostControls>
+
         <NextPrev>
           {next && (
             <li>
@@ -167,6 +193,8 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        email
+        siteUrl
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {

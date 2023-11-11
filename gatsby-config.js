@@ -6,6 +6,7 @@ module.exports = {
     author: title,
     description: 'Веб-разработчик JavaScript (React) в Санкт-Петербурге',
     siteUrl: 'https://ermakovich.ru',
+    email: 's.ermakovich@gmail.com',
   },
   plugins: [
     'gatsby-plugin-styled-components',

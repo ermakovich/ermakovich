@@ -1,4 +1,5 @@
 import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
 
 import Content from 'components/content'
 import { SEO } from 'components/seo'
@@ -8,12 +9,22 @@ export const Head = () => (
 )
 
 export default function ContactsPage() {
+  const { site } = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          email
+        }
+      }
+    }
+  `)
+
   return (
     <Content>
       <h1>Контакты для связи</h1>
       <p>
         Почта:{' '}
-        <a href="mailto:s.ermakovich@gmail.com">s.ermakovich@gmail.com</a>
+        <a href="mailto:s.ermakovich@gmail.com">{site.siteMetadata.email}</a>
       </p>
       <p>
         Телеграм:{' '}
