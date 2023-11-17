@@ -2764,7 +2764,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@netlify/blobs@npm:^6.3.0":
+"@netlify/blobs@npm:6.3.0":
   version: 6.3.0
   resolution: "@netlify/blobs@npm:6.3.0"
   checksum: 0b7bb18c274ded1cc0484910bb4bb938df16a4032c7e0a8bf1c4f94c4a651d5e45f96b84ab9d2c620bac4326c0943fc43bca205f03da91bc8b5a9ffe2bfc1336
@@ -9681,7 +9681,7 @@ __metadata:
     husky: "npm:8.0.3"
     lint-staged: "npm:15.1.0"
     lodash: "npm:4.17.21"
-    netlify-cli: "npm:17.4.0"
+    netlify-cli: "npm:17.5.1"
     prettier: "npm:3.1.0"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
@@ -16538,13 +16538,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"netlify-cli@npm:17.4.0":
-  version: 17.4.0
-  resolution: "netlify-cli@npm:17.4.0"
+"netlify-cli@npm:17.5.1":
+  version: 17.5.1
+  resolution: "netlify-cli@npm:17.5.1"
   dependencies:
     "@bugsnag/js": "npm:7.20.2"
     "@fastify/static": "npm:6.10.2"
-    "@netlify/blobs": "npm:^6.3.0"
+    "@netlify/blobs": "npm:6.3.0"
     "@netlify/build": "npm:29.26.6"
     "@netlify/build-info": "npm:7.11.1"
     "@netlify/config": "npm:20.10.0"
@@ -16651,11 +16651,12 @@ __metadata:
     uuid: "npm:9.0.0"
     wait-port: "npm:1.0.4"
     write-file-atomic: "npm:5.0.1"
+    ws: "npm:^8.14.2"
     zod: "npm:3.22.4"
   bin:
     netlify: bin/run.mjs
     ntl: bin/run.mjs
-  checksum: 0601c1f7c6541d8832416123d45abe809c09b4cbfc84c13156d62cc8cd886ec911782f0350d37b4255b0985c46421a9dce68e4f1ad7e6ef7406946ecbf0bb653
+  checksum: 17e22c34bf270835c067114ce3a8b5f82f6f3ec6be1d4065b43b0b8d427cdd8525a5bb88fcda6ea01929ba7b1cef0cbda8e812e742b34ee4c3653751cd58e003
   languageName: node
   linkType: hard
 
@@ -23146,6 +23147,21 @@ __metadata:
     imurmurhash: "npm:^0.1.4"
     signal-exit: "npm:^3.0.7"
   checksum: a2c282c95ef5d8e1c27b335ae897b5eca00e85590d92a3fd69a437919b7b93ff36a69ea04145da55829d2164e724bc62202cdb5f4b208b425aba0807889375c7
+  languageName: node
+  linkType: hard
+
+"ws@npm:^8.14.2":
+  version: 8.14.2
+  resolution: "ws@npm:8.14.2"
+  peerDependencies:
+    bufferutil: ^4.0.1
+    utf-8-validate: ">=5.0.2"
+  peerDependenciesMeta:
+    bufferutil:
+      optional: true
+    utf-8-validate:
+      optional: true
+  checksum: 35b4c2da048b8015c797fd14bcb5a5766216ce65c8a5965616a5440ca7b6c3681ee3cbd0ea0c184a59975556e9d58f2002abf8485a14d11d3371770811050a16
   languageName: node
   linkType: hard
 
