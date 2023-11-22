@@ -24,6 +24,11 @@
           "isPublishDate": true
         },
         {
+          "title": "Updated date",
+          "name": "updated_date",
+          "type": "datetime"
+        },
+        {
           "title": "Content preview",
           "name": "preview",
           "type": "image"

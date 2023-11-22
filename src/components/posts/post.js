@@ -78,6 +78,11 @@ const locales = {
   ru,
 }
 
+const updatedText = {
+  ru: 'обновлено',
+  en: 'edited',
+}
+
 const timeToReadText = {
   ru: 'мин чтения',
   en: 'min read',
@@ -140,6 +145,21 @@ export default function BlogPostTemplate({
             })}
           />
           &nbsp;&middot;&nbsp;
+          {frontmatter.updated_date && (
+            <>
+              {updatedText[lang]}{' '}
+              <PostDate
+                value={format(
+                  new Date(frontmatter.updated_date),
+                  'MMMM dd, yyyy',
+                  {
+                    locale: locales[lang],
+                  }
+                )}
+              />
+              &nbsp;&middot;&nbsp;
+            </>
+          )}
           <span>
             {timeToRead} {timeToReadText[lang]}
           </span>
@@ -205,6 +225,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date
+        updated_date
         cover_image {
           childImageSharp {
             gatsbyImageData(layout: FULL_WIDTH)

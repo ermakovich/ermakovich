@@ -1,5 +1,6 @@
 ---
 date: 2015-02-28
+updated_date: 2023-11-22
 title: Git branches are not branches?
 cover_image: ./trees.jpeg
 preview: ./trees.jpeg
@@ -7,8 +8,6 @@ lang: en
 tags:
   - git
 ---
-
-UPDATED: Nov 22, 2023
 
 I personally love Git. It is much better than anything else I've used before. However there is one feature I don't like. I'm talking about ability to merge branches in a random way.
 
