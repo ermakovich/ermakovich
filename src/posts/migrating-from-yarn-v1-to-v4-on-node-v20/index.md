@@ -2,7 +2,6 @@
 date: 2023-11-09
 title: Migrating from Yarn v1 to v4 on Node.js v20
 tags:
-  - web
   - node.js
   - yarn
 lang: en
