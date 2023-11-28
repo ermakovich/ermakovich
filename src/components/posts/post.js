@@ -3,7 +3,7 @@ import { Link, graphql } from 'gatsby'
 import styled from 'styled-components'
 import { getSrc } from 'gatsby-plugin-image'
 import { format } from 'date-fns'
-import { en, ru } from 'date-fns/locale'
+import { enUS as en, ru } from 'date-fns/locale'
 
 import Content from 'components/content'
 import PostMeta from 'components/posts/post-meta'
