@@ -34,7 +34,6 @@ const PostCover = styled.div`
   position: relative;
   overflow: hidden;
   z-index: 0;
-  min-height: 50vh;
   display: flex;
   align-items: center;
 
@@ -44,6 +43,7 @@ const PostCover = styled.div`
     display: inline-block;
     z-index: 1;
     padding: 0.5em;
+    margin: 10rem auto;
   }
 `
 
