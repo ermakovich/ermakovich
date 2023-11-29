@@ -45,13 +45,13 @@ export default function IndexPage() {
         <StaticImage
           src="../images/avatar.jpg"
           alt="Photo"
-          width={200}
-          height={200}
           loading="eager"
           style={{
+            width: '10rem',
+            height: '10rem',
             margin: '0 auto',
             borderRadius: '50%',
-            boxShadow: '0 0 5px 0',
+            boxShadow: '0 0 .3rem 0',
             zIndex: 0,
           }}
         />

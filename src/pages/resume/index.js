@@ -8,7 +8,6 @@ import FileLink from 'components/file-link'
 import Content from 'components/content'
 import TextSystem from 'components/text-system'
 import { SEO } from 'components/seo'
-import mq from 'components/media-queries'
 
 export const Head = () => (
   <SEO
@@ -26,7 +25,7 @@ const Header = styled.div`
   }
 
   a {
-    margin-top: 10px;
+    margin-top: 0.5rem;
   }
 `
 
@@ -35,15 +34,10 @@ const Subheader = styled.div`
 `
 
 const AvatarWrapper = styled.div`
-  margin-right: 20px;
+  margin-right: 2rem;
   z-index: 0;
   flex: none;
   align-self: center;
-
-  @media (${mq.xs}) {
-    width: 80px;
-    height: 80px;
-  }
 `
 
 const Generated = styled(TextSystem)`
@@ -96,10 +90,14 @@ export default function ResumePage() {
             <StaticImage
               src="../../images/avatar.jpg"
               alt="Photo"
-              width={130}
-              height={130}
               loading="eager"
-              style={{ borderRadius: '50%', boxShadow: '0 0 5px 0', zIndex: 0 }}
+              style={{
+                width: '7rem',
+                height: '7rem',
+                borderRadius: '50%',
+                boxShadow: '0 0 .2rem 0',
+                zIndex: 0,
+              }}
             />
           </AvatarWrapper>
 

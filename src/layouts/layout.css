@@ -36,6 +36,30 @@ html {
   }
 }
 
+@media (min-width: 1600px) {
+  html {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1920px) {
+  html {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 2048px) {
+  html {
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 2560px) {
+  html {
+    font-size: 42px;
+  }
+}
+
 h1,
 h2,
 h3,

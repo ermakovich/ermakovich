@@ -12,15 +12,17 @@ import IconButton from 'components/icon-button'
 import HamburgerIcon from './hamburger-icon'
 import CloseIcon from './close-icon'
 
+const menuItemBorderRadius = '.2rem'
+
 const Root = styled(Content)`
   display: flex;
   align-items: center;
-  min-height: 100px;
+  min-height: 6rem;
 `
 
 const Menu = styled.menu`
   margin: 0;
-  margin-left: 2em;
+  margin-left: 2rem;
   padding-left: 0;
   display: flex;
 
@@ -32,8 +34,8 @@ const Menu = styled.menu`
     top: 0;
     left: 0;
     right: 0;
-    border-bottom: 1px solid gray;
-    padding: 0 1em;
+    border-bottom: 0.1rem solid gray;
+    padding: 0 1rem;
 
     &:not(.open) {
       display: none;
@@ -55,11 +57,11 @@ const MenuItem = styled.li`
 `
 
 const MenuLink = styled(Link)`
-  padding: 10px;
-  margin: 2px;
+  padding: 0.5rem;
+  margin: 0.2rem;
   color: var(--color-primary) !important;
   background: transparent;
-  border-radius: 3px;
+  border-radius: ${menuItemBorderRadius};
   display: inline-block;
 
   &:active,
@@ -82,8 +84,8 @@ const Right = styled.div`
 
 const CloseMenuButton = styled(IconButton)`
   position: absolute;
-  right: 1em;
-  top: 1.5em;
+  right: 1rem;
+  top: 1.5rem;
   display: none;
 
   @media (${mq.xs}) {
@@ -124,9 +126,12 @@ export default function Header() {
           alt="Logo"
           loading="eager"
           layout="fixed"
-          width={36}
-          height={36}
-          style={{ borderRadius: '0.3em', zIndex: 0 }}
+          style={{
+            width: '2.5rem',
+            height: '2.5rem',
+            borderRadius: menuItemBorderRadius,
+            zIndex: 0,
+          }}
         />
       </Link>
       <Menu className={isMenuOpen ? 'open' : ''}>
