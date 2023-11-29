@@ -57,10 +57,6 @@ const Generated = styled(TextSystem)`
 `
 
 const Root = styled.div`
-  @media not print {
-    font-size: 16px;
-  }
-
   @media print {
     position: fixed;
     top: 0;

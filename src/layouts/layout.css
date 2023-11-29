@@ -20,12 +20,20 @@
 }
 
 html {
-  font-size: 112.5%;
-  font-family: 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
+  font-family: BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
   line-height: 1.5;
   box-sizing: border-box;
   color: var(--color-primary);
   background: var(--background-color);
+  text-rendering: optimizespeed;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (min-width: 577px) {
+  html {
+    font-size: 20px;
+  }
 }
 
 h1,
@@ -85,12 +93,6 @@ figcaption {
   text-align: center;
   font-size: smaller;
   margin-top: 0.3rem;
-}
-
-@media (max-width: 1024px) {
-  h1 {
-    font-size: 1.6em;
-  }
 }
 
 .gatsby-code-title {

@@ -58,10 +58,6 @@ const PostCoverImgWrapper = styled.div`
   z-index: -1;
 `
 
-const PostContent = styled(Content)`
-  font-size: 1.1rem;
-`
-
 const PostControls = styled.div`
   text-align: right;
 `
@@ -136,7 +132,7 @@ export default function BlogPostTemplate({
           </PostCoverImgWrapper>
         </PostCover>
       )}
-      <PostContent>
+      <Content>
         {!coverImage && <h1>{frontmatter.title}</h1>}
         <PostMeta>
           <PostDate
@@ -203,7 +199,7 @@ export default function BlogPostTemplate({
             </li>
           )}
         </NextPrev>
-      </PostContent>
+      </Content>
     </>
   )
 }

@@ -4,6 +4,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 import { Link } from 'gatsby'
 import { globalHistory } from '@reach/router'
 
+import Content from 'components/content'
 import UnstyledList from 'components/unstyled-list'
 import mq from 'components/media-queries'
 import IconButton from 'components/icon-button'
@@ -11,9 +12,7 @@ import IconButton from 'components/icon-button'
 import HamburgerIcon from './hamburger-icon'
 import CloseIcon from './close-icon'
 
-const Content = styled.div`
-  margin: 0 auto;
-  padding: 1em 1em;
+const Root = styled(Content)`
   display: flex;
   align-items: center;
   min-height: 100px;
@@ -118,7 +117,7 @@ export default function Header() {
   }
 
   return (
-    <Content>
+    <Root>
       <Link to="/" title="Главная">
         <StaticImage
           src="../../images/avatar.jpg"
@@ -182,6 +181,6 @@ export default function Header() {
           <HamburgerIcon width={24} height={34} />
         </HamburgerMenuButton>
       </Right>
-    </Content>
+    </Root>
   )
 }
