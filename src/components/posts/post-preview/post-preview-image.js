@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { GatsbyImage, StaticImage } from 'gatsby-plugin-image'
 
+const squareSize = '3.5rem'
+
 export default function PostPreviewImage({ node }) {
   const { frontmatter } = node
   const image = frontmatter.image || frontmatter.cover_image
@@ -13,13 +15,13 @@ export default function PostPreviewImage({ node }) {
           image={image.childImageSharp.gatsbyImageData}
           alt="post image"
           style={{
-            width: 70,
-            height: 70,
+            width: squareSize,
+            height: squareSize,
             flex: 'none',
-            marginTop: 5,
-            marginRight: 20,
+            marginTop: '0.2rem',
+            marginRight: '1rem',
             float: 'left',
-            borderRadius: 5,
+            borderRadius: '.2rem',
           }}
         />
       ) : (
@@ -28,14 +30,14 @@ export default function PostPreviewImage({ node }) {
           alt="post image"
           loading="eager"
           layout="fixed"
-          width={70}
-          height={70}
           style={{
+            width: squareSize,
+            height: squareSize,
             flex: 'none',
-            marginTop: 5,
-            marginRight: 20,
+            marginTop: '0.2rem',
+            marginRight: '1rem',
             float: 'left',
-            borderRadius: 5,
+            borderRadius: '.2rem',
           }}
         />
       )}
