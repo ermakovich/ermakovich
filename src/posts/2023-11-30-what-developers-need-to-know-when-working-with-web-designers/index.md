@@ -1,12 +1,12 @@
 ---
 title: What developers need to know when working with web designers
-description: As a developer you need to know these top things when working with web designers on the same project
 date: 2023-11-30T11:49:20.095Z
 preview: ./bosch.jpg
 tags:
   - web
 lang: en
 cover_image: ./bosch.jpg
+slug: developers-working-with-web-designers
 ---
 
 Any serious project involves a dedicated designer role — a person who will create beautiful, modern design mockups for the product. Designer collaborates with business owners when implementing designs, and then forwards the result to frontend developers. Let's break down what working with designer involves from developer perspective and what you need to pay attention for.
