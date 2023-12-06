@@ -2778,9 +2778,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@netlify/build-info@npm:7.11.1":
-  version: 7.11.1
-  resolution: "@netlify/build-info@npm:7.11.1"
+"@netlify/build-info@npm:7.11.3":
+  version: 7.11.3
+  resolution: "@netlify/build-info@npm:7.11.3"
   dependencies:
     "@bugsnag/js": "npm:^7.20.0"
     dot-prop: "npm:^7.2.0"
@@ -2793,13 +2793,13 @@ __metadata:
     yargs: "npm:^17.6.0"
   bin:
     build-info: bin.js
-  checksum: f2a4e33c56e3f5d3ba550fdcccf71870e9ef20c9993005418638e3ded7b6f3fb1357cec5d2beb423949916b4d497c48a9921adccdb10c95757170716e9090b3b
+  checksum: 18ffdfca32daefc2e76b62c56f68153990d5eca826a93d24ef40461e8868c9fd1d1e4b465325e94c3c9459322cf8d1f846a29c34bc283eb4bb096cad68d277d8
   languageName: node
   linkType: hard
 
-"@netlify/build@npm:29.29.4":
-  version: 29.29.4
-  resolution: "@netlify/build@npm:29.29.4"
+"@netlify/build@npm:29.31.0":
+  version: 29.31.0
+  resolution: "@netlify/build@npm:29.31.0"
   dependencies:
     "@bugsnag/js": "npm:^7.0.0"
     "@honeycombio/opentelemetry-node": "npm:^0.5.0"
@@ -2867,7 +2867,7 @@ __metadata:
       optional: true
   bin:
     netlify-build: bin.js
-  checksum: bedb8525b4df168a0de4727095fc8ab7a59412c9dcfa9d6c3ba452cd1733186099865058daad9c0503c86715f8183437f342f9af377b7eaf2492c15ea9378007
+  checksum: 1f3d5a0461b402b5edcdb93df9080a660f4ff4924f2c4741ad3b7b3364e39487f2ddf912fa842e17456f0c84094d064c35db31ea2f51fa7fe5b0ddb15fa3f3b2
   languageName: node
   linkType: hard
 
@@ -9714,7 +9714,7 @@ __metadata:
     husky: "npm:8.0.3"
     lint-staged: "npm:15.2.0"
     lodash: "npm:4.17.21"
-    netlify-cli: "npm:17.9.0"
+    netlify-cli: "npm:17.10.0"
     prettier: "npm:3.1.0"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
@@ -16621,15 +16621,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"netlify-cli@npm:17.9.0":
-  version: 17.9.0
-  resolution: "netlify-cli@npm:17.9.0"
+"netlify-cli@npm:17.10.0":
+  version: 17.10.0
+  resolution: "netlify-cli@npm:17.10.0"
   dependencies:
     "@bugsnag/js": "npm:7.20.2"
     "@fastify/static": "npm:6.10.2"
     "@netlify/blobs": "npm:6.3.1"
-    "@netlify/build": "npm:29.29.4"
-    "@netlify/build-info": "npm:7.11.1"
+    "@netlify/build": "npm:29.31.0"
+    "@netlify/build-info": "npm:7.11.3"
     "@netlify/config": "npm:20.10.0"
     "@netlify/edge-bundler": "npm:10.1.3"
     "@netlify/local-functions-proxy": "npm:1.1.1"
@@ -16739,7 +16739,7 @@ __metadata:
   bin:
     netlify: bin/run.js
     ntl: bin/run.js
-  checksum: 85a07019f999d939824b39f44ad07b228f86827b5bbef442aecab70eaf9d8d5e652f66bca6057a08c07dde5b662944ea8f4ade6566d25cdf10423060d9fa5d86
+  checksum: b42bb167f56a1181ac51682afa2ca60d340a33e9b96af279297096c30c3353b6931283c7cac985d1084e120ef12d3196b660301c33faf7087a2a3a1b63a72b00
   languageName: node
   linkType: hard
 
