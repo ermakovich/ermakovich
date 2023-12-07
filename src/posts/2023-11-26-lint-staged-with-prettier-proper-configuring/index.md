@@ -8,7 +8,6 @@ tags:
   - tools
 lang: en
 cover_image: ./prettier-error.png
-slug: lint-staged-prettier-proper-configuring
 ---
 
 One of the most common use cases for [lint-staged](https://github.com/lint-staged/lint-staged) is formatting files using [Prettier](https://prettier.io). Documentation of lint-staged is full of references to this use case, suggesting you to achive it this way:
