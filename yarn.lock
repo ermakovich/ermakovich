@@ -9714,7 +9714,7 @@ __metadata:
     husky: "npm:8.0.3"
     lint-staged: "npm:15.2.0"
     lodash: "npm:4.17.21"
-    netlify-cli: "npm:17.10.0"
+    netlify-cli: "npm:17.10.1"
     prettier: "npm:3.1.0"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
@@ -16621,9 +16621,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"netlify-cli@npm:17.10.0":
-  version: 17.10.0
-  resolution: "netlify-cli@npm:17.10.0"
+"netlify-cli@npm:17.10.1":
+  version: 17.10.1
+  resolution: "netlify-cli@npm:17.10.1"
   dependencies:
     "@bugsnag/js": "npm:7.20.2"
     "@fastify/static": "npm:6.10.2"
@@ -16739,7 +16739,7 @@ __metadata:
   bin:
     netlify: bin/run.js
     ntl: bin/run.js
-  checksum: b42bb167f56a1181ac51682afa2ca60d340a33e9b96af279297096c30c3353b6931283c7cac985d1084e120ef12d3196b660301c33faf7087a2a3a1b63a72b00
+  checksum: a38317ab41e0f34e6e98958315c486485e5cbd196eb4934fd45bb278d8ca29592609d9dd953a50ec01f4b8ff6494b2be6b1d9dc3c2c4396e776013b029e22ca3
   languageName: node
   linkType: hard
 
