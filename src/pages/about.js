@@ -57,8 +57,8 @@ export default function AboutPage() {
       <p>
         Меня зовут {site.siteMetadata.title}. С недавнего времени я живу в
         Санкт-Петербурге. По профессии я программист, специализируюсь на
-        веб-разработке. В данный момент работаю над персональными и open source
-        проектами (
+        веб-разработке. В данный момент работаю над коммерческими, персональными
+        и open source проектами (
         <OutboundLink
           href="https://github.com/ermakovich"
           target="_blank"
