@@ -8804,10 +8804,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"date-fns@npm:3.0.0":
-  version: 3.0.0
-  resolution: "date-fns@npm:3.0.0"
-  checksum: 61a2b24df5a963a451fdce729402ba4c4634aa7e758a0f8467c498b46040e7d238591effd7da289ef0d08a57d1100886ca01b40c6cff26faa6daff53c2e91bbd
+"date-fns@npm:3.0.1":
+  version: 3.0.1
+  resolution: "date-fns@npm:3.0.1"
+  checksum: d840a0b25ba4c262868df804d1f4939e809326b6fbdacc04f7f5184c2af9891de84ca5620777a98b077fad52777928032bb2cd8cd3a99d22eb1c75220f0aae34
   languageName: node
   linkType: hard
 
@@ -9699,7 +9699,7 @@ __metadata:
   resolution: "ermakovich@workspace:."
   dependencies:
     babel-plugin-styled-components: "npm:2.1.4"
-    date-fns: "npm:3.0.0"
+    date-fns: "npm:3.0.1"
     eslint: "npm:8.56.0"
     eslint-config-react-app: "npm:7.0.1"
     gatsby: "npm:5.13.0"
