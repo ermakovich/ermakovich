@@ -9712,7 +9712,7 @@ __metadata:
     prettier: "npm:3.1.1"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
-    styled-components: "npm:6.1.3"
+    styled-components: "npm:6.1.4"
     unused-webpack-plugin: "npm:2.4.0"
   languageName: unknown
   linkType: soft
@@ -21202,9 +21202,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"styled-components@npm:6.1.3":
-  version: 6.1.3
-  resolution: "styled-components@npm:6.1.3"
+"styled-components@npm:6.1.4":
+  version: 6.1.4
+  resolution: "styled-components@npm:6.1.4"
   dependencies:
     "@emotion/is-prop-valid": "npm:1.2.1"
     "@emotion/unitless": "npm:0.8.0"
@@ -21218,7 +21218,7 @@ __metadata:
   peerDependencies:
     react: ">= 16.8.0"
     react-dom: ">= 16.8.0"
-  checksum: 2985eaf04484ebc64e951a9816920c039667ce0f1df51fd7571ac495f89f8106dc882ea3cb68c8ba49ca357d7ed302a6f386849e9f78d85a6210ad2d04dfe5c8
+  checksum: 45ecb132accf6b6077cea04ed02d849f22db128ce82a89ba9d7ec5cb96c2348581221b53467f4cbcc17d4c5a3fa699c5d898ae7aa853ccc36e5b5b5279e98b5c
   languageName: node
   linkType: hard
 
