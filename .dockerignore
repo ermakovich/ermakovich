@@ -1,0 +1,24 @@
+**/.dockerignore
+**/.env
+**/.git
+**/.gitignore
+**/.github
+**/.vscode
+**/docker-compose*
+**/compose*
+**/Dockerfile*
+**/node_modules
+
+LICENSE
+README.md
+
+# Gatsby build directory
+/public
+.cache
+
+# Misc
+yarn-error.log
+.yarn
+.frontmatter
+.netlify
+.DS_Store
