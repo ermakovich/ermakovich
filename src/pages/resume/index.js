@@ -41,8 +41,6 @@ const AvatarWrapper = styled.div`
 `
 
 const Generated = styled(TextSystem)`
-  position: absolute;
-  bottom: 0;
   font-size: smaller;
 
   @media not print {
@@ -52,7 +50,7 @@ const Generated = styled(TextSystem)`
 
 const Root = styled.div`
   @media print {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -136,7 +134,10 @@ export default function ResumePage() {
           <strong>Опыт работы:</strong>
         </p>
         <ul>
-          <li>Персональные проекты, open source разработка / 2023г. - н.в.</li>
+          <li>
+            Фриланс, персональные проекты, open-source разработка / 2023г. -
+            н.в.
+          </li>
           <li>
             Интернет-стартапы{' '}
             <OutboundLink
