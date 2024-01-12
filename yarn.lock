@@ -2890,7 +2890,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@netlify/blobs@npm:6.3.1, @netlify/blobs@npm:^6.3.1":
+"@netlify/blobs@npm:6.4.1":
+  version: 6.4.1
+  resolution: "@netlify/blobs@npm:6.4.1"
+  checksum: 031240fd8e5a40a6cd9eedd4f5ed98085954f06725be92a163ac8c9f0c065dea6db78573ba3c45750d60052aa0751fdce632bbb0147cbe4c0884f4503b858718
+  languageName: node
+  linkType: hard
+
+"@netlify/blobs@npm:^6.3.1":
   version: 6.3.1
   resolution: "@netlify/blobs@npm:6.3.1"
   checksum: acf646e22d65194e3b74e5d97ba7d84908acb7cad9eb90fff4b487fbb9ed7e1fa32a4e14a7ba984c7919747cfe901c7a07c40c07e1b2284e20e9a037bd7aba3b
@@ -2916,9 +2923,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@netlify/build@npm:29.31.5":
-  version: 29.31.5
-  resolution: "@netlify/build@npm:29.31.5"
+"@netlify/build@npm:29.32.0":
+  version: 29.32.0
+  resolution: "@netlify/build@npm:29.32.0"
   dependencies:
     "@bugsnag/js": "npm:^7.0.0"
     "@netlify/blobs": "npm:^6.3.1"
@@ -2985,7 +2992,7 @@ __metadata:
       optional: true
   bin:
     netlify-build: bin.js
-  checksum: dd5925b395396abcb2e8799f0c8e65e3e7d1dea522a8580a0eac5110b56648bbfde219608780c18815659ca5e2aee275ac2ba3d16678196d5769a5906d990faa
+  checksum: d78fb703b7ea942337dd951689835d546e40be0c4e109813e1c16f91f9600e32b2338bbdcb4cefd9700a4c82f5908705297b3227dfce1458cb81f2015b45d98e
   languageName: node
   linkType: hard
 
@@ -9227,7 +9234,7 @@ __metadata:
     husky: "npm:8.0.3"
     lint-staged: "npm:15.2.0"
     lodash: "npm:4.17.21"
-    netlify-cli: "npm:17.13.1"
+    netlify-cli: "npm:17.13.2"
     prettier: "npm:3.1.1"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
@@ -16243,14 +16250,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"netlify-cli@npm:17.13.1":
-  version: 17.13.1
-  resolution: "netlify-cli@npm:17.13.1"
+"netlify-cli@npm:17.13.2":
+  version: 17.13.2
+  resolution: "netlify-cli@npm:17.13.2"
   dependencies:
     "@bugsnag/js": "npm:7.20.2"
     "@fastify/static": "npm:6.10.2"
-    "@netlify/blobs": "npm:6.3.1"
-    "@netlify/build": "npm:29.31.5"
+    "@netlify/blobs": "npm:6.4.1"
+    "@netlify/build": "npm:29.32.0"
     "@netlify/build-info": "npm:7.11.4"
     "@netlify/config": "npm:20.10.1"
     "@netlify/edge-bundler": "npm:11.0.0"
@@ -16360,7 +16367,7 @@ __metadata:
   bin:
     netlify: bin/run.js
     ntl: bin/run.js
-  checksum: 7014002d2d6248d0b247c584631a2d4e58c49febc8f53bdcfd287554aad60c7ec9f7a6a9d03d7fbc9ac72d58c7ec0eaf70902a590c64e62d878860a536fad97b
+  checksum: b2a0ea5bf741903b4f3c6641fce43468397d119c2cd6be7b4e296fc96d78547bdb055950a15a2b489b343dbb99e1bdeb715ae0a1ce9af6cb5bf70c96befdba3e
   languageName: node
   linkType: hard
 
