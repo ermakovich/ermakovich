@@ -2769,9 +2769,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@netlify/build@npm:29.32.4":
-  version: 29.32.4
-  resolution: "@netlify/build@npm:29.32.4"
+"@netlify/build@npm:29.33.1":
+  version: 29.33.1
+  resolution: "@netlify/build@npm:29.33.1"
   dependencies:
     "@bugsnag/js": "npm:^7.0.0"
     "@netlify/blobs": "npm:^6.4.2"
@@ -2838,7 +2838,7 @@ __metadata:
       optional: true
   bin:
     netlify-build: bin.js
-  checksum: 8d2cb4b5361833c19696e1d916807b07a527da2cc32364cb5092b33d205747a6691fcf3ed325bc4ff42a3438822790d1c389aa1b0955ea3027a66472263ba909
+  checksum: 4ea73b0c5c234976f6d73904c9627c3cc06d6000e0a22eb8fa25f24b181ea49c01f5bf7276f7c85ee67e2db031601c31817b6c87860ef8c6423a7967aab473e0
   languageName: node
   linkType: hard
 
@@ -9058,7 +9058,7 @@ __metadata:
     husky: "npm:8.0.3"
     lint-staged: "npm:15.2.0"
     lodash: "npm:4.17.21"
-    netlify-cli: "npm:17.15.2"
+    netlify-cli: "npm:17.15.3"
     prettier: "npm:3.2.4"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
@@ -16000,14 +16000,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"netlify-cli@npm:17.15.2":
-  version: 17.15.2
-  resolution: "netlify-cli@npm:17.15.2"
+"netlify-cli@npm:17.15.3":
+  version: 17.15.3
+  resolution: "netlify-cli@npm:17.15.3"
   dependencies:
     "@bugsnag/js": "npm:7.20.2"
     "@fastify/static": "npm:6.10.2"
     "@netlify/blobs": "npm:6.4.2"
-    "@netlify/build": "npm:29.32.4"
+    "@netlify/build": "npm:29.33.1"
     "@netlify/build-info": "npm:7.11.5"
     "@netlify/config": "npm:20.10.2"
     "@netlify/edge-bundler": "npm:11.2.2"
@@ -16117,7 +16117,7 @@ __metadata:
   bin:
     netlify: bin/run.js
     ntl: bin/run.js
-  checksum: c49b9841b393bd425c5b4601310d8b435856e077bcc121c05f7bda44bd51955bac1118311a9fa96b3ab517b657cec8c3ea5b821d2c5868253433aa396367a034
+  checksum: e5e3b5df49139069c58de4dcc60abf1f65ecb84afbe3239973f07a1866011187c45b82fc58ede8580cad86713f4dd5b5b7b09578bf808098a146ba0d5a06a54b
   languageName: node
   linkType: hard
 
