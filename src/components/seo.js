@@ -21,7 +21,7 @@ export const SEO = ({
 
   const seo = {
     title:
-      (titleAddendum ? `${defaultTitle} - ${titleAddendum}` : title) ||
+      (titleAddendum ? `${defaultTitle} — ${titleAddendum}` : title) ||
       defaultTitle,
     description: description || defaultDescription,
     url: `${siteUrl}${pathname || ``}`,
