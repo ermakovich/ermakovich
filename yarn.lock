@@ -2769,9 +2769,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@netlify/build@npm:29.33.1":
-  version: 29.33.1
-  resolution: "@netlify/build@npm:29.33.1"
+"@netlify/build@npm:29.33.2":
+  version: 29.33.2
+  resolution: "@netlify/build@npm:29.33.2"
   dependencies:
     "@bugsnag/js": "npm:^7.0.0"
     "@netlify/blobs": "npm:^6.4.2"
@@ -2779,12 +2779,12 @@ __metadata:
     "@netlify/config": "npm:^20.10.2"
     "@netlify/edge-bundler": "npm:11.2.2"
     "@netlify/framework-info": "npm:^9.8.10"
-    "@netlify/functions-utils": "npm:^5.2.47"
+    "@netlify/functions-utils": "npm:^5.2.48"
     "@netlify/git-utils": "npm:^5.1.1"
     "@netlify/opentelemetry-utils": "npm:^1.0.1"
     "@netlify/plugins-list": "npm:^6.73.0"
     "@netlify/run-utils": "npm:^5.1.1"
-    "@netlify/zip-it-and-ship-it": "npm:9.28.3"
+    "@netlify/zip-it-and-ship-it": "npm:9.28.4"
     "@opentelemetry/api": "npm:~1.6.0"
     "@sindresorhus/slugify": "npm:^2.0.0"
     ansi-escapes: "npm:^6.0.0"
@@ -2838,7 +2838,7 @@ __metadata:
       optional: true
   bin:
     netlify-build: bin.js
-  checksum: 4ea73b0c5c234976f6d73904c9627c3cc06d6000e0a22eb8fa25f24b181ea49c01f5bf7276f7c85ee67e2db031601c31817b6c87860ef8c6423a7967aab473e0
+  checksum: 20e978d1d385bafe75a52fb83db7315e0a8c4b12d81048e3d40c82a5db60d2b2884aefd929f7ee651cacf49aa39afd12da8b1041655c38cca27f8a52f74dd99b
   languageName: node
   linkType: hard
 
@@ -2942,14 +2942,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@netlify/functions-utils@npm:^5.2.47":
-  version: 5.2.47
-  resolution: "@netlify/functions-utils@npm:5.2.47"
+"@netlify/functions-utils@npm:^5.2.48":
+  version: 5.2.48
+  resolution: "@netlify/functions-utils@npm:5.2.48"
   dependencies:
-    "@netlify/zip-it-and-ship-it": "npm:9.28.3"
+    "@netlify/zip-it-and-ship-it": "npm:9.28.4"
     cpy: "npm:^9.0.0"
     path-exists: "npm:^5.0.0"
-  checksum: 2f76d66b0b60bf65e7d43e34c95a7a9ef58b979c77c888dfb2db086804d9589e7019aaae32569f3ccb36422a42128993e80d6e158377ab2432ab2370a8d82da1
+  checksum: 1ad2c601fa41a5ef56a64dcd8c37559b479cfa46a2fd8e9e6066564764dd084eafede52409d4894c38d42bc52aaaab3f6b5f34ed555c1547a0cc529e4a02f842
   languageName: node
   linkType: hard
 
@@ -3168,9 +3168,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@netlify/zip-it-and-ship-it@npm:9.28.3":
-  version: 9.28.3
-  resolution: "@netlify/zip-it-and-ship-it@npm:9.28.3"
+"@netlify/zip-it-and-ship-it@npm:9.28.4":
+  version: 9.28.4
+  resolution: "@netlify/zip-it-and-ship-it@npm:9.28.4"
   dependencies:
     "@babel/parser": "npm:^7.22.5"
     "@babel/types": "npm:7.23.6"
@@ -3207,7 +3207,7 @@ __metadata:
     yargs: "npm:^17.0.0"
   bin:
     zip-it-and-ship-it: dist/bin.js
-  checksum: 7a6728d5ccbe7d06b26560665025a95360bc710bb849cf4e531bf55c377dc657fdf5e4aa76dee4336da5f18617182497b769574e5a486b5adcee61c6ce5b1491
+  checksum: bc46bbcab9b326557006987a15579aa00e6562f25a3bc1e3a50b3e5a6824f9d5444331827ed6423724f08a945ae8d067b1bbf6a7805182d789af118335bf7f67
   languageName: node
   linkType: hard
 
@@ -9058,7 +9058,7 @@ __metadata:
     husky: "npm:9.0.7"
     lint-staged: "npm:15.2.0"
     lodash: "npm:4.17.21"
-    netlify-cli: "npm:17.15.3"
+    netlify-cli: "npm:17.15.4"
     prettier: "npm:3.2.4"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
@@ -16000,19 +16000,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"netlify-cli@npm:17.15.3":
-  version: 17.15.3
-  resolution: "netlify-cli@npm:17.15.3"
+"netlify-cli@npm:17.15.4":
+  version: 17.15.4
+  resolution: "netlify-cli@npm:17.15.4"
   dependencies:
     "@bugsnag/js": "npm:7.20.2"
     "@fastify/static": "npm:6.10.2"
     "@netlify/blobs": "npm:6.4.2"
-    "@netlify/build": "npm:29.33.1"
+    "@netlify/build": "npm:29.33.2"
     "@netlify/build-info": "npm:7.11.5"
     "@netlify/config": "npm:20.10.2"
     "@netlify/edge-bundler": "npm:11.2.2"
     "@netlify/local-functions-proxy": "npm:1.1.1"
-    "@netlify/zip-it-and-ship-it": "npm:9.28.3"
+    "@netlify/zip-it-and-ship-it": "npm:9.28.4"
     "@octokit/rest": "npm:19.0.13"
     ansi-escapes: "npm:6.2.0"
     ansi-styles: "npm:6.2.1"
@@ -16117,7 +16117,7 @@ __metadata:
   bin:
     netlify: bin/run.js
     ntl: bin/run.js
-  checksum: e5e3b5df49139069c58de4dcc60abf1f65ecb84afbe3239973f07a1866011187c45b82fc58ede8580cad86713f4dd5b5b7b09578bf808098a146ba0d5a06a54b
+  checksum: 23b26db717644e2d4e5c1f7e461eea9287e74ba18727ac5ad233da12341df324ba6c23ddbe0e7c85d2bea9939fd1f670fb715b024c6d261f811889b5dd67aafa
   languageName: node
   linkType: hard
 
