@@ -2750,9 +2750,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@netlify/build-info@npm:7.11.5":
-  version: 7.11.5
-  resolution: "@netlify/build-info@npm:7.11.5"
+"@netlify/build-info@npm:7.12.0":
+  version: 7.12.0
+  resolution: "@netlify/build-info@npm:7.12.0"
   dependencies:
     "@bugsnag/js": "npm:^7.20.0"
     dot-prop: "npm:^7.2.0"
@@ -2765,7 +2765,7 @@ __metadata:
     yargs: "npm:^17.6.0"
   bin:
     build-info: bin.js
-  checksum: 10c0/9b610f396f2604591f3b3286b022b78392a25d26ee2ba4c016e8bad36f61aec4518963830975312395746c114842f98659adf976f1913df67cebada065502712
+  checksum: 10c0/d6c831a9746d95f9e738d6b219ed898f3096c8be57b7bb387175912aa450d3efc9f43e234ac55b656be2dbb513cdb52c93d93ed03038dd98065819ff79546ece
   languageName: node
   linkType: hard
 
@@ -9058,7 +9058,7 @@ __metadata:
     husky: "npm:9.0.7"
     lint-staged: "npm:15.2.1"
     lodash: "npm:4.17.21"
-    netlify-cli: "npm:17.15.5"
+    netlify-cli: "npm:17.15.6"
     prettier: "npm:3.2.4"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
@@ -16000,15 +16000,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"netlify-cli@npm:17.15.5":
-  version: 17.15.5
-  resolution: "netlify-cli@npm:17.15.5"
+"netlify-cli@npm:17.15.6":
+  version: 17.15.6
+  resolution: "netlify-cli@npm:17.15.6"
   dependencies:
     "@bugsnag/js": "npm:7.20.2"
     "@fastify/static": "npm:6.10.2"
     "@netlify/blobs": "npm:6.4.2"
     "@netlify/build": "npm:29.33.3"
-    "@netlify/build-info": "npm:7.11.5"
+    "@netlify/build-info": "npm:7.12.0"
     "@netlify/config": "npm:20.10.2"
     "@netlify/edge-bundler": "npm:11.2.2"
     "@netlify/local-functions-proxy": "npm:1.1.1"
@@ -16117,7 +16117,7 @@ __metadata:
   bin:
     netlify: bin/run.js
     ntl: bin/run.js
-  checksum: 10c0/2d4929c66300e6a0e74f6430eb8a33fe45863458a74fcc892f3d1c99cae33fa0928e5b1c108b95cedf691507d7c1da335d070cf00220086901b4f465f80b9b22
+  checksum: 10c0/864c8f68eb59ccd000e0871d76b7ec5d4f659eb456d6716c99b8fc072303cbb8f59c8a524430fb199ee415c33c8cfad14d83e063a0b63dbbe5004f3262c94879
   languageName: node
   linkType: hard
 
