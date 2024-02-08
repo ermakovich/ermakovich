@@ -2743,10 +2743,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@netlify/blobs@npm:6.4.2, @netlify/blobs@npm:^6.4.2":
+"@netlify/blobs@npm:6.4.2":
   version: 6.4.2
   resolution: "@netlify/blobs@npm:6.4.2"
   checksum: 10c0/bff77ed9f2d43d4b1d58597877afd4be0bccc320142d6ea4d2df3e5387d750e480d2aa6716ae435c7dcb5e6ed861b5a400a3432f0101951b0c1e48b718886a2e
+  languageName: node
+  linkType: hard
+
+"@netlify/blobs@npm:^6.5.0":
+  version: 6.5.0
+  resolution: "@netlify/blobs@npm:6.5.0"
+  checksum: 10c0/d56478d39660c6c8bc1a534e75de64113ed39acc8aad998320df33edbb6ceeaa01f62acdb70ca96a0b42754029a06c22f80b2cb0587e2e44c1cafac69f4a81ff
   languageName: node
   linkType: hard
 
@@ -2769,22 +2776,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@netlify/build@npm:29.33.5":
-  version: 29.33.5
-  resolution: "@netlify/build@npm:29.33.5"
+"@netlify/build@npm:29.33.6":
+  version: 29.33.6
+  resolution: "@netlify/build@npm:29.33.6"
   dependencies:
     "@bugsnag/js": "npm:^7.0.0"
-    "@netlify/blobs": "npm:^6.4.2"
+    "@netlify/blobs": "npm:^6.5.0"
     "@netlify/cache-utils": "npm:^5.1.5"
     "@netlify/config": "npm:^20.11.0"
     "@netlify/edge-bundler": "npm:11.2.2"
     "@netlify/framework-info": "npm:^9.8.10"
-    "@netlify/functions-utils": "npm:^5.2.49"
+    "@netlify/functions-utils": "npm:^5.2.50"
     "@netlify/git-utils": "npm:^5.1.1"
     "@netlify/opentelemetry-utils": "npm:^1.0.1"
     "@netlify/plugins-list": "npm:^6.73.0"
     "@netlify/run-utils": "npm:^5.1.1"
-    "@netlify/zip-it-and-ship-it": "npm:9.29.0"
+    "@netlify/zip-it-and-ship-it": "npm:9.29.1"
     "@opentelemetry/api": "npm:~1.6.0"
     "@sindresorhus/slugify": "npm:^2.0.0"
     ansi-escapes: "npm:^6.0.0"
@@ -2838,7 +2845,7 @@ __metadata:
       optional: true
   bin:
     netlify-build: bin.js
-  checksum: 10c0/2f463999f8f338cbe3c311668a582fef7becdcec26ba3d1b23356764c1d06e0018905b4f05e5976d177935242ed0e1f75b6ef63b3cea899c093199528e3b9a72
+  checksum: 10c0/346bfdf137782c44954174333305a6122223fab2cde3f1176823ec44300cfeee671b4118a5c6c9f6e29af491733f1a8aebe304e0964a3ecba4001bc191a5d7d5
   languageName: node
   linkType: hard
 
@@ -2942,14 +2949,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@netlify/functions-utils@npm:^5.2.49":
-  version: 5.2.49
-  resolution: "@netlify/functions-utils@npm:5.2.49"
+"@netlify/functions-utils@npm:^5.2.50":
+  version: 5.2.50
+  resolution: "@netlify/functions-utils@npm:5.2.50"
   dependencies:
-    "@netlify/zip-it-and-ship-it": "npm:9.29.0"
+    "@netlify/zip-it-and-ship-it": "npm:9.29.1"
     cpy: "npm:^9.0.0"
     path-exists: "npm:^5.0.0"
-  checksum: 10c0/99940788bb8e5b26cb3ec08f5a550e7c97f5ae04be08ebe53d3ceb4bf21d825eceb6be9fee5caa396d128644231e03f9b116ae06fce12c887fcf0eef3ed97cec
+  checksum: 10c0/cd11f5fb1975923482eee1a88e018214c589eef18d467bf73fdc78ba0c8b98fe64ec20c113ed4b83059ea01bdbbd68f720fa790e65360ae745eb3678cd0345aa
   languageName: node
   linkType: hard
 
@@ -3158,24 +3165,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@netlify/serverless-functions-api@npm:^1.13.1":
-  version: 1.13.1
-  resolution: "@netlify/serverless-functions-api@npm:1.13.1"
+"@netlify/serverless-functions-api@npm:^1.14.0":
+  version: 1.14.0
+  resolution: "@netlify/serverless-functions-api@npm:1.14.0"
   dependencies:
     "@netlify/node-cookies": "npm:^0.1.0"
     urlpattern-polyfill: "npm:8.0.2"
-  checksum: 10c0/d8bd2be9c29e9a9941a127574cbed8cc2fa245e3143d2d3065ea44e022c9beaf83bb543126c6168217f9b923ec460ca9e388af67523c08af9dad2ac7b637aeb8
+  checksum: 10c0/b4dabb8f76a741198a41cc9d985d7eb876f5fcd1cd9d42d3c1d39eb1556360687ef32e44ca89734b642c46a1f97d86e42f876cfeb33906913235aa6ecb36ec33
   languageName: node
   linkType: hard
 
-"@netlify/zip-it-and-ship-it@npm:9.29.0":
-  version: 9.29.0
-  resolution: "@netlify/zip-it-and-ship-it@npm:9.29.0"
+"@netlify/zip-it-and-ship-it@npm:9.29.1":
+  version: 9.29.1
+  resolution: "@netlify/zip-it-and-ship-it@npm:9.29.1"
   dependencies:
     "@babel/parser": "npm:^7.22.5"
     "@babel/types": "npm:7.23.6"
     "@netlify/binary-info": "npm:^1.0.0"
-    "@netlify/serverless-functions-api": "npm:^1.13.1"
+    "@netlify/serverless-functions-api": "npm:^1.14.0"
     "@vercel/nft": "npm:^0.23.0"
     archiver: "npm:^6.0.0"
     common-path-prefix: "npm:^3.0.0"
@@ -3207,7 +3214,7 @@ __metadata:
     yargs: "npm:^17.0.0"
   bin:
     zip-it-and-ship-it: dist/bin.js
-  checksum: 10c0/8fffec70cad80366015cc117466f2f5ce8c3dc5dc822e9d7804880029724aaad20d378256ce35f5dac4e060b099939501dd17da324443fc1bbf520c191b95593
+  checksum: 10c0/e92a0bd0516d69573f7543b15505a72fa18480aef4d894d1d7d719b21cc78f3013c721b32641b0ba3c9becbfb8f54c9de4231d83a50c54ab1eadf714c53829e6
   languageName: node
   linkType: hard
 
@@ -9058,7 +9065,7 @@ __metadata:
     husky: "npm:9.0.10"
     lint-staged: "npm:15.2.2"
     lodash: "npm:4.17.21"
-    netlify-cli: "npm:17.16.0"
+    netlify-cli: "npm:17.16.1"
     prettier: "npm:3.2.5"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
@@ -16000,19 +16007,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"netlify-cli@npm:17.16.0":
-  version: 17.16.0
-  resolution: "netlify-cli@npm:17.16.0"
+"netlify-cli@npm:17.16.1":
+  version: 17.16.1
+  resolution: "netlify-cli@npm:17.16.1"
   dependencies:
     "@bugsnag/js": "npm:7.20.2"
     "@fastify/static": "npm:6.10.2"
     "@netlify/blobs": "npm:6.4.2"
-    "@netlify/build": "npm:29.33.5"
+    "@netlify/build": "npm:29.33.6"
     "@netlify/build-info": "npm:7.12.0"
     "@netlify/config": "npm:20.11.0"
     "@netlify/edge-bundler": "npm:11.2.2"
     "@netlify/local-functions-proxy": "npm:1.1.1"
-    "@netlify/zip-it-and-ship-it": "npm:9.29.0"
+    "@netlify/zip-it-and-ship-it": "npm:9.29.1"
     "@octokit/rest": "npm:19.0.13"
     ansi-escapes: "npm:6.2.0"
     ansi-styles: "npm:6.2.1"
@@ -16117,7 +16124,7 @@ __metadata:
   bin:
     netlify: bin/run.js
     ntl: bin/run.js
-  checksum: 10c0/55a829415ef437f42cb4ca86d5bc6287dcbc99494aa92d29403eab9bd1cd998e11d9b4e78cfc31f163c27165c3190e0d0b760027602688ef4979b6018b5b6adf
+  checksum: 10c0/40b8ad49b1d9422e7991b23826b93b3b63f677c6658f6db28c0a65c2e12801eb2aa248a011c19ea8b1b2c664babca0d0907e8cf58c5db66113ba702e4a38ac89
   languageName: node
   linkType: hard
 
