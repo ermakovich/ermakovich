@@ -8,6 +8,7 @@ import FileLink from 'components/file-link'
 import Content from 'components/content'
 import TextSystem from 'components/text-system'
 import { SEO } from 'components/seo'
+import UnstyledList from '../../components/unstyled-list'
 
 export const Head = () => (
   <SEO
@@ -15,6 +16,22 @@ export const Head = () => (
     description="Нанять веб-разработчика React и специалиста по вёрстке HTML и CSS в Санкт-Петербурге."
   />
 )
+
+const Tools = styled(UnstyledList)`
+  margin-top: 0;
+  margin-left: -0.25em;
+`
+
+const Tool = styled.li`
+  background: var(--color-primary);
+  color: var(--background-color);
+  border-radius: 0.2em;
+  display: inline;
+  margin: 0 0.25em;
+  padding: 0.25em;
+  white-space: nowrap;
+  line-height: 2em;
+`
 
 const Header = styled.div`
   display: flex;
@@ -114,9 +131,27 @@ export default function ResumePage() {
         </p>
 
         <p>
-          <strong>Инструменты:</strong> React (Next.js / Gatsby), TypeScript,
-          Styled Components, Babel, ESLint, Prettier, Lighthouse, NodeJS,
-          Express, Nginx, Docker, Git, Jest, Puppeteer
+          <strong>Инструменты: </strong>
+          <Tools>
+            {[
+              'Docker',
+              'Express',
+              'Gatsby',
+              'Git',
+              'Github Actions',
+              'Jest',
+              'Lighthouse',
+              'Next JS',
+              'Nginx',
+              'Netlify',
+              'Node',
+              'Puppeteer',
+              'React',
+              'TypeScript',
+            ].map((tool) => (
+              <Tool>{tool}</Tool>
+            ))}
+          </Tools>
         </p>
 
         <p>
