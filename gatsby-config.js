@@ -32,7 +32,7 @@ module.exports = {
           },
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-code-titles',
-          'gatsby-remark-vscode',
+          { resolve: 'gatsby-remark-vscode', options: { injectStyles: false } },
         ],
       },
     },

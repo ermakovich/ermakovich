@@ -133,3 +133,15 @@ figcaption {
   margin-top: 0;
   border-top-left-radius: 0;
 }
+
+.grvsc-container {
+  overflow-x: auto;
+  padding: 1em;
+  border-radius: var(--grvsc-border-radius, 8px);
+}
+
+.grvsc-line-highlighted::before {
+  content: ' ';
+  position: absolute;
+  width: 100%;
+}
