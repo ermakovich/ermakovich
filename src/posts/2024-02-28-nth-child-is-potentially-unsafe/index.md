@@ -17,7 +17,7 @@ After some changes in the project I'm working on I noticed error in the console:
 
 This sounds scary. But what exactly is potentially unsafe and how it can be exploited? Let's investigate.
 
-The error comes from the Emotion library. The problem the library is complaining about, is that selectors such as `:nth-child`, `:first-child` or `:last-child` are not specific enough and sometimes they may select some unexpected elements. For example, elements such as `<style>` elements, which are common in case of SSR. So, the wording in definitely not optimal here, since it has nothing to do with "safety", but is rather about reliability.
+The error comes from the Emotion library. The problem the library is complaining about, is that selectors such as `:nth-child`, `:first-child` or `:last-child` are not specific enough and sometimes they may select some unexpected elements. For example, elements such as `<style>` elements, which are common in case of SSR. So, the wording is definitely not optimal here, since it has nothing to do with "safety", but is rather about reliability.
 
 Why Emotion library cares so much about this (very rare, actually) use case and why it throws an error is a mystery for me. Moreover, it seems to throw this error even in production mode!
 
