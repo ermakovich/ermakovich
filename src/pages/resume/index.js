@@ -26,11 +26,10 @@ const Tool = styled.li`
   background: var(--color-primary);
   color: var(--background-color);
   border-radius: 0.2em;
-  display: inline;
-  margin: 0 0.25em;
+  display: inline-block;
+  margin: 0.25em;
   padding: 0.25em;
   white-space: nowrap;
-  line-height: 2em;
 `
 
 const Header = styled.div`
