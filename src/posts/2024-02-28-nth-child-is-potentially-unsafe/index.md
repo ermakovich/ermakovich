@@ -2,7 +2,6 @@
 title: '":nth-child" is potentially unsafe when doing SSR'
 date: 2024-02-28T09:53:03.096Z
 preview: ./emotion-error.png
-draft: true
 tags:
   - web
   - tools

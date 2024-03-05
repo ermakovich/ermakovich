@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { StaticImage } from 'gatsby-plugin-image'
-import { globalHistory } from '@reach/router'
 
 import Content from 'components/content'
 import UnstyledList from 'components/unstyled-list'
@@ -102,12 +101,6 @@ const HamburgerMenuButton = styled(IconButton)`
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-
-  useEffect(() => {
-    return globalHistory.listen(({ action }) => {
-      setIsMenuOpen(false)
-    })
-  }, [])
 
   function handleHamburgerIconClick() {
     setIsMenuOpen(true)
