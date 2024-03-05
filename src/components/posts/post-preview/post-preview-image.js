@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import { GatsbyImage, StaticImage } from 'gatsby-plugin-image'
 
 const squareSize = '3.5rem'
@@ -9,7 +8,7 @@ export default function PostPreviewImage({ node }) {
   const image = frontmatter.image || frontmatter.cover_image
 
   return (
-    <Link to={node.fields.slug}>
+    <a href={node.fields.slug}>
       {image ? (
         <GatsbyImage
           image={image.childImageSharp.gatsbyImageData}
@@ -41,6 +40,6 @@ export default function PostPreviewImage({ node }) {
           }}
         />
       )}
-    </Link>
+    </a>
   )
 }

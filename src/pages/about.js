@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, graphql, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 
 import Content from 'components/content'
 import { SEO } from 'components/seo'
@@ -93,13 +93,13 @@ export default function AboutPage() {
         . Рассматриваю предложения по работе и сотрудничеству.
       </p>
       <p style={{ textAlign: 'center' }}>
-        <Button as={Link} to="/resume">
+        <Button as="a" href="/resume">
           Посмотреть резюме 🧐
         </Button>
       </p>
       <p>
         Заметки на профессиональную тематику и просто наблюдения из жизни я
-        публикую в <Link to="/posts">записях</Link>.
+        публикую в <a href="/posts">записях</a>.
       </p>
 
       {post && (

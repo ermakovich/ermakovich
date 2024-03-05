@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Link, graphql, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 
 import { StaticImage } from 'gatsby-plugin-image'
 import { SEO } from 'components/seo'
@@ -57,7 +57,7 @@ export default function IndexPage() {
         />
         <Header>Привет, я {site.siteMetadata.title.split(' ')[0]} 👋</Header>
         <More>
-          <Button as={Link} to="/about">
+          <Button as="a" href="/about">
             Продолжить 👉
           </Button>
         </More>

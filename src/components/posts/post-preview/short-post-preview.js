@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import get from 'lodash/get'
 
 import Meta from '../post-meta'
@@ -12,7 +11,7 @@ export default function ShortPostPreview({ node }) {
     <>
       <PreviewImage {...{ node }} />
       <h3>
-        <Link to={node.fields.slug}>{title}</Link>
+        <a href={node.fields.slug}>{title}</a>
       </h3>
       <Meta>
         <Date value={node.frontmatter.date} />

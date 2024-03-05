@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { StaticImage } from 'gatsby-plugin-image'
-import { Link } from 'gatsby'
 import { globalHistory } from '@reach/router'
 
 import Content from 'components/content'
@@ -56,7 +55,7 @@ const MenuItem = styled.li`
   margin-bottom: 0;
 `
 
-const MenuLink = styled(Link)`
+const MenuLink = styled.a`
   padding: 0.5rem;
   margin: 0.2rem;
   color: var(--color-primary) !important;
@@ -120,7 +119,7 @@ export default function Header() {
 
   return (
     <Root>
-      <Link to="/" title="Главная">
+      <a href="/" title="Главная">
         <StaticImage
           src="../../images/avatar.jpg"
           alt="Logo"
@@ -133,12 +132,12 @@ export default function Header() {
             zIndex: 0,
           }}
         />
-      </Link>
+      </a>
       <Menu className={isMenuOpen ? 'open' : ''}>
         <MenuItems>
           <MenuItem>
             <MenuLink
-              to="/about/"
+              href="/about/"
               activeClassName="active"
               partiallyActive={true}
             >
@@ -147,7 +146,7 @@ export default function Header() {
           </MenuItem>
           <MenuItem>
             <MenuLink
-              to="/posts/"
+              href="/posts/"
               activeClassName="active"
               partiallyActive={true}
             >
@@ -156,7 +155,7 @@ export default function Header() {
           </MenuItem>
           <MenuItem>
             <MenuLink
-              to="/resume/"
+              href="/resume/"
               activeClassName="active"
               partiallyActive={true}
             >
@@ -165,7 +164,7 @@ export default function Header() {
           </MenuItem>
           <MenuItem>
             <MenuLink
-              to="/contacts/"
+              href="/contacts/"
               activeClassName="active"
               partiallyActive={true}
             >

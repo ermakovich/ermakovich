@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import styled from 'styled-components'
 import { getSrc } from 'gatsby-plugin-image'
 import { format } from 'date-fns'
@@ -185,17 +185,17 @@ export default function BlogPostTemplate({
           {next && (
             <li>
               → {nextPostText[lang]}:&nbsp;
-              <Link to={next.fields.slug} rel="next">
+              <a href={next.fields.slug} rel="next">
                 {next.frontmatter.title}
-              </Link>
+              </a>
             </li>
           )}
           {previous && (
             <li>
               ← {prevPostText[lang]}:&nbsp;
-              <Link to={previous.fields.slug} rel="prev">
+              <a href={previous.fields.slug} rel="prev">
                 {previous.frontmatter.title}
-              </Link>
+              </a>
             </li>
           )}
         </NextPrev>
