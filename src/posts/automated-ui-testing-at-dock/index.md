@@ -56,7 +56,7 @@ Our process improved dramatically after the release v0.13 of Puppeteer, where th
 
 ## pptr-mock-server
 
-As I mentioned before, we use UI testing in several projects so it was natural to split some of the common logic into a separate library and share it between the projects. We created and open sourced a tiny **[pptr-mock-server](https://github.com/ermakovich/pptr-mock-server)** library. Currently it's lacking api documentation and unit tests, but at least it provides an idea about how to implement backendless testing using Puppeteer.
+As I mentioned before, we use UI testing in several projects so it was natural to split some of the common logic into a separate library and share it between the projects. We created and open sourced a tiny **[pptr-mock-server](https://github.com/ermakovich/pptr-mock-server)** library. Currently it's lacking api documentation and unit tests, but at least it provides an idea about how to implement backend-less testing using Puppeteer.
 
 ## Conclusion
 

@@ -10,7 +10,7 @@ lang: en
 cover_image: ./prettier-error.png
 ---
 
-One of the most common use cases for [lint-staged](https://github.com/lint-staged/lint-staged) is formatting files using [Prettier](https://prettier.io). Documentation of lint-staged is full of references to this use case, suggesting you to achive it this way:
+One of the most common use cases for [lint-staged](https://github.com/lint-staged/lint-staged) is formatting files using [Prettier](https://prettier.io). Documentation of lint-staged is full of references to this use case, suggesting you to achieve it this way:
 
 ```json:title=.lintstagedrc
 {

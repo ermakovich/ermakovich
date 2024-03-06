@@ -5,7 +5,7 @@ tags: ['web']
 lang: 'en'
 ---
 
-TLDR; No.
+<abbr title="Too long, didn't read">TLDR;</abbr> No.
 
 Despite the fact that HTTP/1.1 spec seems to not restrict GET requests with body any longer accordingly to this [thread](https://stackoverflow.com/questions/978061/http-get-with-request-body), this seems to be still not supported by browsers nowadays. Doesn't matter whether you use `XMLHttpRequest` or `fetch` api. The following browsers were tested: Chrome 74, Firefox 66, Safari 12. Below are examples with output for `fetch` api:
 

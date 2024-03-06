@@ -12,7 +12,7 @@ Any serious project involves a dedicated designer role — a person who will cre
 
 ### Grid systems
 
-Designers use grid systems. It's important to understand grid systems and make sure your code utilizes choosen grid system as well and benefits from it. Once you know there is a grid system being used, even if it's not visible in designs (depending on the tool), it gets easier to understand common layout and spacing rules.
+Designers use grid systems. It's important to understand grid systems and make sure your code utilizes chosen grid system as well and benefits from it. Once you know there is a grid system being used, even if it's not visible in designs (depending on the tool), it gets easier to understand common layout and spacing rules.
 
 It's important to align with your designer regarding base unit for grid system. It's common to use base `font-size` as a base unit. This will allow you to use relative values (`rem`) in your CSS in order to avoid absolute `px` values and make sure layout scales accordingly to the viewport.
 
@@ -28,7 +28,7 @@ Designers, especially those who work on non-retina displays will commonly forget
 
 Today's smartphones are often "retina", having DPR (Device Pixel Ratio) from 2x and higher. Apple desktop and laptop displays are usually retina displays as well.
 
-When user opens a website on retina display, that has an unoptimized low-res image, it immidiately catches attention and causes irritation.
+When user opens a website on retina display, that has an un-optimized low-res image, it immediately catches attention and causes irritation.
 
 So remember to always double-check provided image sizes, so that they cover supported viewports and retina displays. Remember, that users of high-end devices with retina displays are potentially more payable customers and they require special care ;)
 
@@ -40,7 +40,7 @@ Also designers sometimes will forget to mark SVG assets as exportable. That's ea
 
 ### Typography
 
-Typography is one of the most important aspects of the web design, and it can affect overall impression and adoption pretty significantly. `letter-spacing`, `line-height`, `font-weight`, `font-family` — all these propeties matter a lot for typography-obsessed designers and they often fine-tune these properties from element to element. It's common that headings and paragraphs may have slightly different font families and other typography properties.
+Typography is one of the most important aspects of the web design, and it can affect overall impression and adoption pretty significantly. `letter-spacing`, `line-height`, `font-weight`, `font-family` — all these properties matter a lot for typography-obsessed designers and they often fine-tune these properties from element to element. It's common that headings and paragraphs may have slightly different font families and other typography properties.
 
 It's important to understand the semantics, discuss with designers common text styles used in the designs. You should create corresponding primitives for these styles in frontend codebase, rather than blindly copy-pasting CSS from place to place.
 
@@ -57,10 +57,10 @@ Sometimes, when getting new designs for some new feature or simply a redesign, y
 
 Usually designers make such changes intentionally, assuming they will propagate globally. But depending on the tool being used by designers, they are not always able to update the rest of designs quickly to make them consistent. So, they may make changes only to the mockup representing particular new feature, and you, as a developer, should make sure these changes propagate globally over the website.
 
-### Accesibility, UX, web standarts
+### Accessibility, UX, web standards
 
-Goal of any designer is to create beatifull, well-looking designs, matching business goals and product vision. But sometimes it has trade-offs. As a developer your responsibility is to notify designer when you see certain design decisions affecting UX or not playing well with web standarts. Most common areas are forms and any elements involving user interaction.
+Goal of any designer is to create beautiful, well-looking designs, matching business goals and product vision. But sometimes it has trade-offs. As a developer your responsibility is to notify designer when you see certain design decisions affecting UX or not playing well with web standards. Most common areas are forms and any elements involving user interaction.
 
 ## Final word
 
-I hope you find these tips helpfull, and as a developer you will be better prepared in terms of what to expect and where to see when working with designers. Finally, I must admit they are usually very nice people and I personally never had any issues or conflicts with them :) Developers and designers mindsets may be slightly different, so communication is the key.
+I hope you find these tips helpful, and as a developer you will be better prepared in terms of what to expect and where to see when working with designers. Finally, I must admit they are usually very nice people and I personally never had any issues or conflicts with them :) Developers and designers mindsets may be slightly different, so communication is the key.
