@@ -10,7 +10,7 @@ lang: en
 cover_image: ./gatsby-link.png
 ---
 
-Many people, including me, initially choose Gatsby, because it helps to create static websites using React quite easily. I know that there are many new frameworks came up for this in the last few years, but coming back in 2020s, there were not so many options.
+Many people, including me, initially choose Gatsby, because it helps to create static websites using React quite easily. I know that there are many new frameworks came up for this in the last few years, but coming back in 2010s, there were not so many options.
 
 When creating websites using Gatsby many people don't realize, that they do actually force their sites to use client-side navigation (let's call it just <abbr>CSN</abbr> for brevity) when using `<Link>` component from [Gatsby Link API](https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-link/). CSN makes website behaving and feeling more like a <abbr>SPA<abbr> (single-page application), rather than just a regular website.
 
