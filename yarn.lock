@@ -3218,6 +3218,49 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@netlify/zip-it-and-ship-it@npm:9.30.0":
+  version: 9.30.0
+  resolution: "@netlify/zip-it-and-ship-it@npm:9.30.0"
+  dependencies:
+    "@babel/parser": "npm:^7.22.5"
+    "@babel/types": "npm:7.23.6"
+    "@netlify/binary-info": "npm:^1.0.0"
+    "@netlify/serverless-functions-api": "npm:^1.14.0"
+    "@vercel/nft": "npm:^0.23.0"
+    archiver: "npm:^6.0.0"
+    common-path-prefix: "npm:^3.0.0"
+    cp-file: "npm:^10.0.0"
+    es-module-lexer: "npm:^1.0.0"
+    esbuild: "npm:0.19.11"
+    execa: "npm:^6.0.0"
+    fast-glob: "npm:^3.3.2"
+    filter-obj: "npm:^5.0.0"
+    find-up: "npm:^6.0.0"
+    glob: "npm:^8.0.3"
+    is-builtin-module: "npm:^3.1.0"
+    is-path-inside: "npm:^4.0.0"
+    junk: "npm:^4.0.0"
+    locate-path: "npm:^7.0.0"
+    merge-options: "npm:^3.0.4"
+    minimatch: "npm:^9.0.0"
+    normalize-path: "npm:^3.0.0"
+    p-map: "npm:^5.0.0"
+    path-exists: "npm:^5.0.0"
+    precinct: "npm:^11.0.0"
+    require-package-name: "npm:^2.0.1"
+    resolve: "npm:^2.0.0-next.1"
+    semver: "npm:^7.3.8"
+    tmp-promise: "npm:^3.0.2"
+    toml: "npm:^3.0.0"
+    unixify: "npm:^1.0.0"
+    urlpattern-polyfill: "npm:8.0.2"
+    yargs: "npm:^17.0.0"
+  bin:
+    zip-it-and-ship-it: dist/bin.js
+  checksum: 10c0/7a0dbaa87e8a5d095f7845948667bf92b146e2309a4f663fbad54e638216fd6266f50a17c5e5eed4f0633c01d61368f0c9fe16d32a20dcde928195aade5162fa
+  languageName: node
+  linkType: hard
+
 "@nicolo-ribaudo/eslint-scope-5-internals@npm:5.1.1-v1":
   version: 5.1.1-v1
   resolution: "@nicolo-ribaudo/eslint-scope-5-internals@npm:5.1.1-v1"
@@ -9254,7 +9297,7 @@ __metadata:
     husky: "npm:9.0.11"
     lint-staged: "npm:15.2.2"
     lodash: "npm:4.17.21"
-    netlify-cli: "npm:17.18.0"
+    netlify-cli: "npm:17.18.1"
     prettier: "npm:3.2.5"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
@@ -16276,9 +16319,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"netlify-cli@npm:17.18.0":
-  version: 17.18.0
-  resolution: "netlify-cli@npm:17.18.0"
+"netlify-cli@npm:17.18.1":
+  version: 17.18.1
+  resolution: "netlify-cli@npm:17.18.1"
   dependencies:
     "@bugsnag/js": "npm:7.20.2"
     "@fastify/static": "npm:6.10.2"
@@ -16288,7 +16331,7 @@ __metadata:
     "@netlify/config": "npm:20.12.1"
     "@netlify/edge-bundler": "npm:11.2.2"
     "@netlify/local-functions-proxy": "npm:1.1.1"
-    "@netlify/zip-it-and-ship-it": "npm:9.29.2"
+    "@netlify/zip-it-and-ship-it": "npm:9.30.0"
     "@octokit/rest": "npm:19.0.13"
     ansi-escapes: "npm:6.2.0"
     ansi-styles: "npm:6.2.1"
@@ -16393,7 +16436,7 @@ __metadata:
   bin:
     netlify: bin/run.js
     ntl: bin/run.js
-  checksum: 10c0/a60b21a9c412c3d1a57cc45efcfb4972e302865b4d8e5f5bd5d598e42faaec42c145b9868dc8eb72f8429b46e1b5f45c1adb256023b6698fd7f3d98d19df76f4
+  checksum: 10c0/8ac11b21781a4353ee6843f7d689bedfb0697763edd7eaa9799ca176c9fd5ee07b5d1db1188d9e247b6dbb396ad06e712d196c25c0d8b54193e06e233e4de586
   languageName: node
   linkType: hard
 
