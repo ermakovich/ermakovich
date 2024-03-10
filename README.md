@@ -13,12 +13,12 @@ Built using [Gatsby](https://www.gatsbyjs.org). Continuous builds and deployment
 
 # Running
 
-```shell
+```sh
 $ yarn develop
 ```
 
 # Building
 
-```shell
+```sh
 $ yarn build
 ```

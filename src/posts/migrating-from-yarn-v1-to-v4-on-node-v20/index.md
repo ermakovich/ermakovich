@@ -19,13 +19,13 @@ First of all, make sure to uninstall your global Yarn instance. Uninstalling dep
 
 After that enable [Corepack](https://nodejs.org/dist/v20.9.0/docs/api/corepack.html):
 
-```shell
+```sh
 corepack enable
 ```
 
 Then tell Corepack to use latest version of Yarn as a package manager:
 
-```shell
+```sh
 corepack use yarn@*
 ```
 

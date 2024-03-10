@@ -19,13 +19,13 @@ I hope you are now convinced enough that IPFS is a good choice. Let's move to ac
 
 First of all we need to [install IPFS](https://docs.ipfs.io/install) on both machines. After installing we need to init repositories:
 
-```shell
+```sh
 $ ipfs init
 ```
 
 Now we need to start IPFS daemon processes, so that machines can discover each other and communicate:
 
-```shell
+```sh
 $ ipfs daemon
 ```
 
@@ -33,7 +33,7 @@ $ ipfs daemon
 
 On the source machine where files are located let's start with adding files to the repo:
 
-```shell
+```sh
 $ ipfs add <filename>
 ```
 
@@ -41,7 +41,7 @@ If we are adding single file, it will give us it's hash (long string starting wi
 
 <!-- spell-checker: disable -->
 
-```shell
+```sh
 added QmUVTKsrYJpaxUT7dr9FpKq6AoKHhEM7eG1ZHGL56haKLG <filename>
 ```
 
@@ -49,7 +49,7 @@ added QmUVTKsrYJpaxUT7dr9FpKq6AoKHhEM7eG1ZHGL56haKLG <filename>
 
 If we want to add a directory rather than single file, then we need to use `-r` flag when adding:
 
-```shell
+```sh
 $ ipfs add -r <path>
 ```
 
@@ -57,7 +57,7 @@ This will give us hashes for each individual file and each directory. At the end
 
 <!-- spell-checker: disable -->
 
-```shell
+```sh
 added QmUVTKsrYJpaxUT7dr9FpKq6AoKHhEM7eG1ZHGL56haKLG <path>/<filename>
 added QmaW4tz1ZMT8Q3feTaskg7bWhMq6DLxoQWN2fckDrcUKmx <path>
 ```
@@ -69,7 +69,7 @@ Now we need to pin objects to local storage. This is needed in order to make the
 
 <!-- spell-checker: disable -->
 
-```shell
+```sh
 $ ipfs pin add QmaW4tz1ZMT8Q3feTaskg7bWhMq6DLxoQWN2fckDrcUKmx
 ```
 
@@ -81,7 +81,7 @@ Now our directory is discoverable using it's unique hash via IPFS. All we need t
 
 <!-- spell-checker: disable -->
 
-```shell
+```sh
 $ ipfs get QmaW4tz1ZMT8Q3feTaskg7bWhMq6DLxoQWN2fckDrcUKmx -o <output_path>
 ```
 
@@ -97,7 +97,7 @@ Once we transferred files, assuming that we don't need to transfer them any more
 
 <!-- spell-checker: disable -->
 
-```shell
+```sh
 $ ipfs pin rm QmaW4tz1ZMT8Q3feTaskg7bWhMq6DLxoQWN2fckDrcUKmx
 $ ipfs repo gc
 ```
@@ -106,7 +106,7 @@ $ ipfs repo gc
 
 On target machine, since we didn't pin anything, we can simply run:
 
-```shell
+```sh
 $ ipfs repo gc
 ```
 
