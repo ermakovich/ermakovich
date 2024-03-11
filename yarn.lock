@@ -2944,15 +2944,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@netlify/build@npm:29.36.1":
-  version: 29.36.1
-  resolution: "@netlify/build@npm:29.36.1"
+"@netlify/build@npm:29.36.3":
+  version: 29.36.3
+  resolution: "@netlify/build@npm:29.36.3"
   dependencies:
     "@bugsnag/js": "npm:^7.0.0"
     "@netlify/blobs": "npm:^6.5.0"
     "@netlify/cache-utils": "npm:^5.1.5"
     "@netlify/config": "npm:^20.12.1"
-    "@netlify/edge-bundler": "npm:11.2.2"
+    "@netlify/edge-bundler": "npm:11.3.0"
     "@netlify/framework-info": "npm:^9.8.10"
     "@netlify/functions-utils": "npm:^5.2.51"
     "@netlify/git-utils": "npm:^5.1.1"
@@ -3007,13 +3007,13 @@ __metadata:
     uuid: "npm:^9.0.0"
     yargs: "npm:^17.6.0"
   peerDependencies:
-    "@netlify/opentelemetry-sdk-setup": ^1.0.3
+    "@netlify/opentelemetry-sdk-setup": ^1.0.4
   peerDependenciesMeta:
     "@netlify/opentelemetry-sdk-setup":
       optional: true
   bin:
     netlify-build: bin.js
-  checksum: 10c0/787b4268bf09e6e6326964ad88ad58013935e4efcedf8bc2aff94439c87bddde2fdc75c8a07a3c0b36a0c239dca240b54f72c555b2f4355c4dd39e3856eb4391
+  checksum: 10c0/98a8bd5039d93fba916d7fbacc313aa2e98b8297aa4ddb73a25237e2b173117b7dad9db1259c77508171644d33300b3c21751afa68fe486850e854f5f9ee2930
   languageName: node
   linkType: hard
 
@@ -3064,38 +3064,6 @@ __metadata:
   bin:
     netlify-config: bin.js
   checksum: 10c0/7a81e4adb1d5059f2e2260a8032d32e821dab01eda7a3c4ee0133c319eab5d55725bc82e7f16835fa1b4dc560eeb24f068e645e53930082145786d396996d48a
-  languageName: node
-  linkType: hard
-
-"@netlify/edge-bundler@npm:11.2.2":
-  version: 11.2.2
-  resolution: "@netlify/edge-bundler@npm:11.2.2"
-  dependencies:
-    "@import-maps/resolve": "npm:^1.0.1"
-    "@vercel/nft": "npm:^0.26.0"
-    ajv: "npm:^8.11.2"
-    ajv-errors: "npm:^3.0.0"
-    better-ajv-errors: "npm:^1.2.0"
-    common-path-prefix: "npm:^3.0.0"
-    env-paths: "npm:^3.0.0"
-    esbuild: "npm:0.19.11"
-    execa: "npm:^6.0.0"
-    find-up: "npm:^6.3.0"
-    get-package-name: "npm:^2.2.0"
-    get-port: "npm:^6.1.2"
-    is-path-inside: "npm:^4.0.0"
-    jsonc-parser: "npm:^3.2.0"
-    node-fetch: "npm:^3.1.1"
-    node-stream-zip: "npm:^1.15.0"
-    p-retry: "npm:^5.1.1"
-    p-wait-for: "npm:^4.1.0"
-    path-key: "npm:^4.0.0"
-    regexp-tree: "npm:^0.1.24"
-    semver: "npm:^7.3.8"
-    tmp-promise: "npm:^3.0.3"
-    urlpattern-polyfill: "npm:8.0.2"
-    uuid: "npm:^9.0.0"
-  checksum: 10c0/479e1454e8d3316fb17684e4e63f45c189dbb2c0eeb8555f2d92f092eb59e08526d394baa9908a20a86aa0a5369c5722066a9b24f9c645b8c4dc335845a65105
   languageName: node
   linkType: hard
 
@@ -9496,7 +9464,7 @@ __metadata:
     husky: "npm:9.0.11"
     lint-staged: "npm:15.2.2"
     lodash: "npm:4.17.21"
-    netlify-cli: "npm:17.19.1"
+    netlify-cli: "npm:17.19.2"
     prettier: "npm:3.2.5"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
@@ -16598,14 +16566,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"netlify-cli@npm:17.19.1":
-  version: 17.19.1
-  resolution: "netlify-cli@npm:17.19.1"
+"netlify-cli@npm:17.19.2":
+  version: 17.19.2
+  resolution: "netlify-cli@npm:17.19.2"
   dependencies:
     "@bugsnag/js": "npm:7.20.2"
     "@fastify/static": "npm:6.10.2"
     "@netlify/blobs": "npm:7.0.1"
-    "@netlify/build": "npm:29.36.1"
+    "@netlify/build": "npm:29.36.3"
     "@netlify/build-info": "npm:7.13.0"
     "@netlify/config": "npm:20.12.1"
     "@netlify/edge-bundler": "npm:11.3.0"
@@ -16715,7 +16683,7 @@ __metadata:
   bin:
     netlify: bin/run.js
     ntl: bin/run.js
-  checksum: 10c0/6e3fc6f78e8e866fd78335c8d15f8a060c076112581ba5485b024206d6c9d236857e6fc994af340faebd4eddc6dd3c0cb06efb235353ccad2c4a87f17ce8e260
+  checksum: 10c0/ae38f07c683869aebf08847585ea619a0f2947bcb3391d07f84364aa730d161c949815f5b49dd1f90900a3cc36c6c1736132dea514f24c35cab1ad58bf94ca9d
   languageName: node
   linkType: hard
 
@@ -19454,15 +19422,6 @@ __metadata:
     extend-shallow: "npm:^3.0.2"
     safe-regex: "npm:^1.1.0"
   checksum: 10c0/a0f8d6045f63b22e9759db10e248369c443b41cedd7dba0922d002b66c2734bc2aef0d98c4d45772d1f756245f4c5203856b88b9624bba2a58708858a8d485d6
-  languageName: node
-  linkType: hard
-
-"regexp-tree@npm:^0.1.24":
-  version: 0.1.27
-  resolution: "regexp-tree@npm:0.1.27"
-  bin:
-    regexp-tree: bin/regexp-tree
-  checksum: 10c0/f636f44b4a0d93d7d6926585ecd81f63e4ce2ac895bc417b2ead0874cd36b337dcc3d0fedc63f69bf5aaeaa4340f36ca7e750c9687cceaf8087374e5284e843c
   languageName: node
   linkType: hard
 
