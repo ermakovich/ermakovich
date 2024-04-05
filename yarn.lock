@@ -2911,17 +2911,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@netlify/blobs@npm:7.0.1":
-  version: 7.0.1
-  resolution: "@netlify/blobs@npm:7.0.1"
-  checksum: 10c0/ad5683ad4f866445d432ef52fc27322c0cc11ea363b9ab900acf61a2c398025766431bae0e73fb51fdcad4ec0ff3a14731955a48ff916f3beb3ebf7b4499b2ff
-  languageName: node
-  linkType: hard
-
-"@netlify/blobs@npm:^6.5.0":
-  version: 6.5.0
-  resolution: "@netlify/blobs@npm:6.5.0"
-  checksum: 10c0/d56478d39660c6c8bc1a534e75de64113ed39acc8aad998320df33edbb6ceeaa01f62acdb70ca96a0b42754029a06c22f80b2cb0587e2e44c1cafac69f4a81ff
+"@netlify/blobs@npm:7.3.0, @netlify/blobs@npm:^7.3.0":
+  version: 7.3.0
+  resolution: "@netlify/blobs@npm:7.3.0"
+  checksum: 10c0/a3a1b13276b3b7b0e67a5c94c4c053da06815ed07b766b214d77034695354e7c7de2087694e85009d2138988777c35fddb7052c7925851f9bdf286580c48a6c2
   languageName: node
   linkType: hard
 
@@ -2944,22 +2937,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@netlify/build@npm:29.36.6":
-  version: 29.36.6
-  resolution: "@netlify/build@npm:29.36.6"
+"@netlify/build@npm:29.39.0":
+  version: 29.39.0
+  resolution: "@netlify/build@npm:29.39.0"
   dependencies:
     "@bugsnag/js": "npm:^7.0.0"
-    "@netlify/blobs": "npm:^6.5.0"
+    "@netlify/blobs": "npm:^7.3.0"
     "@netlify/cache-utils": "npm:^5.1.5"
     "@netlify/config": "npm:^20.12.1"
     "@netlify/edge-bundler": "npm:11.3.0"
     "@netlify/framework-info": "npm:^9.8.11"
-    "@netlify/functions-utils": "npm:^5.2.51"
+    "@netlify/functions-utils": "npm:^5.2.53"
     "@netlify/git-utils": "npm:^5.1.1"
-    "@netlify/opentelemetry-utils": "npm:^1.0.3"
-    "@netlify/plugins-list": "npm:^6.75.0"
+    "@netlify/opentelemetry-utils": "npm:^1.1.0"
+    "@netlify/plugins-list": "npm:^6.77.0"
     "@netlify/run-utils": "npm:^5.1.1"
-    "@netlify/zip-it-and-ship-it": "npm:9.29.2"
+    "@netlify/zip-it-and-ship-it": "npm:9.31.1"
     "@sindresorhus/slugify": "npm:^2.0.0"
     ansi-escapes: "npm:^6.0.0"
     chalk: "npm:^5.0.0"
@@ -3006,14 +2999,14 @@ __metadata:
     uuid: "npm:^9.0.0"
     yargs: "npm:^17.6.0"
   peerDependencies:
-    "@netlify/opentelemetry-sdk-setup": ^1.0.5
-    "@opentelemetry/api": ^1.7.0
+    "@netlify/opentelemetry-sdk-setup": ^1.1.0
+    "@opentelemetry/api": ~1.8.0
   peerDependenciesMeta:
     "@netlify/opentelemetry-sdk-setup":
       optional: true
   bin:
     netlify-build: bin.js
-  checksum: 10c0/6e003bb4447338e7bfde2ded0ca657d4d8c2470ebcaf7ad4633ec8afcc41904679ccf6902943adaed95df94977b168b2a0299b27eeb3a663bf9bfc3cbc2d88cf
+  checksum: 10c0/9c31239716fabd6b5207a6db90cf31d83689902a98123100f721d7fb174d3c67f83b3adf5c36f57eedf889ad254f617865ebbdffe307576fb465a5aa01227a77
   languageName: node
   linkType: hard
 
@@ -3116,14 +3109,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@netlify/functions-utils@npm:^5.2.51":
-  version: 5.2.51
-  resolution: "@netlify/functions-utils@npm:5.2.51"
+"@netlify/functions-utils@npm:^5.2.53":
+  version: 5.2.53
+  resolution: "@netlify/functions-utils@npm:5.2.53"
   dependencies:
-    "@netlify/zip-it-and-ship-it": "npm:9.29.2"
+    "@netlify/zip-it-and-ship-it": "npm:9.31.1"
     cpy: "npm:^9.0.0"
     path-exists: "npm:^5.0.0"
-  checksum: 10c0/f9ebd12886ca5e439ccc4874360ef0ef9b73eab022b33aebaccc4ddb12310c3dc5b4873895519d71b1e5a8fd14f679111542f937c365f87a5dd596c6c9900252
+  checksum: 10c0/f428cae76efdd5b0826dc6797ffac2417bbf107c821a192b8a0e885422a5a1ecca939c3bd8391524b029c87c731c49b81fd1f5ed72b4a32f571b7f4aba4ff08e
   languageName: node
   linkType: hard
 
@@ -3307,19 +3300,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@netlify/opentelemetry-utils@npm:^1.0.3":
-  version: 1.0.3
-  resolution: "@netlify/opentelemetry-utils@npm:1.0.3"
+"@netlify/opentelemetry-utils@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "@netlify/opentelemetry-utils@npm:1.1.0"
   peerDependencies:
-    "@opentelemetry/api": ^1.7.0
-  checksum: 10c0/3798fb0b353d2eaed3803245205463102f951fc93ad77b3f6bb41a7f81d71020c548afb756779661c85f6a0e2523f0468c372fc8a73d38cd82e050cf60d095c8
+    "@opentelemetry/api": ~1.8.0
+  checksum: 10c0/9cfea969195741a49c44413cf35fd363b71edf4797581232cf04d1e31a2e1a8fb1af82bf57e95821fe14fa5f1f99f50c4548e0c0a4909cf7b245d8bcce190b53
   languageName: node
   linkType: hard
 
-"@netlify/plugins-list@npm:^6.75.0":
-  version: 6.75.0
-  resolution: "@netlify/plugins-list@npm:6.75.0"
-  checksum: 10c0/21b129e954ee1690969646ec618e5cabb7129caa9918807150803e603d97be518f43e68bd38316d158baa0c54ad1b82369d84fdbe950acebeb60ffae7d00f10c
+"@netlify/plugins-list@npm:^6.77.0":
+  version: 6.77.0
+  resolution: "@netlify/plugins-list@npm:6.77.0"
+  checksum: 10c0/7b9f21f8a940387ec3cf8ae3ccde7cfa2ddf2edc49a48339515c89d49f3b599264d99832ef2107e9776f1b8b25881c6c81bb9c3f7a88be41755dce324411a260
   languageName: node
   linkType: hard
 
@@ -3332,24 +3325,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@netlify/serverless-functions-api@npm:^1.14.0":
-  version: 1.14.0
-  resolution: "@netlify/serverless-functions-api@npm:1.14.0"
+"@netlify/serverless-functions-api@npm:^1.16.0":
+  version: 1.16.1
+  resolution: "@netlify/serverless-functions-api@npm:1.16.1"
   dependencies:
     "@netlify/node-cookies": "npm:^0.1.0"
     urlpattern-polyfill: "npm:8.0.2"
-  checksum: 10c0/b4dabb8f76a741198a41cc9d985d7eb876f5fcd1cd9d42d3c1d39eb1556360687ef32e44ca89734b642c46a1f97d86e42f876cfeb33906913235aa6ecb36ec33
+  checksum: 10c0/e32fc3a364495ce64dfd4f07fcc52b3078ee62e2fb61afcdc38d74de1804df2a9fb145fd83f18913d0b2372027946d86dbbd7ca274a9a8a5dc05dbce96aad477
   languageName: node
   linkType: hard
 
-"@netlify/zip-it-and-ship-it@npm:9.29.2":
-  version: 9.29.2
-  resolution: "@netlify/zip-it-and-ship-it@npm:9.29.2"
+"@netlify/zip-it-and-ship-it@npm:9.31.1":
+  version: 9.31.1
+  resolution: "@netlify/zip-it-and-ship-it@npm:9.31.1"
   dependencies:
     "@babel/parser": "npm:^7.22.5"
     "@babel/types": "npm:7.23.6"
     "@netlify/binary-info": "npm:^1.0.0"
-    "@netlify/serverless-functions-api": "npm:^1.14.0"
+    "@netlify/serverless-functions-api": "npm:^1.16.0"
     "@vercel/nft": "npm:^0.23.0"
     archiver: "npm:^6.0.0"
     common-path-prefix: "npm:^3.0.0"
@@ -3381,50 +3374,7 @@ __metadata:
     yargs: "npm:^17.0.0"
   bin:
     zip-it-and-ship-it: dist/bin.js
-  checksum: 10c0/f4b1a576485d65eb50f752a638636379211d7b2c6d4452eaf12a3993550c798d9d5c75f869315fbbe9d47bb17c25fb2f95b66a0ebab8a0dcb486db2f7b4183fc
-  languageName: node
-  linkType: hard
-
-"@netlify/zip-it-and-ship-it@npm:9.30.0":
-  version: 9.30.0
-  resolution: "@netlify/zip-it-and-ship-it@npm:9.30.0"
-  dependencies:
-    "@babel/parser": "npm:^7.22.5"
-    "@babel/types": "npm:7.23.6"
-    "@netlify/binary-info": "npm:^1.0.0"
-    "@netlify/serverless-functions-api": "npm:^1.14.0"
-    "@vercel/nft": "npm:^0.23.0"
-    archiver: "npm:^6.0.0"
-    common-path-prefix: "npm:^3.0.0"
-    cp-file: "npm:^10.0.0"
-    es-module-lexer: "npm:^1.0.0"
-    esbuild: "npm:0.19.11"
-    execa: "npm:^6.0.0"
-    fast-glob: "npm:^3.3.2"
-    filter-obj: "npm:^5.0.0"
-    find-up: "npm:^6.0.0"
-    glob: "npm:^8.0.3"
-    is-builtin-module: "npm:^3.1.0"
-    is-path-inside: "npm:^4.0.0"
-    junk: "npm:^4.0.0"
-    locate-path: "npm:^7.0.0"
-    merge-options: "npm:^3.0.4"
-    minimatch: "npm:^9.0.0"
-    normalize-path: "npm:^3.0.0"
-    p-map: "npm:^5.0.0"
-    path-exists: "npm:^5.0.0"
-    precinct: "npm:^11.0.0"
-    require-package-name: "npm:^2.0.1"
-    resolve: "npm:^2.0.0-next.1"
-    semver: "npm:^7.3.8"
-    tmp-promise: "npm:^3.0.2"
-    toml: "npm:^3.0.0"
-    unixify: "npm:^1.0.0"
-    urlpattern-polyfill: "npm:8.0.2"
-    yargs: "npm:^17.0.0"
-  bin:
-    zip-it-and-ship-it: dist/bin.js
-  checksum: 10c0/7a0dbaa87e8a5d095f7845948667bf92b146e2309a4f663fbad54e638216fd6266f50a17c5e5eed4f0633c01d61368f0c9fe16d32a20dcde928195aade5162fa
+  checksum: 10c0/0dc4866b9e9994be6935ec46dc179bf298b9e048d798f801f7d509a8fa70a166be0ccae90ed6a272315d6aa2b7489b140be133ea39ec6615dea59fe56e2039b9
   languageName: node
   linkType: hard
 
@@ -3631,7 +3581,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@opentelemetry/api@npm:~1.8.0":
+"@opentelemetry/api@npm:1.8.0":
   version: 1.8.0
   resolution: "@opentelemetry/api@npm:1.8.0"
   checksum: 10c0/66d5504bfbf9c19a14ea549f5fca975a73a5e1e8a1e40a6dc2d662893c942b9ba66c009262816dee2b9ffd0267acd707ec692eba20db11a09d4ee114c00dc161
@@ -9498,7 +9448,7 @@ __metadata:
     husky: "npm:9.0.11"
     lint-staged: "npm:15.2.2"
     lodash: "npm:4.17.21"
-    netlify-cli: "npm:17.21.1"
+    netlify-cli: "npm:17.21.2"
     prettier: "npm:3.2.5"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
@@ -10534,9 +10484,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"express@npm:4.19.1":
-  version: 4.19.1
-  resolution: "express@npm:4.19.1"
+"express@npm:4.19.2":
+  version: 4.19.2
+  resolution: "express@npm:4.19.2"
   dependencies:
     accepts: "npm:~1.3.8"
     array-flatten: "npm:1.1.1"
@@ -10569,7 +10519,7 @@ __metadata:
     type-is: "npm:~1.6.18"
     utils-merge: "npm:1.0.1"
     vary: "npm:~1.1.2"
-  checksum: 10c0/1cf6d3c095131f0d730105fac23a713083604d4f3ad9364df53cade50662abcfee2f6f8a955fdf164a5ee63f09f457da0b70cbed435ad302fa6f14162a9757f9
+  checksum: 10c0/e82e2662ea9971c1407aea9fc3c16d6b963e55e3830cd0ef5e00b533feda8b770af4e3be630488ef8a752d7c75c4fcefb15892868eeaafe7353cb9e3e269fdcb
   languageName: node
   linkType: hard
 
@@ -16710,21 +16660,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"netlify-cli@npm:17.21.1":
-  version: 17.21.1
-  resolution: "netlify-cli@npm:17.21.1"
+"netlify-cli@npm:17.21.2":
+  version: 17.21.2
+  resolution: "netlify-cli@npm:17.21.2"
   dependencies:
     "@bugsnag/js": "npm:7.20.2"
     "@fastify/static": "npm:6.10.2"
-    "@netlify/blobs": "npm:7.0.1"
-    "@netlify/build": "npm:29.36.6"
+    "@netlify/blobs": "npm:7.3.0"
+    "@netlify/build": "npm:29.39.0"
     "@netlify/build-info": "npm:7.13.2"
     "@netlify/config": "npm:20.12.1"
     "@netlify/edge-bundler": "npm:11.3.0"
     "@netlify/local-functions-proxy": "npm:1.1.1"
-    "@netlify/zip-it-and-ship-it": "npm:9.30.0"
+    "@netlify/zip-it-and-ship-it": "npm:9.31.1"
     "@octokit/rest": "npm:19.0.13"
-    "@opentelemetry/api": "npm:~1.8.0"
+    "@opentelemetry/api": "npm:1.8.0"
     ansi-escapes: "npm:6.2.1"
     ansi-styles: "npm:6.2.1"
     ansi-to-html: "npm:0.7.2"
@@ -16752,7 +16702,7 @@ __metadata:
     envinfo: "npm:7.8.1"
     etag: "npm:1.8.1"
     execa: "npm:5.1.1"
-    express: "npm:4.19.1"
+    express: "npm:4.19.2"
     express-logging: "npm:1.1.1"
     extract-zip: "npm:2.0.1"
     fastest-levenshtein: "npm:1.0.16"
@@ -16828,7 +16778,7 @@ __metadata:
   bin:
     netlify: bin/run.js
     ntl: bin/run.js
-  checksum: 10c0/37f4cd57c420aabc74fd94c0e3bc9fc4600f0f22a91bc39b281b011a3352bf43c592fb175f7f3b12609366d4357504bd3be3eb5739edf3465cf71af8e3ce6205
+  checksum: 10c0/c0aa83d196478f8c8ec6dab4392d2df34ca8b25ee8a95f30fe8685b462d0f7d346012672b24bff5d5dfdb54e57532a78d27bdba5722d2ade1eda2259c8f9dace
   languageName: node
   linkType: hard
 
