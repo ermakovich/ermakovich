@@ -3091,6 +3091,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@netlify/edge-functions@npm:2.5.1":
+  version: 2.5.1
+  resolution: "@netlify/edge-functions@npm:2.5.1"
+  checksum: 10c0/e2a5014ca6a64112b557a6ea0f4e3d9d8e3b5371751e6a7d032e11b84178abe2e7766fb86e0a1ac043088b69cce6a374f7da66bfbba42679f0b4e541a0948e07
+  languageName: node
+  linkType: hard
+
 "@netlify/framework-info@npm:^9.8.11":
   version: 9.8.11
   resolution: "@netlify/framework-info@npm:9.8.11"
@@ -9448,7 +9455,7 @@ __metadata:
     husky: "npm:9.0.11"
     lint-staged: "npm:15.2.2"
     lodash: "npm:4.17.21"
-    netlify-cli: "npm:17.21.2"
+    netlify-cli: "npm:17.22.0"
     prettier: "npm:3.2.5"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
@@ -16660,9 +16667,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"netlify-cli@npm:17.21.2":
-  version: 17.21.2
-  resolution: "netlify-cli@npm:17.21.2"
+"netlify-cli@npm:17.22.0":
+  version: 17.22.0
+  resolution: "netlify-cli@npm:17.22.0"
   dependencies:
     "@bugsnag/js": "npm:7.20.2"
     "@fastify/static": "npm:6.10.2"
@@ -16671,6 +16678,7 @@ __metadata:
     "@netlify/build-info": "npm:7.13.2"
     "@netlify/config": "npm:20.12.1"
     "@netlify/edge-bundler": "npm:11.3.0"
+    "@netlify/edge-functions": "npm:2.5.1"
     "@netlify/local-functions-proxy": "npm:1.1.1"
     "@netlify/zip-it-and-ship-it": "npm:9.31.1"
     "@octokit/rest": "npm:19.0.13"
@@ -16778,7 +16786,7 @@ __metadata:
   bin:
     netlify: bin/run.js
     ntl: bin/run.js
-  checksum: 10c0/c0aa83d196478f8c8ec6dab4392d2df34ca8b25ee8a95f30fe8685b462d0f7d346012672b24bff5d5dfdb54e57532a78d27bdba5722d2ade1eda2259c8f9dace
+  checksum: 10c0/2a4b148508965216e3ed272ef30e399e8c451ca80f1132ab67092de95e37a2c230d568a7ced83b1cb4f3a73f3638ae8f3b6fb47c1b326cefe2e22aa71859abac
   languageName: node
   linkType: hard
 
