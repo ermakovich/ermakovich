@@ -90,6 +90,7 @@ li {
 pre > code {
   background: initial;
   padding: 0;
+  display: grid;
 }
 
 code {
@@ -132,6 +133,11 @@ figcaption {
   overflow-x: auto;
   padding: 1em;
   border-radius: var(--grvsc-border-radius, 8px);
+  display: grid;
+}
+
+.grvsc-line-highlighted {
+  position: relative;
 }
 
 .grvsc-line-highlighted::before {
