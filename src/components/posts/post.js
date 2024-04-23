@@ -10,8 +10,8 @@ import PostMeta from 'components/posts/post-meta'
 import PostDate from 'components/posts/post-date'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import UnstyledList from 'components/unstyled-list'
-import { bg as bgColor, fg as fgColor } from 'components/utils/colors'
 import { SEO } from 'components/seo'
+import mq from 'components/media-queries'
 
 export const Head = ({ data: { site, markdownRemark } }) => {
   const { excerpt, frontmatter } = markdownRemark
@@ -38,12 +38,24 @@ const PostCover = styled.div`
   align-items: center;
 
   h1 {
-    background: ${fgColor};
-    color: ${bgColor};
+    background: var(--color-white);
+    color: var(--color-black);
     display: inline-block;
     z-index: 1;
     padding: 0.5em;
-    margin: 10rem auto;
+    margin: 2rem auto;
+
+    @media (${mq.sm}) {
+      margin: 5rem auto;
+    }
+
+    @media (${mq.md}) {
+      margin: 7.5rem auto;
+    }
+
+    @media (${mq.l}) {
+      margin: 10rem auto;
+    }
   }
 `
 
