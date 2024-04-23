@@ -3,27 +3,18 @@ import styled from 'styled-components'
 export default styled.button.attrs((props) => ({
   className: 'btn',
 }))`
-  background: var(--color-link);
+  background: rgba(0, 0, 0, 0.1);
+  color: var(--color-primary);
+  border: 0.1em solid var(--color-primary);
   margin: 10px;
   padding: 0.7em 2em;
   text-align: center;
-  color: white;
   border-radius: 0.4em;
-  border: none;
   text-decoration: none;
   display: inline-block;
 
-  &:hover,
-  &:active {
-    background: var(--color-link-active);
-  }
-
   @media (prefers-color-scheme: dark) {
-    background: rgb(98, 146, 255);
-
-    &:active,
-    &:hover {
-      background: rgb(133, 168, 255);
-    }
+    background: rgba(255, 255, 255, 0.1);
+    /* border: 2px solid var(--color-primary); */
   }
 `

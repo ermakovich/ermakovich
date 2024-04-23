@@ -5,10 +5,10 @@ import Meta from '../post-meta'
 import Date from '../post-date'
 import PreviewImage from './post-preview-image'
 
-export default function PostPreview({ node }) {
+export default function PostPreview({ node, ...props }) {
   const title = get(node, 'frontmatter.title') || node.fields.slug
   return (
-    <div key={node.fields.slug}>
+    <div {...props}>
       <PreviewImage {...{ node }} />
       <h3>
         <a href={node.fields.slug}>{title}</a>

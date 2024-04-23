@@ -46,9 +46,11 @@ export default function IndexPage() {
           src="../images/avatar.jpg"
           alt="Photo"
           loading="eager"
+          layout="fixed"
+          width={320}
           style={{
-            width: '10rem',
-            height: '10rem',
+            maxWidth: '10rem',
+            maxHeight: '10rem',
             margin: '0 auto',
             borderRadius: '50%',
             boxShadow: '0 0 .3rem 0',
@@ -58,7 +60,7 @@ export default function IndexPage() {
         <Header>Привет, я {site.siteMetadata.title.split(' ')[0]} 👋</Header>
         <More>
           <Button as="a" href="/about">
-            Продолжить 👉
+            Продолжить &nbsp;&nbsp;&nbsp;👉
           </Button>
         </More>
       </Layout>

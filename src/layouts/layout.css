@@ -1,11 +1,10 @@
 :root {
   --color-white: rgba(255, 255, 255, 0.85);
 
-  --color-primary: #000000d9;
+  --color-primary: rgba(0, 0, 0, 0.85);
   --background-color: white;
-  --color-system: gray;
-  --color-link: rgb(82, 130, 255);
-  --color-link-active: rgba(82, 130, 255, 0.9);
+  --color-system: rgba(0, 0, 0, 0.7);
+  --color-link: rgb(37, 75, 172);
 
   --theme-neutral-bg-color: rgba(50, 128, 50, 0.4);
 }
@@ -14,8 +13,8 @@
   :root {
     --color-primary: var(--color-white);
     --background-color: rgb(35, 35, 37);
-    --color-link: rgb(98, 146, 255);
-    --color-link-active: rgba(98, 146, 255, 0.9);
+    --color-system: rgba(255, 255, 255, 0.7);
+    --color-link: rgb(195, 182, 255);
   }
 }
 
@@ -72,12 +71,7 @@ strong {
 
 a:not(.btn) {
   color: var(--color-link);
-  text-decoration: none;
-}
-
-a:not(.btn):active,
-a:not(.btn):hover {
-  color: var(--color-link-active);
+  text-underline-offset: 0.2em;
 }
 
 body {

@@ -118,6 +118,7 @@ export default function Header() {
           alt="Logo"
           loading="eager"
           layout="fixed"
+          width={105}
           style={{
             width: '2.5rem',
             height: '2.5rem',
@@ -129,40 +130,16 @@ export default function Header() {
       <Menu className={isMenuOpen ? 'open' : ''}>
         <MenuItems>
           <MenuItem>
-            <MenuLink
-              href="/about/"
-              activeClassName="active"
-              partiallyActive={true}
-            >
-              Обо мне
-            </MenuLink>
+            <MenuLink href="/about/">Обо мне</MenuLink>
           </MenuItem>
           <MenuItem>
-            <MenuLink
-              href="/posts/"
-              activeClassName="active"
-              partiallyActive={true}
-            >
-              Записи
-            </MenuLink>
+            <MenuLink href="/posts/">Записи</MenuLink>
           </MenuItem>
           <MenuItem>
-            <MenuLink
-              href="/resume/"
-              activeClassName="active"
-              partiallyActive={true}
-            >
-              Резюме
-            </MenuLink>
+            <MenuLink href="/resume/">Резюме</MenuLink>
           </MenuItem>
           <MenuItem>
-            <MenuLink
-              href="/contacts/"
-              activeClassName="active"
-              partiallyActive={true}
-            >
-              Контакты
-            </MenuLink>
+            <MenuLink href="/contacts/">Контакты</MenuLink>
           </MenuItem>
         </MenuItems>
         <CloseMenuButton aria-label="Close menu" onClick={handleCloseIconClick}>

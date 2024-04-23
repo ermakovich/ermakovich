@@ -61,7 +61,7 @@ export default function BlogIndex() {
       </p>
       <br />
       {posts.map(({ node }) => (
-        <PostPreview {...{ node }} />
+        <PostPreview key={node.fields.slug} {...{ node }} />
       ))}
     </Content>
   )

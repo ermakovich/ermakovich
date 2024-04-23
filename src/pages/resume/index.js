@@ -9,6 +9,7 @@ import Content from 'components/content'
 import TextSystem from 'components/text-system'
 import { SEO } from 'components/seo'
 import UnstyledList from '../../components/unstyled-list'
+import mq from 'components/media-queries'
 
 export const Head = () => (
   <SEO
@@ -46,7 +47,9 @@ const Header = styled.div`
 `
 
 const Subheader = styled.div`
-  display: flex;
+  @media (${mq.sm}) {
+    display: flex;
+  }
 `
 
 const AvatarWrapper = styled.div`
@@ -129,29 +132,29 @@ export default function ResumePage() {
           </em>
         </p>
 
-        <p>
+        <p style={{ marginBottom: 0 }}>
           <strong>Инструменты: </strong>
-          <Tools>
-            {[
-              'Docker',
-              'Express',
-              'Gatsby',
-              'Git',
-              'Github Actions',
-              'Jest',
-              'Lighthouse',
-              'Next JS',
-              'Nginx',
-              'Netlify',
-              'Node',
-              'Puppeteer',
-              'React',
-              'TypeScript',
-            ].map((tool) => (
-              <Tool>{tool}</Tool>
-            ))}
-          </Tools>
         </p>
+        <Tools>
+          {[
+            'Docker',
+            'Express',
+            'Gatsby',
+            'Git',
+            'Github Actions',
+            'Jest',
+            'Lighthouse',
+            'Next JS',
+            'Nginx',
+            'Netlify',
+            'Node',
+            'Puppeteer',
+            'React',
+            'TypeScript',
+          ].map((tool) => (
+            <Tool key={tool}>{tool}</Tool>
+          ))}
+        </Tools>
 
         <p>
           <strong>Образование:</strong>{' '}
