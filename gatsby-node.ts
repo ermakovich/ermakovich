@@ -1,13 +1,12 @@
-const Promise = require('bluebird')
-const path = require('path')
-const { createFilePath } = require('gatsby-source-filesystem')
-const UnusedWebpackPlugin = require('unused-webpack-plugin')
+import UnusedWebpackPlugin from 'unused-webpack-plugin'
+import path from 'path'
+import { createFilePath } from 'gatsby-source-filesystem'
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
   return new Promise((resolve, reject) => {
-    const blogPost = path.resolve('./src/components/posts/post.js')
+    const blogPost = path.resolve('./src/components/posts/post.tsx')
     resolve(
       graphql(`
         {
@@ -84,7 +83,7 @@ exports.onCreateWebpackConfig = ({ stage, actions }) => {
         ? [
             new UnusedWebpackPlugin({
               directories: [path.join(__dirname, 'src')],
-              exclude: ['*.md', '*.jpg', '*.jpeg', '*.png', '*.pdf'],
+              exclude: ['*.md', '*.jpg', '*.jpeg', '*.png', '*.pdf', '*.d.ts'],
             }),
           ]
         : [],

@@ -1,6 +1,10 @@
 import * as React from 'react'
 
-function HamburgerIcon(props) {
+function HamburgerIcon({
+  width,
+  height,
+  ...props
+}: React.PropsWithChildren<React.SVGAttributes<SVGSVGElement>>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

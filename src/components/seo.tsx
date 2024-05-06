@@ -6,11 +6,18 @@ import { useSiteMetadata } from 'components/hooks/use-site-metadata'
 export const SEO = ({
   title,
   description,
-  pathname,
+  pathname = '',
   children,
   titleAddendum,
   image,
   lang = 'ru',
+}: React.PropsWithChildren & {
+  title?: string
+  description?: string
+  pathname?: string
+  titleAddendum?: string
+  image?: string
+  lang?: string
 }) => {
   const {
     title: defaultTitle,
@@ -24,11 +31,8 @@ export const SEO = ({
       (titleAddendum ? `${defaultTitle} — ${titleAddendum}` : title) ||
       defaultTitle,
     description: description || defaultDescription,
-    url: `${siteUrl}${pathname || ``}`,
-  }
-
-  if (image) {
-    seo.image = `${siteUrl}${image}`
+    url: `${siteUrl}${pathname}`,
+    image: image ? `${siteUrl}${image}` : null,
   }
 
   return (

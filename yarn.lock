@@ -4981,6 +4981,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/node@npm:20.12.10":
+  version: 20.12.10
+  resolution: "@types/node@npm:20.12.10"
+  dependencies:
+    undici-types: "npm:~5.26.4"
+  checksum: 10c0/2cc3b6ea09894ed1a3cf39f6491ec539281580f4ff83216e7d26ce85c83237fe0543c0ca49e25b2515ccdb6c8814b488d17a64a05f536dcaea94f9d32a60c7d7
+  languageName: node
+  linkType: hard
+
 "@types/node@npm:^17.0.5":
   version: 17.0.45
   resolution: "@types/node@npm:17.0.45"
@@ -5032,6 +5041,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react-dom@npm:18.3.0":
+  version: 18.3.0
+  resolution: "@types/react-dom@npm:18.3.0"
+  dependencies:
+    "@types/react": "npm:*"
+  checksum: 10c0/6c90d2ed72c5a0e440d2c75d99287e4b5df3e7b011838cdc03ae5cd518ab52164d86990e73246b9d812eaf02ec351d74e3b4f5bd325bf341e13bf980392fd53b
+  languageName: node
+  linkType: hard
+
 "@types/react@npm:*":
   version: 18.2.37
   resolution: "@types/react@npm:18.2.37"
@@ -5040,6 +5058,16 @@ __metadata:
     "@types/scheduler": "npm:*"
     csstype: "npm:^3.0.2"
   checksum: 10c0/79dd5d23da05bec54e7423ca17096e345eb8fd80a3bf8dd916bb5cdd60677d27c298523aa5b245d090fcc4ec100cfd58c1af4631fbac709d0a9d8be75f9d78a9
+  languageName: node
+  linkType: hard
+
+"@types/react@npm:18.3.1":
+  version: 18.3.1
+  resolution: "@types/react@npm:18.3.1"
+  dependencies:
+    "@types/prop-types": "npm:*"
+    csstype: "npm:^3.0.2"
+  checksum: 10c0/18d856c12a4ec93f3cda2d58ef3d77a9480818afd3af895f812896fb82cfca1f35a692ab1add4ce826a4eb58a071624c7d1c8c6c4ccfb81c100d2916dc607614
   languageName: node
   linkType: hard
 
@@ -5092,10 +5120,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/source-list-map@npm:*":
+  version: 0.1.6
+  resolution: "@types/source-list-map@npm:0.1.6"
+  checksum: 10c0/1e6d8d4a48535c51368c65bb2c44a1c9fd9afe2eeefefa32cbf06f9c191f7b20f638b3aa755100de0a750b0ba6a76140e912f1bee75705bc2b9a58b5a5185539
+  languageName: node
+  linkType: hard
+
 "@types/stylis@npm:4.2.0":
   version: 4.2.0
   resolution: "@types/stylis@npm:4.2.0"
   checksum: 10c0/c76c13e76ca485f598a13984cfb5e07bb88a851da5bee213587424a5f101f182c74f4f92d633cebf9abcec40ccebb645d600d184b7e4b42793e3eeca8729b110
+  languageName: node
+  linkType: hard
+
+"@types/tapable@npm:^1":
+  version: 1.0.12
+  resolution: "@types/tapable@npm:1.0.12"
+  checksum: 10c0/d6a080f5839b323eb96dd5b65a6c3161c1297d8c2433eb52437912d1c3df54e38fce12ce7a57650f6453d96942298bd0935436e2501d09e407b7f41634483131
   languageName: node
   linkType: hard
 
@@ -5113,10 +5155,53 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/uglify-js@npm:*":
+  version: 3.17.5
+  resolution: "@types/uglify-js@npm:3.17.5"
+  dependencies:
+    source-map: "npm:^0.6.1"
+  checksum: 10c0/e225d7da26a7a8b71e71f584ab2b4e14f9bd61e2ae4c72fa14d3d862ebfb8f3c1c24414048f23ea485e93618d3370e6c9d5e5af51b6a836d48ec453a26e419f4
+  languageName: node
+  linkType: hard
+
 "@types/unist@npm:^2, @types/unist@npm:^2.0.0, @types/unist@npm:^2.0.2, @types/unist@npm:^2.0.3":
   version: 2.0.10
   resolution: "@types/unist@npm:2.0.10"
   checksum: 10c0/5f247dc2229944355209ad5c8e83cfe29419fa7f0a6d557421b1985a1500444719cc9efcc42c652b55aab63c931813c88033e0202c1ac684bcd4829d66e44731
+  languageName: node
+  linkType: hard
+
+"@types/unused-webpack-plugin@npm:2.4.5":
+  version: 2.4.5
+  resolution: "@types/unused-webpack-plugin@npm:2.4.5"
+  dependencies:
+    "@types/webpack": "npm:^4"
+  checksum: 10c0/4acea597fd4dec8369541a7225300abb90d2a48a9cefd5dd89b8068da99888981777677c7c3b2bb47aa95b47c754940abaa06ce1127f4b036f815d515fe4dab6
+  languageName: node
+  linkType: hard
+
+"@types/webpack-sources@npm:*":
+  version: 3.2.3
+  resolution: "@types/webpack-sources@npm:3.2.3"
+  dependencies:
+    "@types/node": "npm:*"
+    "@types/source-list-map": "npm:*"
+    source-map: "npm:^0.7.3"
+  checksum: 10c0/74e9dfdd38bc345ce99442f3be5b5ad1efc7af5890304175c141717a7c0b38c152e6f7fe1d2875fc19aaa68964019ff4661678eba7fdeee8c3ad42dc6dbf6b62
+  languageName: node
+  linkType: hard
+
+"@types/webpack@npm:^4":
+  version: 4.41.38
+  resolution: "@types/webpack@npm:4.41.38"
+  dependencies:
+    "@types/node": "npm:*"
+    "@types/tapable": "npm:^1"
+    "@types/uglify-js": "npm:*"
+    "@types/webpack-sources": "npm:*"
+    anymatch: "npm:^3.0.0"
+    source-map: "npm:^0.6.0"
+  checksum: 10c0/5a0a7465d45a0e7701a8c863e88c6cba7660b37e4aeab851c71baf505dbab2e178be1cac82488c2e7d0ea11fb703ceddb53476daec3ec9a004e2fc1554233483
   languageName: node
   linkType: hard
 
@@ -5997,7 +6082,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"anymatch@npm:^3.1.3, anymatch@npm:~3.1.2":
+"anymatch@npm:^3.0.0, anymatch@npm:^3.1.3, anymatch@npm:~3.1.2":
   version: 3.1.3
   resolution: "anymatch@npm:3.1.3"
   dependencies:
@@ -9648,6 +9733,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "ermakovich@workspace:."
   dependencies:
+    "@types/node": "npm:20.12.10"
+    "@types/react": "npm:18.3.1"
+    "@types/react-dom": "npm:18.3.0"
+    "@types/unused-webpack-plugin": "npm:2.4.5"
     babel-plugin-styled-components: "npm:2.1.4"
     date-fns: "npm:3.6.0"
     eslint: "npm:8.57.0"
@@ -9677,6 +9766,7 @@ __metadata:
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
     styled-components: "npm:6.1.9"
+    typescript: "npm:5.4.5"
     unused-webpack-plugin: "npm:2.4.0"
   languageName: unknown
   linkType: soft
@@ -22453,6 +22543,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"typescript@npm:5.4.5":
+  version: 5.4.5
+  resolution: "typescript@npm:5.4.5"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 10c0/2954022ada340fd3d6a9e2b8e534f65d57c92d5f3989a263754a78aba549f7e6529acc1921913560a4b816c46dce7df4a4d29f9f11a3dc0d4213bb76d043251e
+  languageName: node
+  linkType: hard
+
 "typescript@npm:^5.0.0, typescript@npm:^5.0.4":
   version: 5.2.2
   resolution: "typescript@npm:5.2.2"
@@ -22460,6 +22560,16 @@ __metadata:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: 10c0/91ae3e6193d0ddb8656d4c418a033f0f75dec5e077ebbc2bd6d76439b93f35683936ee1bdc0e9cf94ec76863aa49f27159b5788219b50e1cd0cd6d110aa34b07
+  languageName: node
+  linkType: hard
+
+"typescript@patch:typescript@npm%3A5.4.5#optional!builtin<compat/typescript>":
+  version: 5.4.5
+  resolution: "typescript@patch:typescript@npm%3A5.4.5#optional!builtin<compat/typescript>::version=5.4.5&hash=5adc0c"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 10c0/db2ad2a16ca829f50427eeb1da155e7a45e598eec7b086d8b4e8ba44e5a235f758e606d681c66992230d3fc3b8995865e5fd0b22a2c95486d0b3200f83072ec9
   languageName: node
   linkType: hard
 
