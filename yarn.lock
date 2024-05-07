@@ -7401,13 +7401,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chalk@npm:5.2.0":
-  version: 5.2.0
-  resolution: "chalk@npm:5.2.0"
-  checksum: 10c0/8a519b35c239f96e041b7f1ed8fdd79d3ca2332a8366cb957378b8a1b8a4cdfb740d19628e8bf74654d4c0917aa10cf39c20752e177a1304eac29a1168a740e9
-  languageName: node
-  linkType: hard
-
 "chalk@npm:5.3.0, chalk@npm:^5.0.0, chalk@npm:^5.0.1, chalk@npm:^5.2.0":
   version: 5.3.0
   resolution: "chalk@npm:5.3.0"
@@ -7556,7 +7549,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chokidar@npm:3.5.3, chokidar@npm:^3.4.2, chokidar@npm:^3.5.3":
+"chokidar@npm:3.6.0":
+  version: 3.6.0
+  resolution: "chokidar@npm:3.6.0"
+  dependencies:
+    anymatch: "npm:~3.1.2"
+    braces: "npm:~3.0.2"
+    fsevents: "npm:~2.3.2"
+    glob-parent: "npm:~5.1.2"
+    is-binary-path: "npm:~2.1.0"
+    is-glob: "npm:~4.0.1"
+    normalize-path: "npm:~3.0.0"
+    readdirp: "npm:~3.6.0"
+  dependenciesMeta:
+    fsevents:
+      optional: true
+  checksum: 10c0/8361dcd013f2ddbe260eacb1f3cb2f2c6f2b0ad118708a343a5ed8158941a39cb8fb1d272e0f389712e74ee90ce8ba864eece9e0e62b9705cb468a2f6d917462
+  languageName: node
+  linkType: hard
+
+"chokidar@npm:^3.4.2, chokidar@npm:^3.5.3":
   version: 3.5.3
   resolution: "chokidar@npm:3.5.3"
   dependencies:
@@ -9761,7 +9773,7 @@ __metadata:
     husky: "npm:9.0.11"
     lint-staged: "npm:15.2.2"
     lodash: "npm:4.17.21"
-    netlify-cli: "npm:17.23.1"
+    netlify-cli: "npm:17.23.2"
     prettier: "npm:3.2.5"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
@@ -17000,9 +17012,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"netlify-cli@npm:17.23.1":
-  version: 17.23.1
-  resolution: "netlify-cli@npm:17.23.1"
+"netlify-cli@npm:17.23.2":
+  version: 17.23.2
+  resolution: "netlify-cli@npm:17.23.2"
   dependencies:
     "@bugsnag/js": "npm:7.22.7"
     "@fastify/static": "npm:6.12.0"
@@ -17023,8 +17035,8 @@ __metadata:
     backoff: "npm:2.5.0"
     better-opn: "npm:3.0.2"
     boxen: "npm:7.1.1"
-    chalk: "npm:5.2.0"
-    chokidar: "npm:3.5.3"
+    chalk: "npm:5.3.0"
+    chokidar: "npm:3.6.0"
     ci-info: "npm:3.8.0"
     clean-deep: "npm:3.4.0"
     commander: "npm:10.0.1"
@@ -17119,7 +17131,7 @@ __metadata:
   bin:
     netlify: bin/run.js
     ntl: bin/run.js
-  checksum: 10c0/c55b39cd788fb6ddbf1cb753c884abf150ac4da5d8324707ab3685da2442b8a526bb2fa77908f04dedfb9abf64facb29558c734ba503a28f34cb545003504184
+  checksum: 10c0/f083d649b8fcba92ed5b54fe90c97ad7bf6e650a42fb266e22e07f01ad00fb7cfcdf5c40de55c2b32ec9865a5e0c6296afcb64a852c42abea0beab29e94341b3
   languageName: node
   linkType: hard
 
