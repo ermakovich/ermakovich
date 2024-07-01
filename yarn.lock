@@ -9432,7 +9432,7 @@ __metadata:
     husky: "npm:9.0.11"
     lint-staged: "npm:15.2.7"
     lodash: "npm:4.17.21"
-    netlify-cli: "npm:17.30.0"
+    netlify-cli: "npm:17.31.0"
     prettier: "npm:3.3.2"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
@@ -13210,13 +13210,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"https-proxy-agent@npm:7.0.4":
-  version: 7.0.4
-  resolution: "https-proxy-agent@npm:7.0.4"
+"https-proxy-agent@npm:7.0.5":
+  version: 7.0.5
+  resolution: "https-proxy-agent@npm:7.0.5"
   dependencies:
     agent-base: "npm:^7.0.2"
     debug: "npm:4"
-  checksum: 10c0/bc4f7c38da32a5fc622450b6cb49a24ff596f9bd48dcedb52d2da3fa1c1a80e100fb506bd59b326c012f21c863c69b275c23de1a01d0b84db396822fdf25e52b
+  checksum: 10c0/2490e3acec397abeb88807db52cac59102d5ed758feee6df6112ab3ccd8325e8a1ce8bce6f4b66e5470eca102d31e425ace904242e4fa28dbe0c59c4bafa7b2c
   languageName: node
   linkType: hard
 
@@ -16496,9 +16496,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"netlify-cli@npm:17.30.0":
-  version: 17.30.0
-  resolution: "netlify-cli@npm:17.30.0"
+"netlify-cli@npm:17.31.0":
+  version: 17.31.0
+  resolution: "netlify-cli@npm:17.31.0"
   dependencies:
     "@bugsnag/js": "npm:7.23.0"
     "@fastify/static": "npm:7.0.4"
@@ -16556,7 +16556,7 @@ __metadata:
     hasha: "npm:5.2.2"
     http-proxy: "npm:1.18.1"
     http-proxy-middleware: "npm:2.0.6"
-    https-proxy-agent: "npm:7.0.4"
+    https-proxy-agent: "npm:7.0.5"
     inquirer: "npm:6.5.2"
     inquirer-autocomplete-prompt: "npm:1.4.0"
     ipx: "npm:2.1.0"
@@ -16617,7 +16617,7 @@ __metadata:
   bin:
     netlify: bin/run.js
     ntl: bin/run.js
-  checksum: 10c0/cda8bb195fa845495577c0948e6731f7b42a825a4d11555092776d3ae123d96c1a62d1bc89ac7be90c9a1ffb49811dc62d7d8aeb6ff52751fabce8d46f3b5430
+  checksum: 10c0/e30c40ce44fad010e4e10b3c7cce07b9df77014481f347db309361ac2bf25bcd09ef9643a48fb32cc60f5192e26960000803f569dbee683aee02f34c3118f011
   languageName: node
   linkType: hard
 
