@@ -9432,7 +9432,7 @@ __metadata:
     husky: "npm:9.0.11"
     lint-staged: "npm:15.2.7"
     lodash: "npm:4.17.21"
-    netlify-cli: "npm:17.31.0"
+    netlify-cli: "npm:17.32.0"
     prettier: "npm:3.3.2"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
@@ -16496,9 +16496,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"netlify-cli@npm:17.31.0":
-  version: 17.31.0
-  resolution: "netlify-cli@npm:17.31.0"
+"netlify-cli@npm:17.32.0":
+  version: 17.32.0
+  resolution: "netlify-cli@npm:17.32.0"
   dependencies:
     "@bugsnag/js": "npm:7.23.0"
     "@fastify/static": "npm:7.0.4"
@@ -16603,7 +16603,6 @@ __metadata:
     terminal-link: "npm:3.0.0"
     through2-filter: "npm:4.0.0"
     through2-map: "npm:4.0.0"
-    to-readable-stream: "npm:3.0.0"
     toml: "npm:3.0.0"
     tomlify-j0.4: "npm:3.0.0"
     ulid: "npm:2.3.0"
@@ -16617,7 +16616,7 @@ __metadata:
   bin:
     netlify: bin/run.js
     ntl: bin/run.js
-  checksum: 10c0/e30c40ce44fad010e4e10b3c7cce07b9df77014481f347db309361ac2bf25bcd09ef9643a48fb32cc60f5192e26960000803f569dbee683aee02f34c3118f011
+  checksum: 10c0/12eaf1b3cfe830a726880f46bfae717d9075569e503edc67e59a7e24085cd37da6e9a2efd7c379e49dc02c0aab6058d242184ecc438789ca154a42ee8969c5b9
   languageName: node
   linkType: hard
 
@@ -21464,13 +21463,6 @@ __metadata:
   version: 2.0.0
   resolution: "to-fast-properties@npm:2.0.0"
   checksum: 10c0/b214d21dbfb4bce3452b6244b336806ffea9c05297148d32ebb428d5c43ce7545bdfc65a1ceb58c9ef4376a65c0cb2854d645f33961658b3e3b4f84910ddcdd7
-  languageName: node
-  linkType: hard
-
-"to-readable-stream@npm:3.0.0":
-  version: 3.0.0
-  resolution: "to-readable-stream@npm:3.0.0"
-  checksum: 10c0/086d0ff7cd8e235ae8bb9c5ce4b295487fa580e00a2098d6a00643d8b5f46af8f7e9036b1cf9a16cea6ef377dc693c3a4be868f123baea7fad6222c6b4f8ee50
   languageName: node
   linkType: hard
 
