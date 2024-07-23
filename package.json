@@ -54,7 +54,7 @@
     "lint-staged": "15.2.7",
     "netlify-cli": "17.33.3",
     "prettier": "3.3.3",
-    "typescript": "5.5.3",
+    "typescript": "5.5.4",
     "unused-webpack-plugin": "2.4.0"
   },
   "repository": {
