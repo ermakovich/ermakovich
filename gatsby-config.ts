@@ -99,5 +99,13 @@ module.exports = {
       },
     },
     'gatsby-plugin-robots-txt',
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /\.inline\.svg$/,
+        },
+      },
+    },
   ],
 }

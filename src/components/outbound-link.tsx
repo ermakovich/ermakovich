@@ -1,16 +1,16 @@
 import styled from 'styled-components'
+import React from 'react'
 
-import linkExternalSvgThemeLight from './link-external-theme-light.svg'
-import linkExternalSvgThemeDark from './link-external-theme-dark.svg'
+import LinkExternalSvg from './link-external.inline.svg'
 
-export default styled.a`
-  background-image: url('${linkExternalSvgThemeLight}');
-  background-position: center right;
-  background-repeat: no-repeat;
-  background-size: 0.857em;
-  padding-right: 1em;
-
-  @media (prefers-color-scheme: dark) {
-    background-image: url('${linkExternalSvgThemeDark}');
-  }
+const Link = styled.a`
+  white-space: nowrap;
 `
+
+export default function OutboundLink({ children, ...props }) {
+  return (
+    <Link {...props}>
+      {children} <LinkExternalSvg style={{ width: '0.85em' }} />
+    </Link>
+  )
+}

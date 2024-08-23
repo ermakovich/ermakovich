@@ -1,8 +1,10 @@
 :root {
   --color-white: white;
-  --color-black: rgb(34, 34, 34);
+  --color-black-rgb: 34, 34, 34;
+  --color-black: rgb(var(--color-black-rgb));
 
-  --color-primary: var(--color-black);
+  --color-primary-rgb: var(--color-black-rgb);
+  --color-primary: var(--color-primary-rgb);
   --background-color: var(--color-white);
   --color-system: rgb(87, 87, 87);
   --color-link: rgb(37, 75, 172);
@@ -12,7 +14,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-primary: rgb(226, 226, 226);
+    --color-primary-rgb: 226, 226, 226;
+    --color-primary: rgb(var(--color-primary-rgb));
     --background-color: var(--color-black);
     --color-system: rgb(180, 180, 180);
     --color-link: rgb(195, 182, 255);
