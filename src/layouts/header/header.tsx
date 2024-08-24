@@ -7,8 +7,8 @@ import UnstyledList from 'components/unstyled-list'
 import mq from 'components/media-queries'
 import IconButton from 'components/icon-button'
 
-import HamburgerIcon from './hamburger-icon'
-import CloseIcon from './close-icon'
+import HamburgerIcon from './hamburger-icon.inline.svg'
+import CloseIcon from './close-icon.inline.svg'
 
 const menuItemBorderRadius = '.2rem'
 
@@ -143,7 +143,7 @@ export default function Header() {
           </MenuItem>
         </MenuItems>
         <CloseMenuButton aria-label="Close menu" onClick={handleCloseIconClick}>
-          <CloseIcon width={24} height={24} />
+          <CloseIcon width="24" height="24" />
         </CloseMenuButton>
       </Menu>
       <Main />
@@ -152,7 +152,7 @@ export default function Header() {
           aria-label="Open menu"
           onClick={handleHamburgerIconClick}
         >
-          <HamburgerIcon width={24} height={34} />
+          <HamburgerIcon width="24" height="34" />
         </HamburgerMenuButton>
       </Right>
     </Root>

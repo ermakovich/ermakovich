@@ -114,13 +114,13 @@ const Block = styled(Content)`
 
 const Profiles = styled(UnstyledList)`
   margin-top: 0;
-  margin-left: -0.25em;
+  margin-left: -0.5em;
 `
 
 const Profile = styled.li`
   color: var(--background-color);
   display: inline-block;
-  margin: 0.25em;
+  margin: 1em 0.5em;
   white-space: nowrap;
 `
 
