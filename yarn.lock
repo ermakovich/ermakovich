@@ -7388,7 +7388,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cheerio@npm:^1.0.0-rc.10":
+"cheerio@npm:1.0.0-rc.12":
   version: 1.0.0-rc.12
   resolution: "cheerio@npm:1.0.0-rc.12"
   dependencies:
@@ -9560,8 +9560,8 @@ __metadata:
     gatsby-plugin-sitemap: "npm:6.13.1"
     gatsby-plugin-styled-components: "npm:6.13.1"
     gatsby-remark-code-titles: "npm:1.1.0"
-    gatsby-remark-copy-linked-files: "npm:6.13.1"
-    gatsby-remark-images: "npm:7.13.1"
+    gatsby-remark-copy-linked-files: "npm:6.13.2"
+    gatsby-remark-images: "npm:7.13.2"
     gatsby-remark-vscode: "npm:3.3.1"
     gatsby-source-filesystem: "npm:5.13.1"
     gatsby-transformer-remark: "npm:6.13.1"
@@ -11995,12 +11995,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-remark-copy-linked-files@npm:6.13.1":
-  version: 6.13.1
-  resolution: "gatsby-remark-copy-linked-files@npm:6.13.1"
+"gatsby-remark-copy-linked-files@npm:6.13.2":
+  version: 6.13.2
+  resolution: "gatsby-remark-copy-linked-files@npm:6.13.2"
   dependencies:
     "@babel/runtime": "npm:^7.20.13"
-    cheerio: "npm:^1.0.0-rc.10"
+    cheerio: "npm:1.0.0-rc.12"
     fs-extra: "npm:^11.1.1"
     is-relative-url: "npm:^3.0.0"
     lodash: "npm:^4.17.21"
@@ -12009,17 +12009,17 @@ __metadata:
     unist-util-visit: "npm:^2.0.3"
   peerDependencies:
     gatsby: ^5.0.0-next
-  checksum: 10c0/50087cdd0324cdf4d2aba6525d5c279fc6598d72253ce6773d2d3e83e42ee942e5431b5d46e5e2bced1ace9748ce67e84cc864054788bf43e6f2c343787b1b21
+  checksum: 10c0/5e4477bcadac9c6571825682f136f15d88abf005cf605b08456ccfdd13d0d57cd036d4f0c05c3acdec6656cab499199829d437ce6aae0f754834da42faa81c22
   languageName: node
   linkType: hard
 
-"gatsby-remark-images@npm:7.13.1":
-  version: 7.13.1
-  resolution: "gatsby-remark-images@npm:7.13.1"
+"gatsby-remark-images@npm:7.13.2":
+  version: 7.13.2
+  resolution: "gatsby-remark-images@npm:7.13.2"
   dependencies:
     "@babel/runtime": "npm:^7.20.13"
     chalk: "npm:^4.1.2"
-    cheerio: "npm:^1.0.0-rc.10"
+    cheerio: "npm:1.0.0-rc.12"
     gatsby-core-utils: "npm:^4.13.1"
     is-relative-url: "npm:^3.0.0"
     lodash: "npm:^4.17.21"
@@ -12030,7 +12030,7 @@ __metadata:
   peerDependencies:
     gatsby: ^5.0.0-next
     gatsby-plugin-sharp: ^5.0.0-next
-  checksum: 10c0/48f0b581c5f4459058ab6ee2bdf2787179e7332996dba3f8c3319483a2078076b0480b95f5418ea49ad43dc2fd57fa697c47763b6d087e466b4f19a916b8c3ab
+  checksum: 10c0/79476e78c3f93b266b165b692039e3a7eb5e4ce0c6d24f7dc4111697516854cc94f32278c8a8d55c6ae30d7afd1234668d276a90eddc3e11121e95ed19f8ee35
   languageName: node
   linkType: hard
 
