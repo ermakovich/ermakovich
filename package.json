@@ -51,7 +51,7 @@
     "eslint": "8.57.0",
     "eslint-config-react-app": "7.0.1",
     "gatsby-plugin-react-svg": "3.3.0",
-    "husky": "9.1.5",
+    "husky": "9.1.6",
     "lint-staged": "15.2.10",
     "netlify-cli": "17.36.0",
     "prettier": "3.3.3",
