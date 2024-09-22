@@ -1,11 +1,13 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import get from 'lodash/get'
+import styled from 'styled-components'
 
 import Content from 'components/content'
 import PostPreview from 'components/posts/post-preview/post-preview'
 
 import { SEO } from 'components/seo'
+import UnstyledList from 'components/unstyled-list'
 
 export const Head = () => (
   <SEO
@@ -13,6 +15,12 @@ export const Head = () => (
     description="Заметки на профессиональную тематику и наблюдения из жизни"
   />
 )
+
+const ListItem = styled.li`
+  & + & {
+    margin-top: 3rem;
+  }
+`
 
 export default function BlogIndex() {
   const { allMarkdownRemark } = useStaticQuery(graphql`
@@ -26,7 +34,8 @@ export default function BlogIndex() {
             }
             timeToRead
             frontmatter {
-              date(formatString: "MMMM DD, YYYY", locale: "ru")
+              date
+              updated_date
               title
               cover_image {
                 childImageSharp {
@@ -38,6 +47,7 @@ export default function BlogIndex() {
                   gatsbyImageData(width: 70, height: 70, layout: FIXED)
                 }
               }
+              lang
             }
           }
         }
@@ -60,9 +70,13 @@ export default function BlogIndex() {
         истину.
       </p>
       <br />
-      {posts.map(({ node }) => (
-        <PostPreview key={node.fields.slug} {...{ node }} />
-      ))}
+      <UnstyledList>
+        {posts.map(({ node }) => (
+          <ListItem key={node.fields.slug}>
+            <PostPreview {...{ node }} />
+          </ListItem>
+        ))}
+      </UnstyledList>
     </Content>
   )
 }

@@ -2,12 +2,9 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
 import { getSrc } from 'gatsby-plugin-image'
-import { format } from 'date-fns'
-import { enUS as en, ru } from 'date-fns/locale'
 
 import Content from 'components/content'
 import PostMeta from 'components/posts/post-meta'
-import PostDate from 'components/posts/post-date'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import UnstyledList from 'components/unstyled-list'
 import { SEO } from 'components/seo'
@@ -18,7 +15,7 @@ export const Head = ({ data: { site, markdownRemark } }) => {
   const siteTitle = site.siteMetadata.title
   const frontmatterImage = frontmatter.image || frontmatter.cover_image
 
-  const title = `${frontmatter.title} | ${siteTitle}`
+  const title = `${frontmatter.title} - ${siteTitle}`
 
   return (
     <SEO
@@ -36,27 +33,41 @@ const PostCover = styled.div`
   z-index: 0;
   display: flex;
   align-items: center;
+`
 
-  h1 {
-    background: var(--color-white);
-    color: var(--color-black);
-    display: inline-block;
-    z-index: 1;
-    padding: 0.5em;
-    margin: 2rem auto;
+const PostTitleWrapper = styled.div`
+  margin: 2rem auto;
 
-    @media (${mq.sm}) {
-      margin: 5rem auto;
-    }
-
-    @media (${mq.md}) {
-      margin: 7.5rem auto;
-    }
-
-    @media (${mq.l}) {
-      margin: 10rem auto;
-    }
+  @media (${mq.sm}) {
+    margin: 5rem auto;
   }
+
+  @media (${mq.md}) {
+    margin: 7.5rem auto;
+  }
+
+  @media (${mq.l}) {
+    margin: 10rem auto;
+  }
+`
+
+const PostTitle = styled.h1`
+  background: var(--color-white);
+  color: var(--color-black);
+  display: inline-block;
+  z-index: 1;
+  padding: 0.5em;
+  margin: 0;
+`
+
+const EnPostWrapper = styled.div`
+  font-size: 1.2rem;
+`
+
+const EnPost = styled.span`
+  display: inline-block;
+  background: rgba(var(--color-black-rgb), 0.9);
+  padding: 0.4em;
 `
 
 const PostCoverContent = styled(Content)`
@@ -80,21 +91,6 @@ const NextPrev = styled(UnstyledList)`
   justify-content: space-between;
   margin-top: 3rem;
 `
-
-const locales = {
-  en,
-  ru,
-}
-
-const updatedText = {
-  ru: 'обновлено',
-  en: 'edited',
-}
-
-const timeToReadText = {
-  ru: 'мин чтения',
-  en: 'min read',
-}
 
 const nextPostText = {
   ru: 'Следующая запись',
@@ -120,7 +116,7 @@ export default function BlogPostTemplate({
   pageContext,
   data: { site, markdownRemark },
 }) {
-  const { frontmatter, timeToRead, html } = markdownRemark
+  const { frontmatter, html, timeToRead } = markdownRemark
   const { previous, next } = pageContext
   const coverImage = frontmatter.cover_image
   const { image, lang } = frontmatter
@@ -130,7 +126,14 @@ export default function BlogPostTemplate({
       {coverImage && (
         <PostCover>
           <PostCoverContent>
-            <h1>{frontmatter.title}</h1>
+            <PostTitleWrapper>
+              {lang === 'en' && (
+                <EnPostWrapper>
+                  <EnPost>In English /</EnPost>
+                </EnPostWrapper>
+              )}
+              <PostTitle>{frontmatter.title}</PostTitle>
+            </PostTitleWrapper>
           </PostCoverContent>
           <PostCoverImgWrapper>
             <GatsbyImage
@@ -146,32 +149,7 @@ export default function BlogPostTemplate({
       )}
       <Content>
         {!coverImage && <h1>{frontmatter.title}</h1>}
-        <PostMeta>
-          <PostDate
-            value={format(new Date(frontmatter.date), 'MMMM dd, yyyy', {
-              locale: locales[lang],
-            })}
-          />
-          &nbsp;&middot;&nbsp;
-          {frontmatter.updated_date && (
-            <>
-              {updatedText[lang]}{' '}
-              <PostDate
-                value={format(
-                  new Date(frontmatter.updated_date),
-                  'MMMM dd, yyyy',
-                  {
-                    locale: locales[lang],
-                  }
-                )}
-              />
-              &nbsp;&middot;&nbsp;
-            </>
-          )}
-          <span>
-            {timeToRead} {timeToReadText[lang]}
-          </span>
-        </PostMeta>
+        <PostMeta {...{ frontmatter, timeToRead }} />
         {image && (
           <GatsbyImage
             image={image.childImageSharp.gatsbyImageData}

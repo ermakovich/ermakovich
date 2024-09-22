@@ -5,7 +5,7 @@ import Content from 'components/content'
 import { SEO } from 'components/seo'
 import Button from 'components/button'
 import OutboundLink from 'components/outbound-link'
-import ShortPostPreview from 'components/posts/post-preview/short-post-preview'
+import PostPreview from 'components/posts/post-preview/post-preview'
 
 export const Head = () => (
   <SEO
@@ -30,7 +30,9 @@ export default function AboutPage() {
             }
             timeToRead
             frontmatter {
-              date(formatString: "MMMM DD, YYYY", locale: "ru")
+              date
+              updated_date
+              lang
               title
               cover_image {
                 childImageSharp {
@@ -105,7 +107,7 @@ export default function AboutPage() {
         <>
           <br />
           <p>Последняя запись:</p>
-          <ShortPostPreview {...post} />
+          <PostPreview {...post} />
         </>
       )}
     </Content>
