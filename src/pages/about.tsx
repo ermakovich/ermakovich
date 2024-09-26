@@ -104,11 +104,11 @@ export default function AboutPage() {
       </p>
 
       {post && (
-        <>
+        <section>
           <br />
           <p>Последняя запись:</p>
           <PostPreview {...post} />
-        </>
+        </section>
       )}
     </Content>
   )

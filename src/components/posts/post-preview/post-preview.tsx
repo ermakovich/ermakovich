@@ -11,10 +11,12 @@ export default function PostPreview({ node, ...props }) {
   return (
     <div {...props} lang={lang}>
       <PreviewImage {...{ node }} />
-      <h3>
-        {lang === 'en' && 'In English / '}
-        <a href={node.fields.slug}>{title}</a>
-      </h3>
+      <p>
+        <strong>
+          {lang === 'en' && 'In English / '}
+          <a href={node.fields.slug}>{title}</a>
+        </strong>
+      </p>
       <Meta {...{ frontmatter, timeToRead }} />
       {node.excerpt ? (
         <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
