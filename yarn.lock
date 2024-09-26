@@ -4804,12 +4804,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:20.16.8":
-  version: 20.16.8
-  resolution: "@types/node@npm:20.16.8"
+"@types/node@npm:20.16.9":
+  version: 20.16.9
+  resolution: "@types/node@npm:20.16.9"
   dependencies:
     undici-types: "npm:~6.19.2"
-  checksum: 10c0/3b3bd96885cbbe49e5f701be91f9a69b904a60b23fd4812083b053a802a03e38227919ff800aff2961fd11147b471a1a4fc09f1df171f372698f16d39859aebf
+  checksum: 10c0/52d7cbd6792a26e6757c913d1f6dd0fb0104ac44c93dd87480c011d1211b3a1ba282962996bf6aec03f633b5b39f61576f1bafe8436592ab08ad39464e53e4b0
   languageName: node
   linkType: hard
 
@@ -9486,7 +9486,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "ermakovich@workspace:."
   dependencies:
-    "@types/node": "npm:20.16.8"
+    "@types/node": "npm:20.16.9"
     "@types/react": "npm:18.3.9"
     "@types/react-dom": "npm:18.3.0"
     "@types/unused-webpack-plugin": "npm:2.4.5"
