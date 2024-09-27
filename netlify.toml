@@ -1,3 +1,9 @@
 [build]
   command = "yarn build"
   publish = "./public"
+
+
+# TODO: убрать после забвения поисковиками
+[[redirects]]
+  from = "/2023-11-26-vygodno-li-platit-kartoj-mir-pri-poezdkah-v-belarus"
+  to = "/2023-11-26-vygodno-li-platit-kartoj-mir-pri-poezdkah-v-belorussiyu"
