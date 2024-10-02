@@ -41,9 +41,14 @@ export default function Footer() {
         <TextSystem>
           <small>
             Сайт построен с помощью{' '}
-            <OutboundLink href="https://www.gatsbyjs.com">Gatsby</OutboundLink>{' '}
+            <OutboundLink href="https://www.gatsbyjs.com" rel="nofollow">
+              Gatsby
+            </OutboundLink>{' '}
             🚀 и опубликован на{' '}
-            <OutboundLink href="https://www.netlify.com">Netlify</OutboundLink>.
+            <OutboundLink href="https://www.netlify.com" rel="nofollow">
+              Netlify
+            </OutboundLink>
+            .
             <br />
             Исходный код доступен на{' '}
             <OutboundLink href="https://github.com/ermakovich/ermakovich">

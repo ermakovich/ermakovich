@@ -59,19 +59,12 @@ export default function AboutPage() {
       <p>
         Меня зовут {site.siteMetadata.title}. По профессии я программист,
         специализируюсь на веб-разработке. В данный момент работаю над
-        коммерческими, персональными и open source проектами (
-        <OutboundLink
-          href="https://github.com/ermakovich"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub
-        </OutboundLink>
-        ). Ранее возглавлял веб-разработку в интернет-стартапах{' '}
+        коммерческими, персональными и open source проектами. Ранее возглавлял
+        веб-разработку в интернет-стартапах{' '}
         <OutboundLink
           href="https://verifiable.com"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener noreferrer nofollow"
         >
           Verifiable.com
         </OutboundLink>
@@ -79,7 +72,7 @@ export default function AboutPage() {
         <OutboundLink
           href="https://dock.io"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener noreferrer nofollow"
         >
           Dock.io
         </OutboundLink>
@@ -87,7 +80,7 @@ export default function AboutPage() {
         <OutboundLink
           href="https://remote.com"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener noreferrer nofollow"
         >
           Remote.com
         </OutboundLink>

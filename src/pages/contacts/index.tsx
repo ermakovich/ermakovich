@@ -28,7 +28,11 @@ export default function ContactsPage() {
       </p>
       <p>
         Телеграм:{' '}
-        <a href="https://t.me/ermakovich2022" target="_blank" rel="noreferrer">
+        <a
+          href="https://t.me/ermakovich2022"
+          target="_blank"
+          rel="noreferrer nofollow"
+        >
           @ermakovich2022
         </a>
       </p>

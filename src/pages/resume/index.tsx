@@ -214,7 +214,7 @@ export default function ResumePage() {
               <OutboundLink
                 href="https://bntu.by/faculties/fitr"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener noreferrer nofollow"
               >
                 БНТУ ФИТР
               </OutboundLink>{' '}
@@ -239,7 +239,7 @@ export default function ResumePage() {
               <OutboundLink
                 href="https://verifiable.com"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener noreferrer nofollow"
               >
                 verifiable.com
               </OutboundLink>
@@ -247,7 +247,7 @@ export default function ResumePage() {
               <OutboundLink
                 href="https://dock.io"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener noreferrer nofollow"
               >
                 dock.io
               </OutboundLink>
@@ -255,7 +255,7 @@ export default function ResumePage() {
               <OutboundLink
                 href="https://remote.com"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener noreferrer nofollow"
               >
                 remote.com
               </OutboundLink>{' '}
@@ -266,7 +266,7 @@ export default function ResumePage() {
               <OutboundLink
                 href="https://www.scnsoft.com"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener noreferrer nofollow"
               >
                 scnsoft.com
               </OutboundLink>{' '}
