@@ -61,6 +61,8 @@ const MenuLink = styled.a`
   background: transparent;
   border-radius: ${menuItemBorderRadius};
   display: inline-block;
+  text-decoration: none;
+  font-weight: 500;
 
   &:active,
   &:hover {
