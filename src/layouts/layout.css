@@ -4,7 +4,7 @@
   --color-black: rgb(var(--color-black-rgb));
 
   --color-primary-rgb: var(--color-black-rgb);
-  --color-primary: var(--color-primary-rgb);
+  --color-primary: rgb(var(--color-primary-rgb));
   --background-color: var(--color-white);
   --color-system: rgb(87, 87, 87);
   --color-link: rgb(37, 75, 172);
