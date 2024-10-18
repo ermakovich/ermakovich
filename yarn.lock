@@ -2962,10 +2962,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@netlify/blobs@npm:8.0.1":
-  version: 8.0.1
-  resolution: "@netlify/blobs@npm:8.0.1"
-  checksum: 10c0/442cff5046578830ad13d05727db2f7a18529c544e5ff7ee28687419bfbbb48e57c2e159f90513932e15c6466266edbfb4e64a7302f7b3e50be7faaf5c94e9ae
+"@netlify/blobs@npm:8.1.0":
+  version: 8.1.0
+  resolution: "@netlify/blobs@npm:8.1.0"
+  checksum: 10c0/2488cfa89445147c4bead678676cf6c2816c0781e3e05bc2edb9915606b6dc2f2b90ed2254448b83f58eda1f768e8d07ce535f657870cb56da13bffb52ed1474
   languageName: node
   linkType: hard
 
@@ -8068,17 +8068,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cookie@npm:0.6.0, cookie@npm:^0.6.0":
-  version: 0.6.0
-  resolution: "cookie@npm:0.6.0"
-  checksum: 10c0/f2318b31af7a31b4ddb4a678d024514df5e705f9be5909a192d7f116cfb6d45cbacf96a473fa733faa95050e7cff26e7832bb3ef94751592f1387b71c8956686
+"cookie@npm:0.7.1":
+  version: 0.7.1
+  resolution: "cookie@npm:0.7.1"
+  checksum: 10c0/5de60c67a410e7c8dc8a46a4b72eb0fe925871d057c9a5d2c0e8145c4270a4f81076de83410c4d397179744b478e33cd80ccbcc457abf40a9409ad27dcd21dde
   languageName: node
   linkType: hard
 
-"cookie@npm:0.7.0":
-  version: 0.7.0
-  resolution: "cookie@npm:0.7.0"
-  checksum: 10c0/15c20c9b85431c8565b1750f9bccff0bd289b943d956e25fffce3b146e57934075965c8305a4e3a65a70622c9ed483e013daf9159d9c50f5c3f97f2e7c8117ac
+"cookie@npm:0.7.2":
+  version: 0.7.2
+  resolution: "cookie@npm:0.7.2"
+  checksum: 10c0/9596e8ccdbf1a3a88ae02cf5ee80c1c50959423e1022e4e60b91dd87c622af1da309253d8abdb258fb5e3eacb4f08e579dc58b4897b8087574eee0fd35dfa5d2
+  languageName: node
+  linkType: hard
+
+"cookie@npm:^0.6.0":
+  version: 0.6.0
+  resolution: "cookie@npm:0.6.0"
+  checksum: 10c0/f2318b31af7a31b4ddb4a678d024514df5e705f9be5909a192d7f116cfb6d45cbacf96a473fa733faa95050e7cff26e7832bb3ef94751592f1387b71c8956686
   languageName: node
   linkType: hard
 
@@ -9570,7 +9577,7 @@ __metadata:
     husky: "npm:9.1.6"
     lint-staged: "npm:15.2.10"
     lodash: "npm:4.17.21"
-    netlify-cli: "npm:17.37.0"
+    netlify-cli: "npm:17.37.1"
     prettier: "npm:3.3.3"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
@@ -10608,16 +10615,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"express@npm:4.21.0":
-  version: 4.21.0
-  resolution: "express@npm:4.21.0"
+"express@npm:4.21.1":
+  version: 4.21.1
+  resolution: "express@npm:4.21.1"
   dependencies:
     accepts: "npm:~1.3.8"
     array-flatten: "npm:1.1.1"
     body-parser: "npm:1.20.3"
     content-disposition: "npm:0.5.4"
     content-type: "npm:~1.0.4"
-    cookie: "npm:0.6.0"
+    cookie: "npm:0.7.1"
     cookie-signature: "npm:1.0.6"
     debug: "npm:2.6.9"
     depd: "npm:2.0.0"
@@ -10643,7 +10650,7 @@ __metadata:
     type-is: "npm:~1.6.18"
     utils-merge: "npm:1.0.1"
     vary: "npm:~1.1.2"
-  checksum: 10c0/4cf7ca328f3fdeb720f30ccb2ea7708bfa7d345f9cc460b64a82bf1b2c91e5b5852ba15a9a11b2a165d6089acf83457fc477dc904d59cd71ed34c7a91762c6cc
+  checksum: 10c0/0c287867e5f6129d3def1edd9b63103a53c40d4dc8628839d4b6827e35eb8f0de5a4656f9d85f4457eba584f9871ebb2ad26c750b36bd75d9bbb8bcebdc4892c
   languageName: node
   linkType: hard
 
@@ -16741,13 +16748,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"netlify-cli@npm:17.37.0":
-  version: 17.37.0
-  resolution: "netlify-cli@npm:17.37.0"
+"netlify-cli@npm:17.37.1":
+  version: 17.37.1
+  resolution: "netlify-cli@npm:17.37.1"
   dependencies:
     "@bugsnag/js": "npm:7.25.0"
     "@fastify/static": "npm:7.0.4"
-    "@netlify/blobs": "npm:8.0.1"
+    "@netlify/blobs": "npm:8.1.0"
     "@netlify/build": "npm:29.55.2"
     "@netlify/build-info": "npm:7.15.1"
     "@netlify/config": "npm:20.19.0"
@@ -16773,7 +16780,7 @@ __metadata:
     concordance: "npm:5.0.4"
     configstore: "npm:6.0.0"
     content-type: "npm:1.0.5"
-    cookie: "npm:0.7.0"
+    cookie: "npm:0.7.2"
     cron-parser: "npm:4.9.0"
     debug: "npm:4.3.7"
     decache: "npm:4.6.2"
@@ -16783,7 +16790,7 @@ __metadata:
     envinfo: "npm:7.14.0"
     etag: "npm:1.8.1"
     execa: "npm:5.1.1"
-    express: "npm:4.21.0"
+    express: "npm:4.21.1"
     express-logging: "npm:1.1.1"
     extract-zip: "npm:2.0.1"
     fastest-levenshtein: "npm:1.0.16"
@@ -16861,7 +16868,7 @@ __metadata:
   bin:
     netlify: bin/run.js
     ntl: bin/run.js
-  checksum: 10c0/9354f4098c4cb8584f795f1cb5bf1a99ce1e44dace32cb1b296aaf5e06bd1bcf20c6644704ee15f3c985dfc494db8bf770fa209a4c8d9c816ec96d5df63512da
+  checksum: 10c0/763c7d9ce0b612f4c570c9a067e20c679805cb5fc78ebbc28c6332cde71da8ffb57213e9c8a2dfe10a929161fa52fa8324b0ab878fff0ab0d9d8d0bdd790a873
   languageName: node
   linkType: hard
 
