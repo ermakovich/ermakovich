@@ -24,20 +24,6 @@ export default function Footer() {
   return (
     <Root>
       <Content>
-        <p>Партнеры:</p>
-        <p>
-          <OutboundLink href="https://kontur.ru?p=f34110&SUBID=footer">
-            Контур — экосистема для бизнеса
-          </OutboundLink>
-        </p>
-        <p>
-          <OutboundLink href="https://www.reg.ru?rlink=reflink-19873129">
-            рег.ру — домены по выгодным ценам
-          </OutboundLink>
-        </p>
-
-        <br />
-
         <TextSystem>
           <small>
             Сайт построен с помощью{' '}
@@ -64,6 +50,12 @@ export default function Footer() {
             </small>
           </small>
         </TextSystem>
+
+        <p>
+          <OutboundLink href="https://wsse.ru">
+            WSSE - быстрые и надежные сайты
+          </OutboundLink>
+        </p>
       </Content>
     </Root>
   )

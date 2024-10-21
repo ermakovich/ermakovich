@@ -10,7 +10,7 @@ import PostPreview from 'components/posts/post-preview/post-preview'
 export const Head = () => (
   <SEO
     titleAddendum="Обо мне"
-    description="Веб-разработчик JavaScript (React) в Санкт-Петергбурге"
+    description="Веб-разработчик JavaScript (React) в Санкт-Петербурге"
   />
 )
 
@@ -57,10 +57,9 @@ export default function AboutPage() {
     <Content>
       <h1>Обо мне</h1>
       <p>
-        Меня зовут {site.siteMetadata.title}. По профессии я программист,
-        специализируюсь на веб-разработке. В данный момент работаю над
-        коммерческими, персональными и open source проектами. Ранее возглавлял
-        веб-разработку в интернет-стартапах{' '}
+        Меня зовут {site.siteMetadata.title}. Я владелец небольшой{' '}
+        <OutboundLink href="https://wsse.ru">студии</OutboundLink> по разработке
+        веб-сайтов. Ранее возглавлял веб-разработку в интернет-стартапах{' '}
         <OutboundLink
           href="https://verifiable.com"
           target="_blank"
@@ -84,7 +83,7 @@ export default function AboutPage() {
         >
           Remote.com
         </OutboundLink>
-        . Рассматриваю предложения по работе и сотрудничеству.
+        , и других компаниях.
       </p>
       <p style={{ textAlign: 'center' }}>
         <Button as="a" href="/resume">
@@ -92,8 +91,8 @@ export default function AboutPage() {
         </Button>
       </p>
       <p>
-        Заметки на профессиональную тематику и просто наблюдения из жизни я
-        публикую в <a href="/posts">записях</a>.
+        Заметки на профессиональную и бизнес-тематику, а также просто наблюдения
+        из жизни, я публикую в <a href="/posts">записях</a>.
       </p>
 
       {post && (

@@ -9,6 +9,7 @@ import IconButton from 'components/icon-button'
 
 import HamburgerIcon from './hamburger-icon.inline.svg'
 import CloseIcon from './close-icon.inline.svg'
+import OutboundLink from 'components/outbound-link'
 
 const menuItemBorderRadius = '.2rem'
 
