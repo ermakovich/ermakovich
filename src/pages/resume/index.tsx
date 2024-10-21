@@ -14,7 +14,7 @@ import mq from 'components/media-queries'
 export const Head = () => (
   <SEO
     titleAddendum="Резюме"
-    description="Веб-разработчик React и специалист по вёрстке HTML и CSS в Санкт-Петербурге."
+    description="Веб-разработчик TypeScript / React и специалист по вёрстке HTML и CSS в Санкт-Петербурге."
   />
 )
 
@@ -146,9 +146,6 @@ export default function ResumePage() {
       <Content>
         <Header>
           <h1>Резюме</h1>
-          <FileLink href="/generate/resume.pdf" target="_blank">
-            PDF-версия
-          </FileLink>
         </Header>
       </Content>
 
@@ -171,15 +168,15 @@ export default function ResumePage() {
         <div>
           <h2>{site.siteMetadata.title}</h2>
 
-          <h3>Веб-разработчик (React)</h3>
+          <h3>Веб-разработчик TypeScript / React</h3>
         </div>
       </Subheader>
 
       <Content>
         <BlockQuote>
           <em>
-            Специализируюсь на веб-разработке с использованием React и
-            адаптивной вёрстке.
+            Специализируюсь на веб-разработке с использованием TypeScript /
+            React и адаптивной вёрстке.
           </em>
         </BlockQuote>
 
@@ -187,6 +184,9 @@ export default function ResumePage() {
           <h2>Инструменты 🛠️</h2>
           <Tools>
             {[
+              'Astro',
+              'Tailwind',
+              'Vite',
               'Docker',
               'Express',
               'Gatsby',
@@ -231,10 +231,9 @@ export default function ResumePage() {
           <h2>Опыт работы 👷‍♂️</h2>
           <ul>
             <li>
-              <OutboundLink href="https://wsse.ru">
-                Веб-студия Сергея Ермаковича
-              </OutboundLink>{' '}
-              — владелец, веб-разработчик / 2024г. - н.в.
+              Веб-студия Сергея Ермаковича,{' '}
+              <OutboundLink href="https://wsse.ru">wsse.ru</OutboundLink> —
+              владелец, веб-разработчик / 2024г. - н.в.
             </li>
             <li>
               Фриланс, персональные проекты, open-source разработка / 2023г. -
