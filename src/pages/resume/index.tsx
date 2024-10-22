@@ -267,13 +267,13 @@ export default function ResumePage() {
               — веб-разработка в рамках одной команды / 2015-2020 гг.
             </li>
             <li>
-              ScienceSoft,{' '}
+              Научсофт,{' '}
               <OutboundLink
-                href="https://www.scnsoft.com"
+                href="https://nauchsoft.by/"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
               >
-                scnsoft.com
+                nauchsoft.by
               </OutboundLink>{' '}
               — различные проекты (веб, native) / 2009–2015 гг.
             </li>
@@ -320,17 +320,29 @@ export default function ResumePage() {
           <h2>Профили 🌐</h2>
           <Profiles className="inverted">
             <Profile>
-              <ProfileLink href="https://www.linkedin.com/in/ermakovich/">
+              <ProfileLink
+                rel="nofollow"
+                target="_blank"
+                href="https://www.linkedin.com/in/ermakovich/"
+              >
                 LinkedIn
               </ProfileLink>
             </Profile>
             <Profile>
-              <ProfileLink href="https://github.com/ermakovich">
+              <ProfileLink
+                rel="nofollow"
+                target="_blank"
+                href="https://github.com/ermakovich"
+              >
                 GitHub
               </ProfileLink>
             </Profile>
             <Profile>
-              <ProfileLink href="https://stackoverflow.com/users/434402/s-ermakovich">
+              <ProfileLink
+                rel="nofollow"
+                target="_blank"
+                href="https://stackoverflow.com/users/434402/s-ermakovich"
+              >
                 StackOverflow
               </ProfileLink>
             </Profile>

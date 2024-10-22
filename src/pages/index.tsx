@@ -59,7 +59,7 @@ export default function IndexPage() {
         />
         <Header>Привет, я {site.siteMetadata.title.split(' ')[0]} 👋</Header>
         <More>
-          <Button as="a" href="/about">
+          <Button as="a" href="/about/">
             Продолжить &nbsp;&nbsp;&nbsp;👉
           </Button>
         </More>
