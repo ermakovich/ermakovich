@@ -1,6 +1,8 @@
 import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
+import { format } from 'date-fns'
+import { ru } from 'date-fns/locale'
 
 import OutboundLink from 'components/outbound-link'
 import Content from 'components/content'
@@ -27,20 +29,41 @@ export default function Footer() {
         <TextSystem>
           <small>
             Сайт построен с помощью{' '}
-            <OutboundLink href="https://www.gatsbyjs.com" rel="nofollow">
+            <OutboundLink
+              href="https://www.gatsbyjs.com"
+              rel="nofollow"
+              target="_blank"
+            >
               Gatsby
             </OutboundLink>{' '}
             🚀 и опубликован на{' '}
-            <OutboundLink href="https://www.netlify.com" rel="nofollow">
+            <OutboundLink
+              href="https://www.netlify.com"
+              rel="nofollow"
+              target="_blank"
+            >
               Netlify
             </OutboundLink>
             .
             <br />
             Исходный код доступен на{' '}
-            <OutboundLink href="https://github.com/ermakovich/ermakovich">
+            <OutboundLink
+              href="https://github.com/ermakovich/ermakovich"
+              target="_blank"
+            >
               GitHub
             </OutboundLink>
             .
+            <br />
+            <br />
+            <small>
+              Сайт обновлен:{' '}
+              <time>
+                {format(new Date(), 'dd MMMM, yyyy', {
+                  locale: ru,
+                })}
+              </time>
+            </small>
             <br />
             <br />© {new Date().getFullYear()} {site.siteMetadata.title}
             <br />
