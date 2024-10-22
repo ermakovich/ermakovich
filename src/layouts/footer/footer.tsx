@@ -1,12 +1,13 @@
 import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
-import { format } from 'date-fns'
-import { ru } from 'date-fns/locale'
 
 import OutboundLink from 'components/outbound-link'
 import Content from 'components/content'
 import TextSystem from 'components/text-system'
+import LocalDate from 'components/date'
+
+const date = new Date()
 
 const Root = styled.footer`
   margin: 8em 0 4em 0;
@@ -57,15 +58,14 @@ export default function Footer() {
             <br />
             <br />
             <small>
-              Сайт обновлен:{' '}
-              <time>
-                {format(new Date(), 'dd MMMM, yyyy', {
-                  locale: ru,
-                })}
-              </time>
+              Сайт обновлен: <LocalDate value={date} />
             </small>
             <br />
-            <br />© {new Date().getFullYear()} {site.siteMetadata.title}
+            <br />©{' '}
+            <time dateTime={date.getFullYear().toString()}>
+              {date.getFullYear()}
+            </time>{' '}
+            {site.siteMetadata.title}
             <br />
             <small>
               Данный сайт не использует инструменты для отслеживания

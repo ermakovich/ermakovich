@@ -1,5 +1,9 @@
 import React from 'react'
 
-const BlogPostDate = ({ value }: { value: string }) => <time>{value}</time>
+import LocalDate from '../date'
+
+const BlogPostDate = ({ value, locale }: { value: Date; locale: string }) => (
+  <LocalDate {...{ value, locale }} />
+)
 
 export default BlogPostDate
