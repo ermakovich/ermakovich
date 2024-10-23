@@ -14,15 +14,19 @@ const Root = styled.footer`
   text-align: center;
 `
 export default function Footer() {
-  const { site } = useStaticQuery(graphql`
+  const { site, siteBuildMetadata } = useStaticQuery(graphql`
     query {
       site {
         siteMetadata {
           title
         }
       }
+      siteBuildMetadata {
+        buildTime
+      }
     }
   `)
+  const { buildTime } = siteBuildMetadata
 
   return (
     <Root>
@@ -58,7 +62,7 @@ export default function Footer() {
             <br />
             <br />
             <small>
-              Сайт обновлен: <LocalDate value={date} />
+              Сайт обновлен: <LocalDate value={new Date(buildTime)} />
             </small>
             <br />
             <br />©{' '}
