@@ -25,7 +25,10 @@ const ListItem = styled.li`
 export default function BlogIndex() {
   const { allMarkdownRemark } = useStaticQuery(graphql`
     {
-      allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
+      allMarkdownRemark(
+        filter: { fields: { slug: { regex: "/posts/" } } }
+        sort: { frontmatter: { date: DESC } }
+      ) {
         edges {
           node {
             excerpt

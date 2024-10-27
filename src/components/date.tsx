@@ -1,14 +1,20 @@
 import React from 'react'
 
-const Date = ({ value, locale = 'ru' }: { value: Date; locale?: string }) => (
+const Date = ({
+  value,
+  format = {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  },
+  locale = 'ru',
+}: {
+  value: Date
+  format?: {}
+  locale?: string
+}) => (
   <time dateTime={value.toISOString()}>
-    {value
-      .toLocaleDateString(locale, {
-        day: 'numeric',
-        month: 'long',
-        year: 'numeric',
-      })
-      .replace('г.', '')}
+    {value.toLocaleDateString(locale, format).replace(' г.', '')}
   </time>
 )
 

@@ -15,14 +15,18 @@ export const Head = () => (
 )
 
 export default function AboutPage() {
-  const { site, allMarkdownRemark } = useStaticQuery(graphql`
+  const { allMarkdownRemark } = useStaticQuery(graphql`
     query {
       site {
         siteMetadata {
           title
         }
       }
-      allMarkdownRemark(limit: 1, sort: { frontmatter: { date: DESC } }) {
+      allMarkdownRemark(
+        filter: { fields: { slug: { regex: "/posts/" } } }
+        limit: 1
+        sort: { frontmatter: { date: DESC } }
+      ) {
         edges {
           node {
             fields {
@@ -96,6 +100,10 @@ export default function AboutPage() {
       <p>
         Заметки на профессиональную и бизнес-тематику, а также просто наблюдения
         из жизни, я публикую в <a href="/posts/">записях</a>.
+      </p>
+      <p>
+        Выполненные мной работы можно посмотреть в{' '}
+        <a href="/projects/">проектах</a>.
       </p>
 
       {post && (
