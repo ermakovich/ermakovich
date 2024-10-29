@@ -1,5 +1,5 @@
 # syntax = docker/dockerfile:1.10
-FROM node:20.18-alpine
+FROM node:22.10-alpine
 
 ENV NODE_ENV=production
 
