@@ -23,7 +23,9 @@ export const Head = ({ data: { site, markdownRemark } }) => {
       description={excerpt}
       image={frontmatterImage && getSrc(frontmatterImage)}
       lang={frontmatter.lang}
-    />
+    >
+      <meta name="robots" content="noindex" />
+    </SEO>
   )
 }
 

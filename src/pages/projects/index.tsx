@@ -13,7 +13,9 @@ export const Head = () => (
   <SEO
     titleAddendum="Проекты"
     description="Проекты, в которых я принимал участие в качестве веб-разработчика"
-  />
+  >
+    <meta name="robots" content="noindex" />
+  </SEO>
 )
 
 const ListItem = styled.li`
