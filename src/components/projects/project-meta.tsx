@@ -4,11 +4,6 @@ import styled from 'styled-components'
 import LocalDate from 'components/date'
 import OutboundLink from 'components/outbound-link'
 
-const updatedText = {
-  ru: 'обновлено',
-  en: 'edited',
-}
-
 const Root = styled.div`
   font-size: smaller;
   margin-bottom: 4rem;
@@ -44,7 +39,11 @@ export default function PostMeta({ frontmatter, ...props }) {
 
   return (
     <Root as="div" {...props}>
-      <p title="Период">
+      <p>
+        <label>Проект</label>
+        {frontmatter.title}
+      </p>
+      <p>
         <label>Период</label>
         <LocalDate
           value={new Date(frontmatter.start_date)}
@@ -59,13 +58,6 @@ export default function PostMeta({ frontmatter, ...props }) {
         />
         {frontmatter.is_part_time && ' (частичная загрузка)'}
       </p>
-      {frontmatter.updated_date && (
-        <p>
-          &nbsp;&middot;&nbsp;
-          {updatedText[lang]}{' '}
-          <LocalDate value={new Date(frontmatter.updated_date)} locale={lang} />
-        </p>
-      )}
       <p>
         <label>Клиент</label>
         {frontmatter.customer} /{' '}
@@ -73,13 +65,18 @@ export default function PostMeta({ frontmatter, ...props }) {
           {frontmatter.customer_address}
         </address>
         <br />
-        {frontmatter.live_site
-          .map((site) => (
-            <OutboundLink href={'https://' + site} rel="nofollow noreferrer">
-              {site}
-            </OutboundLink>
-          ))
-          .reduce((prev, curr) => [prev, <br />, curr])}
+        {frontmatter.not_published_yet
+          ? null
+          : frontmatter.live_site
+              .map((site) => (
+                <OutboundLink
+                  href={'https://' + site}
+                  rel="nofollow noreferrer"
+                >
+                  {site}
+                </OutboundLink>
+              ))
+              .reduce((prev, curr) => [prev, <br />, curr])}
       </p>
       <p>
         <label>Тип сайта</label>

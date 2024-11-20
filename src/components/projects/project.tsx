@@ -29,27 +29,41 @@ export const Head = ({ data: { site, markdownRemark } }) => {
   )
 }
 
+const Nav = styled.div`
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+`
+
 const ProjectCover = styled.div`
   position: relative;
   overflow: hidden;
   z-index: 0;
-  display: flex;
+  display: grid;
   align-items: center;
+
+  @media (${mq.sm}) {
+    padding: 0 1em;
+  }
 `
 
 const ProjectTitleWrapper = styled.div`
   margin: 2rem auto;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
 
   @media (${mq.sm}) {
     margin: 5rem auto;
+    border-radius: 0.25rem;
   }
 
   @media (${mq.md}) {
     margin: 7.5rem auto;
+    border-radius: 0.5rem;
   }
 
   @media (${mq.l}) {
     margin: 10rem auto;
+    border-radius: 0.75rem;
   }
 `
 
@@ -58,8 +72,21 @@ const ProjectTitle = styled.h1`
   color: var(--color-black);
   display: inline-block;
   z-index: 1;
-  padding: 0.5em;
+  padding: 0.5em 1em;
   margin: 0;
+  font-size: 1.25rem;
+
+  @media (${mq.sm}) {
+    font-size: 1.5rem;
+  }
+
+  @media (${mq.md}) {
+    font-size: 1.75rem;
+  }
+
+  @media (${mq.l}) {
+    font-size: 2rem;
+  }
 `
 
 const EnProjectWrapper = styled.div`
@@ -74,13 +101,29 @@ const EnProject = styled.span`
 
 const ProjectCoverContent = styled(Content)`
   max-width: 50em;
+  grid-area: 1/1/1/1;
+  z-index: 1;
 `
 
 const ProjectCoverImgWrapper = styled.div`
-  position: absolute;
-  height: 100%;
+  grid-area: 1/1/1/1;
+  margin: 0 auto;
   width: 100%;
-  z-index: -1;
+  aspect-ratio: calc(1366 / 768);
+  overflow: hidden;
+
+  @media (${mq.sm}) {
+    border-radius: 1rem;
+  }
+
+  @media (${mq.md}) {
+    border-radius: 1.25rem;
+  }
+
+  @media (${mq.l}) {
+    border-radius: 1.5rem;
+    max-width: 1200px;
+  }
 `
 
 const NextPrev = styled(UnstyledList)`
@@ -111,18 +154,13 @@ export default function ProjectTemplate({
 
   return (
     <>
+      <Content>
+        <Nav>
+          <a href="/projects">← Проекты</a>
+        </Nav>
+      </Content>
       {coverImage && (
         <ProjectCover>
-          <ProjectCoverContent>
-            <ProjectTitleWrapper>
-              {lang === 'en' && (
-                <EnProjectWrapper>
-                  <EnProject>In English /</EnProject>
-                </EnProjectWrapper>
-              )}
-              <ProjectTitle>{frontmatter.title}</ProjectTitle>
-            </ProjectTitleWrapper>
-          </ProjectCoverContent>
           <ProjectCoverImgWrapper>
             <GatsbyImage
               image={coverImage.childImageSharp.gatsbyImageData}
@@ -133,12 +171,20 @@ export default function ProjectTemplate({
               }}
             />
           </ProjectCoverImgWrapper>
+          <ProjectCoverContent>
+            <ProjectTitleWrapper>
+              {lang === 'en' && (
+                <EnProjectWrapper>
+                  <EnProject>In English /</EnProject>
+                </EnProjectWrapper>
+              )}
+              <ProjectTitle>{frontmatter.title}</ProjectTitle>
+            </ProjectTitleWrapper>
+          </ProjectCoverContent>
         </ProjectCover>
       )}
       <Content>
         {!coverImage && <h1>{frontmatter.title}</h1>}
-        <h2>Проект</h2>
-        <Meta {...{ frontmatter }} />
         {image && (
           <GatsbyImage
             image={image.childImageSharp.gatsbyImageData}
@@ -146,6 +192,7 @@ export default function ProjectTemplate({
             alt="cover image"
           />
         )}
+        <Meta {...{ frontmatter }} />
         <h2>Описание</h2>
         <div dangerouslySetInnerHTML={{ __html: html }} />
 
@@ -195,6 +242,7 @@ export const pageQuery = graphql`
         is_part_time
         customer
         customer_address
+        not_published_yet
         live_site
         site_type
         industry

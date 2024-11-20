@@ -14,7 +14,7 @@ const Date = ({
   locale?: string
 }) => (
   <time dateTime={value.toISOString()}>
-    {value.toLocaleDateString(locale, format).replace(' г.', '')}
+    {value.toLocaleDateString(locale, format).replace('г.', '').trim()}
   </time>
 )
 
