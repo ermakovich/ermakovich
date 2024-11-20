@@ -55,12 +55,12 @@ export default function ProjectsIndex() {
               pull_requests
               cover_image {
                 childImageSharp {
-                  gatsbyImageData(width: 210, height: 140, layout: FIXED)
+                  gatsbyImageData(width: 210, height: 118, layout: FIXED)
                 }
               }
               image {
                 childImageSharp {
-                  gatsbyImageData(width: 210, height: 140, layout: FIXED)
+                  gatsbyImageData(width: 210, height: 118, layout: FIXED)
                 }
               }
               lang
@@ -75,7 +75,7 @@ export default function ProjectsIndex() {
 
   return (
     <Content>
-      <h1>Проекты (дополняется)</h1>
+      <h1>Проекты</h1>
       <p>
         В данном разделе представлены проекты, в которых мне доводилось
         принимать участие в качестве веб-разработчика.
