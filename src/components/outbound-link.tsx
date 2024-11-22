@@ -10,7 +10,7 @@ const Link = styled.a`
 export default function OutboundLink({ children, ...props }) {
   return (
     <Link {...props}>
-      {children} <LinkExternalSvg style={{ width: '0.85em' }} />
+      {children} <LinkExternalSvg width="0.85em" />
     </Link>
   )
 }

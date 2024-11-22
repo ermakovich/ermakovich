@@ -3,19 +3,27 @@ import styled from 'styled-components'
 
 import LocalDate from 'components/date'
 import OutboundLink from 'components/outbound-link'
+import UnstyledList from 'components/unstyled-list'
+import mq from 'components/media-queries'
 
 const Root = styled.div`
-  font-size: smaller;
   margin-bottom: 4rem;
 
-  label {
-    display: block;
-    margin-bottom: 0.25rem;
-    color: var(--color-system);
+  @media (${mq.sm}) {
+    font-size: smaller;
   }
 `
 
-const Item = styled.span`
+const List = styled(UnstyledList)`
+  margin: 0;
+`
+
+const Label = styled.p`
+  margin-bottom: 0.25rem;
+  color: var(--color-system);
+`
+
+const Item = styled.li`
   color: var(--color-primary);
   background: rgba(var(--color-primary-rgb), 0.1);
   border-radius: 0.25em;
@@ -25,26 +33,32 @@ const Item = styled.span`
   white-space: nowrap;
 `
 
-const Comma = styled.span`
-  display: none;
-`
-
 const periodFormat = {
   month: 'long',
   year: 'numeric',
+}
+
+function renderList(items) {
+  return (
+    <List>
+      {items.map((item) => (
+        <Item key={item}>{item}</Item>
+      ))}
+    </List>
+  )
 }
 
 export default function PostMeta({ frontmatter, ...props }) {
   const { lang } = frontmatter
 
   return (
-    <Root as="div" {...props}>
-      <p>
-        <label>Проект</label>
+    <Root as={UnstyledList} {...props}>
+      <li>
+        <Label>Проект</Label>
         {frontmatter.title}
-      </p>
-      <p>
-        <label>Период</label>
+      </li>
+      <li>
+        <Label>Период</Label>
         <LocalDate
           value={new Date(frontmatter.start_date)}
           format={periodFormat}
@@ -57,55 +71,49 @@ export default function PostMeta({ frontmatter, ...props }) {
           locale={lang}
         />
         {frontmatter.is_part_time && ' (частичная загрузка)'}
-      </p>
-      <p>
-        <label>Клиент</label>
+      </li>
+      <li>
+        <Label>Клиент</Label>
         {frontmatter.customer} /{' '}
         <address style={{ display: 'inline', fontStyle: 'normal' }}>
           {frontmatter.customer_address}
         </address>
         <br />
-        {frontmatter.not_published_yet
-          ? null
-          : frontmatter.live_site
-              .map((site) => (
+        {frontmatter.not_published_yet ? null : (
+          <List>
+            {frontmatter.live_site.map((site) => (
+              <Item key={site}>
                 <OutboundLink
                   href={'https://' + site}
                   rel="nofollow noreferrer"
                 >
                   {site}
                 </OutboundLink>
-              ))
-              .reduce((prev, curr) => [prev, <br />, curr])}
-      </p>
-      <p>
-        <label>Тип сайта</label>
-        {frontmatter.site_type
-          .map((item) => <Item>{item}</Item>)
-          .reduce((prev, curr) => [prev, <Comma>, </Comma>, curr])}
-      </p>
-      <p>
-        <label>Индустрия</label>
-        {frontmatter.industry
-          .map((item) => <Item>{item}</Item>)
-          .reduce((prev, curr) => [prev, <Comma>, </Comma>, curr])}
-      </p>
-      <p>
-        <label>Услуги</label>
-        {frontmatter.services
-          .map((item) => <Item>{item}</Item>)
-          .reduce((prev, curr) => [prev, <Comma>, </Comma>, curr])}
-      </p>
-      <p>
-        <label>Технологии</label>
-        {frontmatter.tools
-          .map((item) => <Item>{item}</Item>)
-          .reduce((prev, curr) => [prev, <Comma>, </Comma>, curr])}
-      </p>
-      <p>
-        <label>Объем работ</label>
+              </Item>
+            ))}
+          </List>
+        )}
+      </li>
+      <li>
+        <Label>Тип сайта</Label>
+        {renderList(frontmatter.site_type)}
+      </li>
+      <li>
+        <Label>Индустрия</Label>
+        {renderList(frontmatter.industry)}
+      </li>
+      <li>
+        <Label>Услуги</Label>
+        {renderList(frontmatter.services)}
+      </li>
+      <li>
+        <Label>Технологии</Label>
+        {renderList(frontmatter.tools)}
+      </li>
+      <li>
+        <Label>Объем работ</Label>
         {frontmatter.pull_requests} пулл-реквест
-      </p>
+      </li>
     </Root>
   )
 }
