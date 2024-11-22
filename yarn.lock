@@ -9662,6 +9662,7 @@ __metadata:
     gatsby-plugin-feed: "npm:5.14.0"
     gatsby-plugin-image: "npm:3.14.0"
     gatsby-plugin-layout: "npm:4.14.0"
+    gatsby-plugin-no-javascript-utils: "npm:0.13.1"
     gatsby-plugin-react-svg: "npm:3.3.0"
     gatsby-plugin-resolve-src: "npm:2.1.0"
     gatsby-plugin-robots-txt: "npm:1.8.0"
@@ -12079,6 +12080,18 @@ __metadata:
   peerDependencies:
     gatsby: ^5.0.0-next
   checksum: 10c0/0b72adc43435c0478fb1813ce95af9e3df6c8addaf6c99d547a494957a20203ab9d95adacb53a10305f24bc8d3daca3b35107c7c071ab31fbc09f6fb34f1065f
+  languageName: node
+  linkType: hard
+
+"gatsby-plugin-no-javascript-utils@npm:0.13.1":
+  version: 0.13.1
+  resolution: "gatsby-plugin-no-javascript-utils@npm:0.13.1"
+  peerDependencies:
+    gatsby: ^2.0.0 || ^3.0.0 || ^4.0.0 || ^5.0.0
+  peerDependenciesMeta:
+    gatsby:
+      optional: true
+  checksum: 10c0/aee5a80f932f9786eddbb2b94404c9b64029ffeff5180f912c83f8dce628accff6641abe222cd08ee4c626ef6f2131f8a779a3db96d7ee07e32981014c0c62bc
   languageName: node
   linkType: hard
 

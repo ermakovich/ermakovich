@@ -107,5 +107,6 @@ module.exports = {
         },
       },
     },
+    'gatsby-plugin-no-javascript-utils',
   ],
 }
