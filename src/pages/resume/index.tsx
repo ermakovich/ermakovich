@@ -63,10 +63,13 @@ const Subheader = styled(LargeContent)`
 `
 
 const AvatarWrapper = styled.div`
-  margin-right: 2rem;
   z-index: 0;
-  flex: none;
-  align-self: center;
+
+  @media (${mq.sm}) {
+    margin-right: 2rem;
+    flex: none;
+    align-self: center;
+  }
 `
 
 const Generated = styled(TextSystem)`
@@ -155,9 +158,10 @@ export default function ResumePage() {
             src="../../images/avatar.jpg"
             alt="Photo"
             loading="eager"
+            width={140}
+            height={140}
+            layout="fixed"
             style={{
-              width: '7rem',
-              height: '7rem',
               borderRadius: '50%',
               boxShadow: '0 0 .2rem 0',
               zIndex: 0,
