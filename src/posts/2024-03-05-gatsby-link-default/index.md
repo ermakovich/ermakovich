@@ -17,7 +17,7 @@ When creating websites using Gatsby many people don't realize, that they do actu
 This component is so widely adopted and propagated in so many Gatsby starters and templates, so that it's really tempting to start using it, especially for newcomers. Let me just quote Gatsby documentation about it:
 
 <blockquote>
-The &lt;Link\&gt; component drives a powerful performance feature called preloading. Preloading is used to prefetch page resources so that the resources are available by the time the user navigates to the page. We use the browser’s Intersection Observer API to observe when a <Link> component enters the user viewport and then start a low-priority request for the linked page’s resources. Then when a user moves their mouse over a link and the onMouseOver event is triggered, we upgrade the fetches to high-priority.
+The &lt;Link/&gt; component drives a powerful performance feature called preloading. Preloading is used to prefetch page resources so that the resources are available by the time the user navigates to the page. We use the browser’s Intersection Observer API to observe when a <Link> component enters the user viewport and then start a low-priority request for the linked page’s resources. Then when a user moves their mouse over a link and the onMouseOver event is triggered, we upgrade the fetches to high-priority.
 
 This two stage preloading helps ensure the page is ready to be rendered as soon as the user clicks to navigate.
 

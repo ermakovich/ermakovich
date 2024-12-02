@@ -1,69 +1,117 @@
 import React from 'react'
-import styled from 'styled-components'
 import { graphql, useStaticQuery } from 'gatsby'
 
-import { StaticImage } from 'gatsby-plugin-image'
+import Content from 'components/content'
 import { SEO } from 'components/seo'
 import Button from 'components/button'
+import OutboundLink from 'components/outbound-link'
+import PostPreview from 'components/posts/post-preview/post-preview'
 
-export const Head = () => <SEO />
+export const Head = () => (
+  <SEO
+    titleAddendum="Обо мне"
+    description="Веб-разработчик JavaScript (React) в Санкт-Петербурге"
+  />
+)
 
-const LayoutWrapper = styled.div`
-  min-height: 100vh;
-  display: flex;
-`
-
-const Layout = styled.div`
-  margin: auto;
-  padding: 0px 1.0875em 1.45em;
-  padding-top: 0;
-  text-align: center;
-`
-
-const Header = styled.h1`
-  font-weight: normal;
-`
-
-const More = styled.p`
-  font-size: 1.2em;
-`
-
-export default function IndexPage() {
-  const { site } = useStaticQuery(graphql`
+export default function AboutPage() {
+  const { allMarkdownRemark } = useStaticQuery(graphql`
     query {
       site {
         siteMetadata {
           title
         }
       }
+      allMarkdownRemark(
+        filter: { fields: { slug: { regex: "/posts/" } } }
+        limit: 1
+        sort: { frontmatter: { date: DESC } }
+      ) {
+        edges {
+          node {
+            fields {
+              slug
+            }
+            timeToRead
+            frontmatter {
+              date
+              updated_date
+              lang
+              title
+              cover_image {
+                childImageSharp {
+                  gatsbyImageData(width: 120, height: 70, layout: FIXED)
+                }
+              }
+              image {
+                childImageSharp {
+                  gatsbyImageData(width: 120, height: 70, layout: FIXED)
+                }
+              }
+            }
+          }
+        }
+      }
     }
   `)
 
+  const post = allMarkdownRemark.edges[0]
+
   return (
-    <LayoutWrapper>
-      <Layout>
-        <StaticImage
-          src="../images/avatar.jpg"
-          alt="Photo"
-          loading="eager"
-          layout="fixed"
-          width={320}
-          style={{
-            maxWidth: '10rem',
-            maxHeight: '10rem',
-            margin: '0 auto',
-            borderRadius: '50%',
-            boxShadow: '0 0 .3rem 0',
-            zIndex: 0,
-          }}
-        />
-        <Header>Привет, я {site.siteMetadata.title.split(' ')[0]} 👋</Header>
-        <More>
-          <Button as="a" href="/about/">
-            Продолжить &nbsp;&nbsp;&nbsp;👉
-          </Button>
-        </More>
-      </Layout>
-    </LayoutWrapper>
+    <Content>
+      <h1>Обо мне</h1>
+      <p>
+        Привет, меня зовут Сергей Ермакович 👋. Я веб-разработчик c более чем
+        15-летним опытом. На данный момент являюсь фрилансером. Оказываю
+        фиксированные услуги по веб-разработке, вёрстке HTML & CSS,
+        автоматизации, и предоставляю консультации на платной основе. Ранее
+        работал в интернет-стартапах{' '}
+        <OutboundLink
+          href="https://verifiable.com"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+        >
+          Verifiable.com
+        </OutboundLink>
+        ,{' '}
+        <OutboundLink
+          href="https://dock.io"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+        >
+          Dock.io
+        </OutboundLink>
+        ,{' '}
+        <OutboundLink
+          href="https://remote.com"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+        >
+          Remote.com
+        </OutboundLink>
+        , и других компаниях.
+      </p>
+      <p style={{ textAlign: 'center' }}>
+        <Button as="a" href="/resume/">
+          Посмотреть резюме 🧐
+        </Button>
+      </p>
+      <p>
+        Заметки на профессиональную и бизнес-тематику, а также просто наблюдения
+        из жизни, я публикую в <a href="/posts/">записях</a>.
+      </p>
+      <p>
+        Последние выполненные мной работы в можно посмотреть в{' '}
+        <a href="/projects/">проектах</a>.
+      </p>
+
+      {post && (
+        <section>
+          <br />
+          <p>Последняя запись:</p>
+          <PostPreview {...post} />
+        </section>
+      )}
+    </Content>
   )
 }

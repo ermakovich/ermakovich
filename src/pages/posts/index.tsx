@@ -42,12 +42,12 @@ export default function BlogIndex() {
               title
               cover_image {
                 childImageSharp {
-                  gatsbyImageData(width: 70, height: 70, layout: FIXED)
+                  gatsbyImageData(width: 120, height: 70, layout: FIXED)
                 }
               }
               image {
                 childImageSharp {
-                  gatsbyImageData(width: 70, height: 70, layout: FIXED)
+                  gatsbyImageData(width: 120, height: 70, layout: FIXED)
                 }
               }
               lang

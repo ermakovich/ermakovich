@@ -14,7 +14,8 @@ export default function ProjectPreviewImage({ node }) {
           flex: 'none',
           marginTop: '1.75rem',
           marginRight: '1rem',
-          borderRadius: '.2rem',
+          borderRadius: '8px',
+          border: '1px solid rgba(var(--color-primary-rgb), 0.3)',
         }}
       />
     </a>

@@ -67,15 +67,6 @@ exports.createPages = async ({
   )
 }
 
-exports.onCreatePage = ({ page, actions }) => {
-  const { createPage } = actions
-
-  if (page.path === '/') {
-    page.context.layout = 'intro'
-  }
-  createPage(page)
-}
-
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 

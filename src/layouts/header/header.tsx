@@ -132,9 +132,6 @@ export default function Header() {
       <Menu className={isMenuOpen ? 'open' : ''}>
         <MenuItems>
           <MenuItem>
-            <MenuLink href="/about/">Обо мне</MenuLink>
-          </MenuItem>
-          <MenuItem>
             <MenuLink href="/posts/">Записи</MenuLink>
           </MenuItem>
           <MenuItem>

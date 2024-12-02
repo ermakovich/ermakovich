@@ -7,9 +7,9 @@ import './layout.css'
 
 const Layout = ({ children, pageContext }) => (
   <LayoutBase>
-    {pageContext.layout !== 'intro' && <Header />}
+    <Header />
     {children}
-    {pageContext.layout !== 'intro' && <Footer />}
+    <Footer />
   </LayoutBase>
 )
 

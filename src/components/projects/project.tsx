@@ -111,6 +111,7 @@ const ProjectCoverImgWrapper = styled.div`
   width: 100%;
   aspect-ratio: calc(1366 / 768);
   overflow: hidden;
+  border: 1px solid rgba(var(--color-primary-rgb), 0.3);
 
   @media (${mq.sm}) {
     border-radius: 1rem;

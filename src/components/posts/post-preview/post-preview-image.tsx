@@ -1,7 +1,5 @@
 import React from 'react'
-import { GatsbyImage, StaticImage } from 'gatsby-plugin-image'
-
-const squareSize = '3.5rem'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 export default function PostPreviewImage({ node }) {
   const { frontmatter } = node
@@ -14,32 +12,15 @@ export default function PostPreviewImage({ node }) {
           image={image.childImageSharp.gatsbyImageData}
           alt="post image"
           style={{
-            width: squareSize,
-            height: squareSize,
             flex: 'none',
             marginTop: '0.2rem',
             marginRight: '1rem',
             float: 'left',
-            borderRadius: '.2rem',
+            borderRadius: '6px',
+            border: '1px solid rgba(var(--color-primary-rgb), 0.3)',
           }}
         />
-      ) : (
-        <StaticImage
-          src="./memo.png"
-          alt="post image"
-          loading="eager"
-          layout="fixed"
-          style={{
-            width: squareSize,
-            height: squareSize,
-            flex: 'none',
-            marginTop: '0.2rem',
-            marginRight: '1rem',
-            float: 'left',
-            borderRadius: '.2rem',
-          }}
-        />
-      )}
+      ) : null}
     </a>
   )
 }
