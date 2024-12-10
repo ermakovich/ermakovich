@@ -52,7 +52,7 @@
     "gatsby-plugin-no-javascript-utils": "0.13.1",
     "gatsby-plugin-react-svg": "3.3.0",
     "husky": "9.1.7",
-    "lint-staged": "15.2.10",
+    "lint-staged": "15.2.11",
     "netlify-cli": "17.38.0",
     "prettier": "3.4.2",
     "typescript": "5.7.2",
