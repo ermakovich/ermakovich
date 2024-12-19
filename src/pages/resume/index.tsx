@@ -14,7 +14,7 @@ import mq from 'components/media-queries'
 export const Head = () => (
   <SEO
     titleAddendum="Резюме"
-    description="Веб-разработчик TypeScript / React и специалист по вёрстке HTML и CSS в Санкт-Петербурге."
+    description="Веб-разработчик React в Санкт-Петербурге."
   />
 )
 
@@ -172,42 +172,53 @@ export default function ResumePage() {
         <div>
           <h2>{site.siteMetadata.title}</h2>
 
-          <h3>Веб-разработчик TypeScript / React</h3>
+          <h3>Веб-разработчик React</h3>
         </div>
       </Subheader>
 
       <Content>
         <BlockQuote>
           <em>
-            Специализируюсь на веб-разработке с использованием TypeScript /
-            React и адаптивной вёрстке.
+            Специализируюсь на веб-разработке с использованием React и
+            адаптивной вёрстке.
           </em>
         </BlockQuote>
 
         <Block>
-          <h2>Инструменты 🛠️</h2>
+          <h2>Навыки 🛠️</h2>
           <Tools>
             {[
-              'Astro',
-              'Tailwind',
-              'Vite',
-              'Docker',
-              'Express',
-              'Gatsby',
-              'Git',
-              'Github Actions',
-              'Jest',
-              'Lighthouse',
-              'Next JS',
-              'Nginx',
-              'Netlify',
-              'Node',
-              'Puppeteer',
-              'React',
-              'TypeScript',
-            ].map((tool) => (
-              <Tool key={tool}>{tool}</Tool>
-            ))}
+              ...new Set([
+                'React',
+                'Astro',
+                'TailwindCSS',
+                'Vite',
+                'Docker',
+                'Express',
+                'Gatsby',
+                'Git',
+                'Github Actions',
+                'Jest',
+                'Lighthouse',
+                'NextJs',
+                'Nginx',
+                'Netlify',
+                'NodeJs',
+                'Puppeteer',
+                'TypeScript',
+                'NestJs',
+                'SQL',
+                'Figma',
+                'PixelPerfect верстка',
+                'CI/CD',
+                'CSS3',
+                'HTML5',
+              ]),
+            ]
+              .sort()
+              .map((tool) => (
+                <Tool key={tool}>{tool}</Tool>
+              ))}
           </Tools>
         </Block>
 
@@ -235,8 +246,7 @@ export default function ResumePage() {
           <h2>Опыт работы 👷‍♂️</h2>
           <ul>
             <li>
-              <a href="/projects/">Фриланс-проекты</a>, персональные проекты,
-              open-source разработка / 2023г. - н.в.
+              <a href="/projects/">Проектная работа</a> / 2023г. - н.в.
             </li>
             <li>
               Интернет-стартапы{' '}
@@ -263,7 +273,7 @@ export default function ResumePage() {
               >
                 remote.com
               </OutboundLink>{' '}
-              — веб-разработка в рамках одной команды / 2015-2020 гг.
+              — веб-разработчик React / 2015-2020 гг.
             </li>
             <li>
               <OutboundLink
@@ -273,9 +283,19 @@ export default function ResumePage() {
               >
                 Научсофт
               </OutboundLink>{' '}
-              — различные проекты (веб, native) / 2009–2015 гг.
+              — Javascript/C#/ASP.NET-разработчик / 2009–2015 гг.
             </li>
-            <li>Госсектор — различные проекты (веб, native) / 2007–2009 гг.</li>
+            <li>
+              {' '}
+              <OutboundLink
+                href="https://cbt.by/"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+              >
+                Центр Банковских Технологий
+              </OutboundLink>{' '}
+              — С#/ASP.NET-разработчик / 2007–2009 гг.
+            </li>
           </ul>
         </Block>
 
