@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import TextSystem from 'components/text-system'
-import PostDate from 'components/posts/post-date'
+import LocalDate from 'components/date'
 
 const updatedText = {
   ru: 'обновлено',
@@ -23,12 +23,22 @@ export default function PostMeta({ frontmatter, timeToRead, ...props }) {
 
   return (
     <Root {...props}>
-      <PostDate value={new Date(frontmatter.date)} locale={lang} />
+      <LocalDate
+        itemProp="datePublished"
+        content={frontmatter.date}
+        value={new Date(frontmatter.date)}
+        locale={lang}
+      />
       &nbsp;&middot;&nbsp;
       {frontmatter.updated_date && (
         <>
           {updatedText[lang]}{' '}
-          <PostDate value={new Date(frontmatter.updated_date)} locale={lang} />
+          <LocalDate
+            itemProp="dateModified"
+            content={frontmatter.updated_date}
+            value={new Date(frontmatter.updated_date)}
+            locale={lang}
+          />
           &nbsp;&middot;&nbsp;
         </>
       )}

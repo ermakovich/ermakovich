@@ -4,7 +4,9 @@ module.exports = {
   siteMetadata: {
     title,
     author: title,
-    description: 'Веб-разработчик JavaScript (React) в Санкт-Петербурге',
+    authorEn: 'Sergey Ermakovich',
+    description: 'Веб-разработчик (React / Node) в Санкт-Петербурге',
+    descriptionEn: 'Frontend Engineer (React /Node)',
     siteUrl: 'https://ermakovich.ru',
     email: 's.ermakovich@gmail.com',
   },

@@ -1,6 +1,12 @@
-import React from 'react'
+import React, { HTMLAttributes } from 'react'
 
-const Date = ({
+const Date: React.FC<
+  {
+    value: Date
+    format?: {}
+    locale?: string
+  } & HTMLAttributes<HTMLTimeElement>
+> = ({
   value,
   format = {
     day: 'numeric',
@@ -8,12 +14,9 @@ const Date = ({
     year: 'numeric',
   },
   locale = 'ru',
-}: {
-  value: Date
-  format?: {}
-  locale?: string
+  ...props
 }) => (
-  <time dateTime={value.toISOString()}>
+  <time {...props} dateTime={value.toISOString()}>
     {value.toLocaleDateString(locale, format).replace('г.', '').trim()}
   </time>
 )

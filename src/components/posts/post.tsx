@@ -12,17 +12,16 @@ import mq from 'components/media-queries'
 
 export const Head = ({ data: { site, markdownRemark } }) => {
   const { excerpt, frontmatter } = markdownRemark
-  const siteTitle = site.siteMetadata.title
   const frontmatterImage = frontmatter.image || frontmatter.cover_image
-
-  const title = `${frontmatter.title} - ${siteTitle}`
+  const { lang, title } = frontmatter
+  const { author, authorEn } = site.siteMetadata
 
   return (
     <SEO
-      title={title}
+      title={`${title} — ${lang === 'en' ? authorEn : author}`}
       description={excerpt}
       image={frontmatterImage && getSrc(frontmatterImage)}
-      lang={frontmatter.lang}
+      lang={lang}
     />
   )
 }
@@ -122,7 +121,7 @@ export default function BlogPostTemplate({
   const { image, lang } = frontmatter
 
   return (
-    <>
+    <div itemScope itemType="https://schema.org/Article">
       {coverImage && (
         <PostCover>
           <PostCoverContent>
@@ -132,7 +131,7 @@ export default function BlogPostTemplate({
                   <EnPost>In English /</EnPost>
                 </EnPostWrapper>
               )}
-              <PostTitle>{frontmatter.title}</PostTitle>
+              <PostTitle itemProp="headline">{frontmatter.title}</PostTitle>
             </PostTitleWrapper>
           </PostCoverContent>
           <PostCoverImgWrapper>
@@ -143,6 +142,7 @@ export default function BlogPostTemplate({
               style={{
                 height: '100%',
               }}
+              itemProp="image"
             />
           </PostCoverImgWrapper>
         </PostCover>
@@ -155,6 +155,7 @@ export default function BlogPostTemplate({
             image={image.childImageSharp.gatsbyImageData}
             loading="eager"
             alt="cover image"
+            itemProp="image"
           />
         )}
         <div dangerouslySetInnerHTML={{ __html: html }} />
@@ -190,7 +191,7 @@ export default function BlogPostTemplate({
           )}
         </NextPrev>
       </Content>
-    </>
+    </div>
   )
 }
 
@@ -201,6 +202,8 @@ export const pageQuery = graphql`
         title
         email
         siteUrl
+        author
+        authorEn
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
