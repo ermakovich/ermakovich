@@ -95,6 +95,7 @@ pre > code {
   background: initial;
   padding: 0;
   display: grid;
+  grid-auto-rows: 30px;
 }
 
 code {
@@ -140,7 +141,7 @@ figcaption {
   display: grid;
 }
 
-.grvsc-line-highlighted {
+.grvsc-line .grvsc-line-highlighted {
   position: relative;
 }
 
