@@ -43,7 +43,7 @@
     "deploy-preview": "netlify deploy --build --context deploy-preview --site 63e732aa-9213-45fd-b6a0-b4d03252a628"
   },
   "devDependencies": {
-    "@types/node": "22.10.5",
+    "@types/node": "22.10.6",
     "@types/react": "18.3.18",
     "@types/react-dom": "18.3.5",
     "@types/unused-webpack-plugin": "2.4.5",
