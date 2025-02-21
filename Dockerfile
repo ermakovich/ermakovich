@@ -1,4 +1,4 @@
-# syntax = docker/dockerfile:1.13
+# syntax = docker/dockerfile:1.14
 FROM node:22.14-alpine
 
 ENV NODE_ENV=production
